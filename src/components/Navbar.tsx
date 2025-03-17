@@ -39,9 +39,15 @@ const Navbar = () => {
       label: 'Soluções', 
       href: '#solutions',
       dropdown: [
-        { label: 'Plataforma de Atendimento', href: '#platform' },
-        { label: 'Agentes de IA', href: '#agents' },
-        { label: 'Consultoria', href: '#consulting' },
+        { label: 'Plataforma de Atendimento', href: '/platform' },
+        { label: 'Agentes de IA', href: '/#agents-section' },
+        { label: 'Consultoria', href: '/consulting' },
+        { label: 'Agente de Cobertura de Carteira', href: '/agent/cobertura-carteira' },
+        { label: 'Agente de Avaliação e Monitoramento', href: '/agent/avaliacao-monitoramento' },
+        { label: 'Agente de Reativação Automática', href: '/agent/reativacao-automatica' },
+        { label: 'Agente de Gestão de Vendas', href: '/agent/gestao-vendas' },
+        { label: 'Agente de Cadastro e Crédito', href: '/agent/cadastro-credito' },
+        { label: 'Disparador de Promoções', href: '/agent/disparador-promocoes' },
       ] 
     },
     { id: 'testimonials', label: 'Depoimentos', href: '#testimonials' },
@@ -78,23 +84,38 @@ const Navbar = () => {
                     </button>
                     <div 
                       className={cn(
-                        "absolute top-full left-0 mt-2 w-60 bg-white rounded-lg shadow-lg transition-all duration-300 transform origin-top-left",
+                        "absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg transition-all duration-300 transform origin-top-left",
                         dropdownOpen === item.id ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"
                       )}
                     >
                       <div className="py-2">
-                        {item.dropdown.map((subItem, idx) => (
-                          <a
+                        {item.dropdown.slice(0, 3).map((subItem, idx) => (
+                          <Link
                             key={idx}
-                            href={subItem.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                            to={subItem.href}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors font-medium"
                             onClick={() => {
                               setDropdownOpen('');
                               setIsOpen(false);
                             }}
                           >
                             {subItem.label}
-                          </a>
+                          </Link>
+                        ))}
+                        <div className="border-t border-gray-100 my-2"></div>
+                        <p className="px-4 py-2 text-xs text-gray-500 font-medium">Agentes de IA</p>
+                        {item.dropdown.slice(3).map((subItem, idx) => (
+                          <Link
+                            key={idx + 3}
+                            to={subItem.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
+                            onClick={() => {
+                              setDropdownOpen('');
+                              setIsOpen(false);
+                            }}
+                          >
+                            {subItem.label}
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -152,10 +173,25 @@ const Navbar = () => {
                         dropdownOpen === item.id ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
                       )}
                     >
-                      {item.dropdown.map((subItem, idx) => (
-                        <a
+                      {item.dropdown.slice(0, 3).map((subItem, idx) => (
+                        <Link
                           key={idx}
-                          href={subItem.href}
+                          to={subItem.href}
+                          className="block py-2 text-gray-600 hover:text-primary font-medium"
+                          onClick={() => {
+                            setIsOpen(false);
+                            setDropdownOpen('');
+                          }}
+                        >
+                          {subItem.label}
+                        </Link>
+                      ))}
+                      <div className="border-t border-gray-100 my-2"></div>
+                      <p className="py-2 text-xs text-gray-500 font-medium">Agentes de IA</p>
+                      {item.dropdown.slice(3).map((subItem, idx) => (
+                        <Link
+                          key={idx + 3}
+                          to={subItem.href}
                           className="block py-2 text-gray-600 hover:text-primary"
                           onClick={() => {
                             setIsOpen(false);
@@ -163,7 +199,7 @@ const Navbar = () => {
                           }}
                         >
                           {subItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
