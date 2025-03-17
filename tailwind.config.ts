@@ -74,6 +74,7 @@ export default {
 					700: '#003D99',
 					800: '#002C8F',
 					900: '#001F66',
+					950: '#00184D',
 				},
 				dark: {
 					100: '#1A1A1A',
@@ -157,6 +158,8 @@ export default {
 				'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #000000 100%)',
 				'gradient-light': 'linear-gradient(90deg, #F9F9F9 0%, #FFFFFF 100%)',
 				'gradient-blue-dark': 'linear-gradient(135deg, #002C8F 0%, #000000 100%)',
+				'gradient-dark-blue': 'linear-gradient(135deg, #001F66 0%, #000000 95%)',
+				'gradient-translucent': 'linear-gradient(135deg, rgba(0, 31, 102, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%)',
 			}
 		}
 	},
