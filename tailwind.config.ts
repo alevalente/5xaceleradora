@@ -157,9 +157,9 @@ export default {
 				'gradient-blue': 'linear-gradient(90deg, #002C8F 0%, #0055D4 100%)',
 				'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #000000 100%)',
 				'gradient-light': 'linear-gradient(90deg, #F9F9F9 0%, #FFFFFF 100%)',
-				'gradient-blue-dark': 'linear-gradient(135deg, #002C8F 0%, #000000 100%)',
-				'gradient-dark-blue': 'linear-gradient(135deg, #001F66 0%, #000000 95%)',
-				'gradient-translucent': 'linear-gradient(135deg, rgba(0, 31, 102, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%)',
+				'gradient-blue-dark': 'linear-gradient(135deg, #001A4D 0%, #000000 100%)',
+				'gradient-dark-blue': 'linear-gradient(135deg, #001640 0%, #000000 95%)',
+				'gradient-translucent': 'linear-gradient(135deg, rgba(0, 22, 64, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%)',
 			}
 		}
 	},
