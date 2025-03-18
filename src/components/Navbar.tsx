@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { images } from '../assets/images';
 import { cn } from '@/lib/utils';
@@ -9,6 +9,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState('');
+  const location = useLocation();
+
+  // Check if current page has dark background
+  const hasDarkBackground = ['/platform', '/consulting', '/agent'].some(path => 
+    location.pathname.startsWith(path)
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +46,6 @@ const Navbar = () => {
       href: '#solutions',
       dropdown: [
         { label: 'Plataforma de Atendimento', href: '/platform' },
-        { label: 'Agentes de IA', href: '/#agents-section' },
         { label: 'Consultoria', href: '/consulting' },
         { label: 'Agente de Cobertura de Carteira', href: '/agent/cobertura-carteira' },
         { label: 'Agente de Avaliação e Monitoramento', href: '/agent/avaliacao-monitoramento' },
@@ -54,18 +59,24 @@ const Navbar = () => {
     { id: 'contact', label: 'Contato', href: '#contact' },
   ];
 
+  const textColor = hasDarkBackground 
+    ? "text-white hover:text-white/80" 
+    : "text-gray-800 hover:text-primary";
+
   return (
     <nav 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300',
-        isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-subtle' : 'bg-transparent'
+        isScrolled 
+          ? (hasDarkBackground ? 'bg-black/40 backdrop-blur-lg shadow-subtle' : 'bg-white/80 backdrop-blur-lg shadow-subtle')
+          : 'bg-transparent'
       )}
     >
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={images.logo} alt="5x Aceleradora" className="h-10" />
-          <span className="ml-2 text-xl font-display font-bold">5x Aceleradora</span>
+          <span className={cn("ml-2 text-xl font-display font-bold", hasDarkBackground ? "text-white" : "text-gray-800")}>5x Aceleradora</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -77,7 +88,7 @@ const Navbar = () => {
                   <div className="flex items-center">
                     <button 
                       onClick={() => handleDropdown(item.id)}
-                      className="flex items-center text-gray-800 hover:text-primary px-2 py-2 rounded-md transition-colors"
+                      className={cn("flex items-center px-2 py-2 rounded-md transition-colors", textColor)}
                     >
                       {item.label}
                       <ChevronDown className="ml-1 h-4 w-4" />
@@ -89,7 +100,7 @@ const Navbar = () => {
                       )}
                     >
                       <div className="py-2">
-                        {item.dropdown.slice(0, 3).map((subItem, idx) => (
+                        {item.dropdown.slice(0, 2).map((subItem, idx) => (
                           <Link
                             key={idx}
                             to={subItem.href}
@@ -104,9 +115,9 @@ const Navbar = () => {
                         ))}
                         <div className="border-t border-gray-100 my-2"></div>
                         <p className="px-4 py-2 text-xs text-gray-500 font-medium">Agentes de IA</p>
-                        {item.dropdown.slice(3).map((subItem, idx) => (
+                        {item.dropdown.slice(2).map((subItem, idx) => (
                           <Link
-                            key={idx + 3}
+                            key={idx + 2}
                             to={subItem.href}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-primary transition-colors"
                             onClick={() => {
@@ -123,7 +134,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="block text-gray-800 hover:text-primary px-2 py-2 rounded-md transition-colors"
+                    className={cn("block px-2 py-2 rounded-md transition-colors", textColor)}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -132,7 +143,13 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="button-primary animate-fade-in">
+          <a 
+            href="#contact" 
+            className={cn(
+              "button-primary animate-fade-in",
+              hasDarkBackground && !isScrolled ? "border-white text-white hover:bg-white hover:text-primary" : ""
+            )}
+          >
             Fale Conosco
           </a>
         </div>
@@ -140,7 +157,10 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <button
           onClick={toggleMenu}
-          className="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+          className={cn(
+            "md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none", 
+            hasDarkBackground ? "text-white hover:bg-white/10" : "text-gray-700"
+          )}
           aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -151,6 +171,7 @@ const Navbar = () => {
       <div
         className={cn(
           "md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-20",
+          hasDarkBackground ? "bg-gray-900" : "bg-white",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -162,7 +183,10 @@ const Navbar = () => {
                   <div>
                     <button
                       onClick={() => handleDropdown(item.id)}
-                      className="flex items-center w-full text-left text-gray-800 hover:text-primary py-2"
+                      className={cn(
+                        "flex items-center w-full text-left py-2", 
+                        hasDarkBackground ? "text-white hover:text-white/80" : "text-gray-800 hover:text-primary"
+                      )}
                     >
                       {item.label}
                       <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", dropdownOpen === item.id ? "rotate-180" : "rotate-0")} />
@@ -173,11 +197,14 @@ const Navbar = () => {
                         dropdownOpen === item.id ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
                       )}
                     >
-                      {item.dropdown.slice(0, 3).map((subItem, idx) => (
+                      {item.dropdown.slice(0, 2).map((subItem, idx) => (
                         <Link
                           key={idx}
                           to={subItem.href}
-                          className="block py-2 text-gray-600 hover:text-primary font-medium"
+                          className={cn(
+                            "block py-2 font-medium",
+                            hasDarkBackground ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-primary"
+                          )}
                           onClick={() => {
                             setIsOpen(false);
                             setDropdownOpen('');
@@ -186,13 +213,16 @@ const Navbar = () => {
                           {subItem.label}
                         </Link>
                       ))}
-                      <div className="border-t border-gray-100 my-2"></div>
-                      <p className="py-2 text-xs text-gray-500 font-medium">Agentes de IA</p>
-                      {item.dropdown.slice(3).map((subItem, idx) => (
+                      <div className={cn("border-t my-2", hasDarkBackground ? "border-gray-700" : "border-gray-100")}></div>
+                      <p className={cn("py-2 text-xs font-medium", hasDarkBackground ? "text-gray-400" : "text-gray-500")}>Agentes de IA</p>
+                      {item.dropdown.slice(2).map((subItem, idx) => (
                         <Link
-                          key={idx + 3}
+                          key={idx + 2}
                           to={subItem.href}
-                          className="block py-2 text-gray-600 hover:text-primary"
+                          className={cn(
+                            "block py-2",
+                            hasDarkBackground ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-primary"
+                          )}
                           onClick={() => {
                             setIsOpen(false);
                             setDropdownOpen('');
@@ -206,7 +236,10 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="block text-gray-800 hover:text-primary py-2"
+                    className={cn(
+                      "block py-2", 
+                      hasDarkBackground ? "text-white hover:text-white/80" : "text-gray-800 hover:text-primary"
+                    )}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
