@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -75,8 +74,7 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={images.logo} alt="5x Aceleradora" className="h-10" />
-          <span className={cn("ml-2 text-xl font-display font-bold", hasDarkBackground ? "text-white" : "text-gray-800")}>5x Aceleradora</span>
+          <img src={images.logo} alt="5x Aceleradora" className="h-12" />
         </Link>
 
         {/* Desktop Navigation */}

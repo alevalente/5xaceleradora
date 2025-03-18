@@ -1,4 +1,3 @@
-
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { images } from '../assets/images';
@@ -12,8 +11,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center mb-6">
-              <img src={images.logo} alt="5x Aceleradora" className="h-10 mr-3" />
-              <span className="text-xl font-display font-bold">5x Aceleradora</span>
+              <img src={images.logo} alt="5x Aceleradora" className="h-14" />
             </div>
             <p className="text-gray-400 mb-6">
               Aumentando a performance comercial de empresas com soluções inteligentes de IA e automação.
