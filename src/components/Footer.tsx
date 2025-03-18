@@ -4,6 +4,7 @@ import { images } from '../assets/images';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const logoSrc = images.logoWhite;
 
   return (
     <footer className="bg-dark-900 text-white pt-16 pb-8">
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center mb-6">
-              <img src={images.logo} alt="5x Aceleradora" className="h-14" />
+              <img src={logoSrc} alt="5x Aceleradora" className="h-14" />
             </div>
             <p className="text-gray-400 mb-6">
               Aumentando a performance comercial de empresas com soluções inteligentes de IA e automação.

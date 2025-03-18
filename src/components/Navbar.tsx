@@ -10,10 +10,11 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState('');
   const location = useLocation();
 
-  // Check if current page has dark background
   const hasDarkBackground = ['/platform', '/consulting', '/agent'].some(path => 
     location.pathname.startsWith(path)
   );
+
+  const logoSrc = hasDarkBackground ? images.logoWhite : images.logo;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +75,7 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={images.logo} alt="5x Aceleradora" className="h-12" />
+          <img src={logoSrc} alt="5x Aceleradora" className="h-12" />
         </Link>
 
         {/* Desktop Navigation */}
