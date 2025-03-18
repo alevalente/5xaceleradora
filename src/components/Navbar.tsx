@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -55,7 +56,6 @@ const Navbar = () => {
         { label: 'Disparador de Promoções', href: '/agent/disparador-promocoes' },
       ] 
     },
-    { id: 'testimonials', label: 'Depoimentos', href: '#testimonials' },
     { id: 'contact', label: 'Contato', href: '#contact' },
   ];
 
