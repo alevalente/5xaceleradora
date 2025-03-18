@@ -18,17 +18,17 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      name: 'Fernanda Sartori',
-      company: 'MSTECH',
+      name: 'Gilmar Mendes',
+      company: 'Dinâmica Alimentos',
       image: images.testimonial2,
-      quote: "Eu tinha uma expectativa alta, porque conheço o IEV. Mas posso dizer que ela foi superada."
+      quote: "Nossa empresa cresceu cerca de 60% em relação ao ano passado, o que demonstra o poder do investimento no IEV."
     },
     {
       id: 3,
-      name: 'Gilmar Mendes',
-      company: 'Dinâmica Alimentos',
+      name: 'Fernanda Sartori',
+      company: 'MSTECH',
       image: images.testimonial3,
-      quote: "Nossa empresa cresceu cerca de 60% em relação ao ano passado, o que demonstra o poder do investimento no IEV."
+      quote: "Eu tinha uma expectativa alta, porque conheço o IEV. Mas posso dizer que ela foi superada."
     }
   ];
 
