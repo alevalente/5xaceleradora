@@ -38,7 +38,7 @@ const Solutions = () => {
     {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
-      description: 'Garante contato regular com todos os clientes ativos, evitando perda de oportunidades e sinalizando riscos de evasão.',
+      description: 'Varredura recorrente (por exemplo, semanal), evitando negligenciar qualquer cliente.',
       icon: <Users className="h-8 w-8" />,
       color: 'bg-blue-50 text-blue-600',
       benefits: [
@@ -50,7 +50,7 @@ const Solutions = () => {
     {
       id: 'avaliacao-monitoramento',
       title: 'Agente de Avaliação e Monitoramento',
-      description: 'Mensura o desempenho dos vendedores e emite relatórios com indicadores de melhoria e pontos fortes.',
+      description: 'Monitoramento sistemático das conversas para avaliações detalhadas e contínuas.',
       icon: <BarChart2 className="h-8 w-8" />,
       color: 'bg-purple-50 text-purple-600',
       benefits: [
@@ -62,7 +62,7 @@ const Solutions = () => {
     {
       id: 'reativacao-automatica',
       title: 'Agente de Reativação Automática',
-      description: 'Resgata clientes inativos com campanhas específicas de reativação, identificando aqueles receptivos ao retorno.',
+      description: 'Campanhas pontuais de reativação, sem sobrecarregar a equipe comercial.',
       icon: <UserCheck className="h-8 w-8" />,
       color: 'bg-green-50 text-green-600',
       benefits: [
@@ -74,7 +74,7 @@ const Solutions = () => {
     {
       id: 'gestao-vendas',
       title: 'Agente de Gestão de Vendas',
-      description: 'Automatiza o fluxo de pedidos e cotações, reduzindo tarefas manuais dos vendedores e agilizando o processo comercial.',
+      description: 'Integração total com sistemas internos, permitindo automação do processo comercial completo.',
       icon: <ShoppingCart className="h-8 w-8" />,
       color: 'bg-orange-50 text-orange-600',
       benefits: [
@@ -86,7 +86,7 @@ const Solutions = () => {
     {
       id: 'cadastro-credito',
       title: 'Agente de Cadastro e Análise de Crédito',
-      description: 'Agiliza cadastros e análises de crédito, consultando fontes oficiais automaticamente e minimizando a burocracia.',
+      description: 'Automatiza até 80% do cadastro e análise, exigindo apenas validações pontuais.',
       icon: <FileCheck className="h-8 w-8" />,
       color: 'bg-teal-50 text-teal-600',
       benefits: [
@@ -98,7 +98,7 @@ const Solutions = () => {
     {
       id: 'disparador-promocoes',
       title: 'Disparador de Promoções via WhatsApp',
-      description: 'Automatiza o envio de ofertas e promoções segmentadas, mantendo relacionamento pessoal de forma escalável.',
+      description: 'Promoções pelo WhatsApp pessoal do vendedor, escalável e controlado.',
       icon: <SendHorizonal className="h-8 w-8" />,
       color: 'bg-indigo-50 text-indigo-600',
       benefits: [
@@ -114,7 +114,7 @@ const Solutions = () => {
     {
       id: 'followup-automatico',
       title: 'Agente de Follow-up Automático',
-      description: 'Automatiza o acompanhamento após cotações, garantindo que oportunidades não sejam esquecidas.',
+      description: 'Prioriza leads com maior potencial e alerta vendedores sobre oportunidades de alta conversão.',
       icon: <Clock className="h-8 w-8" />,
       color: 'bg-rose-50 text-rose-600',
       status: 'Em breve'
@@ -122,7 +122,7 @@ const Solutions = () => {
     {
       id: 'sugestao-produtos',
       title: 'Agente de Sugestão de Produtos',
-      description: 'Amplia o ticket médio sugerindo produtos complementares baseados no histórico e perfil do cliente.',
+      description: 'Recomendações personalizadas baseadas em algoritmos específicos para cada negócio.',
       icon: <ShoppingBag className="h-8 w-8" />,
       color: 'bg-emerald-50 text-emerald-600',
       status: 'Em breve'
@@ -130,7 +130,7 @@ const Solutions = () => {
     {
       id: 'validacao-ofertas',
       title: 'Agente de Validação de Ofertas',
-      description: 'Assegura que os vendedores ofereçam corretamente as promoções e condições planejadas pela empresa.',
+      description: 'Análise semântica profunda das conversas para validação assertiva de propostas comerciais.',
       icon: <CheckSquare className="h-8 w-8" />,
       color: 'bg-amber-50 text-amber-600',
       status: 'Em desenvolvimento'
@@ -138,7 +138,7 @@ const Solutions = () => {
     {
       id: 'qualidade-atendimento',
       title: 'Agente de Validação da Qualidade',
-      description: 'Analisa o desempenho em cordialidade, empatia e uso correto de técnicas de venda e relacionamento.',
+      description: 'Análise de sentimento para insights reais sobre experiência do cliente.',
       icon: <Headphones className="h-8 w-8" />,
       color: 'bg-sky-50 text-sky-600',
       status: 'Em desenvolvimento'
@@ -146,7 +146,7 @@ const Solutions = () => {
     {
       id: 'monitoramento-cotacoes',
       title: 'Agente de Monitoramento de Cotações',
-      description: 'Monitora cotações que entram, garantindo agilidade na resposta e identificando atrasos.',
+      description: 'Acompanhamento contínuo e alerta imediato sobre cotações pendentes.',
       icon: <AlertTriangle className="h-8 w-8" />,
       color: 'bg-red-50 text-red-600',
       status: 'Roadmap'
@@ -154,7 +154,7 @@ const Solutions = () => {
     {
       id: 'assistente-pessoal',
       title: 'Assistente Pessoal para Vendedores',
-      description: 'Agiliza tarefas de registro e acompanhamento usando mensagens de áudio no WhatsApp.',
+      description: 'Interações por voz diretamente via WhatsApp.',
       icon: <UserPlus className="h-8 w-8" />,
       color: 'bg-violet-50 text-violet-600',
       status: 'Roadmap'
@@ -162,7 +162,7 @@ const Solutions = () => {
     {
       id: 'gestao-carteira',
       title: 'Gestão Avançada de Carteira',
-      description: 'Monitora padrões de compra e gera alertas para retenção e aumento de vendas.',
+      description: 'Análises preditivas considerando fatores históricos e macroeconômicos.',
       icon: <Briefcase className="h-8 w-8" />,
       color: 'bg-cyan-50 text-cyan-600',
       status: 'Roadmap'
@@ -170,7 +170,7 @@ const Solutions = () => {
     {
       id: 'materiais-promocionais',
       title: 'Gama IA para Materiais Promocionais',
-      description: 'Automatiza a criação de campanhas e artes usando IA geradora de imagens e textos.',
+      description: 'Integração para criação e disparo automatizado de materiais promocionais.',
       icon: <Palette className="h-8 w-8" />,
       color: 'bg-pink-50 text-pink-600',
       status: 'Roadmap'
@@ -178,18 +178,49 @@ const Solutions = () => {
     {
       id: 'gestao-logistica',
       title: 'IA em Gestão Logística',
-      description: 'Otimiza processos logísticos como roteirização e rastreamento de entregas.',
+      description: 'Informações em tempo real sobre entregas para gestão proativa do relacionamento com clientes.',
       icon: <Truck className="h-8 w-8" />,
       color: 'bg-lime-50 text-lime-600',
       status: 'Roadmap'
     }
   ];
 
+  const consultingServices = [
+    {
+      id: 'maquina-vendas',
+      title: 'Consultoria "Máquina de Vendas 5x"',
+      description: 'Estruturação de processos comerciais robustos, com foco em prospecção outbound e vendas híbridas.',
+      icon: <Target className="h-8 w-8" />,
+      color: 'bg-blue-50 text-blue-600',
+    },
+    {
+      id: 'mentoria-comercial',
+      title: 'Mentoria Comercial Estratégica',
+      description: 'Acompanhamento estratégico personalizado para líderes e gestores comerciais, com ajustes ágeis e decisões assertivas.',
+      icon: <BookOpen className="h-8 w-8" />,
+      color: 'bg-purple-50 text-purple-600',
+    },
+    {
+      id: 'workshops',
+      title: 'Workshops e Treinamentos Presenciais',
+      description: 'Desenvolvimento prático e presencial das equipes comerciais, com metodologias atualizadas e aplicáveis.',
+      icon: <Users className="h-8 w-8" />,
+      color: 'bg-green-50 text-green-600',
+    },
+    {
+      id: 'implementacao-ia',
+      title: 'Implementação Estratégica de IA em Vendas',
+      description: 'Suporte completo na adoção de IA, desde qualificação de leads até automações avançadas no processo comercial.',
+      icon: <Sparkles className="h-8 w-8" />,
+      color: 'bg-amber-50 text-amber-600',
+    },
+  ];
+
   const solutionCategories = [
     {
       id: 'platform',
-      title: 'Plataforma de Atendimento',
-      description: 'Centralize todas as conversas de vendas em um único painel, substitua o WhatsApp Web e ganhe controle total sobre o atendimento ao cliente.',
+      title: 'Plataforma de Atendimento via WhatsApp',
+      description: 'Nossa plataforma integra agentes de IA que automatizam processos comerciais, reduzindo tarefas repetitivas e aumentando seu faturamento.',
       icon: <MonitorSmartphone className="h-12 w-12" />,
       color: 'bg-blue-900/20 text-blue-400 border border-blue-800/30',
       link: '/platform'
@@ -210,6 +241,45 @@ const Solutions = () => {
       color: 'bg-amber-900/20 text-amber-400 border border-amber-800/30',
       link: '/consulting'
     }
+  ];
+
+  const platformFeatures = [
+    {
+      title: 'Centralização de Conversas',
+      description: 'WhatsApp, Facebook, Instagram, Webchat, tudo num único painel.',
+      icon: <MessageSquare className="h-8 w-8" />,
+      color: 'bg-blue-50 text-blue-600',
+    },
+    {
+      title: 'Distribuição Automática',
+      description: 'Mensagens roteadas entre setores e equipes conforme regras definidas.',
+      icon: <Users className="h-8 w-8" />,
+      color: 'bg-purple-50 text-purple-600',
+    },
+    {
+      title: 'Acompanhamento em Tempo Real',
+      description: 'Controle de SLA e monitoramento da qualidade do atendimento.',
+      icon: <Clock className="h-8 w-8" />,
+      color: 'bg-green-50 text-green-600',
+    },
+    {
+      title: 'Integrações',
+      description: 'Conexão com ERPs, automação financeira e automações de IA.',
+      icon: <Zap className="h-8 w-8" />,
+      color: 'bg-amber-50 text-amber-600',
+    },
+    {
+      title: 'Múltiplos Números',
+      description: 'Suporte a números oficiais e não-oficiais de WhatsApp.',
+      icon: <Smartphone className="h-8 w-8" />,
+      color: 'bg-rose-50 text-rose-600',
+    },
+    {
+      title: 'Dashboards Analíticos',
+      description: 'Integração com relatórios de desempenho e análise de dados.',
+      icon: <BarChart className="h-8 w-8" />,
+      color: 'bg-indigo-50 text-indigo-600',
+    },
   ];
 
   return (
@@ -255,6 +325,37 @@ const Solutions = () => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Platform Features Section */}
+        <div id="platform-section" className="pt-8 mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Plataforma de Atendimento via WhatsApp</h3>
+            <p className="text-white/80">
+              Centralize todas as conversas de vendas em um único painel, substitua o WhatsApp Web 
+              e ganhe controle total sobre o atendimento ao cliente.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {platformFeatures.map((feature, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "animate-on-scroll opacity-0 glass-card p-6 transition-all duration-300 hover:-translate-y-1",
+                  getDelayClass(index, 100)
+                )}
+              >
+                <div className="flex items-center mb-4">
+                  <div className={cn("p-3 rounded-lg mr-4", feature.color)}>
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-white/70">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* AI Agents Section */}
@@ -330,6 +431,43 @@ const Solutions = () => {
                   </div>
                 </div>
                 <p className="text-white/70 text-sm">{solution.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Consulting Services Section */}
+        <div className="pt-16 mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gradient">Serviços de Consultoria e Treinamento</h3>
+            <p className="text-white/80">
+              Além da tecnologia, oferecemos serviços especializados para impulsionar 
+              seus resultados comerciais e transformar sua equipe de vendas.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {consultingServices.map((service, index) => (
+              <div
+                key={service.id}
+                className={cn(
+                  "animate-on-scroll opacity-0 glass-card p-8 transition-all duration-300 hover:-translate-y-1",
+                  getDelayClass(index, 100)
+                )}
+              >
+                <div className="flex items-center mb-6">
+                  <div className={cn("p-4 rounded-lg mr-4", service.color)}>
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-white/70 mb-6">{service.description}</p>
+                <Link 
+                  to="/consulting" 
+                  className="text-blue-400 font-medium flex items-center hover:text-blue-300 link-underline"
+                >
+                  Saiba mais
+                </Link>
               </div>
             ))}
           </div>
