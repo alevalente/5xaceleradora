@@ -30,6 +30,8 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { createObserver, getDelayClass } from '../utils/animations';
+import { Card, CardHeader, CardContent, CardFooter, CardTitle, CardDescription } from './ui/card';
+import { Badge } from './ui/badge';
 
 const Solutions = () => {
   useEffect(() => {
@@ -302,10 +304,12 @@ const Solutions = () => {
         {/* Solution Categories */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {solutionCategories.map((category, index) => (
-            <div
+            <Card
               key={category.id}
+              variant="glass"
+              hoverEffect={true}
               className={cn(
-                "animate-on-scroll opacity-0 glass-card p-8 transition-all duration-300 hover:-translate-y-1",
+                "animate-on-scroll opacity-0 p-8",
                 getDelayClass(index, 100)
               )}
             >
@@ -329,7 +333,7 @@ const Solutions = () => {
                   Saiba mais
                 </Link>
               )}
-            </div>
+            </Card>
           ))}
         </div>
 
@@ -345,21 +349,27 @@ const Solutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {platformFeatures.map((feature, index) => (
-              <div
+              <Card
                 key={index}
+                variant="glass"
+                hoverEffect={true}
                 className={cn(
-                  "animate-on-scroll opacity-0 glass-card p-6 transition-all duration-300 hover:-translate-y-1",
+                  "animate-on-scroll opacity-0",
                   getDelayClass(index, 100)
                 )}
               >
-                <div className="flex items-center mb-4">
-                  <div className={cn("p-3 rounded-lg mr-4", feature.color)}>
-                    {feature.icon}
+                <CardHeader>
+                  <div className="flex items-center mb-2">
+                    <div className={cn("p-3 rounded-lg mr-4", feature.color)}>
+                      {feature.icon}
+                    </div>
+                    <CardTitle className="text-lg font-semibold text-white">{feature.title}</CardTitle>
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-                </div>
-                <p className="text-white/70">{feature.description}</p>
-              </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-white/70">{feature.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -376,32 +386,40 @@ const Solutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {agentSolutions.map((solution, index) => (
-              <div
+              <Card
                 key={solution.id}
+                variant="glass"
+                hoverEffect={true}
                 className={cn(
-                  "animate-on-scroll opacity-0 glass-card p-8 transition-all duration-300 hover:-translate-y-1",
+                  "animate-on-scroll opacity-0",
                   getDelayClass(index, 100)
                 )}
               >
-                <div className={cn("p-4 rounded-lg inline-block mb-6", solution.color)}>
-                  {solution.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{solution.title}</h3>
-                <p className="text-white/70 mb-6">{solution.description}</p>
-                <ul className="mb-6 space-y-2">
-                  {solution.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start text-white/60 text-sm">
-                      <span className="text-blue-400 mr-2">•</span> {benefit}
-                    </li>
-                  ))}
-                </ul>
-                <Link 
-                  to={`/agent/${solution.id}`} 
-                  className="text-blue-400 font-medium flex items-center hover:text-blue-300 link-underline"
-                >
-                  Saiba mais
-                </Link>
-              </div>
+                <CardHeader>
+                  <div className={cn("p-4 rounded-lg inline-block mb-4", solution.color)}>
+                    {solution.icon}
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-white mb-2">{solution.title}</CardTitle>
+                  <CardDescription className="text-white/70">{solution.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="mb-4 space-y-2">
+                    {solution.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-start text-white/60 text-sm">
+                        <span className="text-blue-400 mr-2">•</span> {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter className="pt-2">
+                  <Link 
+                    to={`/agent/${solution.id}`} 
+                    className="text-blue-400 font-medium flex items-center hover:text-blue-300 link-underline"
+                  >
+                    Saiba mais
+                  </Link>
+                </CardFooter>
+              </Card>
             ))}
           </div>
         </div>
@@ -418,26 +436,31 @@ const Solutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {futureSolutions.slice(0, 6).map((solution, index) => (
-              <div
+              <Card
                 key={solution.id}
+                variant="glass"
                 className={cn(
-                  "animate-on-scroll opacity-0 glass-card p-6 transition-all duration-300",
+                  "animate-on-scroll opacity-0",
                   getDelayClass(index, 100)
                 )}
               >
-                <div className="flex items-center mb-4">
-                  <div className={cn("p-3 rounded-lg mr-4", solution.color)}>
-                    {solution.icon}
+                <CardHeader className="pb-0">
+                  <div className="flex items-center mb-2">
+                    <div className={cn("p-3 rounded-lg mr-4", solution.color)}>
+                      {solution.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{solution.title}</h3>
+                      <Badge className="mt-1 bg-blue-900/30 text-blue-300 border border-blue-800/30 hover:bg-blue-800/40">
+                        {solution.status}
+                      </Badge>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{solution.title}</h3>
-                    <span className="text-xs px-2 py-1 rounded-full bg-blue-900/30 text-blue-300 border border-blue-800/30">
-                      {solution.status}
-                    </span>
-                  </div>
-                </div>
-                <p className="text-white/70 text-sm">{solution.description}</p>
-              </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-white/70 text-sm">{solution.description}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -454,27 +477,33 @@ const Solutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {consultingServices.map((service, index) => (
-              <div
+              <Card
                 key={service.id}
+                variant="glass"
+                hoverEffect={true}
                 className={cn(
-                  "animate-on-scroll opacity-0 glass-card p-8 transition-all duration-300 hover:-translate-y-1",
+                  "animate-on-scroll opacity-0",
                   getDelayClass(index, 100)
                 )}
               >
-                <div className="flex items-center mb-6">
-                  <div className={cn("p-4 rounded-lg mr-4", service.color)}>
-                    {service.icon}
+                <CardHeader>
+                  <div className="flex items-center mb-4">
+                    <div className={cn("p-4 rounded-lg mr-4", service.color)}>
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-xl font-semibold text-white">{service.title}</CardTitle>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                </div>
-                <p className="text-white/70 mb-6">{service.description}</p>
-                <Link 
-                  to="/consulting" 
-                  className="text-blue-400 font-medium flex items-center hover:text-blue-300 link-underline"
-                >
-                  Saiba mais
-                </Link>
-              </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-white/70 mb-4">{service.description}</p>
+                  <Link 
+                    to="/consulting" 
+                    className="text-blue-400 font-medium flex items-center hover:text-blue-300 link-underline"
+                  >
+                    Saiba mais
+                  </Link>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
