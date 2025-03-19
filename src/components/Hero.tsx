@@ -44,7 +44,7 @@ const Hero = () => {
               Aumente sua performance comercial em até <span className="text-blue-700">5x</span> com IA
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-300">
-              Nossa plataforma integra agentes inteligentes para automatizar processos comerciais, reduzir tarefas repetitivas e aumentar seu faturamento.
+              Integre agentes inteligentes para automatizar processos comerciais, reduzir tarefas repetitivas e aumentar seu faturamento.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400">
               <a href="#solutions" className="button-primary">
