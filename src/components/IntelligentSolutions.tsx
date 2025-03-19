@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   MonitorSmartphone, 
   BrainCircuit, 
@@ -193,10 +195,14 @@ const IntelligentSolutions = () => {
                           <a href="#" className="text-white/90 font-medium hover:text-white">
                             Veja abaixo
                           </a>
-                        ) : (
-                          <a href={`#${category.id}`} className="text-white/90 font-medium hover:text-white">
+                        ) : category.id === 'platform' ? (
+                          <Link to="/platform" className="text-white/90 font-medium hover:text-white">
                             Saiba mais
-                          </a>
+                          </Link>
+                        ) : (
+                          <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
+                            Saiba mais
+                          </Link>
                         )}
                       </CardFooter>
                     </Card>
