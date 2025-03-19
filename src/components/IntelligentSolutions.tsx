@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   MonitorSmartphone, 
@@ -43,20 +42,6 @@ const IntelligentSolutions = () => {
       title: 'Consultoria e Treinamentos',
       description: 'Transforme sua equipe comercial com nossa metodologia comprovada de consultoria, mentorias e treinamentos especializados.',
       icon: <Lightbulb className="h-12 w-12 text-white" />,
-      color: 'bg-blue-900/80 text-white border border-blue-800/50',
-    },
-    {
-      id: 'platform-extra',
-      title: 'Análise de Dados em Tempo Real',
-      description: 'Dashboards inteligentes que mostram o desempenho da sua equipe comercial em tempo real, com insights acionáveis.',
-      icon: <Clock className="h-12 w-12 text-white" />,
-      color: 'bg-blue-900/80 text-white border border-blue-800/50',
-    },
-    {
-      id: 'strategy',
-      title: 'Estratégia Comercial Personalizada',
-      description: 'Desenvolvemos estratégias personalizadas para o seu negócio, considerando seu mercado e objetivos específicos.',
-      icon: <CheckSquare className="h-12 w-12 text-white" />,
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     }
   ];
