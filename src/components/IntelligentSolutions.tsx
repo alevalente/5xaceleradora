@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -250,8 +251,10 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <div className="flex justify-center mt-6 space-x-4">
+              <CarouselPrevious className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+              <CarouselNext className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+            </div>
           </Carousel>
         </div>
 
@@ -293,8 +296,10 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <div className="flex justify-center mt-6 space-x-4">
+              <CarouselPrevious className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+              <CarouselNext className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+            </div>
           </Carousel>
         </div>
       </div>
