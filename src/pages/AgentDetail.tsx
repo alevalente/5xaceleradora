@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -148,7 +149,7 @@ const AgentDetail = () => {
         <div className="container-wide">
           <Button 
             variant="ghost" 
-            onClick={() => navigate(-1)}
+            onClick={() => navigate('/')}
             className="mb-6 text-white"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
