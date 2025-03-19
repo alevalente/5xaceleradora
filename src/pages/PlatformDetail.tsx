@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -56,9 +57,9 @@ const PlatformDetail = () => {
       <main className="flex-grow pt-24 pb-20">
         <div className="container-wide">
           <Button 
-            variant="outline" 
+            variant="ghost" 
             onClick={() => navigate(-1)}
-            className="mb-6 text-white border-white/20 hover:bg-white/10 hover:text-white"
+            className="mb-6 text-white"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Voltar
