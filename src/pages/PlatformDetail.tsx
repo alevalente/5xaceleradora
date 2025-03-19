@@ -11,32 +11,32 @@ const PlatformDetail = () => {
   
   const features = [
     {
-      icon: <MessageSquare className="h-8 w-8" />,
+      icon: <MessageSquare className="h-8 w-8 text-white" />,
       title: 'Centralização de Conversas',
       description: 'WhatsApp, Facebook, Instagram, Webchat, tudo em um único painel para facilitar o gerenciamento.'
     },
     {
-      icon: <Users className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8 text-white" />,
       title: 'Distribuição Automática',
       description: 'Mensagens roteadas entre setores e equipes conforme regras personalizadas de atendimento.'
     },
     {
-      icon: <PieChart className="h-8 w-8" />,
+      icon: <PieChart className="h-8 w-8 text-white" />,
       title: 'Acompanhamento em Tempo Real',
       description: 'Controle de SLA e monitoramento da qualidade de atendimento para garantir excelência.'
     },
     {
-      icon: <Zap className="h-8 w-8" />,
+      icon: <Zap className="h-8 w-8 text-white" />,
       title: 'Integrações Avançadas',
       description: 'Conexão perfeita com ERPs, automação financeira e recursos de inteligência artificial.'
     },
     {
-      icon: <Repeat className="h-8 w-8" />,
+      icon: <Repeat className="h-8 w-8 text-white" />,
       title: 'Múltiplos Números',
       description: 'Suporte a números oficiais e não-oficiais de WhatsApp para maior flexibilidade.'
     },
     {
-      icon: <BarChart className="h-8 w-8" />,
+      icon: <BarChart className="h-8 w-8 text-white" />,
       title: 'Dashboards Analíticos',
       description: 'Relatórios detalhados de desempenho e análise de dados para tomada de decisões.'
     }
@@ -95,7 +95,7 @@ const PlatformDetail = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-white mr-3 flex-shrink-0 mt-0.5" />
                   <span className="text-white/80">{benefit}</span>
                 </div>
               ))}

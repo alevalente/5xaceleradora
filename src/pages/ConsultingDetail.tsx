@@ -12,7 +12,7 @@ const ConsultingDetail = () => {
   const consultingServices = [
     {
       title: 'Consultoria "Máquina de Vendas 5x"',
-      icon: <Target className="h-10 w-10" />,
+      icon: <Target className="h-10 w-10 text-white" />,
       description: 'Construa uma máquina comercial previsível, híbrida (presencial + inside sales), com foco em prospecção outbound e na estruturação de um processo de vendas robusto.',
       duration: '90 a 120 dias',
       deliverables: [
@@ -26,7 +26,7 @@ const ConsultingDetail = () => {
     },
     {
       title: 'Mentoria Comercial Estratégica',
-      icon: <BookOpen className="h-10 w-10" />,
+      icon: <BookOpen className="h-10 w-10 text-white" />,
       description: 'Acompanhamento de perto para líderes e gestores comerciais, auxiliando em tomadas de decisão estratégicas e ajustes rápidos no dia a dia.',
       duration: 'Recorrente ou pacotes de 3 a 6 meses',
       deliverables: [
@@ -40,7 +40,7 @@ const ConsultingDetail = () => {
     },
     {
       title: 'Workshops e Treinamentos Presenciais',
-      icon: <Users className="h-10 w-10" />,
+      icon: <Users className="h-10 w-10 text-white" />,
       description: 'Capacitação intensiva para vendedores, gestores comerciais e equipes correlatas, com aplicação imediata de técnicas e metodologias.',
       duration: '1 a 2 dias (workshops) ou formações mais intensivas',
       deliverables: [
@@ -54,7 +54,7 @@ const ConsultingDetail = () => {
     },
     {
       title: 'Implementação Estratégica de IA em Vendas',
-      icon: <Sparkles className="h-10 w-10" />,
+      icon: <Sparkles className="h-10 w-10 text-white" />,
       description: 'Auxílio para empresas incorporarem IA em diversos pontos do processo comercial, desde a qualificação de leads até follow-up automatizado e análise de dados avançada.',
       duration: 'Personalizada conforme projeto',
       deliverables: [
@@ -119,7 +119,7 @@ const ConsultingDetail = () => {
                 <ul className="space-y-2">
                   {service.deliverables.map((item, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0 mt-1" />
+                      <CheckCircle className="h-4 w-4 text-white mr-2 flex-shrink-0 mt-1" />
                       <span className="text-white/70 text-sm">{item}</span>
                     </li>
                   ))}
@@ -130,13 +130,13 @@ const ConsultingDetail = () => {
 
           <div className="glass-card p-8 mb-12">
             <div className="flex items-center justify-center mb-8">
-              <Award className="h-12 w-12 text-blue-400 mr-4" />
+              <Award className="h-12 w-12 text-white mr-4" />
               <h2 className="text-2xl font-bold text-gradient">Benefícios dos Nossos Serviços</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-white mr-3 flex-shrink-0 mt-0.5" />
                   <span className="text-white/80">{benefit}</span>
                 </div>
               ))}

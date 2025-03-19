@@ -167,7 +167,7 @@ const AgentDetail = () => {
               <ul className="space-y-4">
                 {agent.benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-white mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-white/80">{benefit}</span>
                   </li>
                 ))}
@@ -179,7 +179,7 @@ const AgentDetail = () => {
               <ul className="space-y-4">
                 {agent.features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-blue-400 mr-3 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-5 w-5 text-white mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-white/80">{feature}</span>
                   </li>
                 ))}
