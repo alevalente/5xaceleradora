@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -296,8 +295,7 @@ const Solutions = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-6 text-gradient">Soluções Inteligentes para sua Empresa</h2>
           <p className="text-white/80 text-lg">
-            Nossa plataforma integra agentes de IA que automatizam processos comerciais, 
-            reduzindo tarefas repetitivas e aumentando seu faturamento.
+            A inteligência artificial automatiza processos comerciais, reduzindo tarefas repetitivas e aumentando seu faturamento.
           </p>
         </div>
 
