@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -225,7 +224,7 @@ const IntelligentSolutions = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {agentSolutions.map((solution) => (
@@ -251,10 +250,8 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8 gap-4">
-              <CarouselPrevious className="static translate-y-0 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-              <CarouselNext className="static translate-y-0 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-            </div>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
           </Carousel>
         </div>
 
@@ -272,7 +269,7 @@ const IntelligentSolutions = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {upcomingAgents.map((agent) => (
@@ -296,10 +293,8 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8 gap-4">
-              <CarouselPrevious className="static translate-y-0 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-              <CarouselNext className="static translate-y-0 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
-            </div>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
           </Carousel>
         </div>
       </div>
