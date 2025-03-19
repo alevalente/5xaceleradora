@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -192,7 +191,7 @@ const IntelligentSolutions = () => {
                       </CardContent>
                       <CardFooter>
                         {category.id === 'agents' ? (
-                          <a href="#" className="text-white/90 font-medium hover:text-white">
+                          <a href="#agents" className="text-white/90 font-medium hover:text-white">
                             Veja abaixo
                           </a>
                         ) : category.id === 'platform' ? (
@@ -214,7 +213,7 @@ const IntelligentSolutions = () => {
         </div>
 
         {/* Agentes de IA - Carrossel */}
-        <div>
+        <div id="agents">
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Agentes de IA</h3>
           <Carousel
             opts={{
