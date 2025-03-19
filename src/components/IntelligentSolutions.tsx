@@ -19,9 +19,7 @@ import {
 import { 
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
+  CarouselItem
 } from '@/components/ui/carousel';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -201,10 +199,6 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static mx-2" />
-              <CarouselNext className="relative static mx-2" />
-            </div>
           </Carousel>
         </div>
 
@@ -242,10 +236,6 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static mx-2" />
-              <CarouselNext className="relative static mx-2" />
-            </div>
           </Carousel>
         </div>
 
@@ -287,10 +277,6 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static mx-2" />
-              <CarouselNext className="relative static mx-2" />
-            </div>
           </Carousel>
         </div>
       </div>
