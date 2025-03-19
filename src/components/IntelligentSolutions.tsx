@@ -8,7 +8,13 @@ import {
   Clock,
   ShoppingBag,
   CheckSquare,
-  Headphones
+  Headphones,
+  AlertTriangle,
+  UserPlus,
+  Briefcase,
+  Palette,
+  Truck,
+  UserCheck
 } from 'lucide-react';
 import { 
   Carousel,
@@ -81,6 +87,73 @@ const IntelligentSolutions = () => {
       title: 'Agente de Cadastro e Análise de Crédito',
       description: 'Automatiza até 80% do cadastro e análise, exigindo apenas validações pontuais.',
       icon: <CheckSquare className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    }
+  ];
+
+  // Novos Agentes em Desenvolvimento - Adicionando a nova seção
+  const upcomingAgents = [
+    {
+      id: 'followup-automatico',
+      title: 'Agente de Follow-up Automático',
+      description: 'Priorização inteligente de leads para maior conversão.',
+      icon: <Clock className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'sugestao-produtos',
+      title: 'Agente de Sugestão de Produtos',
+      description: 'Recomendações personalizadas para aumentar vendas através de upselling e cross-selling.',
+      icon: <ShoppingBag className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'validacao-ofertas',
+      title: 'Agente de Validação de Ofertas',
+      description: 'Análise semântica profunda das propostas comerciais.',
+      icon: <CheckSquare className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'qualidade-atendimento',
+      title: 'Agente de Validação da Qualidade do Atendimento',
+      description: 'Análise de sentimento das conversas para insights sobre a satisfação do cliente.',
+      icon: <Headphones className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'monitoramento-cotacoes',
+      title: 'Agente de Monitoramento de Cotações',
+      description: 'Alertas automáticos sobre cotações pendentes.',
+      icon: <AlertTriangle className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'assistente-pessoal',
+      title: 'Assistente Pessoal para Vendedores',
+      description: 'Interação simplificada e intuitiva por voz diretamente via WhatsApp.',
+      icon: <UserPlus className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'gestao-carteira',
+      title: 'Gestão Avançada de Carteira',
+      description: 'Utiliza análise preditiva baseada em histórico e indicadores econômicos.',
+      icon: <Briefcase className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'materiais-promocionais',
+      title: 'Gama IA para Promoções',
+      description: 'Automação para criação e envio de materiais promocionais.',
+      icon: <Palette className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
+    },
+    {
+      id: 'gestao-logistica',
+      title: 'IA em Gestão Logística',
+      description: 'Rastreamento e informações logísticas em tempo real para um atendimento proativo.',
+      icon: <Truck className="h-8 w-8 text-white" />,
       color: 'bg-blue-900/80 text-white',
     }
   ];
@@ -163,6 +236,51 @@ const IntelligentSolutions = () => {
                         <a href={`/agent/${solution.id}`} className="text-white/90 font-medium hover:text-white">
                           Saiba mais
                         </a>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-8">
+              <CarouselPrevious className="relative static mx-2" />
+              <CarouselNext className="relative static mx-2" />
+            </div>
+          </Carousel>
+        </div>
+
+        {/* Nova seção: Novos Agentes em Desenvolvimento */}
+        <div className="mt-20">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Novos Agentes em Desenvolvimento</h3>
+            <p className="text-gray-600">
+              Estamos constantemente inovando para otimizar ainda mais os processos comerciais da sua empresa.
+            </p>
+          </div>
+          
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {upcomingAgents.map((agent) => (
+                <CarouselItem key={agent.id} className="md:basis-1/3 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full bg-blue-900 text-white border border-blue-800/50" hoverEffect={true}>
+                      <CardHeader>
+                        <div className={cn("p-4 rounded-lg inline-block mb-4", agent.color)}>
+                          {agent.icon}
+                        </div>
+                        <CardTitle className="text-xl font-semibold text-white">{agent.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-white/80">{agent.description}</CardDescription>
+                      </CardContent>
+                      <CardFooter>
+                        <span className="text-white/70 text-sm">Em breve</span>
                       </CardFooter>
                     </Card>
                   </div>
