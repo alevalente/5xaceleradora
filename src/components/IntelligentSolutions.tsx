@@ -28,36 +28,36 @@ const IntelligentSolutions = () => {
       id: 'platform',
       title: 'Plataforma de Atendimento via WhatsApp',
       description: 'Nossa plataforma integra agentes de IA que automatizam processos comerciais, reduzindo tarefas repetitivas e aumentando seu faturamento.',
-      icon: <MonitorSmartphone className="h-12 w-12" />,
-      color: 'bg-blue-900/20 text-blue-400 border border-blue-800/30',
+      icon: <MonitorSmartphone className="h-12 w-12 text-white" />,
+      color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
       id: 'agents',
       title: 'Agentes de IA',
       description: 'Automatize processos comerciais com nossa suite de agentes inteligentes que reduzem tarefas repetitivas e aumentam a eficiência.',
-      icon: <BrainCircuit className="h-12 w-12" />,
-      color: 'bg-purple-900/20 text-purple-400 border border-purple-800/30',
+      icon: <BrainCircuit className="h-12 w-12 text-white" />,
+      color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
       id: 'consulting',
       title: 'Consultoria e Treinamentos',
       description: 'Transforme sua equipe comercial com nossa metodologia comprovada de consultoria, mentorias e treinamentos especializados.',
-      icon: <Lightbulb className="h-12 w-12" />,
-      color: 'bg-amber-900/20 text-amber-400 border border-amber-800/30',
+      icon: <Lightbulb className="h-12 w-12 text-white" />,
+      color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
       id: 'platform-extra',
       title: 'Análise de Dados em Tempo Real',
       description: 'Dashboards inteligentes que mostram o desempenho da sua equipe comercial em tempo real, com insights acionáveis.',
-      icon: <Clock className="h-12 w-12" />,
-      color: 'bg-green-900/20 text-green-400 border border-green-800/30',
+      icon: <Clock className="h-12 w-12 text-white" />,
+      color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
       id: 'strategy',
       title: 'Estratégia Comercial Personalizada',
       description: 'Desenvolvemos estratégias personalizadas para o seu negócio, considerando seu mercado e objetivos específicos.',
-      icon: <CheckSquare className="h-12 w-12" />,
-      color: 'bg-rose-900/20 text-rose-400 border border-rose-800/30',
+      icon: <CheckSquare className="h-12 w-12 text-white" />,
+      color: 'bg-blue-900/80 text-white border border-blue-800/50',
     }
   ];
 
@@ -66,32 +66,32 @@ const IntelligentSolutions = () => {
     {
       title: 'Centralização de Conversas',
       description: 'WhatsApp, Facebook, Instagram, Webchat, tudo num único painel.',
-      icon: <MessageSquare className="h-8 w-8" />,
-      color: 'bg-blue-50 text-blue-600',
+      icon: <MessageSquare className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       title: 'Distribuição Automática',
       description: 'Mensagens roteadas entre setores e equipes conforme regras definidas.',
-      icon: <Users className="h-8 w-8" />,
-      color: 'bg-purple-50 text-purple-600',
+      icon: <Users className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       title: 'Acompanhamento em Tempo Real',
       description: 'Controle de SLA e monitoramento da qualidade do atendimento.',
-      icon: <Clock className="h-8 w-8" />,
-      color: 'bg-green-50 text-green-600',
+      icon: <Clock className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       title: 'Integrações Avançadas',
       description: 'Conexão com ERPs, automação financeira e automações de IA.',
-      icon: <ShoppingBag className="h-8 w-8" />,
-      color: 'bg-amber-50 text-amber-600',
+      icon: <ShoppingBag className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       title: 'Análise de Satisfação',
       description: 'Monitoramento do sentimento do cliente e feedbacks automáticos.',
-      icon: <Headphones className="h-8 w-8" />,
-      color: 'bg-rose-50 text-rose-600',
+      icon: <Headphones className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     }
   ];
 
@@ -101,36 +101,36 @@ const IntelligentSolutions = () => {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
       description: 'Varredura recorrente (por exemplo, semanal), evitando negligenciar qualquer cliente.',
-      icon: <Users className="h-8 w-8" />,
-      color: 'bg-blue-50 text-blue-600',
+      icon: <Users className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       id: 'avaliacao-monitoramento',
       title: 'Agente de Avaliação e Monitoramento',
       description: 'Monitoramento sistemático das conversas para avaliações detalhadas e contínuas.',
-      icon: <BrainCircuit className="h-8 w-8" />,
-      color: 'bg-purple-50 text-purple-600',
+      icon: <BrainCircuit className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       id: 'reativacao-automatica',
       title: 'Agente de Reativação Automática',
       description: 'Campanhas pontuais de reativação, sem sobrecarregar a equipe comercial.',
-      icon: <Lightbulb className="h-8 w-8" />,
-      color: 'bg-green-50 text-green-600',
+      icon: <Lightbulb className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       id: 'gestao-vendas',
       title: 'Agente de Gestão de Vendas',
       description: 'Integração total com sistemas internos, permitindo automação do processo comercial completo.',
-      icon: <ShoppingBag className="h-8 w-8" />,
-      color: 'bg-orange-50 text-orange-600',
+      icon: <ShoppingBag className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     },
     {
       id: 'cadastro-credito',
       title: 'Agente de Cadastro e Análise de Crédito',
       description: 'Automatiza até 80% do cadastro e análise, exigindo apenas validações pontuais.',
-      icon: <CheckSquare className="h-8 w-8" />,
-      color: 'bg-teal-50 text-teal-600',
+      icon: <CheckSquare className="h-8 w-8 text-white" />,
+      color: 'bg-blue-900/80 text-white',
     }
   ];
 
@@ -157,18 +157,18 @@ const IntelligentSolutions = () => {
               {solutionCategories.map((category) => (
                 <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card variant="gradient" hoverEffect={true} className="h-full">
+                    <Card className="h-full bg-blue-900 text-white" hoverEffect={true}>
                       <CardHeader>
                         <div className={cn("p-4 rounded-lg inline-block mb-4", category.color)}>
                           {category.icon}
                         </div>
-                        <CardTitle className="text-xl font-semibold">{category.title}</CardTitle>
+                        <CardTitle className="text-xl font-semibold text-white">{category.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-gray-600">{category.description}</CardDescription>
+                        <CardDescription className="text-white/80">{category.description}</CardDescription>
                       </CardContent>
                       <CardFooter>
-                        <a href={`#${category.id}`} className="text-blue-600 font-medium hover:text-blue-800">
+                        <a href={`#${category.id}`} className="text-white/90 font-medium hover:text-white">
                           Saiba mais
                         </a>
                       </CardFooter>
@@ -198,17 +198,17 @@ const IntelligentSolutions = () => {
               {platformFeatures.map((feature, index) => (
                 <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="h-full" hoverEffect={true}>
+                    <Card className="h-full bg-blue-900 text-white" hoverEffect={true}>
                       <CardHeader>
                         <div className="flex items-center mb-2">
                           <div className={cn("p-3 rounded-lg mr-4", feature.color)}>
                             {feature.icon}
                           </div>
-                          <CardTitle className="text-lg font-semibold">{feature.title}</CardTitle>
+                          <CardTitle className="text-lg font-semibold text-white">{feature.title}</CardTitle>
                         </div>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-gray-600">{feature.description}</p>
+                        <p className="text-white/80">{feature.description}</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -236,18 +236,18 @@ const IntelligentSolutions = () => {
               {agentSolutions.map((solution) => (
                 <CarouselItem key={solution.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card variant="outline" hoverEffect={true} className="h-full">
+                    <Card className="h-full bg-blue-900 text-white border border-blue-800/50" hoverEffect={true}>
                       <CardHeader>
                         <div className={cn("p-4 rounded-lg inline-block mb-4", solution.color)}>
                           {solution.icon}
                         </div>
-                        <CardTitle className="text-xl font-semibold">{solution.title}</CardTitle>
+                        <CardTitle className="text-xl font-semibold text-white">{solution.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-gray-600">{solution.description}</CardDescription>
+                        <CardDescription className="text-white/80">{solution.description}</CardDescription>
                       </CardContent>
                       <CardFooter>
-                        <a href={`/agent/${solution.id}`} className="text-blue-600 font-medium hover:text-blue-800">
+                        <a href={`/agent/${solution.id}`} className="text-white/90 font-medium hover:text-white">
                           Saiba mais
                         </a>
                       </CardFooter>
