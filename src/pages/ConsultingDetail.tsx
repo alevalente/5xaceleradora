@@ -153,8 +153,8 @@ const ConsultingDetail = () => {
               <a href="#contact" className="button-primary">
                 Solicitar Proposta
               </a>
-              <a href="#solutions" className="button-secondary">
-                Ver Nossas Soluções de IA
+              <a href="/#solutions" className="button-secondary">
+                Ver Outras Soluções
               </a>
             </div>
           </div>

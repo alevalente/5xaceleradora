@@ -112,8 +112,8 @@ const PlatformDetail = () => {
               <a href="#contact" className="button-primary">
                 Solicitar Demonstração
               </a>
-              <a href="#solutions" className="button-secondary">
-                Ver Agentes de IA
+              <a href="/#solutions" className="button-secondary">
+                Ver Outras Soluções
               </a>
             </div>
           </div>

@@ -197,7 +197,7 @@ const AgentDetail = () => {
               <a href="#contact" className="button-primary">
                 Solicitar Demonstração
               </a>
-              <a href="#solutions" className="button-secondary">
+              <a href="/#solutions" className="button-secondary">
                 Ver Outras Soluções
               </a>
             </div>
