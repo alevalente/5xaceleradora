@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   MonitorSmartphone, 
@@ -190,9 +189,15 @@ const IntelligentSolutions = () => {
                         <CardDescription className="text-white/80">{category.description}</CardDescription>
                       </CardContent>
                       <CardFooter>
-                        <a href={`#${category.id}`} className="text-white/90 font-medium hover:text-white">
-                          Saiba mais
-                        </a>
+                        {category.id === 'agents' ? (
+                          <a href="#" className="text-white/90 font-medium hover:text-white">
+                            Veja abaixo
+                          </a>
+                        ) : (
+                          <a href={`#${category.id}`} className="text-white/90 font-medium hover:text-white">
+                            Saiba mais
+                          </a>
+                        )}
                       </CardFooter>
                     </Card>
                   </div>
