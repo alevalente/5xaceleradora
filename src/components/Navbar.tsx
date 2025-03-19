@@ -11,11 +11,8 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState('');
   const location = useLocation();
 
-  const hasDarkBackground = ['/platform', '/consulting', '/agent'].some(path => 
-    location.pathname.startsWith(path)
-  );
-
-  const logoSrc = hasDarkBackground ? images.logoWhite : images.logo;
+  // Always use white logo since we're making the navbar blue
+  const logoSrc = images.logoWhite;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,17 +56,16 @@ const Navbar = () => {
     { id: 'contact', label: 'Contato', href: '#contact' },
   ];
 
-  const textColor = hasDarkBackground 
-    ? "text-white hover:text-white/80" 
-    : "text-gray-800 hover:text-primary";
+  // Always use white text for the navbar items
+  const textColor = "text-white hover:text-white/80";
 
   return (
     <nav 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300',
         isScrolled 
-          ? (hasDarkBackground ? 'bg-black/40 backdrop-blur-lg shadow-subtle' : 'bg-white/80 backdrop-blur-lg shadow-subtle')
-          : 'bg-transparent'
+          ? 'bg-blue-700/95 backdrop-blur-lg shadow-subtle'
+          : 'bg-blue-700'
       )}
     >
       <div className="container-wide flex items-center justify-between">
@@ -144,10 +140,7 @@ const Navbar = () => {
           </ul>
           <a 
             href="#contact" 
-            className={cn(
-              "button-primary animate-fade-in",
-              hasDarkBackground && !isScrolled ? "border-white text-white hover:bg-white hover:text-primary" : ""
-            )}
+            className="border-white text-white hover:bg-white hover:text-blue-700 button-primary"
           >
             Fale Conosco
           </a>
@@ -156,10 +149,7 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <button
           onClick={toggleMenu}
-          className={cn(
-            "md:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none", 
-            hasDarkBackground ? "text-white hover:bg-white/10" : "text-gray-700"
-          )}
+          className="md:hidden p-2 rounded-md text-white hover:bg-white/10 focus:outline-none"
           aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -169,8 +159,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "md:hidden fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out pt-20",
-          hasDarkBackground ? "bg-gray-900" : "bg-white",
+          "md:hidden fixed inset-0 bg-blue-700 z-40 transform transition-transform duration-300 ease-in-out pt-20",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -182,10 +171,7 @@ const Navbar = () => {
                   <div>
                     <button
                       onClick={() => handleDropdown(item.id)}
-                      className={cn(
-                        "flex items-center w-full text-left py-2", 
-                        hasDarkBackground ? "text-white hover:text-white/80" : "text-gray-800 hover:text-primary"
-                      )}
+                      className="flex items-center w-full text-left py-2 text-white hover:text-white/80"
                     >
                       {item.label}
                       <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", dropdownOpen === item.id ? "rotate-180" : "rotate-0")} />
@@ -200,10 +186,7 @@ const Navbar = () => {
                         <Link
                           key={idx}
                           to={subItem.href}
-                          className={cn(
-                            "block py-2 font-medium",
-                            hasDarkBackground ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-primary"
-                          )}
+                          className="block py-2 font-medium text-white/80 hover:text-white"
                           onClick={() => {
                             setIsOpen(false);
                             setDropdownOpen('');
@@ -212,16 +195,13 @@ const Navbar = () => {
                           {subItem.label}
                         </Link>
                       ))}
-                      <div className={cn("border-t my-2", hasDarkBackground ? "border-gray-700" : "border-gray-100")}></div>
-                      <p className={cn("py-2 text-xs font-medium", hasDarkBackground ? "text-gray-400" : "text-gray-500")}>Agentes de IA</p>
+                      <div className="border-t my-2 border-blue-600"></div>
+                      <p className="py-2 text-xs font-medium text-blue-200">Agentes de IA</p>
                       {item.dropdown.slice(2).map((subItem, idx) => (
                         <Link
                           key={idx + 2}
                           to={subItem.href}
-                          className={cn(
-                            "block py-2",
-                            hasDarkBackground ? "text-white/80 hover:text-white" : "text-gray-600 hover:text-primary"
-                          )}
+                          className="block py-2 text-white/80 hover:text-white"
                           onClick={() => {
                             setIsOpen(false);
                             setDropdownOpen('');
@@ -235,10 +215,7 @@ const Navbar = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className={cn(
-                      "block py-2", 
-                      hasDarkBackground ? "text-white hover:text-white/80" : "text-gray-800 hover:text-primary"
-                    )}
+                    className="block py-2 text-white hover:text-white/80"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -249,7 +226,7 @@ const Navbar = () => {
             <li className="pt-4">
               <a 
                 href="#contact" 
-                className="button-primary w-full flex justify-center"
+                className="border-white text-white hover:bg-white hover:text-blue-700 button-primary w-full flex justify-center"
                 onClick={() => setIsOpen(false)}
               >
                 Fale Conosco
