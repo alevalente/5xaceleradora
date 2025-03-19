@@ -1,9 +1,9 @@
+
 import React from 'react';
 import { 
   MonitorSmartphone, 
   BrainCircuit, 
   Lightbulb,
-  MessageSquare, 
   Users, 
   Clock,
   ShoppingBag,
@@ -43,40 +43,6 @@ const IntelligentSolutions = () => {
       description: 'Transforme sua equipe comercial com nossa metodologia comprovada de consultoria, mentorias e treinamentos especializados.',
       icon: <Lightbulb className="h-12 w-12 text-white" />,
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
-    }
-  ];
-
-  // Soluções para o segundo carrossel - Plataforma
-  const platformFeatures = [
-    {
-      title: 'Centralização de Conversas',
-      description: 'WhatsApp, Facebook, Instagram, Webchat, tudo num único painel.',
-      icon: <MessageSquare className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      title: 'Distribuição Automática',
-      description: 'Mensagens roteadas entre setores e equipes conforme regras definidas.',
-      icon: <Users className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      title: 'Acompanhamento em Tempo Real',
-      description: 'Controle de SLA e monitoramento da qualidade do atendimento.',
-      icon: <Clock className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      title: 'Integrações Avançadas',
-      description: 'Conexão com ERPs, automação financeira e automações de IA.',
-      icon: <ShoppingBag className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      title: 'Análise de Satisfação',
-      description: 'Monitoramento do sentimento do cliente e feedbacks automáticos.',
-      icon: <Headphones className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
     }
   ];
 
@@ -169,45 +135,7 @@ const IntelligentSolutions = () => {
           </Carousel>
         </div>
 
-        {/* Segundo Carrossel - Recursos da Plataforma */}
-        <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Plataforma de Atendimento</h3>
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent>
-              {platformFeatures.map((feature, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="h-full bg-blue-900 text-white" hoverEffect={true}>
-                      <CardHeader>
-                        <div className="flex items-center mb-2">
-                          <div className={cn("p-3 rounded-lg mr-4", feature.color)}>
-                            {feature.icon}
-                          </div>
-                          <CardTitle className="text-lg font-semibold text-white">{feature.title}</CardTitle>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-white/80">{feature.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-8">
-              <CarouselPrevious className="relative static mx-2" />
-              <CarouselNext className="relative static mx-2" />
-            </div>
-          </Carousel>
-        </div>
-
-        {/* Terceiro Carrossel - Agentes de IA */}
+        {/* Agentes de IA - Carrossel */}
         <div>
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Agentes de IA</h3>
           <Carousel
