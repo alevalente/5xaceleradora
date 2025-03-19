@@ -14,12 +14,16 @@ import {
   Briefcase,
   Palette,
   Truck,
-  UserCheck
+  UserCheck,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
-  CarouselItem
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
 } from '@/components/ui/carousel';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -220,7 +224,7 @@ const IntelligentSolutions = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {agentSolutions.map((solution) => (
@@ -246,6 +250,8 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
           </Carousel>
         </div>
 
@@ -263,7 +269,7 @@ const IntelligentSolutions = () => {
               align: "start",
               loop: true,
             }}
-            className="w-full"
+            className="w-full relative"
           >
             <CarouselContent>
               {upcomingAgents.map((agent) => (
@@ -287,6 +293,8 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 text-white hover:bg-white/20 hover:text-white border-0" />
           </Carousel>
         </div>
       </div>
