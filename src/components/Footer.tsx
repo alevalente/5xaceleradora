@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react';
+
+import { Mail, Phone, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { images } from '../assets/images';
 
@@ -115,13 +116,6 @@ const Footer = () => {
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-0.5 text-blue-500" />
                 <span className="text-gray-400">(11) 99999-9999</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 mt-0.5 text-blue-500" />
-                <span className="text-gray-400">
-                  São Paulo, SP <br /> 
-                  Av. Paulista, 1000 - Bela Vista
-                </span>
               </li>
             </ul>
           </div>
