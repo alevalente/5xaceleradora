@@ -20,7 +20,13 @@ import {
   UserPlus,
   Briefcase,
   Palette,
-  Truck
+  Truck,
+  TargetIcon,
+  BookOpen,
+  Sparkles,
+  Zap as ZapIcon,
+  Smartphone as SmartphoneIcon,
+  BarChart
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { createObserver, getDelayClass } from '../utils/animations';
@@ -190,7 +196,7 @@ const Solutions = () => {
       id: 'maquina-vendas',
       title: 'Consultoria "Máquina de Vendas 5x"',
       description: 'Estruturação de processos comerciais robustos, com foco em prospecção outbound e vendas híbridas.',
-      icon: <Target className="h-8 w-8" />,
+      icon: <TargetIcon className="h-8 w-8" />,
       color: 'bg-blue-50 text-blue-600',
     },
     {
@@ -265,13 +271,13 @@ const Solutions = () => {
     {
       title: 'Integrações',
       description: 'Conexão com ERPs, automação financeira e automações de IA.',
-      icon: <Zap className="h-8 w-8" />,
+      icon: <ZapIcon className="h-8 w-8" />,
       color: 'bg-amber-50 text-amber-600',
     },
     {
       title: 'Múltiplos Números',
       description: 'Suporte a números oficiais e não-oficiais de WhatsApp.',
-      icon: <Smartphone className="h-8 w-8" />,
+      icon: <SmartphoneIcon className="h-8 w-8" />,
       color: 'bg-rose-50 text-rose-600',
     },
     {
