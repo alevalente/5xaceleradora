@@ -64,8 +64,8 @@ const Navbar = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300',
         isScrolled 
-          ? 'bg-blue-700/95 backdrop-blur-lg shadow-subtle'
-          : 'bg-blue-700'
+          ? 'bg-blue-950/95 backdrop-blur-lg shadow-subtle'
+          : 'bg-blue-950'
       )}
     >
       <div className="container-wide flex items-center justify-between">
@@ -140,7 +140,7 @@ const Navbar = () => {
           </ul>
           <a 
             href="#contact" 
-            className="border-white text-white hover:bg-white hover:text-blue-700 button-primary"
+            className="border-white text-white hover:bg-white hover:text-blue-950 button-primary"
           >
             Fale Conosco
           </a>
@@ -159,7 +159,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "md:hidden fixed inset-0 bg-blue-700 z-40 transform transition-transform duration-300 ease-in-out pt-20",
+          "md:hidden fixed inset-0 bg-blue-950 z-40 transform transition-transform duration-300 ease-in-out pt-20",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -195,7 +195,7 @@ const Navbar = () => {
                           {subItem.label}
                         </Link>
                       ))}
-                      <div className="border-t my-2 border-blue-600"></div>
+                      <div className="border-t my-2 border-blue-900"></div>
                       <p className="py-2 text-xs font-medium text-blue-200">Agentes de IA</p>
                       {item.dropdown.slice(2).map((subItem, idx) => (
                         <Link
@@ -226,7 +226,7 @@ const Navbar = () => {
             <li className="pt-4">
               <a 
                 href="#contact" 
-                className="border-white text-white hover:bg-white hover:text-blue-700 button-primary w-full flex justify-center"
+                className="border-white text-white hover:bg-white hover:text-blue-950 button-primary w-full flex justify-center"
                 onClick={() => setIsOpen(false)}
               >
                 Fale Conosco
