@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { images } from '../assets/images';
@@ -32,26 +32,26 @@ const Testimonials = () => {
     }
   ];
 
-  const next = () => {
+  const next = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
     setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
     setTimeout(() => setIsAnimating(false), 500);
-  };
+  }, [isAnimating, testimonials.length]);
 
-  const prev = () => {
+  const prev = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
     setTimeout(() => setIsAnimating(false), 500);
-  };
+  }, [isAnimating, testimonials.length]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       next();
     }, 6000);
     return () => clearInterval(interval);
-  }, [activeIndex, isAnimating]);
+  }, [next]);
 
   return (
     <section id="testimonials" className="relative py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
