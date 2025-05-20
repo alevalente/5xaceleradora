@@ -86,3 +86,11 @@ We don't support custom domains (yet). If you want to deploy your project under 
 ## Continuous Integration
 
 This repository includes a basic GitHub Actions workflow that installs dependencies, runs linting and builds the project on every push or pull request to `main`. You can find the workflow in `.github/workflows/ci.yml`.
+
+## Netlify deploy previews
+
+Deploying on [Netlify](https://www.netlify.com/) is straightforward. A `netlify.toml` file at the project root defines the build command (`npm run build`) and the publish directory (`dist`).
+
+After linking this repository to a Netlify site, every pull request will generate a **Deploy Preview** so you can review changes such as the updated multiatendimento platform page before merging.
+
+The configuration also adds a redirect from any route to `index.html` which is required for React Router applications.
