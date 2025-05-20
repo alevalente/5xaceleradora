@@ -9,7 +9,7 @@ import { lazy, Suspense } from 'react';
 const Index = lazy(() => import('./pages/Index'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const AgentDetail = lazy(() => import('./pages/AgentDetail'));
-const PlatformDetail = lazy(() => import('./pages/PlatformDetail'));
+const PlataformaMultiAtendimento = lazy(() => import('./pages/plataforma-multi-atendimento'));
 const ConsultingDetail = lazy(() => import('./pages/ConsultingDetail'));
 
 const queryClient = new QueryClient();
@@ -24,7 +24,8 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/agent/:agentId" element={<AgentDetail />} />
-            <Route path="/platform" element={<PlatformDetail />} />
+            <Route path="/platform" element={<PlataformaMultiAtendimento />} />
+            <Route path="/plataforma-multi-atendimento" element={<PlataformaMultiAtendimento />} />
             <Route path="/consulting" element={<ConsultingDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
