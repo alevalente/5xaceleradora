@@ -72,7 +72,7 @@ const IntelligentSolutions = () => {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
       subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
-      description: 'Garante contatos recorrentes e proativos com seus clientes, evitando inativações e protegendo seu faturamento contra concorrentes.',
+      description: 'Garanta que seus vendedores entrem em contato com todos os clientes, evitando inativações e protegendo seu faturamento.',
       image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
       ctaText: 'Quero proteger meus clientes'
     },
