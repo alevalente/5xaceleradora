@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -54,6 +55,25 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="relative py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+      {/* Botões de navegação posicionados nos cantos da página */}
+      <button 
+        onClick={prev}
+        disabled={isAnimating}
+        className="fixed left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        aria-label="Previous testimonial"
+      >
+        <ChevronLeft className="h-6 w-6 text-blue-600" />
+      </button>
+      
+      <button 
+        onClick={next}
+        disabled={isAnimating}
+        className="fixed right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        aria-label="Next testimonial"
+      >
+        <ChevronRight className="h-6 w-6 text-blue-600" />
+      </button>
+
       <div className="container-wide relative z-10">
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-6">O que nossos clientes dizem</h2>
@@ -63,25 +83,6 @@ const Testimonials = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Botões de navegação posicionados nas laterais */}
-          <button 
-            onClick={prev}
-            disabled={isAnimating}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow"
-            aria-label="Previous testimonial"
-          >
-            <ChevronLeft className="h-6 w-6 text-blue-600" />
-          </button>
-          
-          <button 
-            onClick={next}
-            disabled={isAnimating}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow"
-            aria-label="Next testimonial"
-          >
-            <ChevronRight className="h-6 w-6 text-blue-600" />
-          </button>
-
           <div className="relative overflow-hidden rounded-2xl bg-white shadow-glass py-12 px-8 md:px-12">
             <Quote className="absolute top-6 left-6 h-16 w-16 text-blue-100 opacity-60" />
             
