@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -190,11 +191,11 @@ const IntelligentSolutions = () => {
                     {category.id === 'platform' ? (
                       <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                         {category.image && (
-                          <div className="overflow-hidden">
+                          <div className="overflow-hidden flex items-center justify-center">
                             <img 
                               src={category.image} 
                               alt="Plataforma de Atendimento" 
-                              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-103"
+                              className="w-full h-40 object-cover object-center transition-transform duration-300 hover:scale-103"
                             />
                           </div>
                         )}
