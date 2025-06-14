@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MonitorSmartphone, 
   BrainCircuit, 
   Lightbulb,
   Users, 
@@ -34,9 +33,9 @@ const IntelligentSolutions = () => {
   const solutionCategories = [
     {
       id: 'platform',
-      title: 'Plataforma de Atendimento via WhatsApp',
-      description: 'Nossa plataforma integra agentes de IA que automatizam processos comerciais, reduzindo tarefas repetitivas e aumentando seu faturamento.',
-      icon: <MonitorSmartphone className="h-12 w-12 text-white" />,
+      title: 'Tenha total controle e visibilidade das conversas da sua equipe comercial, sem risco de perder informações quando vendedores saírem.',
+      description: 'Gerencie em tempo real todas as conversas da sua equipe em uma única plataforma integrada.',
+      image: '/lovable-uploads/df34db83-7986-45b8-9705-b6d7544c1530.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
@@ -184,17 +183,27 @@ const IntelligentSolutions = () => {
               {solutionCategories.map((category) => (
                 <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="h-full bg-blue-900 text-white" hoverEffect={true}>
+                    <Card className="h-full bg-blue-900 text-white transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                       <CardHeader>
-                        <div className={cn("p-4 rounded-lg inline-block mb-4", category.color)}>
-                          {category.icon}
-                        </div>
+                        {category.image ? (
+                          <div className="mb-4 overflow-hidden rounded-lg">
+                            <img 
+                              src={category.image} 
+                              alt="Plataforma de Atendimento" 
+                              className="w-full h-48 object-cover transition-transform duration-300 hover:scale-103"
+                            />
+                          </div>
+                        ) : (
+                          <div className={cn("p-4 rounded-lg inline-block mb-4", category.color)}>
+                            {category.icon}
+                          </div>
+                        )}
                         <CardTitle className="text-xl font-semibold text-white">{category.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <CardDescription className="text-white/80">{category.description}</CardDescription>
                       </CardContent>
-                      <CardFooter>
+                      <CardFooter className="justify-center">
                         {category.id === 'agents' ? (
                           <a href="#agents" className="text-white/90 font-medium hover:text-white">
                             Veja abaixo
