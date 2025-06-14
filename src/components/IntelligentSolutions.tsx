@@ -33,7 +33,7 @@ const IntelligentSolutions = () => {
   const solutionCategories = [
     {
       id: 'platform',
-      title: 'IAGO Conversas: Controle total das conversas da sua equipe, sem risco de perder informações.',
+      title: 'IAgo Conversas: Controle total das conversas da sua equipe, sem risco de perder informações.',
       description: 'Gerencie em tempo real todas as conversas da sua equipe no WhatsApp, Instagram, Facebook e outros canais, em uma única plataforma multi-atendimento integrada.',
       image: '/lovable-uploads/72d2476b-beea-49f9-8c6f-510357e683c5.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
