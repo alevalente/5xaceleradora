@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -73,36 +74,31 @@ const IntelligentSolutions = () => {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
       description: 'Varredura recorrente (por exemplo, semanal), evitando negligenciar qualquer cliente.',
-      icon: <Users className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
     },
     {
       id: 'avaliacao-monitoramento',
       title: 'Agente de Avaliação e Monitoramento',
       description: 'Monitoramento sistemático das conversas para avaliações detalhadas e contínuas.',
-      icon: <BrainCircuit className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
     },
     {
       id: 'reativacao-automatica',
       title: 'Agente de Reativação Automática',
       description: 'Campanhas pontuais de reativação, sem sobrecarregar a equipe comercial.',
-      icon: <Lightbulb className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
     },
     {
       id: 'gestao-vendas',
       title: 'Agente de Gestão de Vendas',
       description: 'Integração total com sistemas internos, permitindo automação do processo comercial completo.',
-      icon: <ShoppingBag className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
     },
     {
       id: 'cadastro-credito',
       title: 'Agente de Cadastro e Análise de Crédito',
       description: 'Automatiza até 80% do cadastro e análise, exigindo apenas validações pontuais.',
-      icon: <CheckSquare className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
     }
   ];
 
@@ -244,8 +240,8 @@ const IntelligentSolutions = () => {
         </div>
 
         {/* Agentes de IA - Carrossel */}
-        <div id="agents" className="mb-32">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">Agentes de IA</h3>
+        <div id="agents" className="mb-40">
+          <h2 className="heading-lg mb-6 text-center">Conheça nossos Agentes Inteligentes</h2>
           <Carousel
             opts={{
               align: "start",
@@ -257,21 +253,29 @@ const IntelligentSolutions = () => {
               {agentSolutions.map((solution) => (
                 <CarouselItem key={solution.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="h-full bg-blue-900 text-white border border-blue-800/50" hoverEffect={true}>
-                      <CardHeader>
-                        <div className={cn("p-4 rounded-lg inline-block mb-4", solution.color)}>
-                          {solution.icon}
+                    <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
+                      {solution.image && (
+                        <div className="overflow-hidden h-36">
+                          <img 
+                            src={solution.image} 
+                            alt={`${solution.title} - Agente de IA`}
+                            className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
+                          />
                         </div>
-                        <CardTitle className="text-xl font-semibold text-white">{solution.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-white/80">{solution.description}</CardDescription>
-                      </CardContent>
-                      <CardFooter>
-                        <a href={`/agent/${solution.id}`} className="text-white/90 font-medium hover:text-white">
-                          Saiba mais
-                        </a>
-                      </CardFooter>
+                      )}
+                      <div className="bg-gray-50 p-6">
+                        <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
+                          {solution.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-600 mb-4">
+                          {solution.description}
+                        </CardDescription>
+                        <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                          <a href={`/agent/${solution.id}`}>
+                            Saiba mais
+                          </a>
+                        </Button>
+                      </div>
                     </Card>
                   </div>
                 </CarouselItem>
@@ -334,3 +338,4 @@ const IntelligentSolutions = () => {
 };
 
 export default IntelligentSolutions;
+
