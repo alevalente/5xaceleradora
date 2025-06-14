@@ -74,7 +74,7 @@ const IntelligentSolutions = () => {
       subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
       description: 'Garante contatos recorrentes e proativos com seus clientes, evitando inativações e protegendo seu faturamento contra concorrentes.',
       image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Saiba como proteger sua carteira'
+      ctaText: 'Quero proteger meus clientes'
     },
     {
       id: 'avaliacao-monitoramento',
