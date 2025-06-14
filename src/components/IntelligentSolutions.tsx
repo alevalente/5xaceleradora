@@ -55,9 +55,13 @@ const IntelligentSolutions = () => {
     },
     {
       id: 'consulting',
-      title: 'Consultoria e Treinamentos',
-      description: 'Transforme sua equipe comercial com nossa metodologia comprovada de consultoria, mentorias e treinamentos especializados.',
-      icon: <Lightbulb className="h-12 w-12 text-white" />,
+      title: (
+        <>
+          <span className="font-bold text-blue-600">Consultoria em IA</span>: Prepare sua empresa para resultados exponenciais com Inteligência Artificial.
+        </>
+      ),
+      description: 'Diagnóstico estratégico, implementação de soluções personalizadas e workshops práticos para difundir a cultura de IA em toda a equipe.',
+      image: '/lovable-uploads/2325cc10-7027-42bf-9748-64d0f104ff64.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     }
   ];
@@ -191,55 +195,46 @@ const IntelligentSolutions = () => {
               {solutionCategories.map((category) => (
                 <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    {category.id === 'platform' || category.id === 'agents' ? (
-                      <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
-                        {category.image && (
-                          <div className="overflow-hidden h-36">
-                            <img 
-                              src={category.image} 
-                              alt={category.id === 'platform' ? "Plataforma de Atendimento" : "Agentes de IA"} 
-                              className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
-                            />
-                          </div>
-                        )}
-                        <div className="bg-gray-50 p-6">
-                          <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
-                            {category.title}
-                          </CardTitle>
-                          <CardDescription className="text-gray-600 mb-4">
-                            {category.description}
-                          </CardDescription>
-                          <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                            {category.id === 'platform' ? (
-                              <Link to="/platform">
-                                Saiba mais
-                              </Link>
-                            ) : (
-                              <a href="#agents">
-                                Conheça nossos Agentes
-                              </a>
-                            )}
-                          </Button>
+                    <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
+                      {category.image && (
+                        <div className="overflow-hidden h-36">
+                          <img 
+                            src={category.image} 
+                            alt={
+                              category.id === 'platform' 
+                                ? "Plataforma de Atendimento" 
+                                : category.id === 'agents'
+                                ? "Agentes de IA"
+                                : "Consultor apresentando ferramentas de IA (ChatGPT, OpenAI, Gemini, etc.) para equipe em treinamento."
+                            } 
+                            className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
+                          />
                         </div>
-                      </Card>
-                    ) : (
-                      <Card className="h-full bg-blue-900 text-white transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
-                        <CardHeader>
-                          <div className={cn("p-4 rounded-lg inline-block mb-4", category.color)}>
-                            {category.icon}
-                          </div>
-                          <CardTitle className="text-xl font-semibold text-white">{category.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                          <CardDescription className="text-white/80">{category.description}</CardDescription>
-                        </CardContent>
-                        <CardFooter className="justify-center">
-                          <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
-                            Saiba mais
-                          </Link>
-                        </CardFooter>
-                      </Card>
-                    )}
+                      )}
+                      <div className="bg-gray-50 p-6">
+                        <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
+                          {category.title}
+                        </CardTitle>
+                        <CardDescription className="text-gray-600 mb-4">
+                          {category.description}
+                        </CardDescription>
+                        <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                          {category.id === 'platform' ? (
+                            <Link to="/platform">
+                              Saiba mais
+                            </Link>
+                          ) : category.id === 'agents' ? (
+                            <a href="#agents">
+                              Conheça nossos Agentes
+                            </a>
+                          ) : (
+                            <Link to="/consulting">
+                              Saiba mais
+                            </Link>
+                          )}
+                        </Button>
+                      </div>
+                    </Card>
                   </div>
                 </CarouselItem>
               ))}
