@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -57,10 +58,10 @@ const IntelligentSolutions = () => {
       id: 'consulting',
       title: (
         <>
-          <span className="font-bold text-blue-600">Consultoria em IA</span>: Prepare sua empresa para resultados exponenciais com Inteligência Artificial.
+          <span className="font-bold text-blue-600">Treinamento em IA</span>: Desenvolva hoje a equipe que sua empresa precisará amanhã.
         </>
       ),
-      description: 'Diagnóstico estratégico, implementação de soluções personalizadas e workshops práticos para difundir a cultura de IA em toda a equipe.',
+      description: 'Capacite seus colaboradores para adotarem uma cultura prática de Inteligência Artificial, impulsionando inovação e garantindo a competitividade futura da sua empresa.',
       image: '/lovable-uploads/2325cc10-7027-42bf-9748-64d0f104ff64.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     }
