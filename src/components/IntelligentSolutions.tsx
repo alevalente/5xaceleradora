@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -276,9 +277,9 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-6 space-x-4">
-              <CarouselPrevious className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
-              <CarouselNext className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+            <div className="flex justify-center mt-8 space-x-6">
+              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
+              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
             </div>
           </Carousel>
         </div>
@@ -321,9 +322,9 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-6 space-x-4">
-              <CarouselPrevious className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
-              <CarouselNext className="static translate-y-0 bg-white/10 text-blue-900 hover:bg-blue-100 hover:text-blue-900 border border-blue-200" />
+            <div className="flex justify-center mt-8 space-x-6">
+              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
+              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
             </div>
           </Carousel>
         </div>
