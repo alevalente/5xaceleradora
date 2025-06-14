@@ -171,6 +171,9 @@ const IntelligentSolutions = () => {
     }
   ];
 
+  // Ref para controlar o carrossel
+  const [api, setApi] = React.useState<any>();
+
   return (
     <section id="solutions" className="py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container-wide">
@@ -247,14 +250,7 @@ const IntelligentSolutions = () => {
           <button 
             className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             aria-label="Previous agent"
-            onClick={() => {
-              const carousel = document.querySelector('#agents .embla__container');
-              if (carousel) {
-                // Trigger previous button click
-                const prevButton = document.querySelector('#agents .carousel-previous');
-                if (prevButton) prevButton.click();
-              }
-            }}
+            onClick={() => api?.scrollPrev()}
           >
             <ChevronLeft className="h-6 w-6 text-blue-600" />
           </button>
@@ -262,14 +258,7 @@ const IntelligentSolutions = () => {
           <button 
             className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             aria-label="Next agent"
-            onClick={() => {
-              const carousel = document.querySelector('#agents .embla__container');
-              if (carousel) {
-                // Trigger next button click
-                const nextButton = document.querySelector('#agents .carousel-next');
-                if (nextButton) nextButton.click();
-              }
-            }}
+            onClick={() => api?.scrollNext()}
           >
             <ChevronRight className="h-6 w-6 text-blue-600" />
           </button>
@@ -281,6 +270,7 @@ const IntelligentSolutions = () => {
               loop: false,
             }}
             className="w-full relative"
+            setApi={setApi}
           >
             <CarouselContent>
               {agentSolutions.map((solution) => (
