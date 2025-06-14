@@ -35,48 +35,8 @@ const IntelligentSolutions = () => {
       description: 'Acompanhe e analise em tempo real todas as conversas da sua equipe comercial via WhatsApp, identificando oportunidades de melhoria, prevenindo erros de comunicação e garantindo a qualidade no atendimento ao cliente.',
       icon: <BarChart2 className="h-10 w-10" />,
       color: 'bg-purple-50 text-purple-600',
-      image: '/lovable-uploads/364e7d09-0187-44dd-926b-495f80c4c4e9.png',
+      image: '/lovable-uploads/0c1c5292-08e5-4eba-b380-ee70f9456d36.png',
       ctaText: 'Quero acompanhar minha equipe'
-    },
-    {
-      id: 'reativacao-automatica',
-      title: 'Agente de Reativação Automática',
-      subtitle: 'Reative clientes inativos e impulsione suas vendas.',
-      description: 'Identifique e reative clientes que não compram há algum tempo, personalizando abordagens e ofertas para aumentar suas chances de sucesso.',
-      icon: <UserCheck className="h-10 w-10" />,
-      color: 'bg-green-50 text-green-600',
-      image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Quero reativar meus clientes'
-    },
-    {
-      id: 'gestao-vendas',
-      title: 'Agente de Gestão de Vendas',
-      subtitle: 'Otimize seu processo comercial e feche mais negócios.',
-      description: 'Automatize tarefas repetitivas, organize seus leads e acompanhe o desempenho da sua equipe em tempo real para aumentar sua eficiência e receita.',
-      icon: <UserCheck className="h-10 w-10" />,
-      color: 'bg-orange-50 text-orange-600',
-      image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Quero otimizar minhas vendas'
-    },
-    {
-      id: 'cadastro-credito',
-      title: 'Agente de Cadastro e Análise de Crédito',
-      subtitle: 'Agilize a aprovação de crédito e reduza seus riscos.',
-      description: 'Automatize a coleta de dados, verifique informações e analise o perfil de crédito dos seus clientes de forma rápida e segura.',
-      icon: <UserCheck className="h-10 w-10" />,
-      color: 'bg-teal-50 text-teal-600',
-      image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Quero aprovar crédito mais rápido'
-    },
-    {
-      id: 'disparador-promocoes',
-      title: 'Disparador de Promoções via WhatsApp',
-      subtitle: 'Engaje seus clientes com promoções personalizadas.',
-      description: 'Crie e envie promoções segmentadas para seus clientes via WhatsApp, aumentando suas vendas e fidelizando seu público.',
-      icon: <UserCheck className="h-10 w-10" />,
-      color: 'bg-indigo-50 text-indigo-600',
-      image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Quero enviar promoções pelo WhatsApp'
     }
   ];
 
