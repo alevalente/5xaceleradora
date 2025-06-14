@@ -52,7 +52,7 @@ const IntelligentSolutions = () => {
         </>
       ),
       description: 'Automatize processos comerciais, melhore o desempenho do seu time e foque no crescimento da sua empresa com nossos agentes inteligentes sob medida.',
-      image: '/lovable-uploads/0342c09a-e285-4f44-aa10-c0f812ed33b9.png',
+      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
