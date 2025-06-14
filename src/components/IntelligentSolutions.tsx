@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -80,7 +81,7 @@ const IntelligentSolutions = () => {
       id: 'avaliacao-monitoramento',
       title: 'Agente de Monitoramento de Conversas',
       subtitle: 'Análise automática, sem intervenção humana.',
-      description: 'Analise automaticamente, sem intervenção humana, conversas da equipe via WhatsApp, garantindo qualidade no atendimento.',
+      description: 'Avalie automaticamente tudo o que sua equipe conversa com seus clientes, identificando melhorias e corrigindo falhas em tempo real.',
       image: '/lovable-uploads/a18fcce2-253f-4796-8790-2ac852b92b7b.png',
       ctaText: 'Quero acompanhar minha equipe'
     },
