@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -256,7 +255,7 @@ const IntelligentSolutions = () => {
                   <div className="p-2">
                     <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                       {solution.image && (
-                        <div className="overflow-hidden h-48">
+                        <div className="overflow-hidden h-64">
                           <img 
                             src={solution.image} 
                             alt={`${solution.title} - Agente de IA`}
@@ -265,11 +264,11 @@ const IntelligentSolutions = () => {
                         </div>
                       )}
                       <div className="bg-gray-50 p-8">
-                        <CardTitle className="text-xl font-medium text-blue-600 mb-2 leading-tight">
+                        <CardTitle className="text-2xl font-bold text-blue-600 mb-3 leading-tight text-center">
                           {solution.title}
                         </CardTitle>
                         {solution.subtitle && (
-                          <p className="text-lg font-medium text-gray-900 mb-4 leading-tight">
+                          <p className="text-xl font-bold text-gray-900 mb-6 leading-tight text-center">
                             {solution.subtitle}
                           </p>
                         )}
