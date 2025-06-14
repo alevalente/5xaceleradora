@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -64,6 +63,25 @@ const Testimonials = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
+          {/* Botões de navegação posicionados nas laterais */}
+          <button 
+            onClick={prev}
+            disabled={isAnimating}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="h-6 w-6 text-blue-600" />
+          </button>
+          
+          <button 
+            onClick={next}
+            disabled={isAnimating}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="h-6 w-6 text-blue-600" />
+          </button>
+
           <div className="relative overflow-hidden rounded-2xl bg-white shadow-glass py-12 px-8 md:px-12">
             <Quote className="absolute top-6 left-6 h-16 w-16 text-blue-100 opacity-60" />
             
@@ -83,16 +101,6 @@ const Testimonials = () => {
                 >
                   <div className="flex flex-col md:flex-row items-center">
                     <div className="mb-8 md:mb-0 md:mr-10 relative">
-                      {/* Botão de recuar ao lado esquerdo da foto */}
-                      <button 
-                        onClick={prev}
-                        disabled={isAnimating}
-                        className="absolute -left-16 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow z-10"
-                        aria-label="Previous testimonial"
-                      >
-                        <ChevronLeft className="h-6 w-6 text-blue-600" />
-                      </button>
-                      
                       <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
                         <img 
                           src={testimonial.image} 
@@ -100,16 +108,6 @@ const Testimonials = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      
-                      {/* Botão de avançar ao lado direito da foto */}
-                      <button 
-                        onClick={next}
-                        disabled={isAnimating}
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white border border-gray-200 shadow-subtle hover:shadow-hover transition-shadow z-10"
-                        aria-label="Next testimonial"
-                      >
-                        <ChevronRight className="h-6 w-6 text-blue-600" />
-                      </button>
                     </div>
                     
                     <div className="flex-1 text-center md:text-left">
