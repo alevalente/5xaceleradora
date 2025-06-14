@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -44,9 +45,13 @@ const IntelligentSolutions = () => {
     },
     {
       id: 'agents',
-      title: 'Agentes de IA',
-      description: 'Automatize processos comerciais com nossa suite de agentes inteligentes que reduzem tarefas repetitivas e aumentam a eficiência.',
-      icon: <BrainCircuit className="h-12 w-12 text-white" />,
+      title: (
+        <>
+          <span className="font-bold text-blue-600">Agentes de IA</span>: Aumente a eficiência comercial do seu negócio com inteligência artificial.
+        </>
+      ),
+      description: 'Automatize processos comerciais, melhore o desempenho do seu time e foque no crescimento da sua empresa com nossos agentes inteligentes sob medida.',
+      image: '/lovable-uploads/8d908bb9-74e1-4818-a325-423249edf281.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
@@ -187,13 +192,13 @@ const IntelligentSolutions = () => {
               {solutionCategories.map((category) => (
                 <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    {category.id === 'platform' ? (
+                    {category.id === 'platform' || category.id === 'agents' ? (
                       <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                         {category.image && (
                           <div className="overflow-hidden h-36">
                             <img 
                               src={category.image} 
-                              alt="Plataforma de Atendimento" 
+                              alt={category.id === 'platform' ? "Plataforma de Atendimento" : "Agentes de IA"} 
                               className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
                             />
                           </div>
@@ -206,9 +211,15 @@ const IntelligentSolutions = () => {
                             {category.description}
                           </CardDescription>
                           <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                            <Link to="/platform">
-                              Saiba mais
-                            </Link>
+                            {category.id === 'platform' ? (
+                              <Link to="/platform">
+                                Saiba mais
+                              </Link>
+                            ) : (
+                              <a href="#agents">
+                                Veja abaixo
+                              </a>
+                            )}
                           </Button>
                         </div>
                       </Card>
@@ -224,15 +235,9 @@ const IntelligentSolutions = () => {
                           <CardDescription className="text-white/80">{category.description}</CardDescription>
                         </CardContent>
                         <CardFooter className="justify-center">
-                          {category.id === 'agents' ? (
-                            <a href="#agents" className="text-white/90 font-medium hover:text-white">
-                              Veja abaixo
-                            </a>
-                          ) : (
-                            <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
-                              Saiba mais
-                            </Link>
-                          )}
+                          <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
+                            Saiba mais
+                          </Link>
                         </CardFooter>
                       </Card>
                     )}
