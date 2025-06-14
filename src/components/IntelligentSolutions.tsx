@@ -80,7 +80,7 @@ const IntelligentSolutions = () => {
       id: 'avaliacao-monitoramento',
       title: 'Agente de Monitoramento de Conversas',
       subtitle: 'Avalie automaticamente tudo o que sua equipe conversa com seus clientes.',
-      description: 'Analise automaticamente conversas da equipe via WhatsApp, identificando melhorias e garantindo qualidade no atendimento.',
+      description: 'Analise automaticamente, sem intervenção humana, conversas da equipe via WhatsApp, identificando melhorias e garantindo qualidade no atendimento.',
       image: '/lovable-uploads/a18fcce2-253f-4796-8790-2ac852b92b7b.png',
       ctaText: 'Quero acompanhar minha equipe'
     },
