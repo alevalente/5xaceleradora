@@ -72,13 +72,13 @@ const IntelligentSolutions = () => {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
       subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
-      description: 'Garanta contatos recorrentes e proativos com seus clientes, evitando inativações e protegendo seu faturamento contra concorrentes.',
+      description: 'Garante contatos recorrentes e proativos com seus clientes, evitando inativações e protegendo seu faturamento contra concorrentes.',
       image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
       ctaText: 'Saiba como proteger sua carteira'
     },
     {
       id: 'avaliacao-monitoramento',
-      title: 'Agente de Avaliação e Monitoramento de Conversas',
+      title: 'Agente de Monitoramento de Conversas',
       subtitle: 'Acompanhe automaticamente tudo o que sua equipe fala com seus clientes pelo WhatsApp.',
       description: 'Analise automaticamente conversas da equipe via WhatsApp, identificando melhorias e garantindo qualidade no atendimento.',
       image: '/lovable-uploads/a18fcce2-253f-4796-8790-2ac852b92b7b.png',
