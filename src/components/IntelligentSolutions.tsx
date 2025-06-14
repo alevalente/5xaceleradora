@@ -6,14 +6,39 @@ import {
   BarChart2, 
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { createObserver, getDelayClass } from '../utils/animations';
 import { Card, CardTitle, CardDescription } from './ui/card';
 
 const IntelligentSolutions = () => {
   useEffect(() => {
-    const observer = createObserver('animate-on-scroll', 0.1);
+    // Garantir que os cards apareçam mesmo se o observer falhar
+    const timer = setTimeout(() => {
+      const hiddenElements = document.querySelectorAll('.animate-on-scroll.opacity-0');
+      hiddenElements.forEach(element => {
+        element.classList.remove('opacity-0');
+        element.classList.add('opacity-100', 'animated');
+      });
+    }, 100);
+
+    // Observer para animação quando elementos entram na tela
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0');
+            entry.target.classList.add('opacity-100', 'animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px' }
+    );
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach(element => observer.observe(element));
+
     return () => {
-      if (observer) observer.disconnect();
+      clearTimeout(timer);
+      observer.disconnect();
     };
   }, []);
 
@@ -58,18 +83,19 @@ const IntelligentSolutions = () => {
             <div
               key={solution.id}
               className={cn(
-                "animate-on-scroll opacity-0",
-                getDelayClass(index, 200)
+                "animate-on-scroll opacity-0 transition-all duration-700 ease-out transform translate-y-8",
+                `delay-${(index + 1) * 200}`
               )}
             >
               <div className="p-2">
-                <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
+                <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1" hoverEffect={true}>
                   {solution.image && (
                     <div className="overflow-hidden h-64">
                       <img 
                         src={solution.image} 
                         alt={`${solution.title} - Agente de IA`}
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
                       />
                     </div>
                   )}

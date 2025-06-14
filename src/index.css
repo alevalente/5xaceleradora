@@ -196,40 +196,44 @@
   }
 }
 
+/* Melhorado sistema de animação para scroll */
 .animate-on-scroll {
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .animate-on-scroll.opacity-0 {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(32px);
 }
 
-.animate-on-scroll.opacity-100 {
-  opacity: 1;
-  transform: translateY(0);
+.animate-on-scroll.opacity-100,
+.animate-on-scroll.animated {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
-.delay-100 {
-  animation-delay: 100ms;
-}
-
+/* Delays para animações sequenciais */
 .delay-200 {
-  animation-delay: 200ms;
-}
-
-.delay-300 {
-  animation-delay: 300ms;
+  transition-delay: 200ms;
 }
 
 .delay-400 {
-  animation-delay: 400ms;
-}
-
-.delay-500 {
-  animation-delay: 500ms;
+  transition-delay: 400ms;
 }
 
 .delay-600 {
-  animation-delay: 600ms;
+  transition-delay: 600ms;
+}
+
+.delay-800 {
+  transition-delay: 800ms;
+}
+
+/* Fallback para garantir visibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
