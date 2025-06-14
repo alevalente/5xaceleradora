@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -35,7 +34,7 @@ const IntelligentSolutions = () => {
       id: 'platform',
       title: 'Tenha total controle e visibilidade das conversas da sua equipe comercial, sem risco de perder informações quando vendedores saírem.',
       description: 'Gerencie em tempo real todas as conversas da sua equipe em uma única plataforma integrada.',
-      image: '/lovable-uploads/df34db83-7986-45b8-9705-b6d7544c1530.png',
+      image: '/lovable-uploads/72d2476b-beea-49f9-8c6f-510357e683c5.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
