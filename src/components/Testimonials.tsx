@@ -55,26 +55,26 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="relative py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-      {/* Botões de navegação posicionados nos cantos da página */}
-      <button 
-        onClick={prev}
-        disabled={isAnimating}
-        className="fixed left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-        aria-label="Previous testimonial"
-      >
-        <ChevronLeft className="h-6 w-6 text-blue-600" />
-      </button>
-      
-      <button 
-        onClick={next}
-        disabled={isAnimating}
-        className="fixed right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-        aria-label="Next testimonial"
-      >
-        <ChevronRight className="h-6 w-6 text-blue-600" />
-      </button>
-
       <div className="container-wide relative z-10">
+        {/* Botões de navegação posicionados nas laterais da seção */}
+        <button 
+          onClick={prev}
+          disabled={isAnimating}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          aria-label="Previous testimonial"
+        >
+          <ChevronLeft className="h-6 w-6 text-blue-600" />
+        </button>
+        
+        <button 
+          onClick={next}
+          disabled={isAnimating}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          aria-label="Next testimonial"
+        >
+          <ChevronRight className="h-6 w-6 text-blue-600" />
+        </button>
+
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-6">O que nossos clientes dizem</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
