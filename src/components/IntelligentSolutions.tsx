@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -25,6 +26,7 @@ import {
   CarouselNext
 } from '@/components/ui/carousel';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const IntelligentSolutions = () => {
@@ -32,7 +34,7 @@ const IntelligentSolutions = () => {
   const solutionCategories = [
     {
       id: 'platform',
-      title: 'Tenha total controle e visibilidade das conversas da sua equipe comercial, sem risco de perder informações quando vendedores saírem.',
+      title: 'Controle total das conversas da sua equipe, sem risco de perder informações.',
       description: 'Gerencie em tempo real todas as conversas da sua equipe em uma única plataforma integrada.',
       image: '/lovable-uploads/72d2476b-beea-49f9-8c6f-510357e683c5.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
@@ -182,42 +184,55 @@ const IntelligentSolutions = () => {
               {solutionCategories.map((category) => (
                 <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="h-full bg-blue-900 text-white transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
-                      <CardHeader>
-                        {category.image ? (
-                          <div className="mb-4 overflow-hidden rounded-lg">
+                    {category.id === 'platform' ? (
+                      <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
+                        {category.image && (
+                          <div className="overflow-hidden">
                             <img 
                               src={category.image} 
                               alt="Plataforma de Atendimento" 
                               className="w-full h-48 object-cover transition-transform duration-300 hover:scale-103"
                             />
                           </div>
-                        ) : (
+                        )}
+                        <div className="bg-gray-50 p-6">
+                          <CardTitle className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                            {category.title}
+                          </CardTitle>
+                          <CardDescription className="text-gray-600 mb-4">
+                            {category.description}
+                          </CardDescription>
+                          <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                            <Link to="/platform">
+                              Saiba mais
+                            </Link>
+                          </Button>
+                        </div>
+                      </Card>
+                    ) : (
+                      <Card className="h-full bg-blue-900 text-white transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
+                        <CardHeader>
                           <div className={cn("p-4 rounded-lg inline-block mb-4", category.color)}>
                             {category.icon}
                           </div>
-                        )}
-                        <CardTitle className="text-xl font-semibold text-white">{category.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-white/80">{category.description}</CardDescription>
-                      </CardContent>
-                      <CardFooter className="justify-center">
-                        {category.id === 'agents' ? (
-                          <a href="#agents" className="text-white/90 font-medium hover:text-white">
-                            Veja abaixo
-                          </a>
-                        ) : category.id === 'platform' ? (
-                          <Link to="/platform" className="text-white/90 font-medium hover:text-white">
-                            Saiba mais
-                          </Link>
-                        ) : (
-                          <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
-                            Saiba mais
-                          </Link>
-                        )}
-                      </CardFooter>
-                    </Card>
+                          <CardTitle className="text-xl font-semibold text-white">{category.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-white/80">{category.description}</CardDescription>
+                        </CardContent>
+                        <CardFooter className="justify-center">
+                          {category.id === 'agents' ? (
+                            <a href="#agents" className="text-white/90 font-medium hover:text-white">
+                              Veja abaixo
+                            </a>
+                          ) : (
+                            <Link to="/consulting" className="text-white/90 font-medium hover:text-white">
+                              Saiba mais
+                            </Link>
+                          )}
+                        </CardFooter>
+                      </Card>
+                    )}
                   </div>
                 </CarouselItem>
               ))}
