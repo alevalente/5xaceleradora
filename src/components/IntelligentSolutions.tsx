@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -51,7 +52,7 @@ const IntelligentSolutions = () => {
         </>
       ),
       description: 'Automatize processos comerciais, melhore o desempenho do seu time e foque no crescimento da sua empresa com nossos agentes inteligentes sob medida.',
-      image: '/lovable-uploads/8d908bb9-74e1-4818-a325-423249edf281.png',
+      image: '/lovable-uploads/0342c09a-e285-4f44-aa10-c0f812ed33b9.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
     },
     {
@@ -172,7 +173,7 @@ const IntelligentSolutions = () => {
   return (
     <section id="solutions" className="py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container-wide">
-        <div className="text-center max-w-3xl mx-auto mb-8">
+        <div className="text-center max-w-3xl mx-auto mb-6">
           <h2 className="heading-lg mb-4">Soluções Inteligentes para sua Empresa</h2>
           <p className="text-gray-600 text-lg">
             Tudo que você precisa para automatizar sua empresa e lucrar mais
@@ -339,3 +340,4 @@ const IntelligentSolutions = () => {
 };
 
 export default IntelligentSolutions;
+
