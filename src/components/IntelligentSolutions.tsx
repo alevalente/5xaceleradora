@@ -191,11 +191,11 @@ const IntelligentSolutions = () => {
                     {category.id === 'platform' ? (
                       <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                         {category.image && (
-                          <div className="overflow-hidden h-36 flex items-center justify-center bg-gray-100">
+                          <div className="overflow-hidden h-36">
                             <img 
                               src={category.image} 
                               alt="Plataforma de Atendimento" 
-                              className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
+                              className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
                             />
                           </div>
                         )}
