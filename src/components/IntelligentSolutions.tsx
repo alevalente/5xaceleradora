@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -242,8 +241,39 @@ const IntelligentSolutions = () => {
           </Carousel>
         </div>
 
-        {/* Agentes de IA - Carrossel */}
-        <div id="agents" className="mb-40">
+        {/* Agentes de IA - Carrossel com botões laterais */}
+        <div id="agents" className="mb-40 relative">
+          {/* Botões de navegação posicionados nas laterais da seção */}
+          <button 
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            aria-label="Previous agent"
+            onClick={() => {
+              const carousel = document.querySelector('#agents .embla__container');
+              if (carousel) {
+                // Trigger previous button click
+                const prevButton = document.querySelector('#agents .carousel-previous');
+                if (prevButton) prevButton.click();
+              }
+            }}
+          >
+            <ChevronLeft className="h-6 w-6 text-blue-600" />
+          </button>
+          
+          <button 
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+            aria-label="Next agent"
+            onClick={() => {
+              const carousel = document.querySelector('#agents .embla__container');
+              if (carousel) {
+                // Trigger next button click
+                const nextButton = document.querySelector('#agents .carousel-next');
+                if (nextButton) nextButton.click();
+              }
+            }}
+          >
+            <ChevronRight className="h-6 w-6 text-blue-600" />
+          </button>
+
           <h2 className="heading-lg mb-6 text-center">Conheça nossos Agentes Inteligentes</h2>
           <Carousel
             opts={{
@@ -290,8 +320,8 @@ const IntelligentSolutions = () => {
               ))}
             </CarouselContent>
             <div className="flex justify-center mt-10 space-x-8">
-              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
-              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
+              <CarouselPrevious className="carousel-previous static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
+              <CarouselNext className="carousel-next static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
             </div>
           </Carousel>
         </div>

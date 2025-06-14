@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { images } from '../assets/images';
 
@@ -39,13 +39,6 @@ const Testimonials = () => {
     setTimeout(() => setIsAnimating(false), 500);
   };
 
-  const prev = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-    setTimeout(() => setIsAnimating(false), 500);
-  };
-
   useEffect(() => {
     const interval = setInterval(() => {
       next();
@@ -56,25 +49,6 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="relative py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
       <div className="container-wide relative z-10">
-        {/* Botões de navegação posicionados nas laterais da seção */}
-        <button 
-          onClick={prev}
-          disabled={isAnimating}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-          aria-label="Previous testimonial"
-        >
-          <ChevronLeft className="h-6 w-6 text-blue-600" />
-        </button>
-        
-        <button 
-          onClick={next}
-          disabled={isAnimating}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-          aria-label="Next testimonial"
-        >
-          <ChevronRight className="h-6 w-6 text-blue-600" />
-        </button>
-
         <div className="text-center mb-16">
           <h2 className="heading-lg mb-6">O que nossos clientes dizem</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -126,7 +100,7 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation Controls mantidos na parte inferior */}
+          {/* Indicadores de navegação */}
           <div className="flex justify-center mt-10 space-x-4">
             <div className="flex space-x-2 items-center">
               {testimonials.map((_, index) => (
