@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -178,7 +179,7 @@ const IntelligentSolutions = () => {
     <section id="solutions" className="py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container-wide">
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <h2 className="heading-lg mb-4">Automações Inteligentes para Alavancar suas Vendas com IA</h2>
+          <h2 className="heading-lg mb-4">Automações Inteligentes para Alavancar suas Vendas</h2>
           <p className="text-gray-600 text-lg">
             Conheça soluções práticas e inteligentes que aumentam a eficiência da sua equipe comercial, reduzem tarefas repetitivas e aceleram o crescimento das suas vendas.
           </p>
@@ -335,4 +336,5 @@ const IntelligentSolutions = () => {
 };
 
 export default IntelligentSolutions;
+
 
