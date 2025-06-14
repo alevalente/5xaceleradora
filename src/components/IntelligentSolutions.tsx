@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -218,7 +216,7 @@ const IntelligentSolutions = () => {
                               </Link>
                             ) : (
                               <a href="#agents">
-                                Veja abaixo
+                                Conheça nossos Agentes
                               </a>
                             )}
                           </Button>
@@ -340,4 +338,3 @@ const IntelligentSolutions = () => {
 };
 
 export default IntelligentSolutions;
-
