@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -251,11 +249,11 @@ const IntelligentSolutions = () => {
           >
             <CarouselContent>
               {agentSolutions.map((solution) => (
-                <CarouselItem key={solution.id} className="md:basis-1/3 lg:basis-1/3">
-                  <div className="p-1">
+                <CarouselItem key={solution.id} className="md:basis-1/2 lg:basis-1/2">
+                  <div className="p-2">
                     <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                       {solution.image && (
-                        <div className="overflow-hidden h-36">
+                        <div className="overflow-hidden h-48">
                           <img 
                             src={solution.image} 
                             alt={`${solution.title} - Agente de IA`}
@@ -263,11 +261,11 @@ const IntelligentSolutions = () => {
                           />
                         </div>
                       )}
-                      <div className="bg-gray-50 p-6">
-                        <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
+                      <div className="bg-gray-50 p-8">
+                        <CardTitle className="text-xl font-medium text-gray-900 mb-4 leading-tight">
                           {solution.title}
                         </CardTitle>
-                        <CardDescription className="text-gray-600 mb-4">
+                        <CardDescription className="text-gray-600 mb-6 text-base">
                           {solution.description}
                         </CardDescription>
                         <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
@@ -281,9 +279,9 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-8 space-x-6">
-              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
-              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
+            <div className="flex justify-center mt-10 space-x-8">
+              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
+              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
             </div>
           </Carousel>
         </div>
@@ -338,4 +336,3 @@ const IntelligentSolutions = () => {
 };
 
 export default IntelligentSolutions;
-
