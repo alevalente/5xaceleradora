@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -71,8 +72,10 @@ const IntelligentSolutions = () => {
     {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
-      description: 'Varredura recorrente (por exemplo, semanal), evitando negligenciar qualquer cliente.',
-      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
+      subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
+      description: 'Garanta contatos recorrentes e proativos com seus clientes, evitando inativações e protegendo seu faturamento contra concorrentes.',
+      image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
+      ctaText: 'Saiba como proteger sua carteira'
     },
     {
       id: 'avaliacao-monitoramento',
@@ -262,15 +265,20 @@ const IntelligentSolutions = () => {
                         </div>
                       )}
                       <div className="bg-gray-50 p-8">
-                        <CardTitle className="text-xl font-medium text-gray-900 mb-4 leading-tight">
+                        <CardTitle className="text-xl font-medium text-blue-600 mb-2 leading-tight">
                           {solution.title}
                         </CardTitle>
+                        {solution.subtitle && (
+                          <p className="text-lg font-medium text-gray-900 mb-4 leading-tight">
+                            {solution.subtitle}
+                          </p>
+                        )}
                         <CardDescription className="text-gray-600 mb-6 text-base">
                           {solution.description}
                         </CardDescription>
                         <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                           <a href={`/agent/${solution.id}`}>
-                            Saiba mais
+                            {solution.ctaText || 'Saiba mais'}
                           </a>
                         </Button>
                       </div>
