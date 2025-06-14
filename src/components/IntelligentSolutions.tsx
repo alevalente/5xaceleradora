@@ -33,7 +33,11 @@ const IntelligentSolutions = () => {
   const solutionCategories = [
     {
       id: 'platform',
-      title: 'IAgo Conversas: Controle total das conversas da sua equipe, sem risco de perder informações.',
+      title: (
+        <>
+          <span className="font-bold text-blue-600">IAgo Conversas</span>: Controle total das conversas da sua equipe, sem risco de perder informações.
+        </>
+      ),
       description: 'Gerencie em tempo real todas as conversas da sua equipe no WhatsApp, Instagram, Facebook e outros canais, em uma única plataforma multi-atendimento integrada.',
       image: '/lovable-uploads/72d2476b-beea-49f9-8c6f-510357e683c5.png',
       color: 'bg-blue-900/80 text-white border border-blue-800/50',
@@ -195,7 +199,7 @@ const IntelligentSolutions = () => {
                           </div>
                         )}
                         <div className="bg-gray-50 p-6">
-                          <CardTitle className="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                          <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
                             {category.title}
                           </CardTitle>
                           <CardDescription className="text-gray-600 mb-4">
