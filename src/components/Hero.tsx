@@ -49,109 +49,109 @@ const Hero = () => {
           {/* Coluna principal - conteúdo */}
           <div className="lg:col-span-7 text-center lg:text-left pt-20 lg:pt-0">
             
-            {/* Badge provocativo */}
-            <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-400/30 text-red-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up backdrop-blur-sm">
-              <Zap className="h-4 w-4" />
-              Seus concorrentes já estão usando IA
+            {/* Badge de oportunidade */}
+            <div className="inline-flex items-center gap-2 bg-green-600/20 border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up backdrop-blur-sm">
+              <Target className="h-4 w-4" />
+              Oportunidade pioneira disponível
             </div>
             
-            {/* Título impactante */}
+            {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
-              Enquanto você hesita,<br />
+              Seja o primeiro da sua região<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 animate-pulse-soft">
-                eles faturam 5x mais
+                a dominar IA comercial
               </span>
             </h1>
             
-            {/* Subtítulo direto */}
+            {/* Subtítulo de vantagem competitiva */}
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
-              Pare de perder vendas para quem já automatizou processos comerciais com agentes de IA inteligentes.
+              Ganhe vantagem competitiva definitiva automatizando vendas e atendimento antes que seus concorrentes descubram como.
             </p>
             
-            {/* CTAs com destaque */}
+            {/* CTAs focados em oportunidade */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-8">
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
-                <TrendingUp className="h-5 w-5 mr-2" />
-                Quero Recuperar Vendas Perdidas
+                <Brain className="h-5 w-5 mr-2" />
+                Quero Essa Vantagem Agora
               </a>
               <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg">
-                Ver Demonstração Gratuita
+                Ver Como Funciona
               </a>
             </div>
 
-            {/* Prova social rápida */}
+            {/* Prova social realista */}
             <div className="flex items-center justify-center lg:justify-start gap-6 text-blue-200 animate-fade-up delay-500">
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span className="text-sm">+200 empresas</span>
+                <span className="text-sm">Primeiros clientes</span>
               </div>
               <div className="w-1 h-1 bg-blue-300 rounded-full"></div>
               <div className="flex items-center gap-2">
-                <Target className="h-5 w-5" />
-                <span className="text-sm">Resultados em 30 dias</span>
+                <Clock className="h-5 w-5" />
+                <span className="text-sm">Setup em 48h</span>
               </div>
             </div>
           </div>
 
-          {/* Coluna lateral - cards flutuantes */}
+          {/* Coluna lateral - cards com dados realistas */}
           <div className="lg:col-span-5 relative hidden lg:block">
             
-            {/* Card principal - glassmorphism */}
+            {/* Card principal - potencial realista */}
             <div className="relative">
               <div className="glass-card p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                    <TrendingUp className="h-6 w-6 text-white" />
+                    <BarChart3 className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl">Performance Real</h3>
-                    <p className="text-blue-200">Cliente do mês passado</p>
+                    <h3 className="text-white font-bold text-xl">Potencial Estimado</h3>
+                    <p className="text-blue-200">Para sua empresa</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Conversão de Leads</span>
-                    <span className="text-green-300 font-bold text-xl">+347%</span>
+                    <span className="text-blue-200">Economia de Tempo</span>
+                    <span className="text-green-300 font-bold text-xl">40h/mês</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Tempo de Resposta</span>
-                    <span className="text-blue-300 font-bold text-xl">2 min</span>
+                    <span className="text-blue-200">Resposta Instantânea</span>
+                    <span className="text-blue-300 font-bold text-xl">24/7</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">ROI em 30 dias</span>
-                    <span className="text-yellow-300 font-bold text-xl">R$ 89k</span>
+                    <span className="text-blue-200">Leads Qualificados</span>
+                    <span className="text-yellow-300 font-bold text-xl">+200%</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Cards secundários flutuantes */}
+            {/* Cards secundários com vantagens */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Clock className="h-8 w-8 text-blue-300" />
+                <Zap className="h-8 w-8 text-yellow-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">24/7</p>
-                  <p className="text-blue-200 text-sm">Atendimento</p>
+                  <p className="text-white font-bold text-lg">Rápido</p>
+                  <p className="text-blue-200 text-sm">Setup</p>
                 </div>
               </div>
             </div>
 
             <div className="absolute -bottom-6 -left-8 glass-card p-4 animate-float animation-delay-700">
               <div className="flex items-center gap-3">
-                <DollarSign className="h-8 w-8 text-green-300" />
+                <Target className="h-8 w-8 text-green-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">5x</p>
-                  <p className="text-blue-200 text-sm">Mais vendas</p>
+                  <p className="text-white font-bold text-lg">Pioneiro</p>
+                  <p className="text-blue-200 text-sm">Na região</p>
                 </div>
               </div>
             </div>
 
             <div className="absolute top-1/2 -right-12 glass-card p-4 animate-float animation-delay-1000">
               <div className="flex items-center gap-3">
-                <Zap className="h-8 w-8 text-yellow-300" />
+                <TrendingUp className="h-8 w-8 text-blue-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Instantâneo</p>
-                  <p className="text-blue-200 text-sm">Setup</p>
+                  <p className="text-white font-bold text-lg">Vantagem</p>
+                  <p className="text-blue-200 text-sm">Competitiva</p>
                 </div>
               </div>
             </div>
@@ -161,7 +161,7 @@ const Hero = () => {
 
       {/* Scroll indicator melhorado */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-blue-200 mb-2 font-medium">Descubra o Impacto</span>
+        <span className="text-sm text-blue-200 mb-2 font-medium">Descubra Como</span>
         <div className="w-6 h-10 border-2 border-blue-300 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-300 rounded-full mt-2 animate-pulse"></div>
         </div>
