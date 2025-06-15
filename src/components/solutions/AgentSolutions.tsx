@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
@@ -60,6 +59,14 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       description: 'Reduza o tempo e custos da análise com aprovação instantânea e automática de crédito integrada ao comercial.',
       image: '/lovable-uploads/0ab82369-42d6-40c1-bc2e-95902bc715e6.png',
       ctaText: 'Quero reduzir meu tempo de análise'
+    },
+    {
+      id: 'sdr-atendimento',
+      title: 'Agente SDR – Atendimento e Qualificação',
+      subtitle: 'Atendimento imediato e qualificação automática de leads.',
+      description: 'Melhore a satisfação e fidelize clientes com atendimento ágil, qualificação inteligente e integração direta ao CRM.',
+      image: '/lovable-uploads/9c88e904-d5f0-40da-8f51-d3926573eb17.png',
+      ctaText: 'Quero fidelizar meus clientes'
     }
   ];
 
