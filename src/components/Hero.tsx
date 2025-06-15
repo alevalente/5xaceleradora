@@ -44,10 +44,10 @@ const Hero = () => {
 
       {/* Main content */}
       <div className="container-wide relative z-20" ref={heroRef}>
-        <div className="grid grid-cols-1 xl:grid-cols-10 gap-12 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 2xl:grid-cols-10 gap-16 items-center min-h-[80vh]">
           
           {/* Coluna principal - conteúdo expandido */}
-          <div className="xl:col-span-8 text-center xl:text-left pt-20 xl:pt-0">
+          <div className="2xl:col-span-6 text-center 2xl:text-left pt-20 2xl:pt-0">
             
             {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
@@ -58,12 +58,12 @@ const Hero = () => {
             </h1>
             
             {/* Subtítulo de vantagem competitiva */}
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto xl:mx-0 animate-fade-up delay-300 font-light">
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto 2xl:mx-0 animate-fade-up delay-300 font-light">
               Ganhe vantagem competitiva automatizando suas vendas e atendimento enquanto seus concorrentes ainda fazem tudo manual.
             </p>
             
             {/* CTAs focados em oportunidade */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start animate-fade-up delay-400 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center 2xl:justify-start animate-fade-up delay-400 mb-8">
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
                 <Bot className="h-5 w-5 mr-2" />
                 Quero Essa Vantagem Agora
@@ -74,7 +74,7 @@ const Hero = () => {
             </div>
 
             {/* Posicionamento de especialistas integrado */}
-            <div className="flex items-center justify-center xl:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
+            <div className="flex items-center justify-center 2xl:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
               <div className="flex items-center gap-2">
                 <Bot className="h-5 w-5" />
                 <span className="text-sm">Somos especialistas em automatizar processos comerciais com inteligência artificial</span>
@@ -82,14 +82,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Coluna lateral - cartões flutuantes */}
-          <div className="xl:col-span-2 relative hidden xl:block">
+          {/* Coluna lateral - cartões flutuantes com posicionamento corrigido */}
+          <div className="2xl:col-span-4 relative hidden 2xl:block">
             
-            {/* Área de contenção para os cartões flutuantes */}
-            <div className="relative w-full h-[500px] overflow-visible">
+            {/* Área de contenção para os cartões flutuantes - expandida e melhor posicionada */}
+            <div className="relative w-full h-[600px] overflow-visible">
               
-              {/* Cards flutuantes com benefícios específicos - posicionamento melhorado */}
-              {/* Card 1 - Superior */}
+              {/* Cards flutuantes com posicionamento sem sobreposições */}
+              
+              {/* Card 1 - Superior Centro */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-300">
                 <div className="flex items-center gap-3">
                   <Settings className="h-8 w-8 text-yellow-300" />
@@ -100,19 +101,19 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 2 - Superior Direito */}
-              <div className="absolute top-16 right-0 z-10 glass-card p-4 animate-float animation-delay-500">
+              {/* Card 2 - Superior Direita */}
+              <div className="absolute top-12 right-8 z-10 glass-card p-4 animate-float animation-delay-500">
                 <div className="flex items-center gap-3">
                   <MessageCircle className="h-8 w-8 text-purple-300" />
                   <div>
-                    <p className="text-white font-bold text-lg">Clientes Sempre</p>
-                    <p className="text-blue-200 text-sm">Ativos</p>
+                    <p className="text-white font-bold text-lg">Clientes</p>
+                    <p className="text-blue-200 text-sm">Sempre Ativos</p>
                   </div>
                 </div>
               </div>
 
-              {/* Card 3 - Meio Esquerdo */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 glass-card p-4 animate-float animation-delay-700">
+              {/* Card 3 - Meio Esquerda */}
+              <div className="absolute top-32 left-0 z-10 glass-card p-4 animate-float animation-delay-700">
                 <div className="flex items-center gap-3">
                   <Shield className="h-8 w-8 text-green-300" />
                   <div>
@@ -122,8 +123,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 4 - Meio Direito */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 glass-card p-4 animate-float animation-delay-400">
+              {/* Card 4 - Centro */}
+              <div className="absolute top-40 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-400">
                 <div className="flex items-center gap-3">
                   <Bell className="h-8 w-8 text-orange-300" />
                   <div>
@@ -133,8 +134,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 5 - Inferior Direito */}
-              <div className="absolute bottom-16 right-0 z-10 glass-card p-4 animate-float animation-delay-1000">
+              {/* Card 5 - Meio Direita */}
+              <div className="absolute top-48 right-4 z-10 glass-card p-4 animate-float animation-delay-1000">
                 <div className="flex items-center gap-3">
                   <FileText className="h-8 w-8 text-blue-300" />
                   <div>
@@ -144,8 +145,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 6 - Inferior */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-800">
+              {/* Card 6 - Inferior Centro */}
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-800">
                 <div className="flex items-center gap-3">
                   <RotateCcw className="h-8 w-8 text-cyan-300" />
                   <div>
