@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { Target, Clock, Users, LineChart } from 'lucide-react';
+import { Target, Clock, TrendingUp, LineChart } from 'lucide-react';
 import { createObserver } from '../utils/animations';
 
 const Statistics = () => {
@@ -14,41 +14,59 @@ const Statistics = () => {
   const stats = [
     { 
       id: 1, 
-      icon: <Users className="h-8 w-8 text-blue-500" />, 
-      value: '+2K', 
-      label: 'Empresas treinadas em IA',
-      animation: 'animate-slide-left' 
+      icon: <TrendingUp className="h-10 w-10 text-blue-500" />, 
+      value: '67%', 
+      label: 'Crescimento anual do mercado de IA no Brasil',
+      animation: 'animate-slide-left',
+      highlight: true,
+      badge: 'CRESCIMENTO'
     },
     { 
       id: 2, 
-      icon: <Clock className="h-8 w-8 text-blue-500" />, 
-      value: '+80', 
-      label: 'Horas economizadas em tarefas repetitivas',
-      animation: 'animate-slide-left delay-200' 
+      icon: <Clock className="h-10 w-10 text-green-500" />, 
+      value: '24/7', 
+      label: 'Disponibilidade total dos nossos agentes inteligentes',
+      animation: 'animate-slide-left delay-200',
+      highlight: false,
+      badge: 'DISPONÍVEL'
     },
     { 
       id: 3, 
-      icon: <Target className="h-8 w-8 text-blue-500" />, 
-      value: '35%', 
-      label: 'Aumento médio em vendas',
-      animation: 'animate-slide-right delay-300' 
+      icon: <Target className="h-10 w-10 text-purple-500" />, 
+      value: '40%', 
+      label: 'Aumento médio de produtividade com automação de IA',
+      animation: 'animate-slide-right delay-300',
+      highlight: true,
+      badge: 'PRODUTIVIDADE'
     },
     { 
       id: 4, 
-      icon: <LineChart className="h-8 w-8 text-blue-500" />, 
-      value: '5x', 
-      label: 'Aceleração na performance comercial',
-      animation: 'animate-slide-right delay-400' 
+      icon: <LineChart className="h-10 w-10 text-orange-500" />, 
+      value: '300%', 
+      label: 'ROI médio em projetos de IA comercial no primeiro ano',
+      animation: 'animate-slide-right delay-400',
+      highlight: true,
+      badge: 'ROI'
     }
   ];
 
   return (
-    <section className="py-20 bg-white relative">
-      <div className="container-wide">
-        <div className="text-center mb-12">
-          <h2 className="heading-md mb-4">Impacto Comprovado</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Nossos clientes revolucionam seus processos comerciais com tecnologia de ponta e soluções personalizadas
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-purple-600/5"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl"></div>
+      
+      <div className="container-wide relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
+            📊 Dados do Mercado
+          </div>
+          <h2 className="heading-lg mb-6 text-gray-900">
+            O Mercado de IA Comercial em Números
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Veja como a inteligência artificial está transformando o cenário comercial brasileiro e mundial
           </p>
         </div>
 
@@ -56,17 +74,53 @@ const Statistics = () => {
           {stats.map((stat) => (
             <div 
               key={stat.id} 
-              className={`relative overflow-hidden ${stat.animation} bg-white p-6 rounded-xl border border-gray-100 shadow-subtle transition-transform duration-300 hover:shadow-hover hover:-translate-y-1`}
+              className={`group relative overflow-hidden ${stat.animation} 
+                bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-white/20 
+                hover:bg-white/90 hover:shadow-2xl hover:shadow-blue-500/10
+                transition-all duration-500 hover:-translate-y-2
+                ${stat.highlight ? 'ring-2 ring-blue-500/20' : ''}
+              `}
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4 p-3 bg-blue-50 rounded-lg">
+              {/* Highlight badge */}
+              {stat.highlight && (
+                <div className="absolute top-3 right-3">
+                  <span className="inline-flex items-center px-2 py-1 text-xs font-bold text-blue-700 bg-blue-100 rounded-full">
+                    {stat.badge}
+                  </span>
+                </div>
+              )}
+
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+              
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <div className="mb-6 p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl group-hover:scale-110 transition-transform duration-300 animate-pulse-soft">
                   {stat.icon}
                 </div>
-                <h3 className="text-3xl font-bold text-blue-700 mb-2">{stat.value}</h3>
-                <p className="text-gray-600">{stat.label}</p>
+                
+                <h3 className="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  {stat.value}
+                </h3>
+                
+                <p className="text-gray-700 font-medium leading-relaxed">
+                  {stat.label}
+                </p>
+
+                {/* Subtle bottom border animation */}
+                <div className="mt-4 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-500"></div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom CTA section */}
+        <div className="text-center mt-16">
+          <p className="text-lg text-gray-600 mb-6">
+            Quer fazer parte dessa transformação digital?
+          </p>
+          <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 cursor-pointer">
+            Solicitar Demonstração
+          </div>
         </div>
       </div>
     </section>
