@@ -58,7 +58,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       title: 'Agente de Cadastro e Análise de Crédito',
       subtitle: 'Análise automática, rápida e segura.',
       description: 'Reduza o tempo e custos da análise com aprovação instantânea e automática de crédito integrada ao comercial.',
-      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
+      image: '/lovable-uploads/0ab82369-42d6-40c1-bc2e-95902bc715e6.png',
       ctaText: 'Quero reduzir meu tempo de análise'
     }
   ];
