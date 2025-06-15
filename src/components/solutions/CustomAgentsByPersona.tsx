@@ -9,19 +9,19 @@ const CustomAgentsByPersona = () => {
     {
       icon: <Target className="h-8 w-8 text-white" />,
       title: 'Análise Personalizada',
-      description: 'Estudamos seu processo comercial e identificamos oportunidades únicas de automação.',
+      description: 'Analisamos seu negócio e identificamos oportunidades específicas de automação.',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
       icon: <Cog className="h-8 w-8 text-white" />,
       title: 'Desenvolvimento Sob Medida',
-      description: 'Criamos agentes específicos para suas necessidades, não soluções genéricas.',
+      description: 'Desenvolvemos agentes personalizados exatamente para o seu processo comercial.',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       icon: <Zap className="h-8 w-8 text-white" />,
       title: 'Integração Total',
-      description: 'Conectamos perfeitamente com seus sistemas atuais sem interrupções.',
+      description: 'Integramos nossas soluções diretamente aos seus sistemas atuais sem interromper sua rotina.',
       gradient: 'from-orange-500 to-red-500'
     }
   ];
@@ -62,8 +62,8 @@ const CustomAgentsByPersona = () => {
             </div>
             
             <h3 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Não encontrou o 
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> agente ideal</span> para seu negócio?
+              Seu negócio precisa de um 
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> agente sob medida</span>?
             </h3>
             
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -92,10 +92,10 @@ const CustomAgentsByPersona = () => {
               
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-white">
-                  Sua necessidade é única?
+                  Agentes construídos 100% para sua realidade
                 </h4>
                 <p className="text-blue-100 text-lg leading-relaxed">
-                  Nossa solução também será. Desenvolvemos desde automações simples até sistemas complexos de IA.
+                  Desenvolvemos soluções adaptadas especificamente ao seu processo.
                 </p>
                 
                 <div className="flex items-center gap-3 text-blue-100">
