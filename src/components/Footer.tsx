@@ -1,4 +1,3 @@
-
 import { Mail, Phone, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { images } from '../assets/images';
@@ -111,11 +110,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-0.5 text-blue-500" />
-                <span className="text-gray-400">contato@5xaceleradora.com.br</span>
+                <span className="text-gray-400">alexandre.valente@5xaceleradora.com.br</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-3 mt-0.5 text-blue-500" />
-                <span className="text-gray-400">(11) 99999-9999</span>
+                <span className="text-gray-400">(19) 9 9443-5313</span>
               </li>
             </ul>
           </div>
