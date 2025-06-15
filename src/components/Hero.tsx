@@ -58,12 +58,12 @@ const Hero = () => {
             </h1>
             
             {/* Subtítulo de vantagem competitiva */}
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
+            <p className="text-xl md:text-2xl text-blue-100 mb-6 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
               Ganhe vantagem competitiva automatizando suas vendas e atendimento enquanto seus concorrentes ainda fazem tudo manual.
             </p>
             
             {/* CTAs focados em oportunidade */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-4">
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
                 <Bot className="h-5 w-5 mr-2" />
                 Quero Essa Vantagem Agora
