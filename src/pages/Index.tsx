@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import FloatingBadge from '../components/FloatingBadge';
 import Statistics from '../components/Statistics';
 import IntelligentSolutions from '../components/IntelligentSolutions';
-import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
@@ -39,7 +38,6 @@ const Index = () => {
         <Hero />
         <Statistics />
         <IntelligentSolutions />
-        <Testimonials />
         <ContactForm />
       </main>
       <Footer />
