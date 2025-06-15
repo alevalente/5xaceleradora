@@ -159,8 +159,8 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Card 5 - Meio Centro Inferior */}
-            <div className="absolute top-[65%] -right-16 glass-card p-4 animate-float animation-delay-1000">
+            {/* Card 5 - CRM Mais Abaixo */}
+            <div className="absolute top-[75%] -right-16 glass-card p-4 animate-float animation-delay-1000">
               <div className="flex items-center gap-3">
                 <FileText className="h-8 w-8 text-blue-300" />
                 <div>
