@@ -65,7 +65,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       title: 'Agente SDR – Atendimento e Qualificação',
       subtitle: 'Atendimento imediato e qualificação automática de leads.',
       description: 'Melhore a satisfação e fidelize clientes com atendimento ágil, qualificação inteligente e integração direta ao CRM.',
-      image: '/lovable-uploads/9c88e904-d5f0-40da-8f51-d3926573eb17.png',
+      image: '/lovable-uploads/9f08124a-ba80-40a9-8b80-a201c4915bb3.png',
       ctaText: 'Quero fidelizar meus clientes'
     }
   ];
