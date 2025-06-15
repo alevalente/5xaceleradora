@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import FloatingBadge from '../components/FloatingBadge';
 import Statistics from '../components/Statistics';
 import IntelligentSolutions from '../components/IntelligentSolutions';
 import Testimonials from '../components/Testimonials';
@@ -33,6 +34,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <FloatingBadge />
       <main className="flex-grow">
         <Hero />
         <Statistics />
