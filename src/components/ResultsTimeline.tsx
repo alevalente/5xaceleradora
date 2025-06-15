@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, TrendingUp, Target, Zap } from 'lucide-react';
+import { CheckCircle, TrendingUp, Target, Settings } from 'lucide-react';
 
 interface TimelineStep {
   period: string;
@@ -18,30 +18,30 @@ interface ResultsTimelineProps {
 const ResultsTimeline = ({ agentName }: ResultsTimelineProps) => {
   const timelineSteps: TimelineStep[] = [
     {
-      period: "Semana 1-2",
-      title: "Implementação Rápida",
-      description: "Setup completo do agente e integração com seus sistemas existentes. Treinamento da equipe.",
-      icon: <Zap className="h-6 w-6" />,
+      period: "Semana 1-3",
+      title: "Setup e Implementação Personalizada",
+      description: "Configuração completa do agente com foco nas necessidades específicas da sua empresa. Integração cuidadosa com sistemas existentes.",
+      icon: <Settings className="h-6 w-6" />,
       color: "blue"
     },
     {
-      period: "Semana 3-4", 
-      title: "Primeiros Insights",
-      description: "Dados iniciais começam a ser coletados. Identificação dos primeiros padrões e oportunidades.",
+      period: "Semana 4-6", 
+      title: "Primeiros Resultados Mensuráveis",
+      description: "Dados iniciais começam a ser coletados. Identificação dos primeiros padrões e oportunidades de melhoria.",
       icon: <Target className="h-6 w-6" />,
       color: "yellow"
     },
     {
-      period: "Mês 2",
-      title: "Resultados Mensuráveis",
-      description: "Indicadores claros de melhoria. Redução de tarefas manuais e aumento da eficiência.",
+      period: "Mês 2-3",
+      title: "Resultados Consolidados",
+      description: "Indicadores claros de melhoria. Redução significativa de tarefas manuais e aumento da eficiência operacional.",
       icon: <TrendingUp className="h-6 w-6" />,
       color: "orange"
     },
     {
-      period: "Mês 3+",
+      period: "Mês 4+",
       title: "ROI Comprovado",
-      description: "Retorno do investimento evidente. Processos otimizados e equipe focada em atividades estratégicas.",
+      description: "Retorno do investimento evidente. Processos completamente otimizados e equipe focada em atividades estratégicas.",
       icon: <CheckCircle className="h-6 w-6" />,
       color: "green"
     }
@@ -100,10 +100,10 @@ const ResultsTimeline = ({ agentName }: ResultsTimelineProps) => {
 
         <div className="mt-8 p-6 bg-blue-50 rounded-lg text-center">
           <p className="text-lg text-blue-800 font-medium">
-            ⚡ <strong>Implementação em aproximadamente 15 dias úteis</strong>
+            ⚡ <strong>Implementação completa em 2-3 semanas</strong>
           </p>
           <p className="text-blue-600 mt-2">
-            Resultados mensuráveis já nas primeiras semanas
+            Tempo investido para garantir resultados sólidos e duradouros
           </p>
         </div>
       </CardContent>

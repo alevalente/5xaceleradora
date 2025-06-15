@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3 } from 'lucide-react';
+import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3, Settings } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -77,12 +77,12 @@ const Hero = () => {
             <div className="flex items-center justify-center lg:justify-start gap-6 text-blue-200 animate-fade-up delay-500">
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span className="text-sm">Primeiros clientes</span>
+                <span className="text-sm">Clientes satisfeitos</span>
               </div>
               <div className="w-1 h-1 bg-blue-300 rounded-full"></div>
               <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5" />
-                <span className="text-sm">Setup em 48h</span>
+                <Settings className="h-5 w-5" />
+                <span className="text-sm">Implementação personalizada</span>
               </div>
             </div>
           </div>
@@ -122,10 +122,10 @@ const Hero = () => {
             {/* Cards secundários com vantagens */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Zap className="h-8 w-8 text-yellow-300" />
+                <Settings className="h-8 w-8 text-blue-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Rápido</p>
-                  <p className="text-blue-200 text-sm">Setup</p>
+                  <p className="text-white font-bold text-lg">Setup</p>
+                  <p className="text-blue-200 text-sm">Personalizado</p>
                 </div>
               </div>
             </div>
