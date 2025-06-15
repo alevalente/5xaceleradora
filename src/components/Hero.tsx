@@ -90,8 +90,8 @@ const Hero = () => {
               
               {/* Cards flutuantes com posicionamento corrigido */}
               
-              {/* Card 1 - Automação (movido para baixo e para a direita) */}
-              <div className="absolute top-16 lg:top-24 right-8 lg:right-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg">
+              {/* Card 1 - Automação (abaixado um pouco) */}
+              <div className="absolute top-20 lg:top-32 right-8 lg:right-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Settings className="h-6 w-6 lg:h-8 lg:w-8 text-yellow-300" />
                   <div>
@@ -123,8 +123,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 4 - Follow-Up (reposicionado para o lado esquerdo do CRM) */}
-              <div className="absolute top-56 lg:top-72 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
+              {/* Card 4 - Follow-Up (abaixado um pouco) */}
+              <div className="absolute top-64 lg:top-80 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Bell className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
                   <div>
@@ -135,7 +135,7 @@ const Hero = () => {
               </div>
 
               {/* Card 5 - CRM (movido para baixo para não sobrepor) */}
-              <div className="absolute top-56 lg:top-72 right-2 lg:right-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-1000 shadow-lg">
+              <div className="absolute top-64 lg:top-80 right-2 lg:right-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-1000 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <FileText className="h-6 w-6 lg:h-8 lg:w-8 text-blue-300" />
                   <div>
