@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
@@ -49,7 +48,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       id: 'analise-conversa-followup',
       title: 'Agente de Análise de Conversa e Follow-Up',
       subtitle: 'Chega de esquecer clientes e atrasar follow-ups',
-      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas de vendas.',
+      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas.',
       image: '/lovable-uploads/bff71ba3-fe2b-4979-adc6-a9366ee9c19f.png',
       ctaText: 'Quero agilizar meu follow-up'
     },
