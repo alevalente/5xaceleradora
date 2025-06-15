@@ -50,12 +50,19 @@ const Hero = () => {
           <div className="lg:col-span-7 text-center lg:text-left pt-20 lg:pt-0">
             
             {/* Título de oportunidade */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-up delay-200 text-white leading-tight">
               Domine a IA<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 animate-pulse-soft">
                 antes dos concorrentes
               </span>
             </h1>
+            
+            {/* Posicionamento de especialistas */}
+            <div className="mb-8 animate-fade-up delay-250">
+              <p className="text-yellow-300 text-lg md:text-xl font-medium">
+                Especialistas em automatizar processos comerciais com IA personalizada
+              </p>
+            </div>
             
             {/* Subtítulo de vantagem competitiva */}
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">

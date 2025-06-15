@@ -16,7 +16,7 @@ const Footer = () => {
               <img src={logoSrc} alt="5x Aceleradora" className="h-14" />
             </div>
             <p className="text-gray-400 mb-6">
-              Aumentando a performance comercial de empresas com soluções inteligentes de IA e automação.
+              Especialistas em automatizar processos comerciais com IA personalizada para empresas que buscam vantagem competitiva.
             </p>
             <div className="flex space-x-4">
               <a 
