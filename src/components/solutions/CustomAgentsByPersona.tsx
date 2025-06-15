@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, Cog, Zap, Target, CheckCircle, ArrowRight } from 'lucide-react';
+import { BrainCircuit, Cog, Zap, Target, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CustomAgentsByPersona = () => {
@@ -20,19 +20,7 @@ const CustomAgentsByPersona = () => {
       icon: <Zap className="h-6 w-6 text-blue-600" />,
       title: 'Integração Total',
       description: 'Conectamos perfeitamente com seus sistemas atuais sem interrupções.'
-    },
-    {
-      icon: <CheckCircle className="h-6 w-6 text-blue-600" />,
-      title: 'Suporte Especializado',
-      description: 'Acompanhamento completo desde o desenvolvimento até a implementação.'
     }
-  ];
-
-  const uniqueCases = [
-    'Agente para controle de estoque automatizado via WhatsApp',
-    'Validação de propostas comerciais com análise de margem',
-    'Monitoramento de satisfação pós-venda em tempo real',
-    'Automação de cobrança inteligente e humanizada'
   ];
 
   return (
@@ -67,7 +55,7 @@ const CustomAgentsByPersona = () => {
       </div>
 
       {/* Benefits Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      <div className="grid md:grid-cols-3 gap-8 mb-16">
         {customBenefits.map((benefit, index) => (
           <div key={index} className="text-center">
             <div className="flex justify-center mb-4">
@@ -79,21 +67,6 @@ const CustomAgentsByPersona = () => {
             <p className="text-gray-600 text-sm">{benefit.description}</p>
           </div>
         ))}
-      </div>
-
-      {/* Examples Section */}
-      <div className="bg-gray-50 rounded-2xl p-8 mb-12">
-        <h4 className="text-2xl font-bold text-center mb-6 text-gray-900">
-          Exemplos de Agentes Únicos que já Desenvolvemos
-        </h4>
-        <div className="grid md:grid-cols-2 gap-4">
-          {uniqueCases.map((caseExample, index) => (
-            <div key={index} className="flex items-center bg-white rounded-lg p-4 shadow-sm">
-              <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-              <span className="text-gray-700">{caseExample}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* CTA Section */}
