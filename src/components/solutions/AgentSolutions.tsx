@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
@@ -48,7 +49,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       id: 'analise-conversa-followup',
       title: 'Agente de Análise de Conversa e Follow-Up',
       subtitle: 'Chega de esquecer clientes e atrasar follow-ups',
-      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas de vendas.',
+      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas.',
       image: '/lovable-uploads/c71305c1-a521-4de6-9d3c-40baa660ecd3.png',
       ctaText: 'Quero agilizar meu follow-up'
     },
@@ -97,7 +98,12 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
                       <img 
                         src={solution.image} 
                         alt={`${solution.title} - Agente de IA`}
-                        className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
+                        className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                        onError={(e) => {
+                          console.log('Image failed to load:', solution.image);
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
                       />
                     </div>
                   )}
