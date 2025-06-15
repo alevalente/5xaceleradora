@@ -82,16 +82,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Coluna lateral - cartões flutuantes visíveis em telas grandes */}
+          {/* Coluna lateral - cartões flutuantes visíveis a partir de lg breakpoint */}
           <div className="lg:col-span-4 relative hidden lg:block">
             
             {/* Área de contenção para os cartões flutuantes */}
             <div className="relative w-full h-[500px] lg:h-[600px] xl:h-[700px] overflow-visible">
               
-              {/* Cards flutuantes com posicionamento responsivo */}
+              {/* Cards flutuantes com posicionamento responsivo melhorado */}
               
               {/* Card 1 - Superior Esquerda */}
-              <div className="absolute top-4 lg:top-8 left-2 lg:left-4 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-300">
+              <div className="absolute top-4 lg:top-8 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Settings className="h-6 w-6 lg:h-8 lg:w-8 text-yellow-300" />
                   <div>
@@ -102,7 +102,7 @@ const Hero = () => {
               </div>
 
               {/* Card 2 - Superior Direita */}
-              <div className="absolute top-8 lg:top-16 right-4 lg:right-8 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-500">
+              <div className="absolute top-8 lg:top-16 right-4 lg:right-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <MessageCircle className="h-6 w-6 lg:h-8 lg:w-8 text-purple-300" />
                   <div>
@@ -113,7 +113,7 @@ const Hero = () => {
               </div>
 
               {/* Card 3 - Meio Esquerda */}
-              <div className="absolute top-24 lg:top-40 left-0 lg:left-0 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-700">
+              <div className="absolute top-24 lg:top-40 left-0 lg:left-0 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-700 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-green-300" />
                   <div>
@@ -124,7 +124,7 @@ const Hero = () => {
               </div>
 
               {/* Card 4 - Centro */}
-              <div className="absolute top-40 lg:top-64 left-1/2 transform -translate-x-1/2 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-400">
+              <div className="absolute top-40 lg:top-64 left-1/2 transform -translate-x-1/2 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Bell className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
                   <div>
@@ -135,7 +135,7 @@ const Hero = () => {
               </div>
 
               {/* Card 5 - Meio Direita */}
-              <div className="absolute top-48 lg:top-80 right-2 lg:right-4 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-1000">
+              <div className="absolute top-48 lg:top-80 right-2 lg:right-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-1000 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <FileText className="h-6 w-6 lg:h-8 lg:w-8 text-blue-300" />
                   <div>
@@ -146,7 +146,7 @@ const Hero = () => {
               </div>
 
               {/* Card 6 - Inferior Centro */}
-              <div className="absolute bottom-8 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-30 glass-card p-3 lg:p-4 animate-float animation-delay-800">
+              <div className="absolute bottom-8 lg:bottom-16 left-1/2 transform -translate-x-1/2 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-800 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <RotateCcw className="h-6 w-6 lg:h-8 lg:w-8 text-cyan-300" />
                   <div>
