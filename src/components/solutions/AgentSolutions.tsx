@@ -40,7 +40,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
     {
       id: 'reativacao-automatica',
       title: 'Agente de Reativação de Clientes Inativos',
-      subtitle: 'Reconquiste automaticamente quem já custou tanto para conquistar.',
+      subtitle: 'Reconquiste quem já custou tanto para conquistar.',
       description: 'Não dependa da equipe. Reative clientes inativos automaticamente com Inteligência Artificial, de forma consistente.',
       image: '/lovable-uploads/378362fc-9594-4e2b-a359-e2c465bcdd16.png',
       ctaText: 'Quero meus clientes de volta'
