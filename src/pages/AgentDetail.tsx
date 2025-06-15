@@ -14,8 +14,8 @@ const AgentDetail = () => {
   const agents = {
     'cobertura-carteira': {
       title: 'Agente de Cobertura de Carteira',
-      description: 'Garante contato regular com todos os clientes ativos, evitando perda de oportunidades e sinalizando riscos de evasão.',
-      detailedDescription: 'Nosso Agente de Cobertura de Carteira automatiza o monitoramento de contatos com clientes ativos, garantindo que nenhum cliente seja esquecido. O sistema sinaliza quando clientes ficam muito tempo sem contato, prevenindo a perda de oportunidades de venda e reduzindo o risco de evasão de clientes.',
+      description: 'Proteja sua carteira de clientes do "Ricardão".',
+      detailedDescription: 'Nosso Agente de Cobertura de Carteira automatiza o monitoramento de contatos com clientes ativos, garantindo que nenhum cliente seja esquecido. O sistema sinaliza quando clientes ficam muito tempo sem contato, prevenindo a perda de oportunidades de venda e reduzindo o risco de evasão de clientes para a concorrência.',
       benefits: [
         'Redução significativa na perda de clientes por falta de contato',
         'Dashboard completo de monitoramento da frequência de contatos',
@@ -32,100 +32,81 @@ const AgentDetail = () => {
       ]
     },
     'avaliacao-monitoramento': {
-      title: 'Agente de Avaliação e Monitoramento',
-      description: 'Mensura o desempenho dos vendedores e emite relatórios com indicadores de melhoria e pontos fortes.',
-      detailedDescription: 'O Agente de Avaliação e Monitoramento analisa o desempenho dos vendedores durante as interações com clientes, verificando a qualidade da abordagem, técnicas de vendas utilizadas e pontos de melhoria. Através de análises detalhadas, nosso agente fornece insights valiosos para aprimorar as estratégias de vendas.',
+      title: 'Agente de Monitoramento de Conversas',
+      description: 'Análise automática, sem intervenção humana.',
+      detailedDescription: 'O Agente de Monitoramento de Conversas analisa automaticamente todas as interações entre vendedores e clientes, identificando pontos de melhoria, oportunidades perdidas e padrões de sucesso. Nossa solução oferece insights valiosos sobre a qualidade do atendimento e performance da equipe comercial.',
       benefits: [
         'Diagnóstico objetivo do desempenho individual de cada vendedor',
+        'Identificação de oportunidades de upsell e cross-sell perdidas',
         'Base sólida para treinamentos e ações corretivas personalizadas',
-        'Identificação de padrões de sucesso que podem ser replicados',
         'Melhoria contínua no processo de vendas',
-        'Aumento na taxa de conversão de leads'
+        'Aumento na taxa de conversão através de insights acionáveis'
       ],
       features: [
-        'Análise qualitativa das conversas e interações com clientes',
-        'Verificação de uso de upsell/cross-sell durante o atendimento',
-        'Relatórios individuais com pontos fortes e oportunidades de melhoria',
-        'Métricas comparativas de desempenho entre vendedores',
-        'Sugestões automatizadas para aprimoramento de técnicas de venda'
+        'Análise qualitativa das conversas em tempo real',
+        'Detecção automática de sinais de compra e objeções',
+        'Verificação de uso de técnicas de vendas durante o atendimento',
+        'Relatórios detalhados com pontos fortes e oportunidades',
+        'Alertas para situações que requerem intervenção imediata'
       ]
     },
     'reativacao-automatica': {
-      title: 'Agente de Reativação Automática',
-      description: 'Resgata clientes inativos com campanhas específicas de reativação, identificando aqueles receptivos ao retorno.',
-      detailedDescription: 'O Agente de Reativação Automática realiza ações estratégicas para reconquistar clientes que deixaram de comprar. Através de campanhas personalizadas via WhatsApp, o agente identifica quais clientes inativos estão receptivos a retomar o relacionamento comercial, direcionando leads qualificados para sua equipe de vendas.',
+      title: 'Agente de Reativação de Clientes Inativos',
+      description: 'Reconquiste quem já custou tanto para conquistar.',
+      detailedDescription: 'O Agente de Reativação Automática implementa estratégias inteligentes para reconquistar clientes que deixaram de comprar. Através de campanhas personalizadas e análise de receptividade, nossa solução identifica o momento ideal e a abordagem mais eficaz para cada cliente inativo.',
       benefits: [
-        'Recuperação de receita com clientes inativos sem sobrecarregar a equipe',
+        'Recuperação de receita sem sobrecarregar a equipe comercial',
         'Abordagem em larga escala de clientes simultaneamente',
-        'Métricas claras de taxa de reativação e ROI da campanha',
-        'Direcionamento automático apenas de leads qualificados para vendedores',
-        'Personalização das ofertas baseada no histórico do cliente'
+        'Personalização baseada no histórico e perfil do cliente',
+        'Métricas claras de taxa de reativação e ROI',
+        'Direcionamento automático de leads qualificados para vendedores'
       ],
       features: [
-        'Campanhas específicas para diferentes perfis de clientes inativos',
-        'Análise de receptividade via IA para identificar potencial de reativação',
-        'Direcionamento automático para vendedores quando há interesse',
-        'Relatórios detalhados de desempenho das campanhas',
-        'Integração com CRM para atualização da jornada do cliente'
+        'Campanhas segmentadas por tempo de inatividade e perfil',
+        'Análise de receptividade via IA para timing otimizado',
+        'Múltiplos canais de contato (WhatsApp, email, SMS)',
+        'Escalação automática para vendedores quando há interesse',
+        'Relatórios detalhados de performance e conversão'
       ]
     },
-    'gestao-vendas': {
-      title: 'Agente de Gestão de Vendas',
-      description: 'Automatiza o fluxo de pedidos e cotações, reduzindo tarefas manuais dos vendedores e agilizando o processo comercial.',
-      detailedDescription: 'O Agente de Gestão de Vendas automatiza todo o fluxo operacional de pedidos e cotações, permitindo que seus vendedores dediquem mais tempo ao relacionamento com clientes e menos tempo em tarefas administrativas. Nossa solução extrai informações de pedidos diretamente das conversas e as integra com seus sistemas internos.',
+    'analise-conversa-followup': {
+      title: 'Agente de Análise de Conversa e Follow-Up',
+      description: 'Chega de esquecer clientes e atrasar follow-ups.',
+      detailedDescription: 'O Agente de Análise de Conversa e Follow-Up monitora automaticamente todas as conversas de vendas, identifica quando follow-ups são necessários e executa ações automáticas para manter o momentum comercial. Nossa solução garante que nenhuma oportunidade seja perdida por falta de acompanhamento.',
       benefits: [
-        'Redução significativa do tempo gasto com tarefas administrativas',
-        'Aumento da precisão no processamento de pedidos e cotações',
-        'Maior transparência no acompanhamento do funil de vendas',
-        'Vendedores mais focados em relacionamento e negociação',
-        'Ciclo de vendas mais ágil e eficiente'
+        'Eliminação de follow-ups esquecidos ou atrasados',
+        'Aumento significativo na taxa de conversão',
+        'Liberação da equipe para focar em atividades estratégicas',
+        'Padronização do processo de acompanhamento',
+        'Melhoria na experiência do cliente com respostas ágeis'
       ],
       features: [
-        'Extração automática de informações de pedidos via WhatsApp',
-        'Geração de cotações diretamente no ERP ou CRM',
-        'Painel Kanban para visualização das etapas do funil',
-        'Dashboards de performance comercial em tempo real',
-        'Integrações com sistemas internos para fluxo contínuo'
+        'Análise em tempo real de conversas no WhatsApp e outros canais',
+        'Identificação automática de sinais de interesse e próximos passos',
+        'Agendamento inteligente de follow-ups baseado no contexto',
+        'Lembretes automáticos para vendedores sobre ações pendentes',
+        'Escalação de oportunidades quentes para gestores'
       ]
     },
     'cadastro-credito': {
       title: 'Agente de Cadastro e Análise de Crédito',
-      description: 'Agiliza cadastros e análises de crédito, consultando fontes oficiais automaticamente e minimizando a burocracia.',
-      detailedDescription: 'O Agente de Cadastro e Análise de Crédito simplifica e agiliza o processo de onboarding de novos clientes. Através da automação da coleta de dados, consultas a fontes oficiais e análise de crédito, reduzimos drasticamente o tempo de aprovação e a burocracia envolvida no processo comercial.',
+      description: 'Automatiza até 80% do cadastro e análise.',
+      detailedDescription: 'O Agente de Cadastro e Análise de Crédito revoluciona o processo de onboarding de clientes, automatizando a coleta de dados, consultas a órgãos oficiais e análise de risco. Nossa solução reduz drasticamente o tempo de aprovação e elimina a burocracia desnecessária.',
       benefits: [
-        'Redução significativa no tempo de aprovação de cadastros',
+        'Redução de até 80% no tempo de aprovação de cadastros',
+        'Diminuição significativa de erros manuais',
         'Otimização da equipe de análise de crédito',
-        'Maior confiabilidade nos dados coletados',
-        'Aceleração do ciclo de vendas',
-        'Melhoria na experiência do cliente durante o onboarding'
+        'Melhoria na experiência do cliente durante onboarding',
+        'Decisões de crédito mais assertivas e baseadas em dados'
       ],
       features: [
-        'Captura de dados básicos via WhatsApp ou formulários',
-        'Consulta automática a fontes oficiais (Receita Federal, bureaus de crédito)',
+        'Coleta automática de dados via WhatsApp e formulários inteligentes',
+        'Consulta automática à Receita Federal e bureaus de crédito',
         'Preenchimento automático de cadastros no sistema interno',
-        'Cálculo de score de crédito baseado em múltiplas variáveis',
-        'Aprovações automáticas para casos de baixo risco'
+        'Algoritmo de scoring baseado em múltiplas variáveis',
+        'Aprovações automáticas para perfis de baixo risco'
       ]
-    },
-    'disparador-promocoes': {
-      title: 'Disparador de Promoções via WhatsApp',
-      description: 'Automatiza o envio de ofertas e promoções segmentadas, mantendo relacionamento pessoal de forma escalável.',
-      detailedDescription: 'O Disparador de Promoções via WhatsApp permite a criação e envio de campanhas promocionais segmentadas usando os números dos próprios vendedores. Esta solução mantém o caráter pessoal do relacionamento, porém de forma automatizada e escalável, aumentando a efetividade das promoções.',
-      benefits: [
-        'Aumento na taxa de conversão de promoções',
-        'Redução do esforço manual da equipe comercial',
-        'Maior consistência e frequência nas campanhas',
-        'Manutenção do relacionamento pessoal com o cliente',
-        'Escalabilidade no envio de promoções personalizadas'
-      ],
-      features: [
-        'Segmentação avançada baseada no histórico e perfil do cliente',
-        'Envio de mensagens personalizadas por segmento',
-        'Monitoramento automático das respostas',
-        'Encaminhamento de leads interessados para vendedores',
-        'Uso do número do próprio vendedor, mantendo o relacionamento'
-      ]
-    },
+    }
   };
 
   // Find the agent based on the URL parameter
@@ -190,7 +171,7 @@ const AgentDetail = () => {
           <div className="glass-card p-8 text-center">
             <h2 className="text-2xl font-bold mb-6 text-gradient">Pronto para transformar seu processo comercial?</h2>
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-              Nosso Agente de {agent.title.replace('Agente de ', '')} pode ser implementado em aproximadamente 15 dias úteis, 
+              Nosso {agent.title} pode ser implementado em aproximadamente 15 dias úteis, 
               com resultados mensuráveis em poucas semanas após a implantação.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
