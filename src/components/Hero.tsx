@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3, Settings } from 'lucide-react';
+import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Bot, BarChart3 } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -65,7 +65,7 @@ const Hero = () => {
             {/* CTAs focados em oportunidade */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-8">
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
-                <Brain className="h-5 w-5 mr-2" />
+                <Bot className="h-5 w-5 mr-2" />
                 Quero Essa Vantagem Agora
               </a>
               <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg">
@@ -74,15 +74,10 @@ const Hero = () => {
             </div>
 
             {/* Posicionamento de especialistas integrado */}
-            <div className="flex items-center justify-center lg:justify-start gap-6 text-blue-200 animate-fade-up delay-500">
+            <div className="flex items-center justify-center lg:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
               <div className="flex items-center gap-2">
-                <Brain className="h-5 w-5" />
-                <span className="text-sm">Especialistas em automatizar processos comerciais</span>
-              </div>
-              <div className="w-1 h-1 bg-blue-300 rounded-full"></div>
-              <div className="flex items-center gap-2">
-                <Settings className="h-5 w-5" />
-                <span className="text-sm">com IA personalizada</span>
+                <Bot className="h-5 w-5" />
+                <span className="text-sm">Somos especialistas em automatizar processos comerciais com inteligência artificial</span>
               </div>
             </div>
           </div>
@@ -122,7 +117,7 @@ const Hero = () => {
             {/* Cards secundários com vantagens */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Settings className="h-8 w-8 text-blue-300" />
+                <Bot className="h-8 w-8 text-blue-300" />
                 <div>
                   <p className="text-white font-bold text-lg">Setup</p>
                   <p className="text-blue-200 text-sm">Personalizado</p>
