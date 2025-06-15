@@ -1,6 +1,6 @@
 
 import { useState, FormEvent } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Clock, TrendingUp, Headset } from 'lucide-react';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 
@@ -9,6 +9,7 @@ const ContactForm = () => {
     name: '',
     email: '',
     company: '',
+    website: '',
     phone: '',
     message: ''
   });
@@ -34,6 +35,7 @@ const ContactForm = () => {
       name: '',
       email: '',
       company: '',
+      website: '',
       phone: '',
       message: ''
     });
@@ -49,7 +51,7 @@ const ContactForm = () => {
             <div className="bg-white rounded-2xl shadow-subtle border border-gray-100 p-8 lg:p-10 animate-fade-up">
               <h3 className="heading-md mb-6">Fale com um especialista</h3>
               <p className="text-gray-600 mb-8">
-                Preencha o formulário abaixo e nossa equipe entrará em contato para entender seu negócio e apresentar a melhor solução.
+                Solicite agora sua análise gratuita com nosso especialista.
               </p>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -105,25 +107,41 @@ const ContactForm = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Telefone
+                    <label htmlFor="website" className="block text-sm font-medium text-gray-700 mb-1">
+                      Site da Empresa
                     </label>
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
+                      type="url"
+                      id="website"
+                      name="website"
+                      value={formData.website}
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
-                      placeholder="(00) 00000-0000"
+                      placeholder="www.suaempresa.com.br"
                     />
                   </div>
                 </div>
                 
                 <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Telefone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+                
+                <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Como podemos ajudar?
+                    Descreva rapidamente sua maior dificuldade ou objetivo comercial.
                   </label>
                   <textarea
                     id="message"
@@ -165,30 +183,39 @@ const ContactForm = () => {
           </div>
           
           <div className="order-1 lg:order-2">
-            <h2 className="heading-lg mb-6">Pronto para transformar sua área comercial?</h2>
+            <h2 className="heading-lg mb-6">Vamos começar sua automação comercial?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Fale com um de nossos especialistas e descubra como podemos aumentar sua performance comercial em até 5x com nossas soluções de IA personalizadas.
+              Converse com nossos especialistas e descubra como nossos agentes inteligentes podem acelerar e automatizar sua operação comercial em poucos dias.
             </p>
             
             <div className="space-y-6">
               <div className="bg-blue-50 p-6 rounded-xl">
-                <h4 className="text-xl font-semibold mb-3">Implementação rápida</h4>
+                <div className="flex items-center mb-3">
+                  <Clock className="h-6 w-6 text-blue-600 mr-3" />
+                  <h4 className="text-xl font-bold">Implementação rápida</h4>
+                </div>
                 <p className="text-gray-600">
-                  Nossas soluções podem ser implementadas em apenas 15 dias úteis, permitindo que você comece a ver resultados rapidamente.
+                  Seu agente inteligente funcionando em até 15 dias, com resultados imediatos na operação.
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-xl">
-                <h4 className="text-xl font-semibold mb-3">Resultados mensuráveis</h4>
+                <div className="flex items-center mb-3">
+                  <TrendingUp className="h-6 w-6 text-blue-600 mr-3" />
+                  <h4 className="text-xl font-bold">Resultados mensuráveis</h4>
+                </div>
                 <p className="text-gray-600">
-                  Nossos clientes relatam um aumento médio de 35% em suas vendas após implementar nossas soluções de IA.
+                  Em média, nossos clientes aumentam suas vendas em 35% após ativar nossos agentes de IA.
                 </p>
               </div>
               
               <div className="bg-blue-50 p-6 rounded-xl">
-                <h4 className="text-xl font-semibold mb-3">Suporte contínuo</h4>
+                <div className="flex items-center mb-3">
+                  <Headset className="h-6 w-6 text-blue-600 mr-3" />
+                  <h4 className="text-xl font-bold">Suporte contínuo</h4>
+                </div>
                 <p className="text-gray-600">
-                  Oferecemos suporte e acompanhamento contínuo para garantir que você obtenha o máximo valor de nossas soluções.
+                  Você terá suporte dedicado e contínuo para garantir o máximo desempenho dos seus agentes.
                 </p>
               </div>
             </div>
