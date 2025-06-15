@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
   Carousel,
   CarouselContent,
@@ -10,6 +11,8 @@ import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/c
 import { Button } from '@/components/ui/button';
 
 const SolutionCategories = () => {
+  const [api, setApi] = React.useState<any>();
+
   const solutionCategories = [
     {
       id: 'platform',
@@ -47,13 +50,30 @@ const SolutionCategories = () => {
   ];
 
   return (
-    <div className="mb-20">
+    <div className="mb-20 relative">
+      <button 
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        aria-label="Previous solution"
+        onClick={() => api?.scrollPrev()}
+      >
+        <ChevronLeft className="h-6 w-6 text-blue-600" />
+      </button>
+      
+      <button 
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        aria-label="Next solution"
+        onClick={() => api?.scrollNext()}
+      >
+        <ChevronRight className="h-6 w-6 text-blue-600" />
+      </button>
+
       <Carousel
         opts={{
           align: "start",
           loop: true,
         }}
         className="w-full"
+        setApi={setApi}
       >
         <CarouselContent>
           {solutionCategories.map((category) => (
