@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3 } from 'lucide-react';
 
@@ -49,10 +50,10 @@ const Hero = () => {
           <div className="lg:col-span-7 text-center lg:text-left pt-20 lg:pt-0">
             
             {/* Título de oportunidade */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
-              Domine a Inteligência Artificial<br />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
+              Domine a IA<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 animate-pulse-soft">
-                antes dos seus concorrentes
+                antes dos concorrentes
               </span>
             </h1>
             
