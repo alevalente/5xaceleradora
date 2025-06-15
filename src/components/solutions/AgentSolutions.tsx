@@ -26,7 +26,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
       description: 'Garante que seus vendedores entrem em contato com todos os clientes, evitando inativações e protegendo seu faturamento.',
       image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
-      ctaText: 'Quero proteger meus clientes'
+      ctaText: 'Quero proteger meus clientes',
+      customLink: '/agente-cobertura-carteira'
     },
     {
       id: 'avaliacao-monitoramento',
@@ -124,7 +125,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
                       {solution.description}
                     </CardDescription>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                      <a href={`/agent/${solution.id}`}>
+                      <a href={solution.customLink || `/agent/${solution.id}`}>
                         {solution.ctaText || 'Saiba mais'}
                       </a>
                     </Button>

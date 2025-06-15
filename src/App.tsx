@@ -11,6 +11,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const AgentDetail = lazy(() => import('./pages/AgentDetail'));
 const PlatformDetail = lazy(() => import('./pages/PlatformDetail'));
 const ConsultingDetail = lazy(() => import('./pages/ConsultingDetail'));
+const AgenteCoberturaCarteira = lazy(() => import('./pages/AgenteCoberturaCarteira'));
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/agent/:agentId" element={<AgentDetail />} />
+            <Route path="/agente-cobertura-carteira" element={<AgenteCoberturaCarteira />} />
             <Route path="/platform" element={<PlatformDetail />} />
             <Route path="/consulting" element={<ConsultingDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
