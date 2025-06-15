@@ -82,16 +82,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Coluna lateral - cartões flutuantes com posicionamento corrigido */}
+          {/* Coluna lateral - cartões flutuantes */}
           <div className="2xl:col-span-4 relative hidden 2xl:block">
             
-            {/* Área de contenção para os cartões flutuantes - expandida e melhor posicionada */}
-            <div className="relative w-full h-[600px] overflow-visible">
+            {/* Área de contenção para os cartões flutuantes */}
+            <div className="relative w-full h-[700px] overflow-visible">
               
               {/* Cards flutuantes com posicionamento sem sobreposições */}
               
-              {/* Card 1 - Superior Centro */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-300">
+              {/* Card 1 - Superior Esquerda */}
+              <div className="absolute top-8 left-4 z-10 glass-card p-4 animate-float animation-delay-300">
                 <div className="flex items-center gap-3">
                   <Settings className="h-8 w-8 text-yellow-300" />
                   <div>
@@ -102,18 +102,18 @@ const Hero = () => {
               </div>
 
               {/* Card 2 - Superior Direita */}
-              <div className="absolute top-12 right-8 z-10 glass-card p-4 animate-float animation-delay-500">
+              <div className="absolute top-16 right-8 z-10 glass-card p-4 animate-float animation-delay-500">
                 <div className="flex items-center gap-3">
                   <MessageCircle className="h-8 w-8 text-purple-300" />
                   <div>
-                    <p className="text-white font-bold text-lg">Clientes</p>
-                    <p className="text-blue-200 text-sm">Sempre Ativos</p>
+                    <p className="text-white font-bold text-lg">WhatsApp</p>
+                    <p className="text-blue-200 text-sm">Automático</p>
                   </div>
                 </div>
               </div>
 
               {/* Card 3 - Meio Esquerda */}
-              <div className="absolute top-32 left-0 z-10 glass-card p-4 animate-float animation-delay-700">
+              <div className="absolute top-40 left-0 z-10 glass-card p-4 animate-float animation-delay-700">
                 <div className="flex items-center gap-3">
                   <Shield className="h-8 w-8 text-green-300" />
                   <div>
@@ -124,7 +124,7 @@ const Hero = () => {
               </div>
 
               {/* Card 4 - Centro */}
-              <div className="absolute top-40 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-400">
+              <div className="absolute top-64 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-400">
                 <div className="flex items-center gap-3">
                   <Bell className="h-8 w-8 text-orange-300" />
                   <div>
@@ -135,18 +135,18 @@ const Hero = () => {
               </div>
 
               {/* Card 5 - Meio Direita */}
-              <div className="absolute top-48 right-4 z-10 glass-card p-4 animate-float animation-delay-1000">
+              <div className="absolute top-80 right-4 z-10 glass-card p-4 animate-float animation-delay-1000">
                 <div className="flex items-center gap-3">
                   <FileText className="h-8 w-8 text-blue-300" />
                   <div>
                     <p className="text-white font-bold text-lg">CRM</p>
-                    <p className="text-blue-200 text-sm">Automático</p>
+                    <p className="text-blue-200 text-sm">Integrado</p>
                   </div>
                 </div>
               </div>
 
               {/* Card 6 - Inferior Centro */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-800">
+              <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-800">
                 <div className="flex items-center gap-3">
                   <RotateCcw className="h-8 w-8 text-cyan-300" />
                   <div>
