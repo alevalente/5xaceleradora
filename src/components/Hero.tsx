@@ -1,6 +1,5 @@
-
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Bot, BarChart3 } from 'lucide-react';
+import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, FileCheck } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -82,65 +81,65 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Coluna lateral - cards com dados realistas */}
+          {/* Coluna lateral - cards com benefícios concretos */}
           <div className="lg:col-span-5 relative hidden lg:block">
             
-            {/* Card principal - potencial realista */}
+            {/* Card principal - benefícios tangíveis */}
             <div className="relative">
               <div className="glass-card p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                    <BarChart3 className="h-6 w-6 text-white" />
+                    <DollarSign className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl">Potencial Estimado</h3>
+                    <h3 className="text-white font-bold text-xl">Resultados Concretos</h3>
                     <p className="text-blue-200">Para sua empresa</p>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Economia de Tempo</span>
-                    <span className="text-green-300 font-bold text-xl">40h/mês</span>
+                    <span className="text-blue-200">Redução de Custos</span>
+                    <span className="text-green-300 font-bold text-xl">60%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Resposta Instantânea</span>
+                    <span className="text-blue-200">Atendimento</span>
                     <span className="text-blue-300 font-bold text-xl">24/7</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Leads Qualificados</span>
-                    <span className="text-yellow-300 font-bold text-xl">+200%</span>
+                    <span className="text-blue-200">Leads Perdidos</span>
+                    <span className="text-yellow-300 font-bold text-xl">Zero</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Cards secundários com vantagens */}
+            {/* Cards secundários com benefícios específicos */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Bot className="h-8 w-8 text-blue-300" />
+                <Zap className="h-8 w-8 text-yellow-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Setup</p>
-                  <p className="text-blue-200 text-sm">Personalizado</p>
+                  <p className="text-white font-bold text-lg">Automação</p>
+                  <p className="text-blue-200 text-sm">Inteligente</p>
                 </div>
               </div>
             </div>
 
             <div className="absolute -bottom-6 -left-8 glass-card p-4 animate-float animation-delay-700">
               <div className="flex items-center gap-3">
-                <TrendingUp className="h-8 w-8 text-green-300" />
+                <Target className="h-8 w-8 text-green-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Escalável</p>
-                  <p className="text-blue-200 text-sm">Sem limite</p>
+                  <p className="text-white font-bold text-lg">Zero Erros</p>
+                  <p className="text-blue-200 text-sm">Humanos</p>
                 </div>
               </div>
             </div>
 
             <div className="absolute top-1/2 -right-12 glass-card p-4 animate-float animation-delay-1000">
               <div className="flex items-center gap-3">
-                <TrendingUp className="h-8 w-8 text-blue-300" />
+                <FileCheck className="h-8 w-8 text-blue-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Vantagem</p>
-                  <p className="text-blue-200 text-sm">Competitiva</p>
+                  <p className="text-white font-bold text-lg">CRM</p>
+                  <p className="text-blue-200 text-sm">Automático</p>
                 </div>
               </div>
             </div>
