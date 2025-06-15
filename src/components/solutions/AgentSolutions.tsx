@@ -31,11 +31,11 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
     },
     {
       id: 'avaliacao-monitoramento',
-      title: 'Agente de Monitoramento de Conversas',
-      subtitle: 'Análise automática, sem intervenção humana.',
-      description: 'Avalie automaticamente tudo o que sua equipe conversa com seus clientes, identificando melhorias e corrigindo falhas em tempo real.',
-      image: '/lovable-uploads/a18fcce2-253f-4796-8790-2ac852b92b7b.png',
-      ctaText: 'Quero acompanhar minha equipe'
+      title: 'Agente de Análise de Conversa e Follow-Up',
+      subtitle: 'Chega de esquecer clientes e atrasar follow-ups',
+      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perda de vendas por falta de ação ou atrasos.',
+      image: '/lovable-uploads/c71305c1-a521-4de6-9d3c-40baa660ecd3.png',
+      ctaText: 'Quero agilizar meu follow-up'
     },
     {
       id: 'reativacao-automatica',
