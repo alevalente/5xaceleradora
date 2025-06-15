@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
@@ -74,7 +73,7 @@ const CustomAgentsByPersona = () => {
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
-                <span>Entrega em 15 dias</span>
+                <span>Geralmente levamos 3 semanas, mas isso pode variar de acordo com a complexidade do negócio</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
