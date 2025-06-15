@@ -101,8 +101,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 2 - WhatsApp (posição original) */}
-              <div className="absolute top-4 lg:top-8 left-4 lg:left-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg">
+              {/* Card 2 - WhatsApp (reposicionado para o lado direito do Reativação) */}
+              <div className="absolute bottom-24 lg:bottom-32 right-4 lg:right-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <MessageCircle className="h-6 w-6 lg:h-8 lg:w-8 text-purple-300" />
                   <div>
