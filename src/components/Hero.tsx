@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3 } from 'lucide-react';
 
@@ -48,8 +49,8 @@ const Hero = () => {
           {/* Coluna principal - conteúdo */}
           <div className="lg:col-span-7 text-center lg:text-left pt-20 lg:pt-0">
             
-            {/* Badge comercial com z-index alto */}
-            <div className="inline-flex items-center gap-2 bg-green-600/20 border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up backdrop-blur-sm relative z-[60]">
+            {/* Badge comercial com z-index muito alto */}
+            <div className="inline-flex items-center gap-2 bg-green-600/20 border border-green-400/30 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-up backdrop-blur-sm relative z-[100]">
               <TrendingUp className="h-4 w-4" />
               Venda mais, venda melhor com IA
             </div>
