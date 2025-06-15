@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
@@ -55,8 +56,10 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
     {
       id: 'cadastro-credito',
       title: 'Agente de Cadastro e Análise de Crédito',
-      description: 'Automatiza até 80% do cadastro e análise, exigindo apenas validações pontuais.',
+      subtitle: 'Análise automática, rápida e segura.',
+      description: 'Reduza o tempo e custos da análise com aprovação instantânea e automática de crédito integrada ao comercial.',
       image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
+      ctaText: 'Quero reduzir meu tempo de análise'
     }
   ];
 
