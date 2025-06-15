@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Gear } from 'lucide-react';
+import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Settings, FileText } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -117,7 +117,7 @@ const Hero = () => {
             {/* Cards secundários com benefícios específicos */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Gear className="h-8 w-8 text-yellow-300" />
+                <Settings className="h-8 w-8 text-yellow-300" />
                 <div>
                   <p className="text-white font-bold text-lg">Automação</p>
                   <p className="text-blue-200 text-sm">Inteligente</p>
@@ -137,7 +137,7 @@ const Hero = () => {
 
             <div className="absolute top-1/2 -right-12 glass-card p-4 animate-float animation-delay-1000">
               <div className="flex items-center gap-3">
-                <FileCheck className="h-8 w-8 text-blue-300" />
+                <FileText className="h-8 w-8 text-blue-300" />
                 <div>
                   <p className="text-white font-bold text-lg">CRM</p>
                   <p className="text-blue-200 text-sm">Automático</p>
