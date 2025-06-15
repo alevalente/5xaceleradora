@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Settings, FileText } from 'lucide-react';
+import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Settings, FileText, MessageCircle, Bell, RotateCcw } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -144,15 +144,38 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Scroll indicator melhorado */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-blue-200 mb-2 font-medium">Descubra Como</span>
-        <div className="w-6 h-10 border-2 border-blue-300 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-blue-300 rounded-full mt-2 animate-pulse"></div>
+            {/* Novos cartões flutuantes */}
+            <div className="absolute top-[15%] -left-6 glass-card p-4 animate-float animation-delay-500">
+              <div className="flex items-center gap-3">
+                <MessageCircle className="h-8 w-8 text-purple-300" />
+                <div>
+                  <p className="text-white font-bold text-lg">Clientes Sempre</p>
+                  <p className="text-blue-200 text-sm">Ativos</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-[15%] -right-8 glass-card p-4 animate-float animation-delay-800">
+              <div className="flex items-center gap-3">
+                <Bell className="h-8 w-8 text-orange-300" />
+                <div>
+                  <p className="text-white font-bold text-lg">Follow-Up</p>
+                  <p className="text-blue-200 text-sm">Imediato</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute top-[75%] left-[10%] glass-card p-4 animate-float animation-delay-400">
+              <div className="flex items-center gap-3">
+                <RotateCcw className="h-8 w-8 text-cyan-300" />
+                <div>
+                  <p className="text-white font-bold text-lg">Reativação</p>
+                  <p className="text-blue-200 text-sm">Automática</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
