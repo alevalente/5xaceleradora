@@ -1,7 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { ChevronDown, TrendingUp, Users, Zap, Target, Clock, DollarSign } from 'lucide-react';
-import { images } from '../assets/images';
+import { TrendingUp, Users, Zap, Target, Clock, DollarSign, ArrowRight, Brain, BarChart3 } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -12,7 +11,6 @@ const Hero = () => {
       const scrollY = window.scrollY;
       const opacity = Math.max(0, 1 - scrollY / 600);
       
-      // Parallax effect mais suave
       if (heroRef.current) {
         heroRef.current.style.transform = `translateY(${scrollY * 0.2}px)`;
         heroRef.current.style.opacity = `${opacity}`;
@@ -27,7 +25,7 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900">
-      {/* Background animated elements - mais dinâmicos */}
+      {/* Background animated elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-[10%] left-[10%] w-96 h-96 rounded-full bg-blue-400/20 filter blur-3xl animate-pulse-soft"></div>
         <div className="absolute top-[60%] right-[15%] w-80 h-80 rounded-full bg-indigo-400/20 filter blur-3xl animate-float animation-delay-500"></div>
@@ -40,9 +38,11 @@ const Hero = () => {
       </div>
 
       {/* Grid pattern sutil */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="7" cy="7" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+      <div className="absolute inset-0 opacity-40" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }}></div>
 
-      {/* Main content - layout assimétrico */}
+      {/* Main content */}
       <div className="container-wide relative z-10" ref={heroRef}>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
           
