@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -15,7 +16,10 @@ import {
   Truck,
   UserCheck,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Building2,
+  Zap,
+  Target
 } from 'lucide-react';
 import { 
   Carousel,
@@ -106,70 +110,39 @@ const IntelligentSolutions = () => {
     }
   ];
 
-  // Novos Agentes em Desenvolvimento - Adicionando a nova seção
-  const upcomingAgents = [
+  // Nova seção: Agentes Personalizados por Persona/Setor
+  const customAgentsByPersona = [
     {
-      id: 'followup-automatico',
-      title: 'Agente de Follow-up Automático',
-      description: 'Priorização inteligente de leads para maior conversão.',
-      icon: <Clock className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      id: 'distribuidor-atacadista',
+      title: 'Para Distribuidores e Atacadistas',
+      description: 'Agentes especializados em cobertura de carteira, gestão de representantes e controle de inadimplência.',
+      icon: <Building2 className="h-8 w-8 text-blue-600" />,
+      benefits: ['Proteção da carteira', 'Controle de representantes', 'Redução de inadimplência'],
+      color: 'bg-white border border-blue-200 hover:border-blue-400',
     },
     {
-      id: 'sugestao-produtos',
-      title: 'Agente de Sugestão de Produtos',
-      description: 'Recomendações personalizadas para aumentar vendas através de upselling e cross-selling.',
-      icon: <ShoppingBag className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      id: 'ceo-saas',
+      title: 'Para CEOs de SaaS em Escala',
+      description: 'Agentes focados em redução de CAC, automação de follow-up e qualificação inteligente de leads.',
+      icon: <Zap className="h-8 w-8 text-blue-600" />,
+      benefits: ['Redução de CAC', 'Automação de follow-up', 'Qualificação de leads'],
+      color: 'bg-white border border-blue-200 hover:border-blue-400',
     },
     {
-      id: 'validacao-ofertas',
-      title: 'Agente de Validação de Ofertas',
-      description: 'Análise semântica profunda das propostas comerciais.',
-      icon: <CheckSquare className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      id: 'gestor-comercial-b2b',
+      title: 'Para Gestores Comerciais B2B',
+      description: 'Agentes para previsibilidade de pipeline, integração com CRM e análise de performance comercial.',
+      icon: <Target className="h-8 w-8 text-blue-600" />,
+      benefits: ['Pipeline previsível', 'Integração com CRM', 'Análise de performance'],
+      color: 'bg-white border border-blue-200 hover:border-blue-400',
     },
     {
-      id: 'qualidade-atendimento',
-      title: 'Agente de Validação da Qualidade do Atendimento',
-      description: 'Análise de sentimento das conversas para insights sobre a satisfação do cliente.',
-      icon: <Headphones className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      id: 'monitoramento-cotacoes',
-      title: 'Agente de Monitoramento de Cotações',
-      description: 'Alertas automáticos sobre cotações pendentes.',
-      icon: <AlertTriangle className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      id: 'assistente-pessoal',
-      title: 'Assistente Pessoal para Vendedores',
-      description: 'Interação simplificada e intuitiva por voz diretamente via WhatsApp.',
-      icon: <UserPlus className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      id: 'gestao-carteira',
-      title: 'Gestão Avançada de Carteira',
-      description: 'Utiliza análise preditiva baseada em histórico e indicadores econômicos.',
-      icon: <Briefcase className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      id: 'materiais-promocionais',
-      title: 'Gama IA para Promoções',
-      description: 'Automação para criação e envio de materiais promocionais.',
-      icon: <Palette className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
-    },
-    {
-      id: 'gestao-logistica',
-      title: 'IA em Gestão Logística',
-      description: 'Rastreamento e informações logísticas em tempo real para um atendimento proativo.',
-      icon: <Truck className="h-8 w-8 text-white" />,
-      color: 'bg-blue-900/80 text-white',
+      id: 'outros-setores',
+      title: 'Outros Setores e Necessidades',
+      description: 'Criamos agentes sob medida para qualquer processo comercial ou de atendimento específico do seu negócio.',
+      icon: <BrainCircuit className="h-8 w-8 text-blue-600" />,
+      benefits: ['Solução personalizada', 'Integração total', 'Suporte especializado'],
+      color: 'bg-white border border-blue-200 hover:border-blue-400',
     }
   ];
 
@@ -247,7 +220,7 @@ const IntelligentSolutions = () => {
         </div>
 
         {/* Agentes de IA - Carrossel com botões laterais */}
-        <div id="agents" className="mb-40 relative">
+        <div id="agents" className="mb-20 relative">
           {/* Botões de navegação posicionados nas laterais da seção */}
           <button 
             className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -314,49 +287,53 @@ const IntelligentSolutions = () => {
           </Carousel>
         </div>
 
-        {/* Nova seção: Novos Agentes em Desenvolvimento */}
+        {/* Nova seção: Agentes Personalizados para seu Negócio */}
         <div className="mt-20">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">Novos Agentes em Desenvolvimento</h3>
-            <p className="text-gray-600">
-              Estamos constantemente inovando para otimizar ainda mais os processos comerciais da sua empresa.
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Agentes Personalizados para seu Negócio</h3>
+            <p className="text-gray-600 text-lg">
+              Criamos agentes de IA sob medida para as necessidades específicas do seu setor e processo comercial.
             </p>
           </div>
           
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full relative"
-          >
-            <CarouselContent>
-              {upcomingAgents.map((agent) => (
-                <CarouselItem key={agent.id} className="md:basis-1/3 lg:basis-1/3">
-                  <div className="p-1">
-                    <Card className="h-full bg-blue-900 text-white border border-blue-800/50" hoverEffect={true}>
-                      <CardHeader>
-                        <div className={cn("p-4 rounded-lg inline-block mb-4", agent.color)}>
-                          {agent.icon}
-                        </div>
-                        <CardTitle className="text-xl font-semibold text-white">{agent.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <CardDescription className="text-white/80">{agent.description}</CardDescription>
-                      </CardContent>
-                      <CardFooter>
-                        <span className="text-white/70 text-sm">Em breve</span>
-                      </CardFooter>
-                    </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {customAgentsByPersona.map((persona) => (
+              <Card key={persona.id} className={cn("h-full transition-all duration-300 hover:shadow-lg", persona.color)} hoverEffect={true}>
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-4">
+                    {persona.icon}
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-8 space-x-6">
-              <CarouselPrevious className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
-              <CarouselNext className="static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-12 w-12 shadow-lg" />
-            </div>
-          </Carousel>
+                  <CardTitle className="text-lg font-semibold text-gray-900">{persona.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 mb-4 text-center">
+                    {persona.description}
+                  </CardDescription>
+                  <ul className="space-y-2">
+                    {persona.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-600">
+                        <CheckSquare className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* CTA Central */}
+          <div className="text-center bg-blue-600 rounded-2xl p-8 text-white">
+            <h4 className="text-2xl font-bold mb-4">Vamos criar o agente ideal para o seu negócio?</h4>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+              Nossa equipe analisa seus processos comerciais e desenvolve agentes de IA personalizados que se integram perfeitamente ao seu sistema atual.
+            </p>
+            <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
+              <Link to="/contact">
+                Solicitar Demonstração Personalizada
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
