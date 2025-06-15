@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
@@ -69,17 +70,6 @@ const CustomAgentsByPersona = () => {
               Criamos agentes de IA <span className="font-semibold text-blue-600">completamente personalizados</span> para 
               resolver os desafios específicos do seu processo comercial.
             </p>
-
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                <span>Geralmente levamos 3 semanas, mas isso pode variar de acordo com a complexidade do negócio</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-4 w-4" />
-                <span>Suporte dedicado</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Visual */}
