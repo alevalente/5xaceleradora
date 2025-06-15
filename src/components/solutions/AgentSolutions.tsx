@@ -24,7 +24,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       id: 'cobertura-carteira',
       title: 'Agente de Cobertura de Carteira',
       subtitle: 'Proteja sua carteira de clientes do "Ricardão".',
-      description: 'Garanta que seus vendedores entrem em contato com todos os clientes, evitando inativações e protegendo seu faturamento.',
+      description: 'Garante que seus vendedores entrem em contato com todos os clientes, evitando inativações e protegendo seu faturamento.',
       image: '/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png',
       ctaText: 'Quero proteger meus clientes'
     },
@@ -63,7 +63,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
     {
       id: 'sdr-atendimento',
       title: 'Agente SDR – Atendimento e Qualificação',
-      subtitle: 'Atendimento imediato e qualificação automática de leads.',
+      subtitle: 'Atendimento imediato e qualificação automática',
       description: 'Melhore a satisfação e fidelize clientes com atendimento ágil, qualificação inteligente e integração direta ao CRM.',
       image: '/lovable-uploads/9f08124a-ba80-40a9-8b80-a201c4915bb3.png',
       ctaText: 'Quero fidelizar meus clientes'
