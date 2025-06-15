@@ -1,5 +1,6 @@
+
 import { useEffect, useRef } from 'react';
-import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, FileCheck } from 'lucide-react';
+import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Gear } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -98,16 +99,16 @@ const Hero = () => {
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Redução de Custos</span>
+                    <span className="text-blue-200">Redução imediata de custos operacionais</span>
                     <span className="text-green-300 font-bold text-xl">60%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Atendimento</span>
+                    <span className="text-blue-200">Atendimento instantâneo de leads</span>
                     <span className="text-blue-300 font-bold text-xl">24/7</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Leads Perdidos</span>
-                    <span className="text-yellow-300 font-bold text-xl">Zero</span>
+                    <span className="text-blue-200">Leads qualificados automaticamente</span>
+                    <span className="text-yellow-300 font-bold text-xl">100%</span>
                   </div>
                 </div>
               </div>
@@ -116,7 +117,7 @@ const Hero = () => {
             {/* Cards secundários com benefícios específicos */}
             <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
-                <Zap className="h-8 w-8 text-yellow-300" />
+                <Gear className="h-8 w-8 text-yellow-300" />
                 <div>
                   <p className="text-white font-bold text-lg">Automação</p>
                   <p className="text-blue-200 text-sm">Inteligente</p>
@@ -126,7 +127,7 @@ const Hero = () => {
 
             <div className="absolute -bottom-6 -left-8 glass-card p-4 animate-float animation-delay-700">
               <div className="flex items-center gap-3">
-                <Target className="h-8 w-8 text-green-300" />
+                <Shield className="h-8 w-8 text-green-300" />
                 <div>
                   <p className="text-white font-bold text-lg">Zero Erros</p>
                   <p className="text-blue-200 text-sm">Humanos</p>
