@@ -59,7 +59,7 @@ const Hero = () => {
             
             {/* Subtítulo de vantagem competitiva */}
             <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
-              Ganhe vantagem competitiva definitiva automatizando vendas e atendimento antes que seus concorrentes descubram como.
+              Ganhe vantagem competitiva automatizando suas vendas e atendimento enquanto seus concorrentes ainda fazem tudo manual.
             </p>
             
             {/* CTAs focados em oportunidade */}
