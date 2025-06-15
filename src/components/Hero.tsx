@@ -114,8 +114,9 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Cards secundários com benefícios específicos */}
-            <div className="absolute -top-8 -right-4 glass-card p-4 animate-float animation-delay-300">
+            {/* Cards secundários com benefícios específicos - reorganizados */}
+            {/* Card 1 - Topo Esquerdo */}
+            <div className="absolute -top-12 -left-12 glass-card p-4 animate-float animation-delay-300">
               <div className="flex items-center gap-3">
                 <Settings className="h-8 w-8 text-yellow-300" />
                 <div>
@@ -125,28 +126,8 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -left-8 glass-card p-4 animate-float animation-delay-700">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-green-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Zero Erros</p>
-                  <p className="text-blue-200 text-sm">Humanos</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute top-1/2 -right-12 glass-card p-4 animate-float animation-delay-1000">
-              <div className="flex items-center gap-3">
-                <FileText className="h-8 w-8 text-blue-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">CRM</p>
-                  <p className="text-blue-200 text-sm">Automático</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Novos cartões flutuantes */}
-            <div className="absolute top-[15%] -left-6 glass-card p-4 animate-float animation-delay-500">
+            {/* Card 2 - Topo Direito */}
+            <div className="absolute -top-8 -right-8 glass-card p-4 animate-float animation-delay-500">
               <div className="flex items-center gap-3">
                 <MessageCircle className="h-8 w-8 text-purple-300" />
                 <div>
@@ -156,7 +137,19 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="absolute bottom-[15%] -right-8 glass-card p-4 animate-float animation-delay-800">
+            {/* Card 3 - Meio Esquerdo */}
+            <div className="absolute top-[35%] -left-16 glass-card p-4 animate-float animation-delay-700">
+              <div className="flex items-center gap-3">
+                <Shield className="h-8 w-8 text-green-300" />
+                <div>
+                  <p className="text-white font-bold text-lg">Zero Erros</p>
+                  <p className="text-blue-200 text-sm">Humanos</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 - Meio Direito */}
+            <div className="absolute top-[25%] -right-16 glass-card p-4 animate-float animation-delay-400">
               <div className="flex items-center gap-3">
                 <Bell className="h-8 w-8 text-orange-300" />
                 <div>
@@ -166,7 +159,19 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="absolute top-[75%] left-[10%] glass-card p-4 animate-float animation-delay-400">
+            {/* Card 5 - Meio Centro */}
+            <div className="absolute top-[55%] -right-12 glass-card p-4 animate-float animation-delay-1000">
+              <div className="flex items-center gap-3">
+                <FileText className="h-8 w-8 text-blue-300" />
+                <div>
+                  <p className="text-white font-bold text-lg">CRM</p>
+                  <p className="text-blue-200 text-sm">Automático</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 6 - Fundo Esquerdo */}
+            <div className="absolute bottom-[20%] -left-10 glass-card p-4 animate-float animation-delay-800">
               <div className="flex items-center gap-3">
                 <RotateCcw className="h-8 w-8 text-cyan-300" />
                 <div>
