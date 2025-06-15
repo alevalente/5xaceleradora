@@ -132,10 +132,10 @@ const Hero = () => {
 
             <div className="absolute -bottom-6 -left-8 glass-card p-4 animate-float animation-delay-700">
               <div className="flex items-center gap-3">
-                <Target className="h-8 w-8 text-green-300" />
+                <TrendingUp className="h-8 w-8 text-green-300" />
                 <div>
-                  <p className="text-white font-bold text-lg">Pioneiro</p>
-                  <p className="text-blue-200 text-sm">Na região</p>
+                  <p className="text-white font-bold text-lg">Escalável</p>
+                  <p className="text-blue-200 text-sm">Sem limite</p>
                 </div>
               </div>
             </div>
