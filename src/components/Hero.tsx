@@ -123,8 +123,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 4 - Follow-Up (movido para cima) */}
-              <div className="absolute top-28 lg:top-44 left-1/2 transform -translate-x-1/2 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
+              {/* Card 4 - Follow-Up (reposicionado para o lado esquerdo do CRM) */}
+              <div className="absolute top-56 lg:top-72 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Bell className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
                   <div>
