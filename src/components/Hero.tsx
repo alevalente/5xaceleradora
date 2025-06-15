@@ -50,9 +50,9 @@ const Hero = () => {
             
             {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
-              Seja o primeiro da sua região<br />
+              Domine a Inteligência Artificial<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 animate-pulse-soft">
-                a dominar IA comercial
+                antes dos seus concorrentes
               </span>
             </h1>
             
