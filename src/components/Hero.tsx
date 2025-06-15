@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="grid grid-cols-1 xl:grid-cols-10 gap-12 items-center min-h-[80vh]">
           
           {/* Coluna principal - conteúdo expandido */}
-          <div className="xl:col-span-6 text-center xl:text-left pt-20 xl:pt-0">
+          <div className="xl:col-span-8 text-center xl:text-left pt-20 xl:pt-0">
             
             {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
@@ -82,44 +82,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Coluna lateral - cards com benefícios concretos */}
-          <div className="xl:col-span-4 relative hidden xl:block">
+          {/* Coluna lateral - cartões flutuantes */}
+          <div className="xl:col-span-2 relative hidden xl:block">
             
             {/* Área de contenção para os cartões flutuantes */}
             <div className="relative w-full h-[500px] overflow-visible">
               
-              {/* Card principal - benefícios tangíveis */}
-              <div className="relative z-10 flex justify-center items-center h-full">
-                <div className="glass-card p-8 transform hover:rotate-0 transition-transform duration-500 max-w-sm">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                      <DollarSign className="h-6 w-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-white font-bold text-xl">Resultados Concretos</h3>
-                      <p className="text-blue-200">Para sua empresa</p>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Redução imediata de custos operacionais</span>
-                      <span className="text-green-300 font-bold text-xl">60%</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Atendimento instantâneo de leads</span>
-                      <span className="text-blue-300 font-bold text-xl">24/7</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-blue-200">Leads qualificados automaticamente</span>
-                      <span className="text-yellow-300 font-bold text-xl">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cards secundários com benefícios específicos - posicionamento polar */}
-              {/* Card 1 - Superior Esquerdo */}
-              <div className="absolute top-0 left-0 z-0 glass-card p-4 animate-float animation-delay-300">
+              {/* Cards flutuantes com benefícios específicos - posicionamento melhorado */}
+              {/* Card 1 - Superior */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-300">
                 <div className="flex items-center gap-3">
                   <Settings className="h-8 w-8 text-yellow-300" />
                   <div>
@@ -130,7 +101,7 @@ const Hero = () => {
               </div>
 
               {/* Card 2 - Superior Direito */}
-              <div className="absolute top-0 right-0 z-0 glass-card p-4 animate-float animation-delay-500">
+              <div className="absolute top-16 right-0 z-10 glass-card p-4 animate-float animation-delay-500">
                 <div className="flex items-center gap-3">
                   <MessageCircle className="h-8 w-8 text-purple-300" />
                   <div>
@@ -141,7 +112,7 @@ const Hero = () => {
               </div>
 
               {/* Card 3 - Meio Esquerdo */}
-              <div className="absolute top-[35%] -left-8 z-0 glass-card p-4 animate-float animation-delay-700">
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 glass-card p-4 animate-float animation-delay-700">
                 <div className="flex items-center gap-3">
                   <Shield className="h-8 w-8 text-green-300" />
                   <div>
@@ -152,7 +123,7 @@ const Hero = () => {
               </div>
 
               {/* Card 4 - Meio Direito */}
-              <div className="absolute top-[35%] -right-8 z-0 glass-card p-4 animate-float animation-delay-400">
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 glass-card p-4 animate-float animation-delay-400">
                 <div className="flex items-center gap-3">
                   <Bell className="h-8 w-8 text-orange-300" />
                   <div>
@@ -163,7 +134,7 @@ const Hero = () => {
               </div>
 
               {/* Card 5 - Inferior Direito */}
-              <div className="absolute bottom-0 right-0 z-0 glass-card p-4 animate-float animation-delay-1000">
+              <div className="absolute bottom-16 right-0 z-10 glass-card p-4 animate-float animation-delay-1000">
                 <div className="flex items-center gap-3">
                   <FileText className="h-8 w-8 text-blue-300" />
                   <div>
@@ -173,8 +144,8 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Card 6 - Inferior Esquerdo */}
-              <div className="absolute bottom-0 left-0 z-0 glass-card p-4 animate-float animation-delay-800">
+              {/* Card 6 - Inferior */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10 glass-card p-4 animate-float animation-delay-800">
                 <div className="flex items-center gap-3">
                   <RotateCcw className="h-8 w-8 text-cyan-300" />
                   <div>
