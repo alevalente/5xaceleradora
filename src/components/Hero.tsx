@@ -68,7 +68,7 @@ const Hero = () => {
                 <Bot className="h-5 w-5 mr-2" />
                 Quero Essa Vantagem Agora
               </a>
-              <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg">
+              <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg">
                 Ver Como Funciona
               </a>
             </div>
