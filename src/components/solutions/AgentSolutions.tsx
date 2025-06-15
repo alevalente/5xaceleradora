@@ -46,10 +46,12 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       ctaText: 'Quero meus clientes de volta'
     },
     {
-      id: 'gestao-vendas',
-      title: 'Agente de Gestão de Vendas',
-      description: 'Integração total com sistemas internos, permitindo automação do processo comercial completo.',
-      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
+      id: 'analise-conversa-followup',
+      title: 'Agente de Análise de Conversa e Follow-Up',
+      subtitle: 'Chega de esquecer clientes e atrasar follow-ups',
+      description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perda de vendas por falta de ação ou atrasos.',
+      image: '/lovable-uploads/c71305c1-a521-4de6-9d3c-40baa660ecd3.png',
+      ctaText: 'Quero agilizar meu follow-up'
     },
     {
       id: 'cadastro-credito',
