@@ -43,11 +43,11 @@ const Hero = () => {
       }}></div>
 
       {/* Main content */}
-      <div className="container-wide relative z-10" ref={heroRef}>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
+      <div className="container-wide relative z-20" ref={heroRef}>
+        <div className="grid grid-cols-1 xl:grid-cols-10 gap-12 items-center min-h-[80vh]">
           
-          {/* Coluna principal - conteúdo */}
-          <div className="lg:col-span-7 text-center lg:text-left pt-20 lg:pt-0">
+          {/* Coluna principal - conteúdo expandido */}
+          <div className="xl:col-span-6 text-center xl:text-left pt-20 xl:pt-0">
             
             {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
@@ -58,12 +58,12 @@ const Hero = () => {
             </h1>
             
             {/* Subtítulo de vantagem competitiva */}
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
+            <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto xl:mx-0 animate-fade-up delay-300 font-light">
               Ganhe vantagem competitiva automatizando suas vendas e atendimento enquanto seus concorrentes ainda fazem tudo manual.
             </p>
             
             {/* CTAs focados em oportunidade */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center xl:justify-start animate-fade-up delay-400 mb-8">
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
                 <Bot className="h-5 w-5 mr-2" />
                 Quero Essa Vantagem Agora
@@ -74,7 +74,7 @@ const Hero = () => {
             </div>
 
             {/* Posicionamento de especialistas integrado */}
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
+            <div className="flex items-center justify-center xl:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
               <div className="flex items-center gap-2">
                 <Bot className="h-5 w-5" />
                 <span className="text-sm">Somos especialistas em automatizar processos comerciais com inteligência artificial</span>
@@ -83,100 +83,104 @@ const Hero = () => {
           </div>
 
           {/* Coluna lateral - cards com benefícios concretos */}
-          <div className="lg:col-span-5 relative hidden lg:block">
+          <div className="xl:col-span-4 relative hidden xl:block">
             
-            {/* Card principal - benefícios tangíveis */}
-            <div className="relative">
-              <div className="glass-card p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                    <DollarSign className="h-6 w-6 text-white" />
+            {/* Área de contenção para os cartões flutuantes */}
+            <div className="relative w-full h-[500px] overflow-visible">
+              
+              {/* Card principal - benefícios tangíveis */}
+              <div className="relative z-10 flex justify-center items-center h-full">
+                <div className="glass-card p-8 transform hover:rotate-0 transition-transform duration-500 max-w-sm">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                      <DollarSign className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-white font-bold text-xl">Resultados Concretos</h3>
+                      <p className="text-blue-200">Para sua empresa</p>
+                    </div>
                   </div>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Redução imediata de custos operacionais</span>
+                      <span className="text-green-300 font-bold text-xl">60%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Atendimento instantâneo de leads</span>
+                      <span className="text-blue-300 font-bold text-xl">24/7</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-blue-200">Leads qualificados automaticamente</span>
+                      <span className="text-yellow-300 font-bold text-xl">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Cards secundários com benefícios específicos - posicionamento polar */}
+              {/* Card 1 - Superior Esquerdo */}
+              <div className="absolute top-0 left-0 z-0 glass-card p-4 animate-float animation-delay-300">
+                <div className="flex items-center gap-3">
+                  <Settings className="h-8 w-8 text-yellow-300" />
                   <div>
-                    <h3 className="text-white font-bold text-xl">Resultados Concretos</h3>
-                    <p className="text-blue-200">Para sua empresa</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Redução imediata de custos operacionais</span>
-                    <span className="text-green-300 font-bold text-xl">60%</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Atendimento instantâneo de leads</span>
-                    <span className="text-blue-300 font-bold text-xl">24/7</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-blue-200">Leads qualificados automaticamente</span>
-                    <span className="text-yellow-300 font-bold text-xl">100%</span>
+                    <p className="text-white font-bold text-lg">Automação</p>
+                    <p className="text-blue-200 text-sm">Inteligente</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Cards secundários com benefícios específicos - com espaçamento otimizado */}
-            {/* Card 1 - Topo Esquerdo Distante */}
-            <div className="absolute -top-16 -left-20 glass-card p-4 animate-float animation-delay-300">
-              <div className="flex items-center gap-3">
-                <Settings className="h-8 w-8 text-yellow-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Automação</p>
-                  <p className="text-blue-200 text-sm">Inteligente</p>
+              {/* Card 2 - Superior Direito */}
+              <div className="absolute top-0 right-0 z-0 glass-card p-4 animate-float animation-delay-500">
+                <div className="flex items-center gap-3">
+                  <MessageCircle className="h-8 w-8 text-purple-300" />
+                  <div>
+                    <p className="text-white font-bold text-lg">Clientes Sempre</p>
+                    <p className="text-blue-200 text-sm">Ativos</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card 2 - Topo Direito Distante */}
-            <div className="absolute -top-12 -right-20 glass-card p-4 animate-float animation-delay-500">
-              <div className="flex items-center gap-3">
-                <MessageCircle className="h-8 w-8 text-purple-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Clientes Sempre</p>
-                  <p className="text-blue-200 text-sm">Ativos</p>
+              {/* Card 3 - Meio Esquerdo */}
+              <div className="absolute top-[35%] -left-8 z-0 glass-card p-4 animate-float animation-delay-700">
+                <div className="flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-green-300" />
+                  <div>
+                    <p className="text-white font-bold text-lg">Zero Erros</p>
+                    <p className="text-blue-200 text-sm">Humanos</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card 3 - Meio Esquerdo Bem Espaçado */}
-            <div className="absolute top-[20%] -left-24 glass-card p-4 animate-float animation-delay-700">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-green-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Zero Erros</p>
-                  <p className="text-blue-200 text-sm">Humanos</p>
+              {/* Card 4 - Meio Direito */}
+              <div className="absolute top-[35%] -right-8 z-0 glass-card p-4 animate-float animation-delay-400">
+                <div className="flex items-center gap-3">
+                  <Bell className="h-8 w-8 text-orange-300" />
+                  <div>
+                    <p className="text-white font-bold text-lg">Follow-Up</p>
+                    <p className="text-blue-200 text-sm">Imediato</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card 4 - Meio Direito Bem Espaçado */}
-            <div className="absolute top-[40%] -right-24 glass-card p-4 animate-float animation-delay-400">
-              <div className="flex items-center gap-3">
-                <Bell className="h-8 w-8 text-orange-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Follow-Up</p>
-                  <p className="text-blue-200 text-sm">Imediato</p>
+              {/* Card 5 - Inferior Direito */}
+              <div className="absolute bottom-0 right-0 z-0 glass-card p-4 animate-float animation-delay-1000">
+                <div className="flex items-center gap-3">
+                  <FileText className="h-8 w-8 text-blue-300" />
+                  <div>
+                    <p className="text-white font-bold text-lg">CRM</p>
+                    <p className="text-blue-200 text-sm">Automático</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Card 5 - CRM Mais Abaixo */}
-            <div className="absolute top-[75%] -right-16 glass-card p-4 animate-float animation-delay-1000">
-              <div className="flex items-center gap-3">
-                <FileText className="h-8 w-8 text-blue-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">CRM</p>
-                  <p className="text-blue-200 text-sm">Automático</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 6 - Fundo Esquerdo Distante */}
-            <div className="absolute bottom-[10%] -left-20 glass-card p-4 animate-float animation-delay-800">
-              <div className="flex items-center gap-3">
-                <RotateCcw className="h-8 w-8 text-cyan-300" />
-                <div>
-                  <p className="text-white font-bold text-lg">Reativação</p>
-                  <p className="text-blue-200 text-sm">Automática</p>
+              {/* Card 6 - Inferior Esquerdo */}
+              <div className="absolute bottom-0 left-0 z-0 glass-card p-4 animate-float animation-delay-800">
+                <div className="flex items-center gap-3">
+                  <RotateCcw className="h-8 w-8 text-cyan-300" />
+                  <div>
+                    <p className="text-white font-bold text-lg">Reativação</p>
+                    <p className="text-blue-200 text-sm">Automática</p>
+                  </div>
                 </div>
               </div>
             </div>
