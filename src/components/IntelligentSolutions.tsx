@@ -86,9 +86,11 @@ const IntelligentSolutions = () => {
     },
     {
       id: 'reativacao-automatica',
-      title: 'Agente de Reativação Automática',
-      description: 'Campanhas pontuais de reativação, sem sobrecarregar a equipe comercial.',
-      image: '/lovable-uploads/fc726cd1-b0ee-4ead-a507-41d5e8c1eb4e.png',
+      title: 'Agente de Reativação de Clientes Inativos',
+      subtitle: 'Reconquiste automaticamente quem já custou tanto para conquistar.',
+      description: 'Não dependa da equipe. Reative clientes inativos automaticamente com Inteligência Artificial, de forma consistente.',
+      image: '/lovable-uploads/378362fc-9594-4e2b-a359-e2c465bcdd16.png',
+      ctaText: 'Quero meus clientes de volta'
     },
     {
       id: 'gestao-vendas',
@@ -309,10 +311,6 @@ const IntelligentSolutions = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <div className="flex justify-center mt-10 space-x-8">
-              <CarouselPrevious className="carousel-previous static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
-              <CarouselNext className="carousel-next static translate-y-0 bg-blue-600 text-white hover:bg-blue-700 border border-blue-500 h-14 w-14 shadow-lg" />
-            </div>
           </Carousel>
         </div>
 
