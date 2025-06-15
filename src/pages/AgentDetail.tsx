@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
@@ -124,7 +123,7 @@ const AgentDetail = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col dark-gradient-bg">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-blue-900 to-blue-700">
       <Navbar />
       <main className="flex-grow pt-24 pb-20">
         <div className="container-wide">
