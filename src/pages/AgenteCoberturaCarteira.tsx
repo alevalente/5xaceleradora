@@ -118,19 +118,19 @@ const AgenteCoberturaCarteira = () => {
                     {
                       icon: BarChart3,
                       title: "Análise em Tempo Real",
-                      description: "Analisa conversas comerciais pelo WhatsApp diariamente",
+                      description: "Nosso agente captura e analisa automaticamente todas as conversas realizadas pelos seus vendedores via WhatsApp diariamente, garantindo acompanhamento constante.",
                       color: "blue"
                     },
                     {
                       icon: Users,
                       title: "Detecção Inteligente",
-                      description: "Identifica automaticamente clientes sem contato recente",
+                      description: "Identifica automaticamente e com precisão quais clientes da sua carteira não tiveram contato recente com seus vendedores, evitando negligências e prevenindo perdas financeiras.",
                       color: "purple"
                     },
                     {
                       icon: Shield,
                       title: "Monitoramento Ativo",
-                      description: "Aponta claramente quais vendedores estão cuidando adequadamente ou negligenciando clientes",
+                      description: "Você saberá exatamente quais vendedores estão cuidando bem da carteira e quem precisa de ajustes imediatos, permitindo decisões rápidas e precisas.",
                       color: "green"
                     }
                   ].map((item, index) => (
@@ -158,8 +158,9 @@ const AgenteCoberturaCarteira = () => {
                   </h3>
                 </div>
                 <p className="text-lg text-gray-300">
-                  Periodicidade adaptada ao ciclo médio de compra do seu cliente 
-                  <span className="text-blue-400 font-mono"> (semanal, quinzenal ou mensal)</span>.
+                  Adapte totalmente a frequência de análise e cobertura ao ciclo médio de compra dos seus clientes 
+                  <span className="text-blue-400 font-mono"> (ex. semanal, quinzenal ou mensal)</span>, 
+                  garantindo que todos recebam a atenção ideal.
                 </p>
               </div>
             </div>
