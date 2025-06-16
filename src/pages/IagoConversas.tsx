@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import LogoWithTransparentBackground from '../components/LogoWithTransparentBackground';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
@@ -228,13 +229,9 @@ const IagoConversas = () => {
                 </Link>
               </div>
               
-              {/* Logo do IAgo Conversas */}
+              {/* Logo do IAgo Conversas com fundo removido */}
               <div className="mb-8 flex justify-center">
-                <img 
-                  src={images.iagoConversasLogo} 
-                  alt="IAgo Conversas" 
-                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-                />
+                <LogoWithTransparentBackground />
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
