@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock } from 'lucide-react';
+import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock, Filter, Calendar } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -49,8 +49,8 @@ const AgenteCoberturaCarteira = () => {
     
     return (
       <div className="flex flex-col items-center">
-        <svg className="w-24 h-24 mb-3" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.3" />
+        <svg className="w-20 h-20 mb-2" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="35" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.3" />
           {salespeople.map((person, index) => {
             const percentage = (person.clients / total) * 100;
             const strokeDasharray = `${percentage * 2.51} 251`;
@@ -62,10 +62,10 @@ const AgenteCoberturaCarteira = () => {
                 key={index}
                 cx="50"
                 cy="50"
-                r="40"
+                r="35"
                 fill="transparent"
                 stroke={person.color}
-                strokeWidth="8"
+                strokeWidth="7"
                 strokeDasharray={dashboardAnimated[0] ? strokeDasharray : "0 251"}
                 strokeDashoffset="0"
                 transform={`rotate(${rotation} 50 50)`}
@@ -91,7 +91,7 @@ const AgenteCoberturaCarteira = () => {
             <div key={index} className="flex items-center justify-between">
               <div className="flex items-center">
                 <div 
-                  className="w-2.5 h-2.5 rounded-full mr-2"
+                  className="w-2 h-2 rounded-full mr-2"
                   style={{ backgroundColor: person.color }}
                 />
                 <span className="text-gray-300 font-medium text-xs">{person.name}</span>
@@ -104,12 +104,88 @@ const AgenteCoberturaCarteira = () => {
     );
   };
 
+  // New Coverage Donut Chart
+  const CoverageDonutChart = () => {
+    const coveredPercentage = 63;
+    const uncoveredPercentage = 37;
+    const coveredStroke = coveredPercentage * 2.51; // 251 is the circumference
+    const uncoveredStroke = uncoveredPercentage * 2.51;
+    
+    return (
+      <div className="flex flex-col items-center">
+        <svg className="w-24 h-24 mb-3" viewBox="0 0 100 100">
+          {/* Background circle */}
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.2" />
+          
+          {/* Covered clients (green) */}
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="transparent"
+            stroke="#22c55e"
+            strokeWidth="8"
+            strokeDasharray={dashboardAnimated[1] ? `${coveredStroke} 251` : "0 251"}
+            strokeDashoffset="0"
+            transform="rotate(-90 50 50)"
+            className="transition-all duration-1000 ease-out"
+            style={{ strokeLinecap: 'round' }}
+          />
+          
+          {/* Uncovered clients (orange/red) */}
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="transparent"
+            stroke="#f97316"
+            strokeWidth="8"
+            strokeDasharray={dashboardAnimated[1] ? `${uncoveredStroke} 251` : "0 251"}
+            strokeDashoffset={dashboardAnimated[1] ? `-${coveredStroke}` : "0"}
+            transform="rotate(-90 50 50)"
+            className="transition-all duration-1000 ease-out"
+            style={{ 
+              strokeLinecap: 'round',
+              transitionDelay: '300ms'
+            }}
+          />
+          
+          {/* Center text */}
+          <text x="50" y="46" textAnchor="middle" className="text-xs font-bold fill-white">
+            Total:
+          </text>
+          <text x="50" y="58" textAnchor="middle" className="text-xs font-bold fill-white">
+            1.385 clientes
+          </text>
+        </svg>
+        
+        {/* Legend */}
+        <div className="space-y-2 text-xs w-full">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-3 h-3 rounded-full mr-2 bg-green-500" />
+              <span className="text-gray-300 font-medium">Clientes Cobertos</span>
+            </div>
+            <span className="text-green-400 font-bold">63%</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-3 h-3 rounded-full mr-2 bg-orange-500" />
+              <span className="text-gray-300 font-medium">Clientes Não Cobertos</span>
+            </div>
+            <span className="text-orange-400 font-bold">37%</span>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const BarChart = ({ data, color }: { data: number[]; color: string }) => (
-    <div className="flex items-end justify-center space-x-1 h-12 w-16">
+    <div className="flex items-end justify-center space-x-1 h-10 w-14">
       {data.map((value, index) => (
         <div
           key={index}
-          className="w-1.5 rounded-t transition-all duration-700 ease-out"
+          className="w-1 rounded-t transition-all duration-700 ease-out"
           style={{
             height: dashboardAnimated[1] ? `${value}%` : '0%',
             backgroundColor: color,
@@ -121,7 +197,7 @@ const AgenteCoberturaCarteira = () => {
   );
 
   const LineChart = ({ color }: { color: string }) => (
-    <svg className="w-16 h-10" viewBox="0 0 80 48">
+    <svg className="w-14 h-8" viewBox="0 0 80 48">
       <defs>
         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor={color} stopOpacity="0.1" />
@@ -147,14 +223,14 @@ const AgenteCoberturaCarteira = () => {
       {[85, 65, 40].map((width, index) => (
         <div key={index} className="flex items-center space-x-2">
           <div 
-            className="h-1.5 rounded-full transition-all duration-700 ease-out"
+            className="h-1 rounded-full transition-all duration-700 ease-out"
             style={{
               width: dashboardAnimated[2] ? `${width}%` : '0%',
               backgroundColor: color,
               transitionDelay: `${index * 200}ms`
             }}
           />
-          <div className="w-2 h-2 rounded-full bg-current opacity-60" />
+          <div className="w-1.5 h-1.5 rounded-full bg-current opacity-60" />
         </div>
       ))}
     </div>
@@ -451,14 +527,15 @@ const AgenteCoberturaCarteira = () => {
                 },
                 {
                   icon: BarChart3,
-                  title: "Performance de Cobertura",
-                  description: "Acompanhe o percentual de cobertura por vendedor com gráficos dinâmicos. Identifique quem precisa de suporte imediato.",
-                  color: "#3b82f6",
-                  metric: "87%",
-                  metricLabel: "cobertura média",
-                  status: "Acima da meta",
-                  chart: <BarChart data={[60, 80, 90, 75, 95, 70]} color="#3b82f6" />,
-                  features: ["Comparação histórica", "Metas personalizadas", "Ranking de performance"]
+                  title: "Cobertura da Carteira de Clientes",
+                  description: "Visualize rapidamente qual percentual da sua carteira de clientes está recebendo contato frequente dos vendedores e identifique imediatamente o risco de perda por negligência.",
+                  color: "#22c55e",
+                  metric: "63%",
+                  metricLabel: "cobertura atual",
+                  status: "Risco médio",
+                  chart: <CoverageDonutChart />,
+                  features: ["Filtrar por Vendedor", "Filtrar por Data"],
+                  isNewCoverage: true
                 },
                 {
                   icon: Clock,
@@ -511,20 +588,20 @@ const AgenteCoberturaCarteira = () => {
                     </div>
                   </div>
 
-                  <CardHeader className="relative z-10 pb-3">
-                    <CardTitle className="text-white flex items-center justify-between text-lg mb-3">
+                  <CardHeader className="relative z-10 pb-2">
+                    <CardTitle className="text-white flex items-center justify-between text-base mb-2">
                       <div className="flex items-center">
                         <div 
-                          className="h-10 w-10 rounded-lg flex items-center justify-center mr-3 border"
+                          className="h-8 w-8 rounded-lg flex items-center justify-center mr-3 border"
                           style={{ 
                             backgroundColor: `${item.color}20`,
                             borderColor: `${item.color}40`
                           }}
                         >
-                          <item.icon className="h-5 w-5" style={{ color: item.color }} />
+                          <item.icon className="h-4 w-4" style={{ color: item.color }} />
                         </div>
                         <div>
-                          <div className="text-base font-bold">{item.title}</div>
+                          <div className="text-sm font-bold">{item.title}</div>
                           <div 
                             className="text-xs font-mono font-bold"
                             style={{ color: item.color }}
@@ -546,7 +623,7 @@ const AgenteCoberturaCarteira = () => {
                     <div className="flex items-baseline justify-between mb-3">
                       <div>
                         <div 
-                          className="text-2xl font-bold font-mono"
+                          className="text-xl font-bold font-mono"
                           style={{ color: item.color }}
                         >
                           {item.metric}
@@ -562,36 +639,33 @@ const AgenteCoberturaCarteira = () => {
                       {item.description}
                     </p>
 
-                    {/* Features List */}
+                    {/* Features List or Filter Buttons */}
                     <div className="space-y-1.5">
-                      {item.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-xs text-gray-400">
-                          <div 
-                            className="w-1 h-1 rounded-full mr-2"
-                            style={{ backgroundColor: item.color }}
-                          />
-                          {feature}
+                      {item.isNewCoverage ? (
+                        // Filter buttons for the new coverage card
+                        <div className="flex flex-wrap gap-2">
+                          {item.features.map((feature, featureIndex) => (
+                            <div 
+                              key={featureIndex} 
+                              className="inline-flex items-center px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-md text-xs text-gray-300 hover:bg-gray-600/50 transition-colors cursor-pointer"
+                            >
+                              {featureIndex === 0 ? <Users className="h-3 w-3 mr-1" /> : <Calendar className="h-3 w-3 mr-1" />}
+                              {feature}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="mt-3 pt-3 border-t border-gray-700/50">
-                      <div className="flex justify-between items-center text-xs mb-2">
-                        <span className="text-gray-400">Precisão dos dados</span>
-                        <span style={{ color: item.color }} className="font-mono font-bold">
-                          {95 + index}%
-                        </span>
-                      </div>
-                      <div className="h-1 bg-gray-700 rounded-full overflow-hidden">
-                        <div 
-                          className="h-full rounded-full transition-all duration-1000 ease-out"
-                          style={{ 
-                            backgroundColor: item.color,
-                            width: dashboardAnimated[index] ? `${95 + index}%` : '0%'
-                          }}
-                        />
-                      </div>
+                      ) : (
+                        // Regular features list for other cards
+                        item.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-xs text-gray-400">
+                            <div 
+                              className="w-1 h-1 rounded-full mr-2"
+                              style={{ backgroundColor: item.color }}
+                            />
+                            {feature}
+                          </div>
+                        ))
+                      )}
                     </div>
                   </CardContent>
 
