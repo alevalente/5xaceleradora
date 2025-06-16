@@ -6,8 +6,23 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Progress } from '../components/ui/progress';
+import { Badge } from '../components/ui/badge';
 
 const AgenteCoberturaCarteira = () => {
+  const [animatedCards, setAnimatedCards] = useState<boolean[]>([false, false, false]);
+
+  useEffect(() => {
+    // Staggered animation for cards
+    const timeouts = [
+      setTimeout(() => setAnimatedCards(prev => [true, prev[1], prev[2]]), 200),
+      setTimeout(() => setAnimatedCards(prev => [prev[0], true, prev[2]]), 400),
+      setTimeout(() => setAnimatedCards(prev => [prev[0], prev[1], true]), 600),
+    ];
+
+    return () => timeouts.forEach(clearTimeout);
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Navbar />
@@ -108,43 +123,144 @@ const AgenteCoberturaCarteira = () => {
                 </p>
               </div>
 
-              {/* How it works */}
+              {/* How it works - Enhanced Interactive Cards */}
               <div className="mb-16">
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   Como o Agente garante que nenhum cliente fique esquecido?
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {[
                     {
                       icon: BarChart3,
                       title: "Análise em Tempo Real",
                       description: "Nosso agente captura e analisa automaticamente todas as conversas realizadas pelos seus vendedores via WhatsApp diariamente, garantindo acompanhamento constante.",
-                      color: "blue"
+                      color: "blue",
+                      progress: 95,
+                      badge: "24/7",
+                      particles: ["bg-blue-400", "bg-cyan-300", "bg-blue-500"]
                     },
                     {
                       icon: Users,
                       title: "Detecção Inteligente",
                       description: "Identifica automaticamente e com precisão quais clientes da sua carteira não tiveram contato recente com seus vendedores, evitando negligências e prevenindo perdas financeiras.",
-                      color: "purple"
+                      color: "purple",
+                      progress: 98,
+                      badge: "IA Avançada",
+                      particles: ["bg-purple-400", "bg-pink-300", "bg-purple-500"]
                     },
                     {
                       icon: Shield,
                       title: "Monitoramento Ativo",
                       description: "Você saberá exatamente quais vendedores estão cuidando bem da carteira e quem precisa de ajustes imediatos, permitindo decisões rápidas e precisas.",
-                      color: "green"
+                      color: "green",
+                      progress: 92,
+                      badge: "Automático",
+                      particles: ["bg-green-400", "bg-emerald-300", "bg-green-500"]
                     }
                   ].map((item, index) => (
-                    <Card key={index} className="bg-gray-800/50 border-gray-600/50 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                      <CardContent className="pt-8 text-center">
-                        <div className={`h-16 w-16 mx-auto mb-4 rounded-full bg-${item.color}-500/20 flex items-center justify-center border border-${item.color}-400/30`}>
-                          <item.icon className={`h-8 w-8 text-${item.color}-400`} />
-                        </div>
-                        <h4 className="text-white font-bold mb-3">{item.title}</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          {item.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <div
+                      key={index}
+                      className={`group relative transition-all duration-700 ${
+                        animatedCards[index] 
+                          ? 'opacity-100 translate-y-0' 
+                          : 'opacity-0 translate-y-8'
+                      }`}
+                    >
+                      {/* Floating particles */}
+                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                        {item.particles.map((color, particleIndex) => (
+                          <div
+                            key={particleIndex}
+                            className={`absolute w-1 h-1 ${color} rounded-full opacity-0 group-hover:opacity-60 transition-all duration-1000 animate-pulse-soft`}
+                            style={{
+                              top: `${20 + particleIndex * 25}%`,
+                              left: `${10 + particleIndex * 30}%`,
+                              animationDelay: `${particleIndex * 500}ms`,
+                            }}
+                          />
+                        ))}
+                      </div>
+
+                      <Card className={`
+                        relative overflow-hidden bg-gradient-to-br from-gray-800/70 via-gray-800/50 to-gray-900/70 
+                        border border-gray-600/50 backdrop-blur-sm 
+                        transition-all duration-500 ease-out
+                        hover:scale-105 hover:shadow-2xl hover:shadow-${item.color}-500/20
+                        hover:border-${item.color}-400/50
+                        group-hover:bg-gradient-to-br group-hover:from-${item.color}-900/20 group-hover:via-gray-800/50 group-hover:to-gray-900/70
+                      `}>
+                        {/* Glow effect on hover */}
+                        <div className={`
+                          absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500
+                          bg-gradient-to-r from-${item.color}-400 to-${item.color}-600 blur-xl
+                        `} />
+                        
+                        <CardContent className="pt-8 text-center relative z-10">
+                          {/* Badge */}
+                          <div className="absolute top-4 right-4">
+                            <Badge 
+                              variant="outline" 
+                              className={`text-xs border-${item.color}-400/40 text-${item.color}-300 bg-${item.color}-500/10`}
+                            >
+                              {item.badge}
+                            </Badge>
+                          </div>
+
+                          {/* Icon with enhanced animation */}
+                          <div className={`
+                            h-16 w-16 mx-auto mb-4 rounded-full 
+                            bg-gradient-to-br from-${item.color}-500/30 to-${item.color}-600/30 
+                            flex items-center justify-center 
+                            border border-${item.color}-400/30
+                            transition-all duration-500 ease-out
+                            group-hover:scale-110 group-hover:rotate-3
+                            group-hover:shadow-lg group-hover:shadow-${item.color}-500/50
+                          `}>
+                            <item.icon className={`
+                              h-8 w-8 text-${item.color}-400 
+                              transition-all duration-300
+                              group-hover:scale-110
+                              animate-pulse-soft
+                            `} />
+                          </div>
+                          
+                          {/* Title with hover effect */}
+                          <h4 className={`
+                            text-white font-bold mb-3 text-lg
+                            transition-colors duration-300
+                            group-hover:text-${item.color}-300
+                          `}>
+                            {item.title}
+                          </h4>
+                          
+                          {/* Description */}
+                          <p className="text-gray-300 text-sm leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300">
+                            {item.description}
+                          </p>
+
+                          {/* Animated Progress Bar */}
+                          <div className="space-y-2">
+                            <div className="flex justify-between items-center text-xs">
+                              <span className="text-gray-400">Eficiência</span>
+                              <span className={`text-${item.color}-400 font-mono font-bold`}>
+                                {item.progress}%
+                              </span>
+                            </div>
+                            <Progress 
+                              value={animatedCards[index] ? item.progress : 0} 
+                              className="h-2"
+                            />
+                          </div>
+                        </CardContent>
+
+                        {/* Bottom glow line */}
+                        <div className={`
+                          absolute bottom-0 left-0 w-full h-1 
+                          bg-gradient-to-r from-transparent via-${item.color}-500 to-transparent
+                          opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        `} />
+                      </Card>
+                    </div>
                   ))}
                 </div>
               </div>
