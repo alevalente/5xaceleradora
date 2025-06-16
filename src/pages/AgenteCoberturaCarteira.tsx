@@ -49,7 +49,7 @@ const AgenteCoberturaCarteira = () => {
     
     return (
       <div className="flex flex-col items-center">
-        <svg className="w-32 h-32 mb-4" viewBox="0 0 100 100">
+        <svg className="w-24 h-24 mb-3" viewBox="0 0 100 100">
           <circle cx="50" cy="50" r="40" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.3" />
           {salespeople.map((person, index) => {
             const percentage = (person.clients / total) * 100;
@@ -91,12 +91,12 @@ const AgenteCoberturaCarteira = () => {
             <div key={index} className="flex items-center justify-between">
               <div className="flex items-center">
                 <div 
-                  className="w-3 h-3 rounded-full mr-2"
+                  className="w-2.5 h-2.5 rounded-full mr-2"
                   style={{ backgroundColor: person.color }}
                 />
-                <span className="text-gray-300 font-medium">{person.name}</span>
+                <span className="text-gray-300 font-medium text-xs">{person.name}</span>
               </div>
-              <span className="text-white font-bold">{person.clients}</span>
+              <span className="text-white font-bold text-xs">{person.clients}</span>
             </div>
           ))}
         </div>
@@ -105,11 +105,11 @@ const AgenteCoberturaCarteira = () => {
   };
 
   const BarChart = ({ data, color }: { data: number[]; color: string }) => (
-    <div className="flex items-end justify-center space-x-1 h-16 w-20">
+    <div className="flex items-end justify-center space-x-1 h-12 w-16">
       {data.map((value, index) => (
         <div
           key={index}
-          className="w-2 rounded-t transition-all duration-700 ease-out"
+          className="w-1.5 rounded-t transition-all duration-700 ease-out"
           style={{
             height: dashboardAnimated[1] ? `${value}%` : '0%',
             backgroundColor: color,
@@ -121,7 +121,7 @@ const AgenteCoberturaCarteira = () => {
   );
 
   const LineChart = ({ color }: { color: string }) => (
-    <svg className="w-20 h-12" viewBox="0 0 80 48">
+    <svg className="w-16 h-10" viewBox="0 0 80 48">
       <defs>
         <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stopColor={color} stopOpacity="0.1" />
@@ -436,7 +436,7 @@ const AgenteCoberturaCarteira = () => {
               Veja como nosso dashboard transforma dados complexos em insights visuais claros e actionáveis
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               {[
                 {
                   icon: PieChart,
@@ -504,29 +504,29 @@ const AgenteCoberturaCarteira = () => {
                   />
                   
                   {/* Real-time indicator */}
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-3 right-3">
                     <div className="flex items-center space-x-1">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
                       <span className="text-xs text-green-400 font-mono">AO VIVO</span>
                     </div>
                   </div>
 
-                  <CardHeader className="relative z-10">
-                    <CardTitle className="text-white flex items-center justify-between text-xl mb-4">
+                  <CardHeader className="relative z-10 pb-3">
+                    <CardTitle className="text-white flex items-center justify-between text-lg mb-3">
                       <div className="flex items-center">
                         <div 
-                          className="h-12 w-12 rounded-xl flex items-center justify-center mr-4 border"
+                          className="h-10 w-10 rounded-lg flex items-center justify-center mr-3 border"
                           style={{ 
                             backgroundColor: `${item.color}20`,
                             borderColor: `${item.color}40`
                           }}
                         >
-                          <item.icon className="h-6 w-6" style={{ color: item.color }} />
+                          <item.icon className="h-5 w-5" style={{ color: item.color }} />
                         </div>
                         <div>
-                          <div className="text-lg font-bold">{item.title}</div>
+                          <div className="text-base font-bold">{item.title}</div>
                           <div 
-                            className="text-sm font-mono font-bold"
+                            className="text-xs font-mono font-bold"
                             style={{ color: item.color }}
                           >
                             {item.status}
@@ -541,33 +541,33 @@ const AgenteCoberturaCarteira = () => {
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="relative z-10">
+                  <CardContent className="relative z-10 pt-0 pb-4">
                     {/* Main Metric */}
-                    <div className="flex items-baseline justify-between mb-4">
+                    <div className="flex items-baseline justify-between mb-3">
                       <div>
                         <div 
-                          className="text-3xl font-bold font-mono"
+                          className="text-2xl font-bold font-mono"
                           style={{ color: item.color }}
                         >
                           {item.metric}
                         </div>
-                        <div className="text-sm text-gray-400 font-mono">
+                        <div className="text-xs text-gray-400 font-mono">
                           {item.metricLabel}
                         </div>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-4 text-sm">
+                    <p className="text-gray-300 leading-relaxed mb-3 text-sm">
                       {item.description}
                     </p>
 
                     {/* Features List */}
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       {item.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-xs text-gray-400">
                           <div 
-                            className="w-1.5 h-1.5 rounded-full mr-2"
+                            className="w-1 h-1 rounded-full mr-2"
                             style={{ backgroundColor: item.color }}
                           />
                           {feature}
@@ -576,14 +576,14 @@ const AgenteCoberturaCarteira = () => {
                     </div>
 
                     {/* Progress Bar */}
-                    <div className="mt-4 pt-4 border-t border-gray-700/50">
+                    <div className="mt-3 pt-3 border-t border-gray-700/50">
                       <div className="flex justify-between items-center text-xs mb-2">
                         <span className="text-gray-400">Precisão dos dados</span>
                         <span style={{ color: item.color }} className="font-mono font-bold">
                           {95 + index}%
                         </span>
                       </div>
-                      <div className="h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                      <div className="h-1 bg-gray-700 rounded-full overflow-hidden">
                         <div 
                           className="h-full rounded-full transition-all duration-1000 ease-out"
                           style={{ 
@@ -605,8 +605,8 @@ const AgenteCoberturaCarteira = () => {
             </div>
 
             {/* Dashboard Preview Note */}
-            <div className="text-center mt-12">
-              <div className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-400/20 rounded-full backdrop-blur-sm">
+            <div className="text-center mt-8">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-400/20 rounded-full backdrop-blur-sm">
                 <Terminal className="h-4 w-4 mr-2 text-blue-400" />
                 <span className="text-blue-300 text-sm font-mono">
                   Dashboard responsivo disponível em desktop, tablet e mobile
