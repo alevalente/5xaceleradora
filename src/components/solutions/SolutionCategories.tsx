@@ -104,7 +104,7 @@ const SolutionCategories = () => {
                     </CardDescription>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                       {category.id === 'platform' ? (
-                        <Link to="/platform">
+                        <Link to="/iago-conversas">
                           Saiba mais
                         </Link>
                       ) : category.id === 'agents' ? (
