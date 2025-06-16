@@ -22,48 +22,23 @@ const IagoConversas = () => {
       title: "Atrasos de minutos viram milhares de reais perdidos.",
       description: "Cada segundo conta quando um lead está quente. Perder tempo alternando entre apps significa perder vendas para a concorrência.",
       icon: <Clock className="h-8 w-8" />,
-      visual: "Relógio contando para zero ao lado de carrinho abandonado"
     },
     {
       title: "Cada canal conta só parte da história; decidir fica no escuro.",
       description: "Sem visão unificada do cliente, sua equipe toma decisões baseadas em informações incompletas.",
       icon: <Users className="h-8 w-8" />,
-      visual: "Silhueta de cliente fragmentada em 4 janelas sobrepostas"
     },
     {
       title: "5 apps abertos ≠ produtividade; é caos disfarçado de trabalho.",
       description: "Sua equipe gasta mais tempo navegando entre ferramentas do que realmente vendendo.",
       icon: <BarChart3 className="h-8 w-8" />,
-      visual: "Operador cercado por telas sobrepostas"
     },
     {
       title: "Sem métricas, você gerencia pelo sentimento – e erra.",
       description: "Decisões comerciais baseadas em intuição, não em dados reais, levam a oportunidades perdidas.",
       icon: <AlertTriangle className="h-8 w-8" />,
-      visual: "Gráfico vazio / indicador cinza apagado"
     }
   ];
-
-  const titleOptions = [
-    {
-      id: 'a',
-      title: "Pare de perder vendas por falta de resposta: centralize tudo no IAgo Conversas.",
-      subtitle: "Enfatiza dor (perda) + solução direta"
-    },
-    {
-      id: 'b', 
-      title: "Atenda WhatsApp, e-mail e redes em um só lugar – sem trocar de tela.",
-      subtitle: "Benefício prático de centralização"
-    },
-    {
-      id: 'c',
-      title: "Seu time responde em segundos, vende mais em horas – IAgo Conversas faz o resto.",
-      subtitle: "Liga rapidez operacional ao resultado de vendas"
-    }
-  ];
-
-  // Usando a opção A como principal
-  const selectedTitle = titleOptions[0];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -72,7 +47,7 @@ const IagoConversas = () => {
       <main className="flex-grow">
         {/* Breadcrumb */}
         <div className="bg-gray-50 py-4">
-          <div className="container-wide">
+          <div className="container mx-auto px-4 max-w-7xl">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Link to="/" className="hover:text-blue-600">Home</Link>
               <span>/</span>
@@ -83,7 +58,7 @@ const IagoConversas = () => {
 
         {/* Seção 1 - Título Inicial Provocativo */}
         <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
-          <div className="container-wide">
+          <div className="container mx-auto px-4 max-w-7xl">
             <div className="max-w-4xl mx-auto text-center">
               <div className="mb-6">
                 <Link 
@@ -95,28 +70,16 @@ const IagoConversas = () => {
                 </Link>
               </div>
               
-              <h1 className={cn(
-                "text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight",
-                "animate-on-scroll opacity-0",
-                getDelayClass(0, 200)
-              )}>
-                {selectedTitle.title}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
+                Pare de perder vendas por falta de resposta: centralize tudo no IAgo Conversas.
               </h1>
               
-              <p className={cn(
-                "text-xl text-gray-600 mb-8 max-w-3xl mx-auto",
-                "animate-on-scroll opacity-0",
-                getDelayClass(1, 200)
-              )}>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in">
                 Centralize WhatsApp, Instagram, Facebook, e-mail e chat do site em uma única plataforma. 
                 Sua equipe atende mais rápido, você vende mais.
               </p>
 
-              <div className={cn(
-                "flex flex-col sm:flex-row gap-4 justify-center",
-                "animate-on-scroll opacity-0",
-                getDelayClass(2, 200)
-              )}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
                   Solicitar Demonstração
                 </Button>
@@ -130,24 +93,16 @@ const IagoConversas = () => {
 
         {/* Seção 2 - Identificação Clara e Visual da Dor/Desafio */}
         <section className="py-20 bg-white">
-          <div className="container-wide">
+          <div className="container mx-auto px-4 max-w-7xl">
             <div className="max-w-5xl mx-auto">
               
               {/* Texto-âncora */}
               <div className="text-center mb-16">
-                <h2 className={cn(
-                  "text-3xl md:text-4xl font-bold text-gray-900 mb-6",
-                  "animate-on-scroll opacity-0",
-                  getDelayClass(0, 200)
-                )}>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
                   Gerenciar múltiplos canais de atendimento não deveria ser tão confuso.
                 </h2>
                 
-                <div className={cn(
-                  "text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed",
-                  "animate-on-scroll opacity-0",
-                  getDelayClass(1, 200)
-                )}>
+                <div className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in">
                   <p className="mb-4">
                     Hoje, gestores comerciais gastam horas saltando entre WhatsApp Web, Instagram, 
                     chat do site, e-mails e planilhas só para descobrir que um lead esfriou ou uma 
@@ -165,11 +120,7 @@ const IagoConversas = () => {
                 {painPoints.map((pain, index) => (
                   <Card 
                     key={index}
-                    className={cn(
-                      "p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300",
-                      "animate-on-scroll opacity-0",
-                      getDelayClass(index + 2, 200)
-                    )}
+                    className="p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300 animate-fade-in"
                     hoverEffect={true}
                   >
                     <CardContent className="p-0">
@@ -181,12 +132,9 @@ const IagoConversas = () => {
                           <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
                             {pain.title}
                           </h3>
-                          <p className="text-gray-600 mb-4">
+                          <p className="text-gray-600">
                             {pain.description}
                           </p>
-                          <div className="text-sm text-gray-500 italic border-l-2 border-gray-200 pl-4">
-                            Indicação visual: {pain.visual}
-                          </div>
                         </div>
                       </div>
                     </CardContent>
@@ -195,11 +143,7 @@ const IagoConversas = () => {
               </div>
 
               {/* Call to Action de Transição */}
-              <div className={cn(
-                "text-center mt-16 p-8 bg-blue-50 rounded-2xl",
-                "animate-on-scroll opacity-0",
-                getDelayClass(6, 200)
-              )}>
+              <div className="text-center mt-16 p-8 bg-blue-50 rounded-2xl animate-fade-in">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   E se existisse uma forma simples de resolver tudo isso?
                 </h3>
@@ -217,7 +161,7 @@ const IagoConversas = () => {
 
         {/* Placeholder para Seções Futuras */}
         <section className="py-12 bg-gray-50">
-          <div className="container-wide text-center">
+          <div className="container mx-auto px-4 max-w-7xl text-center">
             <div className="max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Próximas Seções em Desenvolvimento
