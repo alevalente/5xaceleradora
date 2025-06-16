@@ -77,7 +77,7 @@ const AgenteCoberturaCarteira = () => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
                 <span className="text-blue-400 font-bold">Enquanto você não sabe quais clientes estão sendo negligenciados,</span>
                 <br />
-                <span className="text-cyan-400 font-bold">a IA já identificou todos eles.</span>
+                <span className="text-cyan-400 font-bold">nosso agente de IA já identificou todos eles.</span>
               </p>
             </div>
           </div>
@@ -98,9 +98,13 @@ const AgenteCoberturaCarteira = () => {
                   O que é o Agente de Cobertura de Carteira?
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                  É uma solução automatizada, baseada em <span className="text-blue-400 font-semibold">Inteligência Artificial</span>, 
-                  que identifica automaticamente quais clientes estão sendo negligenciados pelos seus vendedores, 
-                  garantindo visibilidade total e imediata da qualidade do atendimento da carteira.
+                  É uma solução automatizada baseada em <span className="text-blue-400 font-semibold">Inteligência Artificial</span>, 
+                  que capta automaticamente todas as conversas realizadas pelos seus vendedores através da plataforma multi-atendimento Iago Conversas.
+                </p>
+                <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mt-4">
+                  Com todos os números de WhatsApp dos seus vendedores conectados em nossa plataforma, nosso agente passa a monitorar cada interação comercial diariamente. 
+                  De posse da relação detalhada dos seus vendedores, clientes e respectivos contatos, o Agente de Cobertura identifica com precisão quais clientes estão sendo negligenciados ou esquecidos, 
+                  garantindo uma visão clara, detalhada e imediata sobre a qualidade do atendimento e a real cobertura da carteira da sua empresa.
                 </p>
               </div>
 
