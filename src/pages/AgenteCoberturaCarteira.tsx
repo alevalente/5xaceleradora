@@ -1,13 +1,13 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock, Filter, Calendar } from 'lucide-react';
+import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock, Filter, Calendar, ExternalLink } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Progress } from '../components/ui/progress';
 import { Badge } from '../components/ui/badge';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
 
 const AgenteCoberturaCarteira = () => {
   const [animatedCards, setAnimatedCards] = useState<boolean[]>([false, false, false]);
@@ -290,6 +290,84 @@ const AgenteCoberturaCarteira = () => {
             </div>
             <span className="text-yellow-400 font-bold text-xs">156</span>
           </div>
+        </div>
+      </div>
+    );
+  };
+
+  // New Outdated Contacts Table Component
+  const OutdatedContactsTable = () => {
+    const outdatedContacts = [
+      { id: 1489, link: "chat.5xaceleradora.com.br/conversa1489", date: "29/05/2025", salesperson: "João" },
+      { id: 1580, link: "chat.5xaceleradora.com.br/conversa1580", date: "29/05/2025", salesperson: "Maria" },
+      { id: 1623, link: "chat.5xaceleradora.com.br/conversa1623", date: "28/05/2025", salesperson: "Carlos" },
+      { id: 1701, link: "chat.5xaceleradora.com.br/conversa1701", date: "28/05/2025", salesperson: "Ana" }
+    ];
+
+    return (
+      <div className="space-y-3">
+        {/* Main metric */}
+        <div className="text-center mb-3">
+          <div className="text-xl font-bold font-mono text-orange-400">
+            156
+          </div>
+          <div className="text-xs text-gray-400 font-mono">
+            contatos não identificados
+          </div>
+        </div>
+
+        {/* Filter buttons */}
+        <div className="flex flex-wrap gap-2 mb-3">
+          <div className="inline-flex items-center px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-md text-xs text-gray-300 hover:bg-gray-600/50 transition-colors cursor-pointer">
+            <Users className="h-3 w-3 mr-1" />
+            Filtrar por Vendedor
+          </div>
+          <div className="inline-flex items-center px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-md text-xs text-gray-300 hover:bg-gray-600/50 transition-colors cursor-pointer">
+            <Calendar className="h-3 w-3 mr-1" />
+            Filtrar por Data
+          </div>
+        </div>
+
+        {/* Conversations table */}
+        <div className="bg-gray-800/50 rounded-md border border-gray-600/30 overflow-hidden">
+          <Table>
+            <TableHeader>
+              <TableRow className="border-gray-600/30">
+                <TableHead className="text-gray-300 text-xs py-2 px-2">ID</TableHead>
+                <TableHead className="text-gray-300 text-xs py-2 px-2">Link</TableHead>
+                <TableHead className="text-gray-300 text-xs py-2 px-2">Data</TableHead>
+                <TableHead className="text-gray-300 text-xs py-2 px-2">Vendedor</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {outdatedContacts.map((contact) => (
+                <TableRow key={contact.id} className="border-gray-600/20 hover:bg-gray-700/30">
+                  <TableCell className="font-mono text-xs py-2 px-2 text-gray-300">
+                    {contact.id}
+                  </TableCell>
+                  <TableCell className="py-2 px-2">
+                    <a 
+                      href={`https://${contact.link}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-xs transition-colors"
+                    >
+                      <span className="truncate max-w-[100px]">
+                        {contact.link}
+                      </span>
+                      <ExternalLink className="h-2.5 w-2.5 ml-1 flex-shrink-0" />
+                    </a>
+                  </TableCell>
+                  <TableCell className="font-mono text-xs py-2 px-2 text-gray-300">
+                    {contact.date}
+                  </TableCell>
+                  <TableCell className="text-xs py-2 px-2 text-gray-300">
+                    {contact.salesperson}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       </div>
     );
@@ -599,24 +677,26 @@ const AgenteCoberturaCarteira = () => {
                 {
                   icon: Phone,
                   title: "Contatos Desatualizados",
-                  description: "Visualize rapidamente os contatos com telefones desatualizados. Atualize-os facilmente para garantir qualidade nas interações e evitar falhas comerciais.",
+                  description: "Nosso agente identifica automaticamente quais números usados pelos vendedores não correspondem ao cadastro atual da empresa, permitindo uma atualização rápida e precisa.",
                   color: "#f59e0b",
                   metric: "156",
                   metricLabel: "contatos desatualizados",
                   status: "11% do total",
                   chart: <UpdatedContactsChart />,
-                  features: ["Detecção automática", "Alertas visuais claros", "Atualização simplificada"]
+                  features: ["Detecção automática", "Alertas visuais claros", "Atualização simplificada"],
+                  description2: "Visualize rapidamente os contatos com telefones desatualizados. Atualize-os facilmente para garantir qualidade nas interações e evitar falhas comerciais."
                 },
                 {
                   icon: Activity,
-                  title: "Índice de Proatividade",
-                  description: "Acompanhe a evolução da proatividade da equipe com gráficos de tendência. Transforme vendedores reativos em proativos.",
-                  color: "#8b5cf6",
-                  metric: "3.2x",
-                  metricLabel: "mais proativo",
-                  status: "Tendência crescente",
-                  chart: <LineChart color="#8b5cf6" />,
-                  features: ["Análise de tendências", "Comparativo semanal", "Alertas de queda"]
+                  title: "Lista de Contatos Desatualizados",
+                  description: "Identifique rapidamente os contatos desatualizados através do link direto para as conversas dos vendedores. Atualize facilmente os dados dos seus clientes no sistema.",
+                  color: "#f97316",
+                  metric: "156",
+                  metricLabel: "contatos não identificados",
+                  status: "Acesso direto",
+                  chart: <OutdatedContactsTable />,
+                  features: ["Link direto para conversas", "Filtros por vendedor e data", "Atualização simplificada"],
+                  isOutdatedContactsList: true
                 }
               ].map((item, index) => (
                 <Card 
@@ -626,7 +706,7 @@ const AgenteCoberturaCarteira = () => {
                     border border-gray-600/50 backdrop-blur-sm 
                     transition-all duration-700 ease-out
                     hover:scale-105 hover:shadow-2xl hover:border-gray-500/50
-                    group
+                    group h-96
                     ${dashboardAnimated[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
                   `}
                   style={{
@@ -670,62 +750,82 @@ const AgenteCoberturaCarteira = () => {
                         </div>
                       </div>
                       
-                      {/* Chart Component */}
-                      <div className="flex flex-col items-center">
-                        {item.chart}
-                      </div>
+                      {/* Chart Component - Only for non-list cards */}
+                      {!item.isOutdatedContactsList && (
+                        <div className="flex flex-col items-center">
+                          {item.chart}
+                        </div>
+                      )}
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="relative z-10 pt-0 pb-4">
-                    {/* Main Metric */}
-                    <div className="flex items-baseline justify-between mb-3">
-                      <div>
-                        <div 
-                          className="text-xl font-bold font-mono"
-                          style={{ color: item.color }}
-                        >
-                          {item.metric}
-                        </div>
-                        <div className="text-xs text-gray-400 font-mono">
-                          {item.metricLabel}
-                        </div>
+                  <CardContent className="relative z-10 pt-0 pb-4 h-full overflow-hidden">
+                    {/* For the new contacts list card, show the table */}
+                    {item.isOutdatedContactsList ? (
+                      <div className="h-full overflow-y-auto">
+                        {item.chart}
                       </div>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-gray-300 leading-relaxed mb-3 text-sm">
-                      {item.description}
-                    </p>
-
-                    {/* Features List or Filter Buttons */}
-                    <div className="space-y-1.5">
-                      {item.isNewCoverage ? (
-                        // Filter buttons for the new coverage card
-                        <div className="flex flex-wrap gap-2">
-                          {item.features.map((feature, featureIndex) => (
-                            <div 
-                              key={featureIndex} 
-                              className="inline-flex items-center px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-md text-xs text-gray-300 hover:bg-gray-600/50 transition-colors cursor-pointer"
-                            >
-                              {featureIndex === 0 ? <Users className="h-3 w-3 mr-1" /> : <Calendar className="h-3 w-3 mr-1" />}
-                              {feature}
+                    ) : (
+                      <>
+                        {/* Main Metric - Only for non-list cards */}
+                        {!item.isNewCoverage && (
+                          <div className="flex items-baseline justify-between mb-3">
+                            <div>
+                              <div 
+                                className="text-xl font-bold font-mono"
+                                style={{ color: item.color }}
+                              >
+                                {item.metric}
+                              </div>
+                              <div className="text-xs text-gray-400 font-mono">
+                                {item.metricLabel}
+                              </div>
                             </div>
-                          ))}
-                        </div>
-                      ) : (
-                        // Regular features list for other cards
-                        item.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-xs text-gray-400">
-                            <div 
-                              className="w-1 h-1 rounded-full mr-2"
-                              style={{ backgroundColor: item.color }}
-                            />
-                            {feature}
                           </div>
-                        ))
-                      )}
-                    </div>
+                        )}
+
+                        {/* Description */}
+                        <p className="text-gray-300 leading-relaxed mb-3 text-sm">
+                          {item.description}
+                        </p>
+
+                        {/* Second description for phone card */}
+                        {item.description2 && (
+                          <p className="text-gray-300 leading-relaxed mb-3 text-sm">
+                            {item.description2}
+                          </p>
+                        )}
+
+                        {/* Features List or Filter Buttons */}
+                        <div className="space-y-1.5">
+                          {item.isNewCoverage ? (
+                            // Filter buttons for the coverage card
+                            <div className="flex flex-wrap gap-2">
+                              {item.features.map((feature, featureIndex) => (
+                                <div 
+                                  key={featureIndex} 
+                                  className="inline-flex items-center px-3 py-1 bg-gray-700/50 border border-gray-600/50 rounded-md text-xs text-gray-300 hover:bg-gray-600/50 transition-colors cursor-pointer"
+                                >
+                                  {featureIndex === 0 ? <Users className="h-3 w-3 mr-1" /> : <Calendar className="h-3 w-3 mr-1" />}
+                                  {feature}
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            // Regular features list for other cards
+                            item.features.map((feature, featureIndex) => (
+                              <div key={featureIndex} className="flex items-center text-xs text-gray-400">
+                                <div 
+                                  className="w-1 h-1 rounded-full mr-2"
+                                  style={{ backgroundColor: item.color }}
+                                />
+                                {feature}
+                              </div>
+                            ))
+                          )}
+                        </div>
+                      </>
+                    )}
                   </CardContent>
 
                   {/* Bottom accent line */}
