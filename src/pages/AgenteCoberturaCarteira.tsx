@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain } from 'lucide-react';
@@ -188,6 +187,7 @@ const AgenteCoberturaCarteira = () => {
                         hover:scale-105 hover:shadow-2xl hover:shadow-${item.color}-500/20
                         hover:border-${item.color}-400/50
                         group-hover:bg-gradient-to-br group-hover:from-${item.color}-900/20 group-hover:via-gray-800/50 group-hover:to-gray-900/70
+                        h-80
                       `}>
                         {/* Glow effect on hover */}
                         <div className={`
@@ -195,51 +195,53 @@ const AgenteCoberturaCarteira = () => {
                           bg-gradient-to-r from-${item.color}-400 to-${item.color}-600 blur-xl
                         `} />
                         
-                        <CardContent className="pt-8 text-center relative z-10">
-                          {/* Badge */}
-                          <div className="absolute top-4 right-4">
-                            <Badge 
-                              variant="outline" 
-                              className={`text-xs border-${item.color}-400/40 text-${item.color}-300 bg-${item.color}-500/10`}
-                            >
-                              {item.badge}
-                            </Badge>
-                          </div>
+                        <CardContent className="pt-8 text-center relative z-10 h-full flex flex-col justify-between">
+                          <div>
+                            {/* Badge */}
+                            <div className="absolute top-4 right-4">
+                              <Badge 
+                                variant="outline" 
+                                className={`text-xs border-${item.color}-400/40 text-${item.color}-300 bg-${item.color}-500/10`}
+                              >
+                                {item.badge}
+                              </Badge>
+                            </div>
 
-                          {/* Icon with enhanced animation */}
-                          <div className={`
-                            h-16 w-16 mx-auto mb-4 rounded-full 
-                            bg-gradient-to-br from-${item.color}-500/30 to-${item.color}-600/30 
-                            flex items-center justify-center 
-                            border border-${item.color}-400/30
-                            transition-all duration-500 ease-out
-                            group-hover:scale-110 group-hover:rotate-3
-                            group-hover:shadow-lg group-hover:shadow-${item.color}-500/50
-                          `}>
-                            <item.icon className={`
-                              h-8 w-8 text-${item.color}-400 
-                              transition-all duration-300
-                              group-hover:scale-110
-                              animate-pulse-soft
-                            `} />
+                            {/* Icon with enhanced animation */}
+                            <div className={`
+                              h-16 w-16 mx-auto mb-4 rounded-full 
+                              bg-gradient-to-br from-${item.color}-500/30 to-${item.color}-600/30 
+                              flex items-center justify-center 
+                              border border-${item.color}-400/30
+                              transition-all duration-500 ease-out
+                              group-hover:scale-110 group-hover:rotate-3
+                              group-hover:shadow-lg group-hover:shadow-${item.color}-500/50
+                            `}>
+                              <item.icon className={`
+                                h-8 w-8 text-${item.color}-400 
+                                transition-all duration-300
+                                group-hover:scale-110
+                                animate-pulse-soft
+                              `} />
+                            </div>
+                            
+                            {/* Title with hover effect */}
+                            <h4 className={`
+                              text-white font-bold mb-3 text-lg
+                              transition-colors duration-300
+                              group-hover:text-${item.color}-300
+                            `}>
+                              {item.title}
+                            </h4>
+                            
+                            {/* Description */}
+                            <p className="text-gray-300 text-sm leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300 flex-grow">
+                              {item.description}
+                            </p>
                           </div>
-                          
-                          {/* Title with hover effect */}
-                          <h4 className={`
-                            text-white font-bold mb-3 text-lg
-                            transition-colors duration-300
-                            group-hover:text-${item.color}-300
-                          `}>
-                            {item.title}
-                          </h4>
-                          
-                          {/* Description */}
-                          <p className="text-gray-300 text-sm leading-relaxed mb-4 group-hover:text-gray-200 transition-colors duration-300">
-                            {item.description}
-                          </p>
 
                           {/* Animated Progress Bar */}
-                          <div className="space-y-2">
+                          <div className="space-y-2 mt-auto">
                             <div className="flex justify-between items-center text-xs">
                               <span className="text-gray-400">Eficiência</span>
                               <span className={`text-${item.color}-400 font-mono font-bold`}>
@@ -385,7 +387,7 @@ const AgenteCoberturaCarteira = () => {
                     aumentando nosso faturamento recorrente já nos primeiros meses."
                   </blockquote>
                   <cite className="text-white font-semibold">
-                    – Luiz Almeida, Diretor Comercial, Fera Atacado.
+                    – Luiz Almeida, Diretor Comercial, Maxima Distribuidora.
                   </cite>
                   
                   {/* Tech metrics */}
