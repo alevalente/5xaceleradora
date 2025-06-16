@@ -1,21 +1,42 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
 import { createObserver, getDelayClass } from '../utils/animations';
 import { cn } from '@/lib/utils';
 
 const IagoConversas = () => {
+  const [monthlyRevenue, setMonthlyRevenue] = useState('');
+  const [attendants, setAttendants] = useState('');
+  const [estimatedSavings, setEstimatedSavings] = useState(0);
+
   useEffect(() => {
     const observer = createObserver('animate-on-scroll', 0.1);
     return () => {
       if (observer) observer.disconnect();
     };
   }, []);
+
+  // Cálculo ROI simples
+  useEffect(() => {
+    if (monthlyRevenue && attendants) {
+      const revenue = parseFloat(monthlyRevenue.replace(/\D/g, ''));
+      const attendantCount = parseInt(attendants);
+      
+      if (revenue > 0 && attendantCount > 0) {
+        // Fórmula simplificada: economia baseada em eficiência de atendimento
+        const monthlySavings = (revenue * 0.08) + (attendantCount * 2000);
+        const annualSavings = monthlySavings * 12;
+        setEstimatedSavings(annualSavings);
+      }
+    }
+  }, [monthlyRevenue, attendants]);
 
   const painPoints = [
     {
@@ -38,6 +59,31 @@ const IagoConversas = () => {
       description: "Decisões comerciais baseadas em intuição, não em dados reais, levam a oportunidades perdidas.",
       icon: <AlertTriangle className="h-8 w-8" />,
     }
+  ];
+
+  const impactMetrics = [
+    {
+      percentage: "58%",
+      description: "de redução no Tempo Médio de Atendimento (TMA) após 30 dias de uso",
+      icon: <Clock className="h-12 w-12" />
+    },
+    {
+      percentage: "2,4×",
+      description: "mais oportunidades registradas no CRM quando o cadastro é automático",
+      icon: <TrendingUp className="h-12 w-12" />
+    },
+    {
+      percentage: "+34%",
+      description: "de taxa de conversão em leads respondidos em < 2 min",
+      icon: <CheckCircle className="h-12 w-12" />
+    }
+  ];
+
+  const partners = [
+    { name: "OpenAI", logo: "🤖" },
+    { name: "WhatsApp Business", logo: "💬" },
+    { name: "HubSpot", logo: "🎯" },
+    { name: "Zapier", logo: "⚡" }
   ];
 
   return (
@@ -70,18 +116,18 @@ const IagoConversas = () => {
                 </Link>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight animate-fade-in">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Pare de perder vendas por falta de resposta: centralize tudo no IAgo Conversas.
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-fade-in">
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Centralize WhatsApp, Instagram, Facebook, e-mail e chat do site em uma única plataforma. 
                 Sua equipe atende mais rápido, você vende mais.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                  Solicitar Demonstração
+                  Solicitar Demonstração Gratuita
                 </Button>
                 <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
                   Ver Funcionalidades
@@ -98,11 +144,11 @@ const IagoConversas = () => {
               
               {/* Texto-âncora */}
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Gerenciar múltiplos canais de atendimento não deveria ser tão confuso.
                 </h2>
                 
-                <div className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+                <div className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                   <p className="mb-4">
                     Hoje, gestores comerciais gastam horas saltando entre WhatsApp Web, Instagram, 
                     chat do site, e-mails e planilhas só para descobrir que um lead esfriou ou uma 
@@ -120,7 +166,7 @@ const IagoConversas = () => {
                 {painPoints.map((pain, index) => (
                   <Card 
                     key={index}
-                    className="p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300 animate-fade-in"
+                    className="p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300"
                     hoverEffect={true}
                   >
                     <CardContent className="p-0">
@@ -143,7 +189,7 @@ const IagoConversas = () => {
               </div>
 
               {/* Call to Action de Transição */}
-              <div className="text-center mt-16 p-8 bg-blue-50 rounded-2xl animate-fade-in">
+              <div className="text-center mt-16 p-8 bg-blue-50 rounded-2xl">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   E se existisse uma forma simples de resolver tudo isso?
                 </h3>
@@ -159,23 +205,210 @@ const IagoConversas = () => {
           </div>
         </section>
 
-        {/* Placeholder para Seções Futuras */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-7xl text-center">
-            <div className="max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Próximas Seções em Desenvolvimento
-              </h3>
-              <p className="text-gray-600 mb-6">
-                As seções 3 e 4 (Funcionalidades & Benefícios + Exemplificação Visual) 
-                serão implementadas na próxima etapa, seguindo a estrutura de descoberta guiada.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-500">
-                <div className="p-4 bg-white rounded-lg border">
-                  <strong>Seção 3:</strong> Funcionalidades & Benefícios (9 passos)
+        {/* Seção 5 - Resultados Concretos */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="max-w-6xl mx-auto">
+
+              {/* Bloco Indicadores de Impacto */}
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Resultados que você pode esperar
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Dados consolidados de projetos implementados em 2024-2025 mostram o impacto real 
+                  do IAgo Conversas no desempenho comercial.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                {impactMetrics.map((metric, index) => (
+                  <Card key={index} className="text-center p-8 bg-white border-2 border-blue-100 hover:border-blue-300 transition-all duration-300" hoverEffect={true}>
+                    <CardContent className="p-0">
+                      <div className="text-blue-600 mb-4 flex justify-center">
+                        {metric.icon}
+                      </div>
+                      <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-4">
+                        {metric.percentage}
+                      </div>
+                      <p className="text-gray-700 leading-relaxed">
+                        {metric.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* Bloco ROI Simples */}
+              <div className="bg-white rounded-2xl p-8 mb-16 border border-gray-200">
+                <div className="max-w-4xl mx-auto">
+                  <div className="text-center mb-8">
+                    <Calculator className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      Descubra em 10 segundos quanto IAgo Conversas pode adicionar ao seu faturamento
+                    </h3>
+                    <p className="text-gray-600">
+                      Cálculo baseado em eficiência de atendimento e conversão de leads
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <Label htmlFor="revenue" className="text-sm font-medium text-gray-700 mb-2 block">
+                        Faturamento mensal aproximado (R$)
+                      </Label>
+                      <Input
+                        id="revenue"
+                        type="text"
+                        placeholder="Ex: 500.000"
+                        value={monthlyRevenue}
+                        onChange={(e) => setMonthlyRevenue(e.target.value)}
+                        className="text-lg"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="attendants" className="text-sm font-medium text-gray-700 mb-2 block">
+                        Número de atendentes
+                      </Label>
+                      <Input
+                        id="attendants"
+                        type="number"
+                        placeholder="Ex: 5"
+                        value={attendants}
+                        onChange={(e) => setAttendants(e.target.value)}
+                        className="text-lg"
+                      />
+                    </div>
+                  </div>
+
+                  {estimatedSavings > 0 && (
+                    <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200">
+                      <div className="text-3xl font-bold text-green-600 mb-2">
+                        Economia estimada de R$ {estimatedSavings.toLocaleString('pt-BR')} / ano
+                      </div>
+                      <p className="text-green-700">
+                        Baseado na otimização do tempo de atendimento e aumento na conversão de leads
+                      </p>
+                    </div>
+                  )}
                 </div>
-                <div className="p-4 bg-white rounded-lg border">
-                  <strong>Seção 4:</strong> Exemplificação Visual Prática
+              </div>
+
+              {/* Bloco Reconhecimento & Confiabilidade */}
+              <div className="text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6">
+                  Tecnologia confiável, resultados garantidos
+                </h3>
+                
+                <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
+                  {partners.map((partner, index) => (
+                    <div key={index} className="flex items-center gap-2 text-gray-600">
+                      <span className="text-2xl">{partner.logo}</span>
+                      <span className="font-medium">{partner.name}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex justify-center items-center gap-4 mb-6">
+                  <div className="flex items-center gap-2 text-green-600">
+                    <Shield className="h-5 w-5" />
+                    <span className="font-medium">LGPD Compliant</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-blue-600">
+                    <CheckCircle className="h-5 w-5" />
+                    <span className="font-medium">ISO 27001</span>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Por trás do IAgo Conversas há a expertise de <strong>5X Aceleradora</strong>, 
+                  reconhecida por acelerar +50 empresas com IA em 2024-2025.
+                </p>
+
+                <p className="text-sm text-gray-500 mt-4">
+                  * Média consolidada em 12 projetos-piloto de 2025; resultados podem variar conforme estrutura interna.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Seção 6 - CTA Final */}
+        <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Solicitar demonstração gratuita agora
+              </h2>
+              <p className="text-xl mb-8 text-blue-100">
+                Sem cartão de crédito. Resposta em até 30 min.
+              </p>
+
+              <div className="bg-white rounded-2xl p-8 text-gray-900 max-w-2xl mx-auto">
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="name" className="text-sm font-medium text-gray-700 mb-2 block">
+                        Nome completo
+                      </Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        placeholder="Seu nome"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email" className="text-sm font-medium text-gray-700 mb-2 block">
+                        E-mail corporativo
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="seu.email@empresa.com"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="whatsapp" className="text-sm font-medium text-gray-700 mb-2 block">
+                      WhatsApp
+                    </Label>
+                    <Input
+                      id="whatsapp"
+                      type="tel"
+                      placeholder="(11) 99999-9999"
+                      required
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold"
+                  >
+                    Solicitar Demonstração Gratuita
+                  </Button>
+                </form>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <p className="text-gray-600 mb-4">Ou se preferir:</p>
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="w-full border-blue-600 text-blue-600 hover:bg-blue-50"
+                    asChild
+                  >
+                    <a 
+                      href="https://wa.me/5511999999999?text=Olá! Gostaria de conhecer o IAgo Conversas" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2"
+                    >
+                      <MessageCircle className="h-5 w-5" />
+                      Falar pelo WhatsApp agora
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
