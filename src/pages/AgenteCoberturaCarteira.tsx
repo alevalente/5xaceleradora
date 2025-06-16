@@ -171,7 +171,7 @@ const AgenteCoberturaCarteira = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <div className="w-3 h-3 rounded-full mr-2 bg-orange-500" />
-              <span className="text-gray-300 font-medium">Clientes Não Cobertos</span>
+              <span className="text-gray-300 font-medium">Clientes Negligenciados</span>
             </div>
             <span className="text-orange-400 font-bold">37%</span>
           </div>
