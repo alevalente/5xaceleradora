@@ -88,9 +88,16 @@ const AgenteCoberturaCarteira = () => {
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-medium">
-                  Sem clareza sobre como seus vendedores cuidam dos clientes, 
-                  <span className="text-red-400 font-bold"> você perde dinheiro todos os dias.</span>
+                <h2 className="text-3xl md:text-4xl text-white mb-6 font-bold leading-tight">
+                  <span className="text-red-400">Seus vendedores estão deixando dinheiro na mesa</span>
+                  <br />
+                  <span className="text-gray-300">e você só descobre quando já perdeu o cliente.</span>
+                </h2>
+                
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
+                  <span className="text-blue-400 font-bold">Enquanto você não sabe quais clientes estão sendo negligenciados,</span>
+                  <br />
+                  <span className="text-cyan-400 font-bold">a IA já identificou todos eles.</span>
                 </p>
                 
                 {/* Dark Dashboard Mockup */}
