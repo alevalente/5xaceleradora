@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock, Filter, Calendar } from 'lucide-react';
@@ -218,23 +219,81 @@ const AgenteCoberturaCarteira = () => {
     </svg>
   );
 
-  const StatusIndicators = ({ color }: { color: string }) => (
-    <div className="flex flex-col space-y-1">
-      {[85, 65, 40].map((width, index) => (
-        <div key={index} className="flex items-center space-x-2">
-          <div 
-            className="h-1 rounded-full transition-all duration-700 ease-out"
-            style={{
-              width: dashboardAnimated[2] ? `${width}%` : '0%',
-              backgroundColor: color,
-              transitionDelay: `${index * 200}ms`
+  // New Updated Contacts Donut Chart
+  const UpdatedContactsChart = () => {
+    const updatedPercentage = 89;
+    const outdatedPercentage = 11;
+    const updatedStroke = updatedPercentage * 2.51;
+    const outdatedStroke = outdatedPercentage * 2.51;
+    
+    return (
+      <div className="flex flex-col items-center">
+        <svg className="w-20 h-20 mb-2" viewBox="0 0 100 100">
+          {/* Background circle */}
+          <circle cx="50" cy="50" r="35" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.2" />
+          
+          {/* Updated contacts (green) */}
+          <circle
+            cx="50"
+            cy="50"
+            r="35"
+            fill="transparent"
+            stroke="#22c55e"
+            strokeWidth="7"
+            strokeDasharray={dashboardAnimated[2] ? `${updatedStroke} 251` : "0 251"}
+            strokeDashoffset="0"
+            transform="rotate(-90 50 50)"
+            className="transition-all duration-1000 ease-out"
+            style={{ strokeLinecap: 'round' }}
+          />
+          
+          {/* Outdated contacts (orange/red) */}
+          <circle
+            cx="50"
+            cy="50"
+            r="35"
+            fill="transparent"
+            stroke="#f59e0b"
+            strokeWidth="7"
+            strokeDasharray={dashboardAnimated[2] ? `${outdatedStroke} 251` : "0 251"}
+            strokeDashoffset={dashboardAnimated[2] ? `-${updatedStroke}` : "0"}
+            transform="rotate(-90 50 50)"
+            className="transition-all duration-1000 ease-out"
+            style={{ 
+              strokeLinecap: 'round',
+              transitionDelay: '300ms'
             }}
           />
-          <div className="w-1.5 h-1.5 rounded-full bg-current opacity-60" />
+          
+          {/* Center text */}
+          <text x="50" y="46" textAnchor="middle" className="text-xs font-bold fill-white">
+            Total:
+          </text>
+          <text x="50" y="58" textAnchor="middle" className="text-xs font-bold fill-white">
+            1.385
+          </text>
+        </svg>
+        
+        {/* Legend */}
+        <div className="space-y-1 text-xs w-full">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-2 h-2 rounded-full mr-2 bg-green-500" />
+              <span className="text-gray-300 font-medium text-xs">Contatos Atualizados</span>
+            </div>
+            <span className="text-green-400 font-bold text-xs">1.229</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center">
+              <div className="w-2 h-2 rounded-full mr-2 bg-yellow-500" />
+              <span className="text-gray-300 font-medium text-xs">Contatos Desatualizados</span>
+            </div>
+            <span className="text-yellow-400 font-bold text-xs">156</span>
+          </div>
         </div>
-      ))}
-    </div>
-  );
+      </div>
+    );
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
@@ -538,15 +597,15 @@ const AgenteCoberturaCarteira = () => {
                   isNewCoverage: true
                 },
                 {
-                  icon: Clock,
-                  title: "Status dos Contatos",
-                  description: "Monitore a qualidade dos dados em tempo real. Visualize quais contatos precisam de atualização com indicadores visuais intuitivos.",
+                  icon: Phone,
+                  title: "Contatos Desatualizados",
+                  description: "Visualize rapidamente os contatos com telefones desatualizados. Atualize-os facilmente para garantir qualidade nas interações e evitar falhas comerciais.",
                   color: "#f59e0b",
                   metric: "156",
-                  metricLabel: "p/ atualizar",
-                  status: "8% dos contatos",
-                  chart: <StatusIndicators color="#f59e0b" />,
-                  features: ["Validação automática", "Priorização inteligente", "Sugestões de correção"]
+                  metricLabel: "contatos desatualizados",
+                  status: "11% do total",
+                  chart: <UpdatedContactsChart />,
+                  features: ["Detecção automática", "Alertas visuais claros", "Atualização simplificada"]
                 },
                 {
                   icon: Activity,
