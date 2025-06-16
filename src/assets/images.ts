@@ -7,7 +7,7 @@ export const images = {
   testimonial1: "/lovable-uploads/457d153d-5992-4d64-885e-ede570b87cd8.png", // Rafael Cânovas
   testimonial2: "/lovable-uploads/9c88e904-d5f0-40da-8f51-3d926573eb17.png", // Gilmar Mendes
   testimonial3: "/lovable-uploads/293d03ad-9e3a-4153-8783-c2ab5ff59772.png", // Fernanda Sartori
-  iagoConversasLogo: "/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png", // IAgo Conversas Logo
+  iagoConversasLogo: "/lovable-uploads/6f4b0c0b-90b9-4df6-a76a-ff053465c123.png", // IAgo Conversas Logo
   solution1: "/placeholder.svg",
   solution2: "/placeholder.svg",
   solution3: "/placeholder.svg",
