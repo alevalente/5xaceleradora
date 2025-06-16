@@ -35,29 +35,74 @@ const AgenteCoberturaCarteira = () => {
   }, []);
 
   // SVG Chart Components
-  const DonutChart = ({ percentage, color }: { percentage: number; color: string }) => (
-    <svg className="w-16 h-16" viewBox="0 0 42 42">
-      <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="currentColor" strokeWidth="2" className="text-gray-600/30" />
-      <circle
-        cx="21"
-        cy="21"
-        r="15.915"
-        fill="transparent"
-        stroke={color}
-        strokeWidth="2"
-        strokeDasharray={`${percentage} ${100 - percentage}`}
-        strokeDashoffset="25"
-        className="transition-all duration-1000 ease-out"
-        style={{ 
-          strokeLinecap: 'round',
-          animation: dashboardAnimated[0] ? 'none' : 'none'
-        }}
-      />
-      <text x="21" y="21" textAnchor="middle" dy="0.3em" className="text-xs font-bold fill-current">
-        {percentage}%
-      </text>
-    </svg>
-  );
+  const ClientDistributionChart = () => {
+    const salespeople = [
+      { name: 'João', clients: 620, color: '#ef4444', angle: 0 },
+      { name: 'Maria', clients: 430, color: '#f97316', angle: 161 },
+      { name: 'Carlos', clients: 125, color: '#22c55e', angle: 260 },
+      { name: 'Ana', clients: 110, color: '#3b82f6', angle: 293 },
+      { name: 'Pedro', clients: 100, color: '#6366f1', angle: 320 }
+    ];
+    
+    const total = 1385;
+    let currentAngle = 0;
+    
+    return (
+      <div className="flex flex-col items-center">
+        <svg className="w-32 h-32 mb-4" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="40" fill="transparent" stroke="#374151" strokeWidth="2" opacity="0.3" />
+          {salespeople.map((person, index) => {
+            const percentage = (person.clients / total) * 100;
+            const strokeDasharray = `${percentage * 2.51} 251`;
+            const rotation = currentAngle;
+            currentAngle += percentage * 3.6;
+            
+            return (
+              <circle
+                key={index}
+                cx="50"
+                cy="50"
+                r="40"
+                fill="transparent"
+                stroke={person.color}
+                strokeWidth="8"
+                strokeDasharray={dashboardAnimated[0] ? strokeDasharray : "0 251"}
+                strokeDashoffset="0"
+                transform={`rotate(${rotation} 50 50)`}
+                className="transition-all duration-1000 ease-out"
+                style={{ 
+                  strokeLinecap: 'round',
+                  transitionDelay: `${index * 200}ms`
+                }}
+              />
+            );
+          })}
+          <text x="50" y="46" textAnchor="middle" className="text-xs font-bold fill-white">
+            Total
+          </text>
+          <text x="50" y="58" textAnchor="middle" className="text-xs font-bold fill-white">
+            1.385
+          </text>
+        </svg>
+        
+        {/* Legend */}
+        <div className="space-y-1 text-xs w-full">
+          {salespeople.map((person, index) => (
+            <div key={index} className="flex items-center justify-between">
+              <div className="flex items-center">
+                <div 
+                  className="w-3 h-3 rounded-full mr-2"
+                  style={{ backgroundColor: person.color }}
+                />
+                <span className="text-gray-300 font-medium">{person.name}</span>
+              </div>
+              <span className="text-white font-bold">{person.clients}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   const BarChart = ({ data, color }: { data: number[]; color: string }) => (
     <div className="flex items-end justify-center space-x-1 h-16 w-20">
@@ -395,14 +440,14 @@ const AgenteCoberturaCarteira = () => {
               {[
                 {
                   icon: PieChart,
-                  title: "Distribuição da Carteira",
-                  description: "Visualize instantaneamente como seus clientes estão distribuídos entre vendedores. Identifique rapidamente sobrecargas e oportunidades de redistribuição.",
+                  title: "Distribuição de Clientes por Vendedor",
+                  description: "Identifique rapidamente quantos clientes cada vendedor possui e quais carteiras precisam ser reorganizadas para equilibrar melhor os atendimentos e evitar perdas.",
                   color: "#10b981",
-                  metric: "1,247",
-                  metricLabel: "clientes ativos",
-                  status: "92% cobertos",
-                  chart: <DonutChart percentage={87} color="#10b981" />,
-                  features: ["Distribuição em tempo real", "Alertas de sobrecarga", "Sugestões de balanceamento"]
+                  metric: "1.385",
+                  metricLabel: "clientes total",
+                  status: "Desbalanceado",
+                  chart: <ClientDistributionChart />,
+                  features: ["Visualização clara do desequilíbrio", "Dados em tempo real", "Alerta de sobrecarga"]
                 },
                 {
                   icon: BarChart3,
