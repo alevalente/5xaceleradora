@@ -8,25 +8,6 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 
 const AgenteCoberturaCarteira = () => {
-  const [animatedNumbers, setAnimatedNumbers] = useState({
-    neglectedClients: 0,
-    inactiveVendors: 0,
-    outdatedData: 0
-  });
-
-  // Animate numbers on mount
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setAnimatedNumbers({
-        neglectedClients: 47,
-        inactiveVendors: 23,
-        outdatedData: 31
-      });
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
       <Navbar />
@@ -86,91 +67,18 @@ const AgenteCoberturaCarteira = () => {
         {/* Pain Identification - Dark Dashboard */}
         <section className="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
           <div className="container-wide">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl text-white mb-6 font-bold leading-tight">
-                  <span className="text-red-400">Seus vendedores estão deixando dinheiro na mesa</span>
-                  <br />
-                  <span className="text-gray-300">e você só descobre quando já perdeu o cliente.</span>
-                </h2>
-                
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
-                  <span className="text-blue-400 font-bold">Enquanto você não sabe quais clientes estão sendo negligenciados,</span>
-                  <br />
-                  <span className="text-cyan-400 font-bold">a IA já identificou todos eles.</span>
-                </p>
-                
-                {/* Dark Dashboard Mockup */}
-                <div className="bg-gray-800 border border-gray-600 rounded-xl p-6 shadow-2xl">
-                  <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-red-400 font-bold flex items-center">
-                      <Terminal className="h-5 w-5 mr-2" />
-                      Sistema de Monitoramento
-                    </h3>
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-red-300 font-mono text-sm">Clientes sem contato há +30 dias</span>
-                        <span className="text-red-400 font-bold text-2xl font-mono">
-                          {animatedNumbers.neglectedClients}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-red-500 h-2 rounded-full transition-all duration-2000 ease-out"
-                          style={{ width: `${animatedNumbers.neglectedClients}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-orange-900/30 border border-orange-500/30 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-orange-300 font-mono text-sm">Vendedores inativos</span>
-                        <span className="text-orange-400 font-bold text-2xl font-mono">
-                          {animatedNumbers.inactiveVendors}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-orange-500 h-2 rounded-full transition-all duration-2000 ease-out animation-delay-300"
-                          style={{ width: `${animatedNumbers.inactiveVendors}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-yellow-900/30 border border-yellow-500/30 rounded-lg p-4">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-yellow-300 font-mono text-sm">Dados desatualizados</span>
-                        <span className="text-yellow-400 font-bold text-2xl font-mono">
-                          {animatedNumbers.outdatedData}%
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div 
-                          className="bg-yellow-500 h-2 rounded-full transition-all duration-2000 ease-out animation-delay-500"
-                          style={{ width: `${animatedNumbers.outdatedData}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl text-white mb-6 font-bold leading-tight">
+                <span className="text-red-400">Seus vendedores estão deixando dinheiro na mesa</span>
+                <br />
+                <span className="text-gray-300">e você só descobre quando já perdeu o cliente.</span>
+              </h2>
               
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-xl"></div>
-                <img 
-                  src="/lovable-uploads/f6aab51a-8e0d-479c-a816-84642f9f736a.png" 
-                  alt="Dashboard mostrando clientes negligenciados" 
-                  className="relative w-full rounded-lg shadow-2xl border border-gray-600"
-                />
-              </div>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
+                <span className="text-blue-400 font-bold">Enquanto você não sabe quais clientes estão sendo negligenciados,</span>
+                <br />
+                <span className="text-cyan-400 font-bold">a IA já identificou todos eles.</span>
+              </p>
             </div>
           </div>
         </section>
