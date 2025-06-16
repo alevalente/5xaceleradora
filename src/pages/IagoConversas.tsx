@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -236,15 +235,6 @@ const IagoConversas = () => {
                 Centralize WhatsApp, Instagram, Facebook, e-mail e chat do site em uma única plataforma. 
                 Sua equipe atende mais rápido, você vende mais.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
-                  Solicitar Demonstração Gratuita
-                </Button>
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                  Ver Funcionalidades
-                </Button>
-              </div>
             </div>
           </div>
         </section>
