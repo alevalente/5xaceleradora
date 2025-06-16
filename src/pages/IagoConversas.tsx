@@ -236,7 +236,7 @@ const IagoConversas = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Centralize todos os atendimentos da sua empresa e nunca mais perca controle das conversas comerciais.
+                Centralize todos os atendimentos da sua empresa e nunca mais perca controle das conversas de sua equipe
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
