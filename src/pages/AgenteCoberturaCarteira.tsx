@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain } from 'lucide-react';
+import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -10,6 +10,7 @@ import { Badge } from '../components/ui/badge';
 
 const AgenteCoberturaCarteira = () => {
   const [animatedCards, setAnimatedCards] = useState<boolean[]>([false, false, false]);
+  const [dashboardAnimated, setDashboardAnimated] = useState<boolean[]>([false, false, false, false]);
 
   useEffect(() => {
     // Staggered animation for cards
@@ -19,8 +20,100 @@ const AgenteCoberturaCarteira = () => {
       setTimeout(() => setAnimatedCards(prev => [prev[0], prev[1], true]), 600),
     ];
 
-    return () => timeouts.forEach(clearTimeout);
+    // Dashboard cards animation
+    const dashboardTimeouts = [
+      setTimeout(() => setDashboardAnimated(prev => [true, prev[1], prev[2], prev[3]]), 800),
+      setTimeout(() => setDashboardAnimated(prev => [prev[0], true, prev[2], prev[3]]), 1000),
+      setTimeout(() => setDashboardAnimated(prev => [prev[0], prev[1], true, prev[3]]), 1200),
+      setTimeout(() => setDashboardAnimated(prev => [prev[0], prev[1], prev[2], true]), 1400),
+    ];
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+      dashboardTimeouts.forEach(clearTimeout);
+    };
   }, []);
+
+  // SVG Chart Components
+  const DonutChart = ({ percentage, color }: { percentage: number; color: string }) => (
+    <svg className="w-16 h-16" viewBox="0 0 42 42">
+      <circle cx="21" cy="21" r="15.915" fill="transparent" stroke="currentColor" strokeWidth="2" className="text-gray-600/30" />
+      <circle
+        cx="21"
+        cy="21"
+        r="15.915"
+        fill="transparent"
+        stroke={color}
+        strokeWidth="2"
+        strokeDasharray={`${percentage} ${100 - percentage}`}
+        strokeDashoffset="25"
+        className="transition-all duration-1000 ease-out"
+        style={{ 
+          strokeLinecap: 'round',
+          animation: dashboardAnimated[0] ? 'none' : 'none'
+        }}
+      />
+      <text x="21" y="21" textAnchor="middle" dy="0.3em" className="text-xs font-bold fill-current">
+        {percentage}%
+      </text>
+    </svg>
+  );
+
+  const BarChart = ({ data, color }: { data: number[]; color: string }) => (
+    <div className="flex items-end justify-center space-x-1 h-16 w-20">
+      {data.map((value, index) => (
+        <div
+          key={index}
+          className="w-2 rounded-t transition-all duration-700 ease-out"
+          style={{
+            height: dashboardAnimated[1] ? `${value}%` : '0%',
+            backgroundColor: color,
+            transitionDelay: `${index * 100}ms`
+          }}
+        />
+      ))}
+    </div>
+  );
+
+  const LineChart = ({ color }: { color: string }) => (
+    <svg className="w-20 h-12" viewBox="0 0 80 48">
+      <defs>
+        <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor={color} stopOpacity="0.1" />
+          <stop offset="100%" stopColor={color} stopOpacity="0.8" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M5,35 Q20,25 35,30 T75,15"
+        stroke={color}
+        strokeWidth="2"
+        fill="none"
+        className="transition-all duration-1000 ease-out"
+        strokeDasharray={dashboardAnimated[3] ? "none" : "100"}
+        strokeDashoffset={dashboardAnimated[3] ? "0" : "100"}
+      />
+      <circle cx="35" cy="30" r="2" fill={color} className={`transition-all duration-500 ${dashboardAnimated[3] ? 'opacity-100' : 'opacity-0'}`} />
+      <circle cx="75" cy="15" r="2" fill={color} className={`transition-all duration-500 delay-300 ${dashboardAnimated[3] ? 'opacity-100' : 'opacity-0'}`} />
+    </svg>
+  );
+
+  const StatusIndicators = ({ color }: { color: string }) => (
+    <div className="flex flex-col space-y-1">
+      {[85, 65, 40].map((width, index) => (
+        <div key={index} className="flex items-center space-x-2">
+          <div 
+            className="h-1.5 rounded-full transition-all duration-700 ease-out"
+            style={{
+              width: dashboardAnimated[2] ? `${width}%` : '0%',
+              backgroundColor: color,
+              transitionDelay: `${index * 200}ms`
+            }}
+          />
+          <div className="w-2 h-2 rounded-full bg-current opacity-60" />
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
@@ -285,78 +378,195 @@ const AgenteCoberturaCarteira = () => {
           </div>
         </section>
 
-        {/* Dashboard Examples - Tech Grid */}
+        {/* Dashboard Examples - Enhanced with Visual Charts */}
         <section className="py-16 bg-gray-900">
           <div className="container-wide">
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">
+            <h2 className="text-4xl font-bold text-white mb-4 text-center">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Dashboard
               </span>{" "}
               ilustrativo prático
             </h2>
+            <p className="text-lg text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+              Veja como nosso dashboard transforma dados complexos em insights visuais claros e actionáveis
+            </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {[
                 {
-                  icon: Users,
-                  title: "Carteira de Clientes",
-                  description: "Veja claramente quantos clientes cada vendedor possui e identifique rapidamente quais clientes estão sem vendedor atribuído ou inativos.",
-                  color: "green",
+                  icon: PieChart,
+                  title: "Distribuição da Carteira",
+                  description: "Visualize instantaneamente como seus clientes estão distribuídos entre vendedores. Identifique rapidamente sobrecargas e oportunidades de redistribuição.",
+                  color: "#10b981",
                   metric: "1,247",
-                  metricLabel: "clientes ativos"
+                  metricLabel: "clientes ativos",
+                  status: "92% cobertos",
+                  chart: <DonutChart percentage={87} color="#10b981" />,
+                  features: ["Distribuição em tempo real", "Alertas de sobrecarga", "Sugestões de balanceamento"]
                 },
                 {
                   icon: BarChart3,
-                  title: "Cobertura Real da Carteira",
-                  description: "Descubra exatamente o percentual de clientes cobertos pelos vendedores e veja imediatamente quem precisa de atenção urgente.",
-                  color: "blue",
+                  title: "Performance de Cobertura",
+                  description: "Acompanhe o percentual de cobertura por vendedor com gráficos dinâmicos. Identifique quem precisa de suporte imediato.",
+                  color: "#3b82f6",
                   metric: "87%",
-                  metricLabel: "cobertura atual"
+                  metricLabel: "cobertura média",
+                  status: "Acima da meta",
+                  chart: <BarChart data={[60, 80, 90, 75, 95, 70]} color="#3b82f6" />,
+                  features: ["Comparação histórica", "Metas personalizadas", "Ranking de performance"]
                 },
                 {
-                  icon: Phone,
-                  title: "Dados Desatualizados",
-                  description: "Tenha clareza imediata sobre números de telefone que não correspondem aos dados cadastrados no seu sistema ou planilhas.",
-                  color: "orange",
+                  icon: Clock,
+                  title: "Status dos Contatos",
+                  description: "Monitore a qualidade dos dados em tempo real. Visualize quais contatos precisam de atualização com indicadores visuais intuitivos.",
+                  color: "#f59e0b",
                   metric: "156",
-                  metricLabel: "contatos p/ atualizar"
+                  metricLabel: "p/ atualizar",
+                  status: "8% dos contatos",
+                  chart: <StatusIndicators color="#f59e0b" />,
+                  features: ["Validação automática", "Priorização inteligente", "Sugestões de correção"]
                 },
                 {
-                  icon: TrendingUp,
-                  title: "Proatividade vs. Reatividade",
-                  description: "Veja claramente se sua equipe está sendo ativa (procurando clientes) ou passiva (esperando contatos).",
-                  color: "purple",
+                  icon: Activity,
+                  title: "Índice de Proatividade",
+                  description: "Acompanhe a evolução da proatividade da equipe com gráficos de tendência. Transforme vendedores reativos em proativos.",
+                  color: "#8b5cf6",
                   metric: "3.2x",
-                  metricLabel: "mais proativo"
+                  metricLabel: "mais proativo",
+                  status: "Tendência crescente",
+                  chart: <LineChart color="#8b5cf6" />,
+                  features: ["Análise de tendências", "Comparativo semanal", "Alertas de queda"]
                 }
               ].map((item, index) => (
-                <Card key={index} className="bg-gray-800/70 border-gray-600/50 backdrop-blur-sm hover:bg-gray-700/70 transition-all duration-300 hover:scale-105 group">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <CardTitle className={`text-${item.color}-400 flex items-center text-xl`}>
-                        <item.icon className="h-6 w-6 mr-3" />
-                        {item.title}
-                      </CardTitle>
-                      <div className="text-right">
-                        <div className={`text-2xl font-bold font-mono text-${item.color}-400`}>
+                <Card 
+                  key={index} 
+                  className={`
+                    relative overflow-hidden bg-gradient-to-br from-gray-800/90 via-gray-800/60 to-gray-900/90 
+                    border border-gray-600/50 backdrop-blur-sm 
+                    transition-all duration-700 ease-out
+                    hover:scale-105 hover:shadow-2xl hover:border-gray-500/50
+                    group
+                    ${dashboardAnimated[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
+                  `}
+                  style={{
+                    transitionDelay: `${index * 200}ms`
+                  }}
+                >
+                  {/* Background Glow */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"
+                    style={{ backgroundColor: item.color }}
+                  />
+                  
+                  {/* Real-time indicator */}
+                  <div className="absolute top-4 right-4">
+                    <div className="flex items-center space-x-1">
+                      <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-xs text-green-400 font-mono">AO VIVO</span>
+                    </div>
+                  </div>
+
+                  <CardHeader className="relative z-10">
+                    <CardTitle className="text-white flex items-center justify-between text-xl mb-4">
+                      <div className="flex items-center">
+                        <div 
+                          className="h-12 w-12 rounded-xl flex items-center justify-center mr-4 border"
+                          style={{ 
+                            backgroundColor: `${item.color}20`,
+                            borderColor: `${item.color}40`
+                          }}
+                        >
+                          <item.icon className="h-6 w-6" style={{ color: item.color }} />
+                        </div>
+                        <div>
+                          <div className="text-lg font-bold">{item.title}</div>
+                          <div 
+                            className="text-sm font-mono font-bold"
+                            style={{ color: item.color }}
+                          >
+                            {item.status}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Chart Component */}
+                      <div className="flex flex-col items-center">
+                        {item.chart}
+                      </div>
+                    </CardTitle>
+                  </CardHeader>
+                  
+                  <CardContent className="relative z-10">
+                    {/* Main Metric */}
+                    <div className="flex items-baseline justify-between mb-4">
+                      <div>
+                        <div 
+                          className="text-3xl font-bold font-mono"
+                          style={{ color: item.color }}
+                        >
                           {item.metric}
                         </div>
-                        <div className="text-xs text-gray-400 font-mono">
+                        <div className="text-sm text-gray-400 font-mono">
                           {item.metricLabel}
                         </div>
                       </div>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 leading-relaxed">
+
+                    {/* Description */}
+                    <p className="text-gray-300 leading-relaxed mb-4 text-sm">
                       {item.description}
                     </p>
-                    <div className={`mt-4 h-1 bg-${item.color}-500/30 rounded-full`}>
-                      <div className={`h-1 bg-${item.color}-500 rounded-full transition-all duration-1000 group-hover:w-full`} style={{width: '60%'}}></div>
+
+                    {/* Features List */}
+                    <div className="space-y-2">
+                      {item.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-xs text-gray-400">
+                          <div 
+                            className="w-1.5 h-1.5 rounded-full mr-2"
+                            style={{ backgroundColor: item.color }}
+                          />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Progress Bar */}
+                    <div className="mt-4 pt-4 border-t border-gray-700/50">
+                      <div className="flex justify-between items-center text-xs mb-2">
+                        <span className="text-gray-400">Precisão dos dados</span>
+                        <span style={{ color: item.color }} className="font-mono font-bold">
+                          {95 + index}%
+                        </span>
+                      </div>
+                      <div className="h-1.5 bg-gray-700 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full rounded-full transition-all duration-1000 ease-out"
+                          style={{ 
+                            backgroundColor: item.color,
+                            width: dashboardAnimated[index] ? `${95 + index}%` : '0%'
+                          }}
+                        />
+                      </div>
                     </div>
                   </CardContent>
+
+                  {/* Bottom accent line */}
+                  <div 
+                    className="absolute bottom-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ backgroundColor: item.color }}
+                  />
                 </Card>
               ))}
+            </div>
+
+            {/* Dashboard Preview Note */}
+            <div className="text-center mt-12">
+              <div className="inline-flex items-center px-6 py-3 bg-blue-500/10 border border-blue-400/20 rounded-full backdrop-blur-sm">
+                <Terminal className="h-4 w-4 mr-2 text-blue-400" />
+                <span className="text-blue-300 text-sm font-mono">
+                  Dashboard responsivo disponível em desktop, tablet e mobile
+                </span>
+              </div>
             </div>
           </div>
         </section>
