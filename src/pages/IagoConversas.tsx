@@ -9,6 +9,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { createObserver, getDelayClass } from '../utils/animations';
 import { cn } from '@/lib/utils';
+import { images } from '../assets/images';
 
 const IagoConversas = () => {
   const [monthlyRevenue, setMonthlyRevenue] = useState('');
@@ -225,6 +226,15 @@ const IagoConversas = () => {
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Voltar para Soluções
                 </Link>
+              </div>
+              
+              {/* Logo do IAgo Conversas */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src={images.iagoConversasLogo} 
+                  alt="IAgo Conversas" 
+                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                />
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
