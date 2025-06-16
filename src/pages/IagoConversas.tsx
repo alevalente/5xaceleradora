@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -235,12 +236,11 @@ const IagoConversas = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Pare de perder vendas por falta de resposta: centralize tudo no IAgo Conversas.
+                Centralize todos os atendimentos da sua empresa e nunca mais perca controle das conversas comerciais.
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Centralize WhatsApp, Instagram, Facebook, e-mail e chat do site em uma única plataforma. 
-                Sua equipe atende mais rápido, você vende mais.
+                IAgo Conversas organiza automaticamente WhatsApp, Instagram, e-mail e chat, garantindo histórico completo, segurança total e eficiência imediata da sua equipe.
               </p>
             </div>
           </div>
