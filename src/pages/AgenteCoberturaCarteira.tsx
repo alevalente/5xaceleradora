@@ -155,7 +155,7 @@ const AgenteCoberturaCarteira = () => {
             Total:
           </text>
           <text x="50" y="58" textAnchor="middle" className="text-xs font-bold fill-white">
-            1.385 clientes
+            1.385
           </text>
         </svg>
         
