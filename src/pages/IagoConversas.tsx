@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -281,19 +282,28 @@ const IagoConversas = () => {
                   <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-purple-500 rounded-full opacity-20 animate-float animation-delay-500"></div>
                 </div>
 
-                {/* Métricas em tempo real */}
+                {/* Benefícios práticos em tempo real */}
                 <div className="mt-8 grid grid-cols-3 gap-4 text-center">
                   <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
-                    <div className="text-2xl font-bold text-blue-600">58%</div>
-                    <div className="text-xs text-gray-600">↓ TMA</div>
+                    <div className="flex items-center justify-center mb-2">
+                      <Shield className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div className="text-sm font-bold text-blue-600 mb-1">Histórico protegido</div>
+                    <div className="text-xs text-gray-600">Nenhuma conversa é perdida</div>
                   </div>
                   <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
-                    <div className="text-2xl font-bold text-green-600">2.4×</div>
-                    <div className="text-xs text-gray-600">↑ Conversões</div>
+                    <div className="flex items-center justify-center mb-2">
+                      <TrendingUp className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div className="text-sm font-bold text-green-600 mb-1">Mais produtividade</div>
+                    <div className="text-xs text-gray-600">Atenda mais em menos tempo</div>
                   </div>
                   <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
-                    <div className="text-2xl font-bold text-purple-600">24/7</div>
-                    <div className="text-xs text-gray-600">Automação</div>
+                    <div className="flex items-center justify-center mb-2">
+                      <Eye className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div className="text-sm font-bold text-purple-600 mb-1">Gestão em tempo real</div>
+                    <div className="text-xs text-gray-600">Acompanhe instantaneamente</div>
                   </div>
                 </div>
               </div>
