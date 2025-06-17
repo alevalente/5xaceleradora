@@ -526,13 +526,6 @@ const IagoConversas = () => {
                     </div>
                   </div>
 
-                  {/* Impacto Financeiro */}
-                  <div className="bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-6 text-white text-center mb-6">
-                    <div className="text-3xl font-bold mb-2">R$ 290.000</div>
-                    <div className="text-lg">perdidos em potencial de vendas</div>
-                    <div className="text-sm opacity-90 mt-2">Baseado em ticket médio de R$ 850 × 347 contatos</div>
-                  </div>
-
                   {/* Estatísticas Chocantes */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-4 bg-orange-50 rounded-xl border border-orange-200">
