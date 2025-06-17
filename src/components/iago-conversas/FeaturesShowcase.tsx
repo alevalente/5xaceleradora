@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -21,7 +20,8 @@ const FeaturesShowcase = () => {
       title: "Automatize seu atendimento",
       description: "Simplifique e acelere seus atendimentos criando respostas automáticas rápidas, regras práticas para direcionar as conversas para as pessoas certas, além de modelos prontos que tornam tudo mais ágil e fácil.",
       icon: <Zap className="h-12 w-12" />,
-      benefit: "Atendimento mais rápido e eficiente automaticamente"
+      benefit: "Atendimento mais rápido e eficiente automaticamente",
+      image: "/lovable-uploads/a568ab5e-339a-4984-b59a-4cff14880f09.png"
     },
     {
       step: "03",
@@ -145,29 +145,29 @@ const FeaturesShowcase = () => {
                 </div>
                 
                 <div className="flex-1 lg:max-w-2xl">
-                  <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
-                    <div className="text-center">
-                      <div className="text-blue-600 mb-4 flex justify-center">
-                        {feature.icon}
-                      </div>
-                      {feature.image ? (
-                        <div className="rounded-xl overflow-hidden shadow-lg">
-                          <img 
-                            src={feature.image} 
-                            alt={feature.title}
-                            className="w-full h-auto max-w-full object-contain"
-                            style={{ maxHeight: '400px' }}
-                          />
+                  {feature.image ? (
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                      <img 
+                        src={feature.image} 
+                        alt={feature.title}
+                        className="w-full h-auto max-w-full object-contain"
+                        style={{ maxHeight: '400px' }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                      <div className="text-center">
+                        <div className="text-blue-600 mb-4 flex justify-center">
+                          {feature.icon}
                         </div>
-                      ) : (
                         <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
                           <span className="text-gray-500 text-sm">
                             Preview: {feature.title}
                           </span>
                         </div>
-                      )}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}
