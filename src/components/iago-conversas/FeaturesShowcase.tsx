@@ -13,7 +13,7 @@ const FeaturesShowcase = () => {
       description: "WhatsApp, Instagram, Facebook, chat do site e e-mail integrados em uma única interface.",
       icon: <MessageCircle className="h-12 w-12" />,
       benefit: "Elimina a necessidade de alternar entre 5+ aplicativos diferentes",
-      image: "/lovable-uploads/58d2ef00-fcde-4a9a-be4f-db3ae7a2bd1e.png"
+      image: "/lovable-uploads/0342c09a-e285-4f44-aa10-c0f812ed33b9.png"
     },
     {
       step: "02", 
