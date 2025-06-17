@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -303,7 +302,7 @@ const IagoConversas = () => {
                       <Eye className="h-5 w-5 text-purple-600" />
                     </div>
                     <div className="text-sm font-bold text-purple-600 mb-1">Gestão em tempo real</div>
-                    <div className="text-xs text-gray-600">Acompanhe instantaneamente</div>
+                    <div className="text-xs text-gray-600">Acompanhe conversas da equipe</div>
                   </div>
                 </div>
               </div>
