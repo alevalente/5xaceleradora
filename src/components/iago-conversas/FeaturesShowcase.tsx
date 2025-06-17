@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Eye, Monitor, Target, Bell, Zap, Star, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
@@ -9,58 +10,58 @@ const FeaturesShowcase = () => {
   const features = [
     {
       step: "01",
-      title: "Centralize todas as conversas em um só lugar",
-      description: "WhatsApp, Instagram, Facebook, chat do site e e-mail integrados em uma única interface.",
+      title: "Centralize suas conversas",
+      description: "Centralize WhatsApp, Instagram, Facebook, e-mail, SMS, Telegram e Chat do seu site em uma única plataforma segura, privada e totalmente controlada por você.",
       icon: <MessageCircle className="h-12 w-12" />,
-      benefit: "Elimina a necessidade de alternar entre 5+ aplicativos diferentes",
+      benefit: "Elimina a necessidade de alternar entre múltiplos aplicativos",
       image: "/lovable-uploads/34c98d0f-9bb0-49e8-9e60-a92f6d489b89.png"
     },
     {
       step: "02", 
-      title: "Visualize o histórico completo do cliente",
-      description: "Acesso instantâneo a todas as interações anteriores, independente do canal usado.",
-      icon: <Eye className="h-12 w-12" />,
-      benefit: "Atendimento personalizado e consistente em qualquer momento"
+      title: "Automatize seu atendimento",
+      description: "Simplifique e acelere seus atendimentos criando respostas automáticas rápidas, regras práticas para direcionar as conversas para as pessoas certas, além de modelos prontos que tornam tudo mais ágil e fácil.",
+      icon: <Zap className="h-12 w-12" />,
+      benefit: "Atendimento mais rápido e eficiente automaticamente"
     },
     {
       step: "03",
-      title: "Monitore sua equipe em tempo real",
-      description: "Dashboard com métricas de atendimento, tempo de resposta e performance individual.",
-      icon: <Monitor className="h-12 w-12" />,
-      benefit: "Gestão baseada em dados, não em suposições"
+      title: "Distribua conversas automaticamente",
+      description: "Quando um cliente entra em contato, nossa plataforma envia automaticamente essa conversa para o vendedor ou equipe correta, sem você precisar fazer isso manualmente. Assim, ninguém fica esperando e você não perde vendas.",
+      icon: <Target className="h-12 w-12" />,
+      benefit: "Zero leads perdidos por distribuição manual"
     },
     {
       step: "04",
-      title: "Distribua conversas automaticamente",
-      description: "Sistema inteligente que direciona cada lead para o vendedor certo, na hora certa.",
-      icon: <Target className="h-12 w-12" />,
-      benefit: "Reduz tempo de espera e aumenta taxa de conversão"
+      title: "Monitore sua equipe em tempo real",
+      description: "Acompanhe facilmente o desempenho da sua equipe através de gráficos e relatórios simples, claros e objetivos. Veja rapidamente tempo de resposta médio, satisfação dos seus clientes e a qualidade geral do atendimento prestado.",
+      icon: <Monitor className="h-12 w-12" />,
+      benefit: "Gestão baseada em dados claros e objetivos"
     },
     {
       step: "05",
-      title: "Acione alertas inteligentes",
-      description: "Notificações automáticas para leads quentes, follow-ups pendentes e oportunidades.",
-      icon: <Bell className="h-12 w-12" />,
-      benefit: "Zero oportunidades perdidas por esquecimento"
+      title: "Agende mensagens facilmente",
+      description: "Nunca mais perca um follow-up importante! Agende mensagens diretamente no chat para garantir contatos assertivos e pontuais com seus clientes.",
+      icon: <Calendar className="h-12 w-12" />,
+      benefit: "Zero follow-ups perdidos por esquecimento"
     },
     {
       step: "06",
-      title: "Conecte com seus sistemas existentes", 
-      description: "Integração nativa com CRMs, ERPs e outras ferramentas que você já usa.",
-      icon: <Zap className="h-12 w-12" />,
+      title: "Integre facilmente com seus sistemas atuais", 
+      description: "Conecte a plataforma rapidamente com outros sistemas que você já usa na sua empresa, como CRM, sistemas financeiros, planilhas ou qualquer ferramenta que você já tenha. Tudo fica integrado em um só lugar.",
+      icon: <Plug className="h-12 w-12" />,
       benefit: "Implementação sem quebrar processos atuais"
     },
     {
       step: "07",
-      title: "Ative Agentes de IA especializados",
-      description: "Suite completa de agentes que automatizam tarefas específicas do seu processo comercial.",
-      icon: <Star className="h-12 w-12" />,
-      benefit: "Automação inteligente que potencializa sua equipe"
+      title: "Melhore sua comunicação com Escrita Mágica",
+      description: "Com o recurso integrado de Escrita Mágica (powered by OpenAI), deixe suas mensagens mais claras, profissionais e persuasivas com apenas um clique.",
+      icon: <PenTool className="h-12 w-12" />,
+      benefit: "Comunicação profissional sem esforço extra"
     },
     {
       step: "08",
-      title: "Meça resultados com precisão",
-      description: "Relatórios detalhados de performance, ROI e métricas de conversão por canal.",
+      title: "Meça resultados com alta precisão",
+      description: "Visualize relatórios detalhados e em tempo real com métricas claras: ROI, taxas de conversão por canal, produtividade da equipe, além de acompanhamento contínuo da qualidade do atendimento.",
       icon: <BarChart3 className="h-12 w-12" />,
       benefit: "Visibilidade total para otimização contínua"
     },
