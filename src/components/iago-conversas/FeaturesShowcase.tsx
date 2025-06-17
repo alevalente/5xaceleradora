@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Eye, Monitor, Target, Bell, Zap, Star, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -14,7 +13,7 @@ const FeaturesShowcase = () => {
       description: "WhatsApp, Instagram, Facebook, chat do site e e-mail integrados em uma única interface.",
       icon: <MessageCircle className="h-12 w-12" />,
       benefit: "Elimina a necessidade de alternar entre 5+ aplicativos diferentes",
-      image: "/lovable-uploads/89447a1a-23e2-4fc5-8515-348c7ca16114.png"
+      image: "/lovable-uploads/58d2ef00-fcde-4a9a-be4f-db3ae7a2bd1e.png"
     },
     {
       step: "02", 
@@ -144,18 +143,19 @@ const FeaturesShowcase = () => {
                   </div>
                 </div>
                 
-                <div className="flex-1 lg:max-w-lg">
-                  <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+                <div className="flex-1 lg:max-w-2xl">
+                  <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
                     <div className="text-center">
                       <div className="text-blue-600 mb-4 flex justify-center">
                         {feature.icon}
                       </div>
                       {feature.image ? (
-                        <div className="rounded-lg overflow-hidden">
+                        <div className="rounded-xl overflow-hidden shadow-lg">
                           <img 
                             src={feature.image} 
                             alt={feature.title}
-                            className="w-full h-auto rounded-lg"
+                            className="w-full h-auto max-w-full object-contain"
+                            style={{ maxHeight: '400px' }}
                           />
                         </div>
                       ) : (
