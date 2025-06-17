@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -102,7 +103,7 @@ const FeaturesShowcase = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Como IAgo Conversas transforma seu atendimento em 9 passos
             </h2>
@@ -117,50 +118,51 @@ const FeaturesShowcase = () => {
               <div 
                 key={index}
                 className={cn(
-                  "flex flex-col lg:flex-row items-center gap-8",
+                  "flex flex-col lg:flex-row items-center gap-8 animate-fade-in transition-all duration-700 hover:scale-[1.02] group",
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 )}
+                style={{ animationDelay: `${index * 200}ms` }}
               >
-                <div className="flex-1">
+                <div className="flex-1 transform transition-transform duration-500 group-hover:translate-y-[-4px]">
                   <div className="flex items-center mb-4">
-                    <div className="bg-blue-600 text-white text-lg font-bold px-4 py-2 rounded-lg mr-4">
+                    <div className="bg-blue-600 text-white text-lg font-bold px-4 py-2 rounded-lg mr-4 transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110">
                       {feature.step}
                     </div>
-                    <div className="text-blue-600">
+                    <div className="text-blue-600 transition-all duration-300 group-hover:scale-110 group-hover:text-blue-700">
                       {feature.icon}
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-blue-900">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 text-lg leading-relaxed">
+                  <p className="text-gray-600 mb-4 text-lg leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
                     {feature.description}
                   </p>
-                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                  <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded transition-all duration-300 group-hover:bg-green-100 group-hover:shadow-md">
                     <div className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-2 transition-transform duration-300 group-hover:scale-110" />
                       <span className="text-green-800 font-medium">{feature.benefit}</span>
                     </div>
                   </div>
                 </div>
                 
-                <div className="flex-1 lg:max-w-2xl">
+                <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
-                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <div className="rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
                       <img 
                         src={feature.image} 
                         alt={feature.title}
-                        className="w-full h-auto max-w-full object-contain"
+                        className="w-full h-auto max-w-full object-contain transition-transform duration-700 group-hover:scale-110"
                         style={{ maxHeight: '400px' }}
                       />
                     </div>
                   ) : (
-                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                    <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200 transition-all duration-500 group-hover:shadow-2xl group-hover:border-blue-200">
                       <div className="text-center">
-                        <div className="text-blue-600 mb-4 flex justify-center">
+                        <div className="text-blue-600 mb-4 flex justify-center transition-all duration-300 group-hover:scale-110">
                           {feature.icon}
                         </div>
-                        <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
+                        <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-gray-50">
                           <span className="text-gray-500 text-sm">
                             Preview: {feature.title}
                           </span>
