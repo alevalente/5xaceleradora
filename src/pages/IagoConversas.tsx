@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -274,12 +273,6 @@ const IagoConversas = () => {
                     <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                       <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
                       Online
-                    </div>
-                    
-                    {/* Badge de funcionalidade */}
-                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-lg shadow-lg">
-                      <div className="text-sm font-semibold">+5 Canais Integrados</div>
-                      <div className="text-xs text-gray-600">WhatsApp • Instagram • E-mail</div>
                     </div>
                   </div>
                   
