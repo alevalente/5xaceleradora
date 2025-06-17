@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -40,26 +39,30 @@ const IagoConversas = () => {
     }
   }, [monthlyRevenue, attendants]);
 
-  const painPoints = [
+  const realScenarios = [
     {
-      title: "Atrasos de minutos viram milhares de reais perdidos.",
-      description: "Cada segundo conta quando um lead está quente. Perder tempo alternando entre apps significa perder vendas para a concorrência.",
-      icon: <Clock className="h-8 w-8" />,
+      scenario: "09:15 - Cliente manda mensagem no WhatsApp. 09:47 - Você vê a mensagem. 10:23 - Cliente já comprou do concorrente.",
+      frequency: "73% dos leads são perdidos assim",
+      visual: "⏰ → 💬 → 😰 → 🏃‍♂️💨",
+      impact: "R$ 15.000 perdidos ontem"
     },
     {
-      title: "Cada canal conta só parte da história; decidir fica no escuro.",
-      description: "Sem visão unificada do cliente, sua equipe toma decisões baseadas em informações incompletas.",
-      icon: <Users className="h-8 w-8" />,
+      scenario: "Vendedor sai da empresa. Leva 2 anos de histórico de clientes no WhatsApp pessoal dele.",
+      frequency: "Acontece em 89% das empresas",
+      visual: "👨‍💼 → 🚪 → 📱💔 → 😱",
+      impact: "347 contatos perdidos"
     },
     {
-      title: "5 apps abertos ≠ produtividade; é caos disfarçado de trabalho.",
-      description: "Sua equipe gasta mais tempo navegando entre ferramentas do que realmente vendendo.",
-      icon: <BarChart3 className="h-8 w-8" />,
+      scenario: "Cliente reclama no Instagram. Equipe responde no WhatsApp. Cliente posta: 'Vocês nem leem as mensagens!'",
+      frequency: "5x por semana em média",
+      visual: "📱 → 💬 → 🤦‍♂️ → 😡",
+      impact: "Reputação no chão"
     },
     {
-      title: "Sem métricas, você gerencia pelo sentimento – e erra.",
-      description: "Decisões comerciais baseadas em intuição, não em dados reais, levam a oportunidades perdidas.",
-      icon: <AlertTriangle className="h-8 w-8" />,
+      scenario: "Reunião de vendas: 'Quantos leads convertemos?' Silêncio. Ninguém sabe porque cada um usa uma planilha diferente.",
+      frequency: "Toda segunda-feira",
+      visual: "🤷‍♂️ → 📊❓ → 😬 → 📈???",
+      impact: "Decisões no escuro"
     }
   ];
 
@@ -311,67 +314,72 @@ const IagoConversas = () => {
           </div>
         </section>
 
-        {/* Seção 2 - Identificação Clara e Visual da Dor/Desafio */}
+        {/* Seção 2 - Cenários Reais do Dia a Dia */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               
-              {/* Texto-âncora */}
+              {/* Texto-âncora direto */}
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Gerenciar múltiplos canais não precisa ser complicado.
+                  "Nossa, isso acontece comigo todos os dias!"
                 </h2>
                 
-                <div className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                  <p className="mb-4">
-                    Quantas vezes você perdeu conversas importantes porque um vendedor apagou mensagens 
-                    ou saiu da empresa levando o histórico com ele?
-                  </p>
-                  <p>
-                    Alternar entre WhatsApp, Instagram, e-mails e planilhas gera desorganização, 
-                    insegurança nas informações e dificuldade de acompanhar o desempenho real da equipe 
-                    comercial. Sem histórico claro e métricas precisas, você perde oportunidades valiosas.
-                  </p>
-                </div>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Reconhece alguma dessas situações? Você não está sozinho.
+                </p>
               </div>
 
-              {/* Grid de Dores Específicas */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {painPoints.map((pain, index) => (
-                  <Card 
-                    key={index}
-                    className="p-8 border-2 border-gray-100 hover:border-blue-200 transition-all duration-300"
-                    hoverEffect={true}
-                  >
-                    <CardContent className="p-0">
-                      <div className="flex items-start mb-4">
-                        <div className="p-3 bg-red-50 text-red-600 rounded-lg mr-4 flex-shrink-0">
-                          {pain.icon}
+              {/* Cenários Reais */}
+              <div className="space-y-8">
+                {realScenarios.map((scenario, index) => (
+                  <div key={index} className="relative">
+                    {/* Linha conectora (exceto para o último item) */}
+                    {index < realScenarios.length - 1 && (
+                      <div className="absolute left-8 top-20 w-0.5 h-16 bg-gray-200 hidden md:block"></div>
+                    )}
+                    
+                    <div className="flex flex-col md:flex-row items-start gap-6 p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors duration-300">
+                      {/* Ícone + Visual */}
+                      <div className="flex-shrink-0 text-center">
+                        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                          <AlertTriangle className="h-8 w-8 text-red-600" />
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
-                            {pain.title}
-                          </h3>
-                          <p className="text-gray-600">
-                            {pain.description}
-                          </p>
+                        <div className="text-2xl mb-2">{scenario.visual}</div>
+                      </div>
+                      
+                      {/* Conteúdo */}
+                      <div className="flex-1">
+                        <div className="text-lg font-medium text-gray-900 mb-3 leading-relaxed">
+                          {scenario.scenario}
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4">
+                          <div className="flex items-center gap-2 text-orange-600">
+                            <Clock className="h-4 w-4" />
+                            <span className="text-sm font-medium">{scenario.frequency}</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-red-600">
+                            <TrendingUp className="h-4 w-4" />
+                            <span className="text-sm font-bold">{scenario.impact}</span>
+                          </div>
                         </div>
                       </div>
-                    </CardContent>
-                  </Card>
+                    </div>
+                  </div>
                 ))}
               </div>
 
               {/* Call to Action de Transição */}
-              <div className="text-center mt-16 p-8 bg-blue-50 rounded-2xl">
+              <div className="text-center mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  E se existisse uma forma simples de resolver tudo isso?
+                  E se você pudesse resolver tudo isso hoje?
                 </h3>
                 <p className="text-lg text-gray-600 mb-6">
-                  O IAgo Conversas elimina cada uma dessas dores com uma solução integrada e intuitiva.
+                  IAgo Conversas elimina cada uma dessas situações com uma solução simples e integrada.
                 </p>
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
-                  Descobrir Como Funciona
+                  Quero Acabar Com Esses Problemas
                 </Button>
               </div>
 
