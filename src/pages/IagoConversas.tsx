@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -66,22 +65,40 @@ const IagoConversas = () => {
 
   const otherScenarios = [
     {
-      scenario: "Vendedor sai da empresa. Leva 2 anos de histórico de clientes no WhatsApp pessoal dele.",
+      title: "Vendedor sai da empresa",
+      scenario: "Leva 2 anos de histórico de clientes no WhatsApp pessoal dele.",
       frequency: "Acontece em 89% das empresas",
-      visual: "👨‍💼 → 🚪 → 📱💔 → 😱",
-      impact: "347 contatos perdidos"
+      visual: "👨‍💼 → 🚪 → 📱💔",
+      impact: "347 contatos perdidos",
+      bgColor: "from-orange-50 to-red-50",
+      borderColor: "border-orange-200",
+      iconColor: "text-orange-600",
+      iconBg: "bg-orange-100",
+      icon: Users
     },
     {
-      scenario: "Cliente reclama no Instagram. Equipe responde no WhatsApp. Cliente posta: 'Vocês nem leem as mensagens!'",
+      title: "Cliente reclama no Instagram",
+      scenario: "Equipe responde no WhatsApp. Cliente posta: 'Vocês nem leem as mensagens!'",
       frequency: "5x por semana em média",
-      visual: "📱 → 💬 → 🤦‍♂️ → 😡",
-      impact: "Reputação no chão"
+      visual: "📱 → 💬 → 🤦‍♂️",
+      impact: "Reputação no chão",
+      bgColor: "from-purple-50 to-pink-50",
+      borderColor: "border-purple-200",
+      iconColor: "text-purple-600",
+      iconBg: "bg-purple-100",
+      icon: MessageCircle
     },
     {
-      scenario: "Reunião de vendas: 'Quantos leads convertemos?' Silêncio. Ninguém sabe porque cada um usa uma planilha diferente.",
+      title: "Reunião de vendas",
+      scenario: "'Quantos leads convertemos?' Silêncio. Ninguém sabe porque cada um usa uma planilha diferente.",
       frequency: "Toda segunda-feira",
-      visual: "🤷‍♂️ → 📊❓ → 😬 → 📈???",
-      impact: "Decisões no escuro"
+      visual: "🤷‍♂️ → 📊❓ → 😬",
+      impact: "Decisões no escuro",
+      bgColor: "from-blue-50 to-indigo-50",
+      borderColor: "border-blue-200",
+      iconColor: "text-blue-600",
+      iconBg: "bg-blue-100",
+      icon: BarChart3
     }
   ];
 
@@ -434,42 +451,56 @@ const IagoConversas = () => {
                 </div>
               </div>
 
-              {/* Outros Cenários */}
-              <div className="space-y-8">
+              {/* Outros Cenários - Design Melhorado */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {otherScenarios.map((scenario, index) => (
-                  <div key={index} className="relative">
-                    {/* Linha conectora (exceto para o último item) */}
-                    {index < otherScenarios.length - 1 && (
-                      <div className="absolute left-8 top-20 w-0.5 h-16 bg-gray-200 hidden md:block"></div>
+                  <div 
+                    key={index} 
+                    className={cn(
+                      "group relative p-8 rounded-2xl border-2 transition-all duration-500 hover:scale-105 hover:shadow-xl bg-gradient-to-br",
+                      scenario.bgColor,
+                      scenario.borderColor
                     )}
-                    
-                    <div className="flex flex-col md:flex-row items-start gap-6 p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors duration-300">
-                      {/* Ícone + Visual */}
-                      <div className="flex-shrink-0 text-center">
-                        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-3">
-                          <AlertTriangle className="h-8 w-8 text-red-600" />
-                        </div>
-                        <div className="text-2xl mb-2">{scenario.visual}</div>
+                  >
+                    {/* Ícone Principal */}
+                    <div className="text-center mb-6">
+                      <div className={cn(
+                        "w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110",
+                        scenario.iconBg
+                      )}>
+                        <scenario.icon className={cn("h-10 w-10", scenario.iconColor)} />
                       </div>
                       
-                      {/* Conteúdo */}
-                      <div className="flex-1">
-                        <div className="text-lg font-medium text-gray-900 mb-3 leading-relaxed">
-                          {scenario.scenario}
-                        </div>
-                        
-                        <div className="flex flex-col sm:flex-row gap-4">
-                          <div className="flex items-center gap-2 text-orange-600">
-                            <Clock className="h-4 w-4" />
-                            <span className="text-sm font-medium">{scenario.frequency}</span>
-                          </div>
-                          <div className="flex items-center gap-2 text-red-600">
-                            <TrendingUp className="h-4 w-4" />
-                            <span className="text-sm font-bold">{scenario.impact}</span>
-                          </div>
-                        </div>
+                      {/* Visual Emoji */}
+                      <div className="text-3xl mb-4 group-hover:animate-pulse">
+                        {scenario.visual}
                       </div>
                     </div>
+                    
+                    {/* Título e Cenário */}
+                    <div className="text-center mb-6">
+                      <h4 className="text-xl font-bold text-gray-900 mb-3">
+                        {scenario.title}
+                      </h4>
+                      <p className="text-gray-700 leading-relaxed text-base">
+                        {scenario.scenario}
+                      </p>
+                    </div>
+                    
+                    {/* Métricas */}
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-center gap-2 text-orange-600 bg-white/50 rounded-lg p-3">
+                        <Clock className="h-4 w-4" />
+                        <span className="text-sm font-medium">{scenario.frequency}</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2 text-red-600 bg-white/50 rounded-lg p-3">
+                        <AlertTriangle className="h-4 w-4" />
+                        <span className="text-sm font-bold">{scenario.impact}</span>
+                      </div>
+                    </div>
+
+                    {/* Efeito de borda animado no hover */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                   </div>
                 ))}
               </div>
