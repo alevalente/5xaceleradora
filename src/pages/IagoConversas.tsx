@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Users, BarChart3, AlertTriangle, TrendingUp, Calculator, Shield, CheckCircle, MessageCircle, Monitor, Smartphone, Zap, Bell, Target, Eye, PlayCircle, ArrowRight, Star } from 'lucide-react';
@@ -318,18 +319,18 @@ const IagoConversas = () => {
               {/* Texto-âncora */}
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Gerenciar múltiplos canais de atendimento não deveria ser tão confuso.
+                  Gerenciar múltiplos canais não precisa ser complicado.
                 </h2>
                 
                 <div className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                   <p className="mb-4">
-                    Hoje, gestores comerciais gastam horas saltando entre WhatsApp Web, Instagram, 
-                    chat do site, e-mails e planilhas só para descobrir que um lead esfriou ou uma 
-                    venda escapou para o concorrente.
+                    Quantas vezes você perdeu conversas importantes porque um vendedor apagou mensagens 
+                    ou saiu da empresa levando o histórico com ele?
                   </p>
                   <p>
-                    A sobrecarga de abas, falta de histórico unificado e ausência de métricas em 
-                    tempo real transformam o simples ato de responder clientes em um labirinto sem fim.
+                    Alternar entre WhatsApp, Instagram, e-mails e planilhas gera desorganização, 
+                    insegurança nas informações e dificuldade de acompanhar o desempenho real da equipe 
+                    comercial. Sem histórico claro e métricas precisas, você perde oportunidades valiosas.
                   </p>
                 </div>
               </div>
