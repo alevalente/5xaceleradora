@@ -459,8 +459,92 @@ const IagoConversas = () => {
                     </p>
                   </div>
 
-                  {/* Timeline Visual Dramática */}
+                  {/* Cenários Paralelos - WhatsApp Pessoal vs Celular da Empresa */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                    
+                    {/* Cenário 1 - WhatsApp Pessoal */}
+                    <div className="bg-red-50 rounded-2xl p-6 border-2 border-red-200">
+                      <div className="text-center mb-4">
+                        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Smartphone className="h-8 w-8 text-red-600" />
+                        </div>
+                        <h4 className="text-lg font-bold text-red-800 mb-2">CENÁRIO A</h4>
+                        <div className="bg-red-600 text-white px-3 py-1 rounded-lg text-sm font-bold mb-3">
+                          WhatsApp Pessoal
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3 text-sm">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">📱</span>
+                          <div>
+                            <div className="font-medium text-red-800">Vendedor usa celular próprio</div>
+                            <div className="text-red-600">347 contatos de clientes misturados com pessoais</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">🚪</span>
+                          <div>
+                            <div className="font-medium text-red-800">Sai da empresa</div>
+                            <div className="text-red-600">Leva TODOS os contatos junto</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">💔</span>
+                          <div>
+                            <div className="font-medium text-red-800">Resultado</div>
+                            <div className="text-red-600">2 anos de relacionamento perdidos</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Cenário 2 - Celular da Empresa */}
+                    <div className="bg-orange-50 rounded-2xl p-6 border-2 border-orange-200">
+                      <div className="text-center mb-4">
+                        <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Shield className="h-8 w-8 text-orange-600" />
+                        </div>
+                        <h4 className="text-lg font-bold text-orange-800 mb-2">CENÁRIO B</h4>
+                        <div className="bg-orange-600 text-white px-3 py-1 rounded-lg text-sm font-bold mb-3">
+                          Celular da Empresa
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3 text-sm">
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">💼</span>
+                          <div>
+                            <div className="font-medium text-orange-800">Empresa fornece celular</div>
+                            <div className="text-orange-600">Contatos "protegidos" no aparelho corporativo</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">🗑️</span>
+                          <div>
+                            <div className="font-medium text-orange-800">Vendedor se demite</div>
+                            <div className="text-orange-600">"Ops, apaguei tudo sem querer"</div>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <span className="text-2xl">😱</span>
+                          <div>
+                            <div className="font-medium text-orange-800">Resultado</div>
+                            <div className="text-orange-600">Histórico zerado, não tem backup</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Timeline Visual Central */}
                   <div className="relative mb-8">
+                    <div className="text-center mb-6">
+                      <div className="inline-flex items-center bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-bold">
+                        ⚡ Nos dois casos, o resultado é o mesmo
+                      </div>
+                    </div>
+
                     {/* Linha de fundo representando o "antes" */}
                     <div className="absolute top-24 left-0 w-full h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-30"></div>
                     
@@ -496,11 +580,12 @@ const IagoConversas = () => {
                         </div>
                         <div className="text-6xl mb-4">🚪💥</div>
                         <h4 className="text-lg font-bold text-red-800 mb-2">O MOMENTO</h4>
-                        <div className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold">
+                        <div className="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-bold mb-2">
                           "Recebi uma proposta melhor"
                         </div>
-                        <div className="mt-3 text-xs text-red-600 font-medium">
-                          Leva o WhatsApp pessoal com todos os contatos
+                        <div className="text-xs text-red-600 font-medium space-y-1">
+                          <div>☠️ Leva o WhatsApp pessoal</div>
+                          <div>☠️ Ou "apaga sem querer"</div>
                         </div>
                       </div>
 
