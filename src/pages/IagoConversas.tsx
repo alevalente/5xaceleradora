@@ -216,32 +216,94 @@ const IagoConversas = () => {
           </div>
         </div>
 
-        {/* Seção 1 - Título Inicial Provocativo */}
-        <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+        {/* Seção 1 - Hero com Layout de Duas Colunas */}
+        <section className="py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6">
-                <Link 
-                  to="/#solutions" 
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium mb-8"
-                >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Voltar para Soluções
-                </Link>
+            <div className="mb-6 text-center lg:text-left">
+              <Link 
+                to="/#solutions" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium mb-8"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Voltar para Soluções
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Coluna da Esquerda - Conteúdo */}
+              <div className="text-center lg:text-left animate-fade-up">
+                {/* Logo do IAgo Conversas */}
+                <div className="mb-8 flex justify-center lg:justify-start">
+                  <LogoWithTransparentBackground />
+                </div>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  Centralize todos os atendimentos da sua empresa e nunca mais perca controle das conversas de sua equipe
+                </h1>
+                
+                <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                  IAgo Conversas organiza automaticamente WhatsApp, Instagram, e-mail e chat, garantindo histórico completo, segurança total e eficiência imediata da sua equipe.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+                    Solicitar Demonstração Gratuita
+                  </Button>
+                  <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                    Ver Como Funciona
+                  </Button>
+                </div>
               </div>
-              
-              {/* Logo do IAgo Conversas com fundo removido */}
-              <div className="mb-8 flex justify-center">
-                <LogoWithTransparentBackground />
+
+              {/* Coluna da Direita - Imagem com Efeitos */}
+              <div className="relative animate-scale-in animation-delay-300">
+                <div className="relative group">
+                  {/* Efeito de Background Blur */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                  
+                  {/* Container da Imagem */}
+                  <div className="relative bg-white rounded-2xl shadow-2xl p-2 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img 
+                      src={images.iagoConversasScreenshot}
+                      alt="Interface do IAgo Conversas - Plataforma unificada de atendimento"
+                      className="w-full h-auto rounded-xl shadow-lg"
+                      loading="eager"
+                    />
+                    
+                    {/* Overlay com informações */}
+                    <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                      <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                      Online
+                    </div>
+                    
+                    {/* Badge de funcionalidade */}
+                    <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-gray-900 px-4 py-2 rounded-lg shadow-lg">
+                      <div className="text-sm font-semibold">+5 Canais Integrados</div>
+                      <div className="text-xs text-gray-600">WhatsApp • Instagram • E-mail</div>
+                    </div>
+                  </div>
+                  
+                  {/* Elementos decorativos flutuantes */}
+                  <div className="absolute -top-6 -right-6 w-12 h-12 bg-blue-500 rounded-full opacity-20 animate-float"></div>
+                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-purple-500 rounded-full opacity-20 animate-float animation-delay-500"></div>
+                </div>
+
+                {/* Métricas em tempo real */}
+                <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+                  <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
+                    <div className="text-2xl font-bold text-blue-600">58%</div>
+                    <div className="text-xs text-gray-600">↓ TMA</div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
+                    <div className="text-2xl font-bold text-green-600">2.4×</div>
+                    <div className="text-xs text-gray-600">↑ Conversões</div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-md p-4 border border-gray-100">
+                    <div className="text-2xl font-bold text-purple-600">24/7</div>
+                    <div className="text-xs text-gray-600">Automação</div>
+                  </div>
+                </div>
               </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Centralize todos os atendimentos da sua empresa e nunca mais perca controle das conversas de sua equipe
-              </h1>
-              
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                IAgo Conversas organiza automaticamente WhatsApp, Instagram, e-mail e chat, garantindo histórico completo, segurança total e eficiência imediata da sua equipe.
-              </p>
             </div>
           </div>
         </section>
