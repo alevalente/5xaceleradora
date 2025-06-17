@@ -13,7 +13,8 @@ const FeaturesShowcase = () => {
       title: "Centralize todas as conversas em um só lugar",
       description: "WhatsApp, Instagram, Facebook, chat do site e e-mail integrados em uma única interface.",
       icon: <MessageCircle className="h-12 w-12" />,
-      benefit: "Elimina a necessidade de alternar entre 5+ aplicativos diferentes"
+      benefit: "Elimina a necessidade de alternar entre 5+ aplicativos diferentes",
+      image: "/lovable-uploads/89447a1a-23e2-4fc5-8515-348c7ca16114.png"
     },
     {
       step: "02", 
@@ -149,11 +150,21 @@ const FeaturesShowcase = () => {
                       <div className="text-blue-600 mb-4 flex justify-center">
                         {feature.icon}
                       </div>
-                      <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">
-                          Preview: {feature.title}
-                        </span>
-                      </div>
+                      {feature.image ? (
+                        <div className="rounded-lg overflow-hidden">
+                          <img 
+                            src={feature.image} 
+                            alt={feature.title}
+                            className="w-full h-auto rounded-lg"
+                          />
+                        </div>
+                      ) : (
+                        <div className="h-32 bg-gray-100 rounded-lg flex items-center justify-center">
+                          <span className="text-gray-500 text-sm">
+                            Preview: {feature.title}
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
