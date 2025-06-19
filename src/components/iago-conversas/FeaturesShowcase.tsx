@@ -29,7 +29,7 @@ const FeaturesShowcase = () => {
       description: "Quando um cliente escolhe uma opção ou inicia uma conversa, o IAgo envia automaticamente para o atendente ou equipe certa. Ninguém precisa esperar nem direcionar manualmente.",
       icon: <Target className="h-12 w-12" />,
       benefit: "Zero leads perdidos por distribuição manual",
-      image: "/lovable-uploads/49f90fce-c665-4498-8a74-1bf467bfcbc2.png"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop&crop=center"
     },
     {
       step: "04",
