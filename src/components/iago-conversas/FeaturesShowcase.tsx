@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -27,9 +26,10 @@ const FeaturesShowcase = () => {
     {
       step: "03",
       title: "Distribua conversas automaticamente",
-      description: "Quando um cliente entra em contato, nossa plataforma envia automaticamente essa conversa para o vendedor ou equipe correta, sem você precisar fazer isso manualmente. Assim, ninguém fica esperando e você não perde vendas.",
+      description: "Quando um cliente escolhe uma opção ou inicia uma conversa, o IAgo envia automaticamente para o atendente ou equipe certa. Ninguém precisa esperar nem direcionar manualmente.",
       icon: <Target className="h-12 w-12" />,
-      benefit: "Zero leads perdidos por distribuição manual"
+      benefit: "Zero leads perdidos por distribuição manual",
+      image: "/lovable-uploads/49f90fce-c665-4498-8a74-1bf467bfcbc2.png"
     },
     {
       step: "04",
