@@ -29,7 +29,8 @@ const FeaturesShowcase = () => {
       description: "Quando um cliente escolhe uma opção ou inicia uma conversa, o IAgo envia automaticamente para o atendente ou equipe certa. Ninguém precisa esperar nem direcionar manualmente.",
       icon: <Target className="h-12 w-12" />,
       benefit: "Zero leads perdidos por distribuição manual",
-      image: "/lovable-uploads/cf519303-fd86-4936-83d8-68c45b60dd54.png"
+      image: "/lovable-uploads/cf519303-fd86-4936-83d8-68c45b60dd54.png",
+      hasTransparentBg: true
     },
     {
       step: "04",
@@ -149,7 +150,10 @@ const FeaturesShowcase = () => {
                 
                 <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
-                    <div className="rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                    <div className={cn(
+                      "rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl",
+                      feature.hasTransparentBg ? "bg-transparent" : "bg-white"
+                    )}>
                       <img 
                         src={feature.image} 
                         alt={feature.title}
