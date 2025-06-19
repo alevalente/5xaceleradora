@@ -36,7 +36,8 @@ const FeaturesShowcase = () => {
       title: "Monitore sua equipe em tempo real",
       description: "Acompanhe facilmente o desempenho da sua equipe através de gráficos e relatórios simples, claros e objetivos. Veja rapidamente tempo de resposta médio, satisfação dos seus clientes e a qualidade geral do atendimento prestado.",
       icon: <Monitor className="h-12 w-12" />,
-      benefit: "Gestão baseada em dados claros e objetivos"
+      benefit: "Gestão baseada em dados claros e objetivos",
+      image: "/lovable-uploads/6335dbfb-bd9a-433a-b412-4a668d962d94.png"
     },
     {
       step: "05",
