@@ -29,8 +29,7 @@ const FeaturesShowcase = () => {
       description: "Quando um cliente escolhe uma opção ou inicia uma conversa, o IAgo envia automaticamente para o atendente ou equipe certa. Ninguém precisa esperar nem direcionar manualmente.",
       icon: <Target className="h-12 w-12" />,
       benefit: "Zero leads perdidos por distribuição manual",
-      image: "/lovable-uploads/4e8e5e5b-e0f3-4b6a-a51d-a8f3a2035b5c.png",
-      isStep3: true
+      image: "/lovable-uploads/cf519303-fd86-4936-83d8-68c45b60dd54.png"
     },
     {
       step: "04",
@@ -150,23 +149,11 @@ const FeaturesShowcase = () => {
                 
                 <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
-                    <div className={cn(
-                      "rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl",
-                      feature.isStep3 ? "bg-transparent p-0" : ""
-                    )}>
+                    <div className="rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
                       <img 
                         src={feature.image} 
                         alt={feature.title}
-                        className={cn(
-                          "w-full h-auto transition-transform duration-700 group-hover:scale-110",
-                          feature.isStep3 
-                            ? "object-cover max-h-[400px] mix-blend-multiply" 
-                            : "object-contain max-h-[400px]"
-                        )}
-                        style={feature.isStep3 ? { 
-                          filter: 'brightness(1.1) contrast(1.1)',
-                          backgroundColor: 'transparent'
-                        } : {}}
+                        className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 max-h-[400px]"
                       />
                     </div>
                   ) : (
