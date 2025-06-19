@@ -150,16 +150,21 @@ const FeaturesShowcase = () => {
                 
                 <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
-                    <div className={cn(
-                      "rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl",
-                      feature.hasTransparentBg ? "bg-transparent" : "bg-white"
-                    )}>
+                    feature.hasTransparentBg ? (
                       <img 
                         src={feature.image} 
                         alt={feature.title}
                         className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 max-h-[400px]"
                       />
-                    </div>
+                    ) : (
+                      <div className="bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                        <img 
+                          src={feature.image} 
+                          alt={feature.title}
+                          className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 max-h-[400px]"
+                        />
+                      </div>
+                    )
                   ) : (
                     <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200 transition-all duration-500 group-hover:shadow-2xl group-hover:border-blue-200">
                       <div className="text-center">
