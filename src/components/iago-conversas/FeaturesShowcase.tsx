@@ -55,7 +55,10 @@ const FeaturesShowcase = () => {
       title: "Melhore sua comunicação com Escrita Mágica",
       description: "Com o recurso integrado de Escrita Mágica (powered by OpenAI), deixe suas mensagens mais claras, profissionais e persuasivas com apenas um clique.",
       icon: <PenTool className="h-12 w-12" />,
-      benefit: "Comunicação profissional sem esforço extra"
+      benefit: "Comunicação profissional sem esforço extra",
+      image: "/lovable-uploads/1c97b0a6-2f96-4c4b-a6cc-75a890a0749b.png",
+      hasTransparentBg: true,
+      largeImage: true
     }
   ];
 
