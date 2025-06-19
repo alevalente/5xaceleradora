@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Settings, FileText, MessageCircle, Bell, RotateCcw } from 'lucide-react';
 
@@ -51,9 +50,9 @@ const Hero = () => {
             
             {/* Título de oportunidade */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
-              Domine a IA<br />
+              Domine a IA antes<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-indigo-300 animate-pulse-soft">
-                antes dos concorrentes
+                dos seus concorrentes
               </span>
             </h1>
             
