@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { MessageCircle, Zap, Target, Monitor, Calendar, PenTool, CheckCircle, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
@@ -30,7 +31,8 @@ const FeaturesShowcase = () => {
       icon: <Target className="h-12 w-12" />,
       benefit: "Zero leads perdidos por distribuição manual",
       image: "/lovable-uploads/cf519303-fd86-4936-83d8-68c45b60dd54.png",
-      hasTransparentBg: true
+      hasTransparentBg: true,
+      largeImage: true
     },
     {
       step: "04",
@@ -45,35 +47,15 @@ const FeaturesShowcase = () => {
       title: "Agende mensagens facilmente",
       description: "Nunca mais perca um follow-up importante! Agende mensagens diretamente no chat para garantir contatos assertivos e pontuais com seus clientes.",
       icon: <Calendar className="h-12 w-12" />,
-      benefit: "Zero follow-ups perdidos por esquecimento"
+      benefit: "Zero follow-ups perdidos por esquecimento",
+      image: "/lovable-uploads/40bafc31-b467-4f2a-ba97-243d60153bc9.png"
     },
     {
       step: "06",
-      title: "Integre facilmente com seus sistemas atuais", 
-      description: "Conecte a plataforma rapidamente com outros sistemas que você já usa na sua empresa, como CRM, sistemas financeiros, planilhas ou qualquer ferramenta que você já tenha. Tudo fica integrado em um só lugar.",
-      icon: <Plug className="h-12 w-12" />,
-      benefit: "Implementação sem quebrar processos atuais"
-    },
-    {
-      step: "07",
       title: "Melhore sua comunicação com Escrita Mágica",
       description: "Com o recurso integrado de Escrita Mágica (powered by OpenAI), deixe suas mensagens mais claras, profissionais e persuasivas com apenas um clique.",
       icon: <PenTool className="h-12 w-12" />,
       benefit: "Comunicação profissional sem esforço extra"
-    },
-    {
-      step: "08",
-      title: "Meça resultados com alta precisão",
-      description: "Visualize relatórios detalhados e em tempo real com métricas claras: ROI, taxas de conversão por canal, produtividade da equipe, além de acompanhamento contínuo da qualidade do atendimento.",
-      icon: <BarChart3 className="h-12 w-12" />,
-      benefit: "Visibilidade total para otimização contínua"
-    },
-    {
-      step: "09",
-      title: "Escale sem aumentar headcount",
-      description: "Atenda mais clientes com a mesma equipe através de automação e eficiência operacional.",
-      icon: <TrendingUp className="h-12 w-12" />,
-      benefit: "Crescimento sustentável com margem preservada"
     }
   ];
 
@@ -107,7 +89,7 @@ const FeaturesShowcase = () => {
           
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Como IAgo Conversas transforma seu atendimento em 9 passos
+              Como IAgo Conversas transforma seu atendimento em 6 passos
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Cada funcionalidade foi pensada para resolver problemas reais do dia a dia comercial, 
@@ -151,11 +133,17 @@ const FeaturesShowcase = () => {
                 <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
                     feature.hasTransparentBg ? (
-                      <div className="rounded-2xl overflow-hidden transition-all duration-500 h-[400px] flex items-center justify-center">
+                      <div className={cn(
+                        "rounded-2xl overflow-hidden transition-all duration-500 flex items-center justify-center",
+                        feature.largeImage ? "h-[500px]" : "h-[400px]"
+                      )}>
                         <img 
                           src={feature.image} 
                           alt={feature.title}
-                          className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
+                          className={cn(
+                            "object-contain transition-transform duration-700 group-hover:scale-110",
+                            feature.largeImage ? "w-full h-full scale-125" : "w-full h-full"
+                          )}
                         />
                       </div>
                     ) : (
