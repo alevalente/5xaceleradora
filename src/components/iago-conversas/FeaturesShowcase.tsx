@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Zap, Target, Monitor, Calendar, Plug, PenTool, BarChart3, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
@@ -152,11 +151,11 @@ const FeaturesShowcase = () => {
                 <div className="flex-1 lg:max-w-2xl transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                   {feature.image ? (
                     feature.hasTransparentBg ? (
-                      <div className="rounded-2xl overflow-hidden transition-all duration-500 min-h-[400px] flex items-center justify-center">
+                      <div className="rounded-2xl overflow-hidden transition-all duration-500 h-[400px] flex items-center justify-center">
                         <img 
                           src={feature.image} 
                           alt={feature.title}
-                          className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 max-h-[400px]"
+                          className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>
                     ) : (
