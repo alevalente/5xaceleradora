@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Zap, Target, Monitor, Calendar, PenTool, CheckCircle, ArrowRight } from 'lucide-react';
@@ -48,7 +47,8 @@ const FeaturesShowcase = () => {
       description: "Nunca mais perca um follow-up importante! Agende mensagens diretamente no chat para garantir contatos assertivos e pontuais com seus clientes.",
       icon: <Calendar className="h-12 w-12" />,
       benefit: "Zero follow-ups perdidos por esquecimento",
-      image: "/lovable-uploads/40bafc31-b467-4f2a-ba97-243d60153bc9.png"
+      image: "/lovable-uploads/40bafc31-b467-4f2a-ba97-243d60153bc9.png",
+      largeImage: true
     },
     {
       step: "06",
@@ -147,11 +147,17 @@ const FeaturesShowcase = () => {
                         />
                       </div>
                     ) : (
-                      <div className="bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                      <div className={cn(
+                        "bg-white rounded-2xl overflow-hidden shadow-xl transition-all duration-500 group-hover:shadow-2xl",
+                        feature.largeImage ? "h-[500px]" : "h-[400px]"
+                      )}>
                         <img 
                           src={feature.image} 
                           alt={feature.title}
-                          className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 max-h-[400px]"
+                          className={cn(
+                            "w-full h-full object-contain transition-transform duration-700 group-hover:scale-110",
+                            feature.largeImage ? "scale-125" : ""
+                          )}
                         />
                       </div>
                     )
