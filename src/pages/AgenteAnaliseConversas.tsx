@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Brain, Cpu, Zap, Terminal, CheckCircle2, AlertTriangle, BarChart3, MessageSquare, TrendingUp, Layout, Kanban } from 'lucide-react';
+import { ArrowLeft, Brain, Cpu, Zap, Terminal, CheckCircle2, AlertTriangle, BarChart3, MessageSquare, TrendingUp } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button } from '../components/ui/button';
@@ -119,122 +119,6 @@ const AgenteAnaliseConversas = () => {
 
               {/* How it works - Enhanced Interactive Cards */}
               <HowItWorksSection />
-            </div>
-          </div>
-        </section>
-
-        {/* Dashboard e Kanban Section */}
-        <section className="py-16 bg-gradient-to-b from-gray-900 to-gray-800">
-          <div className="container-wide">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-white mb-6 leading-tight">
-                  Dashboard e Kanban: insights práticos e imediatos para suas decisões comerciais
-                </h2>
-                <p className="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                  Nosso Agente de Análise de Conversas organiza automaticamente os resultados das análises feitas nas interações comerciais em duas apresentações visuais altamente intuitivas: um Dashboard com informações rápidas e estratégicas, e cartões individuais no formato Kanban com sugestões práticas e específicas. Assim, você tem clareza absoluta e rapidez total para agir.
-                </p>
-              </div>
-
-              {/* Visual Presentation Options */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                {/* Dashboard Card */}
-                <Card className="bg-gray-800/80 border-2 border-blue-400/40 hover:border-blue-400/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-blue-500/20 border-2 border-blue-400/40 flex items-center justify-center">
-                        <Layout className="w-6 h-6 text-blue-400" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl">Dashboard</CardTitle>
-                        <p className="text-blue-400 text-sm font-mono">Visão estratégica geral</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      Entrega uma visão rápida, clara e visual da performance geral da equipe comercial.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Pontuações médias e rankings</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Gráficos simples (barras e linhas)</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Alertas rápidos e intuitivos para ações imediatas</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Kanban Card */}
-                <Card className="bg-gray-800/80 border-2 border-purple-400/40 hover:border-purple-400/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-purple-500/20 border-2 border-purple-400/40 flex items-center justify-center">
-                        <Kanban className="w-6 h-6 text-purple-400" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-white text-xl">Kanban (Cartões Individuais)</CardTitle>
-                        <p className="text-purple-400 text-sm font-mono">Análises detalhadas por conversa</p>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 leading-relaxed mb-4">
-                      Cada cartão representa uma conversa específica analisada, contendo informações práticas e detalhadas.
-                    </p>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Nome do vendedor, cliente e empresa</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Data da conversa e pontuação de desempenho</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Sugestões imediatas e claras para melhorias</span>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">Acesso a detalhes adicionais ao clicar no cartão</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Kanban Visual Example */}
-              <div className="bg-gray-800/60 rounded-xl p-8 border border-gray-700/50">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-3">Exemplo Visual: Cartões Kanban</h3>
-                  <p className="text-gray-400">Veja como as análises são organizadas em cartões práticos e intuitivos</p>
-                </div>
-                
-                <div className="flex justify-center">
-                  <img 
-                    src="/lovable-uploads/8e14a658-7300-4854-b89c-c74ef7974015.png"
-                    alt="Exemplo de cartões Kanban com análises de conversas comerciais organizadas por categorias: Abordagem, Necessidades/Mix, Negociação, Fechamento e Conexão"
-                    className="max-w-full h-auto rounded-lg shadow-2xl border border-gray-600/50"
-                  />
-                </div>
-
-                <div className="mt-8 text-center">
-                  <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-400/20 rounded-full backdrop-blur-sm">
-                    <Kanban className="h-4 w-4 mr-2 text-purple-400" />
-                    <span className="text-purple-300 text-sm font-mono">
-                      Cartões organizados por categoria de análise para fácil visualização
-                    </span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
