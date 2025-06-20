@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Brain, Cpu, Zap, Terminal, CheckCircle2, AlertTriangle, BarChart3, MessageSquare, TrendingUp } from 'lucide-react';
@@ -152,7 +151,7 @@ const AgenteAnaliseConversas = () => {
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="relative z-10 pt-0 pb-6 max-h-96 overflow-y-auto">
+                  <CardContent className="relative z-10 pt-0 pb-6">
                     <ConversationAnalysisCards />
                   </CardContent>
                 </Card>
