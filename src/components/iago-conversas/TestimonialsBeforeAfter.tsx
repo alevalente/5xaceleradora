@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -12,7 +11,7 @@ const TestimonialsBeforeAfter = () => {
       id: 1,
       name: 'José Augusto',
       title: 'Proprietário',
-      image: '/lovable-uploads/97c66276-acf9-4ba6-861e-2254ebcd0cb6.png',
+      image: '/lovable-uploads/95795439-a827-4e8f-a89b-d46d144416af.png',
       quote: 'Perdíamos vendas diariamente sem saber onde estava o problema, pois não conseguíamos monitorar o tempo de resposta ou a satisfação dos clientes. Agora, com tudo centralizado, temos controle total.'
     },
     {
