@@ -135,18 +135,18 @@ const AgenteAnaliseConversas = () => {
               Veja como nosso dashboard apresenta análises detalhadas e sugestões específicas para cada conversa
             </p>
             
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {/* Conversation Analysis Cards */}
               <div className="lg:col-span-2">
-                <Card className="relative overflow-hidden bg-gradient-to-br from-gray-800/90 via-gray-800/60 to-gray-900/90 border border-gray-600/50 backdrop-blur-sm transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-gray-500/50 group opacity-100 translate-y-0">
+                <Card className="relative overflow-hidden bg-gray-100 border-2 border-gray-300 transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-blue-400 group opacity-100 translate-y-0">
                   <CardHeader className="relative z-10 pb-4">
-                    <CardTitle className="text-white flex items-center text-lg mb-2">
-                      <div className="h-8 w-8 rounded-lg flex items-center justify-center mr-3 border bg-blue-500/20 border-blue-400/40">
-                        <MessageSquare className="h-4 w-4 text-blue-400" />
+                    <CardTitle className="text-gray-900 flex items-center text-lg mb-2">
+                      <div className="h-8 w-8 rounded-lg flex items-center justify-center mr-3 bg-blue-100 border-2 border-blue-300">
+                        <MessageSquare className="h-4 w-4 text-blue-600" />
                       </div>
                       <div>
-                        <div className="text-lg font-bold">Análise de Conversas</div>
-                        <div className="text-xs text-blue-400 font-mono">Últimas 24 horas</div>
+                        <div className="text-lg font-bold text-gray-900">Análise de Conversas</div>
+                        <div className="text-sm text-blue-600 font-semibold">Últimas 24 horas</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -158,17 +158,17 @@ const AgenteAnaliseConversas = () => {
               </div>
 
               {/* Side Panels */}
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {/* Performance Metrics */}
-                <Card className="relative overflow-hidden bg-gradient-to-br from-gray-800/90 via-gray-800/60 to-gray-900/90 border border-gray-600/50 backdrop-blur-sm transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-gray-500/50 group opacity-100 translate-y-0">
+                <Card className="relative overflow-hidden bg-gray-100 border-2 border-gray-300 transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-blue-400 group opacity-100 translate-y-0">
                   <CardHeader className="relative z-10 pb-2">
-                    <CardTitle className="text-white flex items-center text-base mb-2">
-                      <div className="h-6 w-6 rounded-lg flex items-center justify-center mr-2 border bg-green-500/20 border-green-400/40">
-                        <BarChart3 className="h-3 w-3 text-green-400" />
+                    <CardTitle className="text-gray-900 flex items-center text-base mb-2">
+                      <div className="h-6 w-6 rounded-lg flex items-center justify-center mr-2 bg-green-100 border border-green-300">
+                        <BarChart3 className="h-3 w-3 text-green-600" />
                       </div>
                       <div>
-                        <div className="text-sm font-bold">Métricas de Performance</div>
-                        <div className="text-xs text-green-400 font-mono">Visão Geral</div>
+                        <div className="text-sm font-bold text-gray-900">Métricas de Performance</div>
+                        <div className="text-xs text-green-600 font-semibold">Visão Geral</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
@@ -179,20 +179,20 @@ const AgenteAnaliseConversas = () => {
                 </Card>
 
                 {/* Improvement Suggestions */}
-                <Card className="relative overflow-hidden bg-gradient-to-br from-gray-800/90 via-gray-800/60 to-gray-900/90 border border-gray-600/50 backdrop-blur-sm transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-gray-500/50 group opacity-100 translate-y-0">
+                <Card className="relative overflow-hidden bg-gray-100 border-2 border-gray-300 transition-all duration-700 ease-out hover:scale-105 hover:shadow-2xl hover:border-blue-400 group opacity-100 translate-y-0">
                   <CardHeader className="relative z-10 pb-2">
-                    <CardTitle className="text-white flex items-center text-base mb-2">
-                      <div className="h-6 w-6 rounded-lg flex items-center justify-center mr-2 border bg-orange-500/20 border-orange-400/40">
-                        <TrendingUp className="h-3 w-3 text-orange-400" />
+                    <CardTitle className="text-gray-900 flex items-center text-base mb-2">
+                      <div className="h-6 w-6 rounded-lg flex items-center justify-center mr-2 bg-orange-100 border border-orange-300">
+                        <TrendingUp className="h-3 w-3 text-orange-600" />
                       </div>
                       <div>
-                        <div className="text-sm font-bold">Sugestões de Melhoria</div>
-                        <div className="text-xs text-orange-400 font-mono">Prioridades</div>
+                        <div className="text-sm font-bold text-gray-900">Sugestões de Melhoria</div>
+                        <div className="text-xs text-orange-600 font-semibold">Prioridades</div>
                       </div>
                     </CardTitle>
                   </CardHeader>
                   
-                  <CardContent className="relative z-10 pt-0 pb-4 max-h-64 overflow-y-auto">
+                  <CardContent className="relative z-10 pt-0 pb-4">
                     <ImprovementSuggestions />
                   </CardContent>
                 </Card>

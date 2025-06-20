@@ -57,15 +57,14 @@ const ConversationAnalysisCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {conversations.map((conv, index) => (
         <Card 
           key={conv.id} 
           className={`
-            relative overflow-hidden bg-gradient-to-br from-gray-800/90 via-gray-800/60 to-gray-900/90 
-            border border-gray-600/50 backdrop-blur-sm 
+            relative overflow-hidden bg-white border-2 border-gray-300
             transition-all duration-700 ease-out
-            hover:scale-105 hover:shadow-2xl hover:border-gray-500/50
+            hover:scale-105 hover:shadow-2xl hover:border-blue-400
             group
             opacity-100 translate-y-0
           `}
@@ -74,105 +73,105 @@ const ConversationAnalysisCards = () => {
           }}
         >
           {/* Status indicator */}
-          <div className="absolute top-2 right-2">
-            <div className="flex items-center space-x-1">
-              <div className={`w-1.5 h-1.5 rounded-full ${
-                conv.statusColor === 'green' ? 'bg-green-400' : 
-                conv.statusColor === 'orange' ? 'bg-orange-400' : 'bg-red-400'
-              } animate-pulse`}></div>
-              <span className={`text-xs font-mono ${
-                conv.statusColor === 'green' ? 'text-green-400' : 
-                conv.statusColor === 'orange' ? 'text-orange-400' : 'text-red-400'
+          <div className="absolute top-3 right-3">
+            <div className="flex items-center space-x-2">
+              <div className={`w-3 h-3 rounded-full ${
+                conv.statusColor === 'green' ? 'bg-green-500' : 
+                conv.statusColor === 'orange' ? 'bg-orange-500' : 'bg-red-500'
+              }`}></div>
+              <span className={`text-sm font-semibold ${
+                conv.statusColor === 'green' ? 'text-green-700' : 
+                conv.statusColor === 'orange' ? 'text-orange-700' : 'text-red-700'
               }`}>
                 {conv.status}
               </span>
             </div>
           </div>
 
-          <CardHeader className="relative z-10 pb-1 pt-3 px-3">
-            <CardTitle className="text-white flex items-center justify-between text-sm mb-1">
+          <CardHeader className="relative z-10 pb-3 pt-4 px-4">
+            <CardTitle className="text-gray-900 flex items-center justify-between text-base mb-2">
               <div className="flex items-center">
-                <div className="h-6 w-6 rounded-lg flex items-center justify-center mr-2 border bg-blue-500/20 border-blue-400/40">
-                  <MessageSquare className="h-3 w-3 text-blue-400" />
+                <div className="h-8 w-8 rounded-lg flex items-center justify-center mr-3 bg-blue-100 border-2 border-blue-300">
+                  <MessageSquare className="h-4 w-4 text-blue-600" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold">{conv.id}</div>
-                  <div className="text-xs text-gray-400 font-mono">{conv.date}</div>
+                  <div className="text-sm font-bold text-gray-900">{conv.id}</div>
+                  <div className="text-sm text-gray-600">{conv.date}</div>
                 </div>
               </div>
               
               {/* Score display */}
               <div className="flex flex-col items-center">
-                <div className={`text-lg font-bold font-mono ${
-                  conv.score >= 80 ? 'text-green-400' : 
-                  conv.score >= 60 ? 'text-orange-400' : 'text-red-400'
+                <div className={`text-2xl font-bold ${
+                  conv.score >= 80 ? 'text-green-600' : 
+                  conv.score >= 60 ? 'text-orange-600' : 'text-red-600'
                 }`}>
                   {conv.score}
                 </div>
-                <div className="text-xs text-gray-400">pts</div>
+                <div className="text-sm text-gray-600">pontos</div>
               </div>
             </CardTitle>
           </CardHeader>
           
-          <CardContent className="relative z-10 pt-0 pb-3 px-3">
+          <CardContent className="relative z-10 pt-0 pb-4 px-4">
             {/* Salesperson and Client */}
-            <div className="space-y-1 mb-2">
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-400">Vendedor:</span>
-                <span className="text-white font-medium text-right">{conv.salesperson}</span>
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600 font-medium">Vendedor:</span>
+                <span className="text-gray-900 font-semibold text-right">{conv.salesperson}</span>
               </div>
-              <div className="flex items-center justify-between text-xs">
-                <span className="text-gray-400">Cliente:</span>
-                <span className="text-white font-medium text-right">{conv.client}</span>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-gray-600 font-medium">Cliente:</span>
+                <span className="text-gray-900 font-semibold text-right">{conv.client}</span>
               </div>
             </div>
 
             {/* Rating stars */}
-            <div className="flex items-center mb-2">
-              <span className="text-xs text-gray-400 mr-1">Nota:</span>
+            <div className="flex items-center mb-4">
+              <span className="text-sm text-gray-600 font-medium mr-2">Avaliação:</span>
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star 
                     key={star}
-                    className={`h-2.5 w-2.5 ${
-                      star <= conv.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'
+                    className={`h-4 w-4 ${
+                      star <= conv.rating ? 'text-yellow-500 fill-yellow-500' : 'text-gray-300'
                     }`}
                   />
                 ))}
               </div>
             </div>
 
-            {/* Feedback - Compressed */}
-            <div className="space-y-1.5">
+            {/* Feedback */}
+            <div className="space-y-3">
               <div className="flex items-start">
-                <ThumbsUp className="h-2.5 w-2.5 text-green-400 mr-1.5 mt-0.5 flex-shrink-0" />
-                <p className="text-xs text-gray-300 leading-tight">
+                <ThumbsUp className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-gray-800 leading-relaxed font-medium">
                   {conv.feedback}
                 </p>
               </div>
               
               <div className="flex items-start">
-                <TrendingUp className="h-2.5 w-2.5 text-blue-400 mr-1.5 mt-0.5 flex-shrink-0" />
-                <p className="text-xs text-gray-300 leading-tight">
-                  <span className="text-blue-400 font-medium">Melhoria:</span> {conv.improvement}
+                <TrendingUp className="h-4 w-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-gray-800 leading-relaxed">
+                  <span className="text-blue-600 font-semibold">Melhoria:</span> {conv.improvement}
                 </p>
               </div>
             </div>
 
             {/* Progress bar */}
-            <div className="mt-2">
+            <div className="mt-4">
               <Progress 
                 value={conv.score} 
-                className="h-1.5"
+                className="h-2"
               />
             </div>
           </CardContent>
 
           {/* Bottom accent line */}
           <div className={`
-            absolute bottom-0 left-0 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500
-            ${conv.statusColor === 'green' ? 'bg-green-400' : 
-              conv.statusColor === 'orange' ? 'bg-orange-400' : 'bg-red-400'}
+            absolute bottom-0 left-0 w-full h-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500
+            ${conv.statusColor === 'green' ? 'bg-green-500' : 
+              conv.statusColor === 'orange' ? 'bg-orange-500' : 'bg-red-500'}
           `} />
         </Card>
       ))}
