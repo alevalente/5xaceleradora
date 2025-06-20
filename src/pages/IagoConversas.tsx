@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import IagoConversasHero from '../components/iago-conversas/IagoConversasHero';
 import TestimonialsBeforeAfter from '../components/iago-conversas/TestimonialsBeforeAfter';
 import FeaturesShowcase from '../components/iago-conversas/FeaturesShowcase';
-import DemoFeatures from '../components/iago-conversas/DemoFeatures';
+import InteractiveDemo from '../components/iago-conversas/InteractiveDemo';
 import ResultsMetrics from '../components/iago-conversas/ResultsMetrics';
 import FinalCTA from '../components/iago-conversas/FinalCTA';
 import { createObserver } from '../utils/animations';
@@ -33,8 +33,8 @@ const IagoConversas = () => {
         {/* Seção 3 - Funcionalidades & Benefícios */}
         <FeaturesShowcase />
 
-        {/* Seção 4 - Exemplificação Visual Prática */}
-        <DemoFeatures />
+        {/* Seção 4 - Demonstração Interativa */}
+        <InteractiveDemo />
 
         {/* Seção 5 - Resultados Concretos */}
         <ResultsMetrics />
