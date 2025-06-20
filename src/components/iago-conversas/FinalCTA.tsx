@@ -10,7 +10,6 @@ import { z } from 'zod';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
 import { useToast } from '../ui/use-toast';
 import emailjs from '@emailjs/browser';
-import InputMask from 'react-input-mask';
 import { Textarea } from '../ui/textarea';
 
 // Schema de validação
@@ -182,14 +181,17 @@ const FinalCTA = () => {
                       <FormItem>
                         <FormLabel>WhatsApp</FormLabel>
                         <FormControl>
-                          <InputMask
-                            mask="(99) 99999-9999"
+                          <Input 
+                            placeholder="(11) 99999-9999" 
                             {...field}
-                          >
-                            {(inputProps: any) => (
-                              <Input placeholder="(11) 99999-9999" {...inputProps} />
-                            )}
-                          </InputMask>
+                            onChange={(e) => {
+                              let value = e.target.value.replace(/\D/g, '');
+                              if (value.length <= 11) {
+                                value = value.replace(/(\d{2})(\d{4,5})(\d{4})/, '($1) $2-$3');
+                              }
+                              field.onChange(value);
+                            }}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
