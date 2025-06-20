@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -18,7 +19,7 @@ const TestimonialsBeforeAfter = () => {
       id: 2,
       name: 'Fernanda Soares',
       title: 'Gerente de Vendas',
-      image: '/lovable-uploads/9e958dd2-2833-4c7a-9aba-5b297553a69c.png',
+      image: '/lovable-uploads/15d59c7e-da93-4ecd-a395-e2f6266f30e9.png',
       quote: 'Com tantos canais diferentes, os clientes ficavam frustrados com a demora ou desencontro de informações. Desde que centralizamos tudo, nossa reputação melhorou significativamente.'
     },
     {
