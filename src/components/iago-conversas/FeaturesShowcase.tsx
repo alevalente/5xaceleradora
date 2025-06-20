@@ -1,8 +1,6 @@
+
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { MessageCircle, Zap, Target, Monitor, Calendar, PenTool, CheckCircle, ArrowRight } from 'lucide-react';
-import { Card, CardContent } from '../ui/card';
-import { Button } from '../ui/button';
+import { CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const FeaturesShowcase = () => {
@@ -59,29 +57,6 @@ const FeaturesShowcase = () => {
       image: "/lovable-uploads/1c97b0a6-2f96-4c4b-a6cc-75a890a0749b.png",
       hasTransparentBg: true,
       largeImage: true
-    }
-  ];
-
-  const agentIntegrations = [
-    {
-      name: "Cobertura de Carteira",
-      description: "Varredura automática e recorrente de toda sua base de clientes",
-      link: "/agente-cobertura-carteira"
-    },
-    {
-      name: "Avaliação e Monitoramento", 
-      description: "Análise contínua da qualidade das conversas comerciais",
-      link: "/agent/avaliacao-monitoramento"
-    },
-    {
-      name: "Reativação Automática",
-      description: "Campanhas inteligentes para recuperar clientes inativos", 
-      link: "/agent/reativacao-automatica"
-    },
-    {
-      name: "Gestão de Vendas",
-      description: "Automação completa do processo comercial integrado",
-      link: "/agent/gestao-vendas"
     }
   ];
 
@@ -181,46 +156,6 @@ const FeaturesShowcase = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Seção de Agentes IA Integrados */}
-          <div className="mt-20 p-8 bg-blue-900 rounded-2xl text-white">
-            <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                + Agentes de IA que trabalham 24/7 na sua plataforma
-              </h3>
-              <p className="text-blue-100 text-lg">
-                IAgo Conversas é mais que uma plataforma de atendimento. É a base para uma suite 
-                completa de agentes inteligentes que automatizam seu processo comercial.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {agentIntegrations.map((agent, index) => (
-                <Card key={index} className="bg-white/10 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <h4 className="text-xl font-semibold text-white mb-2">{agent.name}</h4>
-                    <p className="text-blue-100 mb-4">{agent.description}</p>
-                    <Link 
-                      to={agent.link}
-                      className="inline-flex items-center text-blue-300 hover:text-white font-medium"
-                    >
-                      Saiba mais <ArrowRight className="h-4 w-4 ml-2" />
-                    </Link>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-blue-900"
-                asChild
-              >
-                <Link to="/#solutions">Ver Todos os Agentes Disponíveis</Link>
-              </Button>
-            </div>
           </div>
 
         </div>
