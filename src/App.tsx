@@ -12,6 +12,7 @@ const AgentDetail = lazy(() => import('./pages/AgentDetail'));
 const PlatformDetail = lazy(() => import('./pages/PlatformDetail'));
 const ConsultingDetail = lazy(() => import('./pages/ConsultingDetail'));
 const AgenteCoberturaCarteira = lazy(() => import('./pages/AgenteCoberturaCarteira'));
+const AgenteAnaliseConversas = lazy(() => import('./pages/AgenteAnaliseConversas'));
 const IagoConversas = lazy(() => import('./pages/IagoConversas'));
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/agent/:agentId" element={<AgentDetail />} />
             <Route path="/agente-cobertura-carteira" element={<AgenteCoberturaCarteira />} />
+            <Route path="/agente-analise-conversas" element={<AgenteAnaliseConversas />} />
             <Route path="/iago-conversas" element={<IagoConversas />} />
             <Route path="/platform" element={<PlatformDetail />} />
             <Route path="/consulting" element={<ConsultingDetail />} />

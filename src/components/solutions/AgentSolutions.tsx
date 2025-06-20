@@ -36,7 +36,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Análise automática, sem intervenção humana.',
       description: 'Avalie automaticamente tudo o que sua equipe conversa com seus clientes, identificando melhorias e corrigindo falhas em tempo real.',
       image: '/lovable-uploads/a18fcce2-253f-4796-8790-2ac852b92b7b.png',
-      ctaText: 'Quero acompanhar minha equipe'
+      ctaText: 'Quero acompanhar minha equipe',
+      customLink: '/agente-analise-conversas'
     },
     {
       id: 'reativacao-automatica',
