@@ -26,7 +26,7 @@ const TestimonialsBeforeAfter = () => {
       id: 3,
       name: 'Carlos Menezes',
       title: 'Diretor de Vendas',
-      image: '/lovable-uploads/b71df23b-0034-42e3-8793-96ce555c36dd.png',
+      image: '/lovable-uploads/80c5e327-0715-4a18-9c4f-404dc7aab346.png',
       quote: 'Já aconteceu mais de uma vez, o vendedor sair da empresa e levar ou apagar os contatos. Recuperar esses clientes foi demorado e caro. Hoje temos controle total sobre as conversas e históricos.'
     }
   ];
