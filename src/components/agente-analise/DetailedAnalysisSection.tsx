@@ -26,7 +26,7 @@ const DetailedAnalysisSection = () => {
       description: "Avalia se os vendedores iniciam conversas gerando confiança e interesse imediato nos clientes.",
       benefit: "Reduz perda de oportunidades logo na primeira interação.",
       color: "text-blue-400",
-      accent: "bg-blue-500/10 border-blue-500/20"
+      borderColor: "border-blue-400/40 hover:border-blue-400/60"
     },
     {
       icon: Brain,
@@ -34,7 +34,7 @@ const DetailedAnalysisSection = () => {
       description: "Avalia se o vendedor identifica corretamente as necessidades reais dos clientes e se oferece oportunidades complementares que aumentam o valor da venda.",
       benefit: "Aumenta constantemente o ticket médio.",
       color: "text-purple-400",
-      accent: "bg-purple-500/10 border-purple-500/20"
+      borderColor: "border-purple-400/40 hover:border-purple-400/60"
     },
     {
       icon: Handshake,
@@ -42,7 +42,7 @@ const DetailedAnalysisSection = () => {
       description: "Analisa diretamente como vendedores argumentam, superam objeções e negociam condições comerciais sem prejudicar margens.",
       benefit: "Reduz descontos desnecessários e melhora conversões.",
       color: "text-orange-400",
-      accent: "bg-orange-500/10 border-orange-500/20"
+      borderColor: "border-orange-400/40 hover:border-orange-400/60"
     },
     {
       icon: Award,
@@ -50,7 +50,7 @@ const DetailedAnalysisSection = () => {
       description: "Mede a objetividade e a proatividade dos vendedores ao fechar as vendas, evitando a perda de oportunidades na reta final.",
       benefit: "Garante resultados melhores na etapa crítica do fechamento.",
       color: "text-green-400",
-      accent: "bg-green-500/10 border-green-500/20"
+      borderColor: "border-green-400/40 hover:border-green-400/60"
     },
     {
       icon: Heart,
@@ -58,7 +58,7 @@ const DetailedAnalysisSection = () => {
       description: "Avalia a habilidade real dos vendedores em criar conexões consistentes e vínculos duradouros com clientes.",
       benefit: "Aumenta significativamente a fidelização e retenção de clientes.",
       color: "text-red-400",
-      accent: "bg-red-500/10 border-red-500/20"
+      borderColor: "border-red-400/40 hover:border-red-400/60"
     }
   ];
 
@@ -88,9 +88,9 @@ const DetailedAnalysisSection = () => {
             <div
               key={index}
               className={`
-                grid grid-cols-1 md:grid-cols-12 gap-6 p-6 rounded-lg
-                bg-gray-800/60 border border-gray-700/50
-                hover:bg-gray-800/80 hover:border-gray-600/50 hover:shadow-lg
+                grid grid-cols-1 md:grid-cols-12 gap-6 p-6 rounded-xl
+                bg-gray-800/80 border-2 ${item.borderColor}
+                hover:bg-gray-800/90 hover:shadow-xl hover:scale-[1.02]
                 transition-all duration-300 ease-out
                 ${itemsAnimated[index] 
                   ? 'opacity-100 translate-y-0' 
@@ -104,9 +104,9 @@ const DetailedAnalysisSection = () => {
               {/* Analysis Area */}
               <div className="col-span-1 md:col-span-4 flex items-start space-x-4">
                 <div className={`
-                  flex-shrink-0 w-12 h-12 rounded-lg 
-                  ${item.accent}
-                  border flex items-center justify-center
+                  flex-shrink-0 w-12 h-12 rounded-xl 
+                  bg-gray-700/50 border-2 ${item.borderColor}
+                  flex items-center justify-center
                   transition-all duration-300
                 `}>
                   <item.icon className={`w-6 h-6 ${item.color}`} />
