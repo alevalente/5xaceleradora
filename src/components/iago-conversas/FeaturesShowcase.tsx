@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, MessageCircle, Zap, Target, Monitor, Calendar, PenTool } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const FeaturesShowcase = () => {
