@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, MessageSquare, BarChart3, AlertTriangle, CheckCircle2, TrendingUp, Cpu, Zap, Terminal, Brain, Activity, Clock, ExternalLink, Users, Calendar, Star, ThumbsUp, ThumbsDown } from 'lucide-react';
@@ -360,11 +359,11 @@ const AgenteAnaliseConversas = () => {
           <div className="container-wide text-center relative z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                E se você pudesse saber exatamente
+                Quantas vendas você perde
               </span>
               <br />
               <span className="text-white drop-shadow-lg">
-                quais conversas dos seus vendedores estão matando suas vendas?
+                todos os dias sem saber o motivo exato?
               </span>
             </h1>
             
@@ -381,15 +380,15 @@ const AgenteAnaliseConversas = () => {
           <div className="container-wide">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl text-white mb-6 font-bold leading-tight">
-                <span className="text-red-400">Se você não consegue acompanhar o que seus vendedores dizem em cada conversa,</span>
+                <span className="text-red-400">Sem acompanhar o que seus vendedores realmente falam nas conversas,</span>
                 <br />
-                <span className="text-gray-300">está correndo sérios riscos de perder vendas importantes diariamente.</span>
+                <span className="text-gray-300">você deixa dinheiro escapar todos os dias sem perceber.</span>
               </h2>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 font-medium">
-                <span className="text-blue-400 font-bold">Cada conversa perdida é uma oportunidade que não volta.</span>
-                <br />
-                <span className="text-cyan-400 font-bold">Nosso agente de IA analisa cada palavra e te mostra exatamente o que está acontecendo.</span>
+                Cada conversa mal conduzida é uma oportunidade desperdiçada. Nosso <span className="text-blue-400 font-bold">Agente de Análise de Conversas</span> usa Inteligência Artificial para monitorar automaticamente cada interação comercial, identificando exatamente onde estão os erros que fazem você perder vendas.
+                <br /><br />
+                <span className="text-cyan-400 font-bold">Assim, você recebe insights imediatos e práticos para corrigir rapidamente o desempenho dos seus vendedores e parar de perder oportunidades.</span>
               </p>
             </div>
           </div>
