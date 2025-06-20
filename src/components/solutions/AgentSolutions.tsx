@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
@@ -89,7 +90,13 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
         <ChevronRight className="h-6 w-6 text-blue-600" />
       </button>
 
-      <h2 className="heading-lg mb-6 text-center">Conheça nossos Agentes Inteligentes</h2>
+      <div className="text-center max-w-3xl mx-auto mb-12">
+        <h2 className="heading-lg mb-4">Conheça nossos Agentes Inteligentes</h2>
+        <p className="text-gray-600 text-lg">
+          Cada agente foi desenvolvido para resolver desafios específicos do seu processo comercial, automatizando tarefas repetitivas e permitindo que sua equipe foque no que realmente importa: vender mais e melhor.
+        </p>
+      </div>
+
       <Carousel
         opts={{
           align: "start",
