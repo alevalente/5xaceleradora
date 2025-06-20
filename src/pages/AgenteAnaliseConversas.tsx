@@ -409,13 +409,14 @@ const AgenteAnaliseConversas = () => {
                   O que é o Agente de Análise de Conversas?
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                  É uma solução automatizada baseada em <span className="text-blue-400 font-semibold">Inteligência Artificial</span>, 
-                  que monitora e avalia automaticamente cada conversa realizada pelos seus vendedores através da plataforma Iago Conversas.
+                  É uma solução inteligente baseada em <span className="text-blue-400 font-semibold">Inteligência Artificial</span>, 
+                  integrada diretamente à plataforma multiatendimento <span className="text-blue-400 font-semibold">IAgo Conversas</span>, 
+                  que monitora e avalia automaticamente todas as conversas comerciais realizadas pelos seus vendedores.
                 </p>
                 <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mt-4">
-                  Nosso agente analisa em tempo real o tom, abordagem, técnicas utilizadas e qualidade das interações comerciais. 
-                  Ele identifica automaticamente pontos fortes, falhas críticas e oportunidades de melhoria específicas para cada vendedor, 
-                  fornecendo insights detalhados e sugestões práticas para otimizar imediatamente o desempenho comercial da sua equipe.
+                  O agente identifica rapidamente quais interações comerciais estão prejudicando suas vendas e quais delas são exemplares, 
+                  oferecendo uma visão clara e objetiva através de dashboards intuitivos e cards detalhados no formato Kanban. 
+                  Assim, você recebe insights estratégicos imediatos e toma ações rápidas para melhorar o desempenho da sua equipe comercial.
                 </p>
               </div>
 
@@ -424,6 +425,7 @@ const AgenteAnaliseConversas = () => {
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   Como o Agente melhora cada conversa dos seus vendedores?
                 </h3>
+                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {[
                     {
