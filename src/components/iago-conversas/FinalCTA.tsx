@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MessageCircle, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -80,7 +79,7 @@ const FinalCTA = () => {
 
       setIsSuccess(true);
       toast({
-        title: "Demonstração solicitada com sucesso!",
+        title: "Contato enviado com sucesso!",
         description: "Entraremos em contato em até 30 minutos.",
       });
 
@@ -112,11 +111,11 @@ const FinalCTA = () => {
                 <CheckCircle className="h-16 w-16 text-green-500" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Demonstração solicitada com sucesso!
+                Contato enviado com sucesso!
               </h3>
               <p className="text-gray-600 mb-6">
-                Recebemos sua solicitação e entraremos em contato em até 30 minutos 
-                para agendar sua demonstração personalizada.
+                Recebemos sua mensagem e entraremos em contato em até 30 minutos 
+                para conversar sobre suas necessidades.
               </p>
               <div className="bg-blue-50 p-4 rounded-lg">
                 <p className="text-sm text-blue-800">
@@ -135,10 +134,10 @@ const FinalCTA = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Solicitar demonstração gratuita agora
+            Entre em contato conosco
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Sem cartão de crédito. Resposta em até 30 min.
+            Resposta em até 30 minutos
           </p>
 
           <div className="bg-white rounded-2xl p-8 text-gray-900 max-w-2xl mx-auto">
@@ -283,7 +282,7 @@ const FinalCTA = () => {
                   ) : (
                     <>
                       <Send className="h-5 w-5 mr-2" />
-                      Solicitar Demonstração Gratuita
+                      Enviar Contato
                     </>
                   )}
                 </Button>
