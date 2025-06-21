@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { 
   Carousel,
@@ -45,7 +46,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Reconquiste quem já custou tanto para conquistar.',
       description: 'Não dependa da equipe. Reative clientes inativos automaticamente com Inteligência Artificial, de forma consistente.',
       image: '/lovable-uploads/378362fc-9594-4e2b-a359-e2c465bcdd16.png',
-      ctaText: 'Quero meus clientes de volta'
+      ctaText: 'Quero meus clientes de volta',
+      customLink: '/agente-reativacao-clientes'
     },
     {
       id: 'analise-conversa-followup',
@@ -53,7 +55,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Chega de esquecer clientes e atrasar follow-ups',
       description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas.',
       image: '/lovable-uploads/bff71ba3-fe2b-4979-adc6-a9366ee9c19f.png',
-      ctaText: 'Quero agilizar meu follow-up'
+      ctaText: 'Quero agilizar meu follow-up',
+      customLink: '/iago-conversas'
     },
     {
       id: 'cadastro-credito',
@@ -133,9 +136,9 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
                       {solution.description}
                     </CardDescription>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                      <a href={solution.customLink || `/agent/${solution.id}`}>
+                      <Link to={solution.customLink || `/agent/${solution.id}`}>
                         {solution.ctaText || 'Saiba mais'}
-                      </a>
+                      </Link>
                     </Button>
                   </div>
                 </Card>
