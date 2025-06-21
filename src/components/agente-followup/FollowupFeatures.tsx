@@ -7,8 +7,8 @@ const FollowupFeatures = () => {
   const benefits = [
     {
       icon: <Target className="h-12 w-12" />,
-      title: "Recuperação Automática de Vendas Perdidas",
-      description: "O agente identifica clientes sem resposta e realiza automaticamente o follow-up, recuperando vendas que seriam perdidas.",
+      title: "Conexão Automática com IAgo Conversas",
+      description: "Todas as conversas da sua equipe de vendas são automaticamente monitoradas em tempo real, garantindo visibilidade total sobre cada oportunidade discutida.",
       color: "text-red-300",
       bgColor: "bg-red-500/20",
       borderColor: "border-red-500/80",
@@ -16,8 +16,8 @@ const FollowupFeatures = () => {
     },
     {
       icon: <MessageSquare className="h-12 w-12" />,
-      title: "Mensagens Personalizadas no Momento Ideal",
-      description: "Cada mensagem é enviada com personalização e timing perfeito, aumentando a chance de resposta positiva.",
+      title: "Análise Automática e Extração de Dados",
+      description: "Nossa IA analisa automaticamente cada interação, identificando oportunidades reais e extraindo dados essenciais como nome do cliente, valor orçado e resumo da negociação.",
       color: "text-green-300",
       bgColor: "bg-green-500/20",
       borderColor: "border-green-500/80",
@@ -25,8 +25,8 @@ const FollowupFeatures = () => {
     },
     {
       icon: <Bell className="h-12 w-12" />,
-      title: "Alertas Instantâneos para Gestores",
-      description: "Quando necessário, gestores são notificados imediatamente para tomar decisões rápidas sobre oportunidades críticas.",
+      title: "Contato Automático com o Cliente",
+      description: "O agente realiza automaticamente contatos personalizados por WhatsApp ou e-mail. Você define quantos follow-ups serão feitos, qual o intervalo entre eles, e até quando insistir com cada cliente.",
       color: "text-yellow-300",
       bgColor: "bg-yellow-500/20",
       borderColor: "border-yellow-500/80",
@@ -34,8 +34,8 @@ const FollowupFeatures = () => {
     },
     {
       icon: <BarChart3 className="h-12 w-12" />,
-      title: "Relatórios Claros e Resultados Comprovados",
-      description: "Você acompanha facilmente os resultados e benefícios concretos entregues pelo agente através de dashboards simples e intuitivos.",
+      title: "Dashboard, Kanban e Integração com CRM",
+      description: "Cada oportunidade é organizada em dashboards claros e cartões Kanban intuitivos. Clientes interessados são encaminhados automaticamente ao vendedor responsável. Podemos também integrar diretamente as oportunidades no CRM da sua empresa, desde que exista uma API disponível.",
       color: "text-indigo-300",
       bgColor: "bg-indigo-500/20",
       borderColor: "border-indigo-500/80",
