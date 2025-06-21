@@ -56,7 +56,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       description: 'Analise automaticamente as conversas dos seus vendedores no WhatsApp e dispare follow-ups automáticos, evitando perdas.',
       image: '/lovable-uploads/bff71ba3-fe2b-4979-adc6-a9366ee9c19f.png',
       ctaText: 'Quero agilizar meu follow-up',
-      customLink: '/iago-conversas'
+      customLink: '/agente-analise-conversas-followup'
     },
     {
       id: 'cadastro-credito',
