@@ -42,8 +42,8 @@ const ReativacaoHero = () => {
             </Link>
           </div>
 
-          {/* Conteúdo centralizado em toda a largura */}
-          <div className="text-center animate-fade-in max-w-6xl mx-auto">
+          {/* Conteúdo centralizado sem limitação de largura para o título */}
+          <div className="text-center animate-fade-in">
             <div className="flex flex-wrap gap-3 justify-center mb-6">
               <Badge variant="outline" className="border-purple-500/30 text-purple-400 bg-purple-500/10">
                 <Target className="h-3 w-3 mr-1" />
@@ -59,7 +59,7 @@ const ReativacaoHero = () => {
               </Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight px-4">
               Sua maior oportunidade de faturar rápido<br />
               está nos clientes que já{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">confiaram em você</span>,<br />
