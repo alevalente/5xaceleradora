@@ -1,9 +1,14 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { AlertTriangle } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const SalesRepScenarios = () => {
+  const handleCTAClick = () => {
+    console.log('SalesRepScenarios CTA clicked - navigating to:', '/agente-analise-conversas-followup');
+  };
+
   return (
     <div className="mb-12 relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 p-1">
       {/* Efeito de brilho animado */}
@@ -119,8 +124,16 @@ const SalesRepScenarios = () => {
           <p className="text-gray-600 mb-4">
             <strong>Isso não precisa acontecer com você.</strong>
           </p>
-          <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold">
-            Proteger Minha Empresa Agora
+          <Button 
+            asChild
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold"
+          >
+            <Link 
+              to="/agente-analise-conversas-followup" 
+              onClick={handleCTAClick}
+            >
+              Proteger Minha Empresa Agora
+            </Link>
           </Button>
         </div>
       </div>
