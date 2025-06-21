@@ -32,7 +32,7 @@ const ReativacaoHero = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gray-900 overflow-hidden relative">
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
-          <div className="mb-6 text-center lg:text-left">
+          <div className="mb-6 text-center">
             <Link 
               to="/#solutions" 
               className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium mb-8 transition-colors"
@@ -42,39 +42,31 @@ const ReativacaoHero = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Coluna da Esquerda - Conteúdo */}
-            <div className="text-center lg:text-left animate-fade-in">
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-6">
-                <Badge variant="outline" className="border-purple-500/30 text-purple-400 bg-purple-500/10">
-                  <Target className="h-3 w-3 mr-1" />
-                  Reativação Automática
-                </Badge>
-                <Badge variant="outline" className="border-green-500/30 text-green-400 bg-green-500/10">
-                  <MessageCircle className="h-3 w-3 mr-1" />
-                  WhatsApp
-                </Badge>
-                <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/10">
-                  <Mail className="h-3 w-3 mr-1" />
-                  E-mail
-                </Badge>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Sua maior oportunidade de faturar rápido está nos clientes que já 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"> confiaram em você</span>, mas hoje estão esquecidos.
-              </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto lg:mx-0 leading-relaxed">
-                A carteira de clientes inativos não está visível nos relatórios que você acompanha diariamente, mas representa uma das maiores oportunidades imediatas de aumentar receita, sem precisar prospectar novos clientes. Nosso agente usa Inteligência Artificial para encontrar automaticamente esses clientes esquecidos, disparar mensagens personalizadas via WhatsApp e e-mail, e trazê-los de volta para o seu negócio rapidamente.
-              </p>
+          {/* Conteúdo centralizado em toda a largura */}
+          <div className="text-center animate-fade-in max-w-6xl mx-auto">
+            <div className="flex flex-wrap gap-3 justify-center mb-6">
+              <Badge variant="outline" className="border-purple-500/30 text-purple-400 bg-purple-500/10">
+                <Target className="h-3 w-3 mr-1" />
+                Reativação Automática
+              </Badge>
+              <Badge variant="outline" className="border-green-500/30 text-green-400 bg-green-500/10">
+                <MessageCircle className="h-3 w-3 mr-1" />
+                WhatsApp
+              </Badge>
+              <Badge variant="outline" className="border-blue-500/30 text-blue-400 bg-blue-500/10">
+                <Mail className="h-3 w-3 mr-1" />
+                E-mail
+              </Badge>
             </div>
 
-            {/* Coluna da Direita - Elementos visuais */}
-            <div className="relative animate-scale-in animation-delay-300">
-              {/* Área vazia para manter o layout balanceado */}
-              <div className="h-96"></div>
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Sua maior oportunidade de faturar rápido está nos clientes que já 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"> confiaram em você</span>, mas hoje estão esquecidos.
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              A carteira de clientes inativos não está visível nos relatórios que você acompanha diariamente, mas representa uma das maiores oportunidades imediatas de aumentar receita, sem precisar prospectar novos clientes. Nosso agente usa Inteligência Artificial para encontrar automaticamente esses clientes esquecidos, disparar mensagens personalizadas via WhatsApp e e-mail, e trazê-los de volta para o seu negócio rapidamente.
+            </p>
           </div>
         </div>
       </section>
