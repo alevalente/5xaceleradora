@@ -1,9 +1,23 @@
 
 import React from 'react';
-import { RefreshCw, MessageCircle, Phone } from 'lucide-react';
+import { Rocket, DollarSign, Users, MessageCircle, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const ReativacaoCTA = () => {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5511999999999"; // Número do WhatsApp da empresa
+    const message = encodeURIComponent("Olá! Tenho interesse no Agente de Reativação de Clientes. Gostaria de saber mais sobre como implementar na minha empresa.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+  const handleFormClick = () => {
+    // Scroll para o formulário de contato
+    const contactForm = document.getElementById('contact');
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
       {/* Background elements */}
@@ -16,44 +30,44 @@ const ReativacaoCTA = () => {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-500/20 backdrop-blur-sm rounded-full mb-6 border border-blue-500/30">
-              <RefreshCw className="h-10 w-10 text-blue-400" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500/30 to-purple-500/30 backdrop-blur-sm rounded-full mb-6 border-2 border-blue-500/40 ring-2 ring-blue-400/20 shadow-lg shadow-blue-500/25">
+              <Rocket className="h-10 w-10 text-blue-400" />
             </div>
             
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Quer saber quantos clientes você pode 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> recuperar imediatamente?</span>
+              Pronto para recuperar clientes inativos e 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> aumentar seu faturamento?</span>
             </h2>
             
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
-              Solicite agora o <strong className="text-white">Diagnóstico Gratuito da sua Carteira de Inativos</strong> e descubra o potencial de recuperação de faturamento da sua empresa.
+              Entre em contato agora e vamos mostrar como <strong className="text-white">implementar o agente de reativação na sua empresa</strong> e começar a recuperar clientes perdidos imediatamente.
             </p>
           </div>
 
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-500/20 rounded-full mb-4 border border-green-500/30">
-                <MessageCircle className="h-6 w-6 text-green-400" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500/30 to-emerald-500/30 rounded-full mb-4 border-2 border-green-500/50 ring-1 ring-green-400/20 shadow-lg shadow-green-500/25">
+                <Rocket className="h-6 w-6 text-green-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Análise Gratuita</h3>
-              <p className="text-gray-400 text-sm">Identificação dos clientes com maior potencial de reativação</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Implementação Rápida</h3>
+              <p className="text-gray-400 text-sm">Agente funcionando na sua empresa em até 15 dias</p>
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-500/20 rounded-full mb-4 border border-purple-500/30">
-                <RefreshCw className="h-6 w-6 text-purple-400" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-yellow-500/30 to-orange-500/30 rounded-full mb-4 border-2 border-yellow-500/50 ring-1 ring-yellow-400/20 shadow-lg shadow-yellow-500/25">
+                <DollarSign className="h-6 w-6 text-yellow-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Estimativa de Recuperação</h3>
-              <p className="text-gray-400 text-sm">Projeção de faturamento que pode ser recuperado mensalmente</p>
+              <h3 className="text-lg font-semibold text-white mb-2">ROI Comprovado</h3>
+              <p className="text-gray-400 text-sm">Clientes recuperam o investimento em 60-90 dias</p>
             </div>
             
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-cyan-500/20 rounded-full mb-4 border border-cyan-500/30">
-                <Phone className="h-6 w-6 text-cyan-400" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-full mb-4 border-2 border-cyan-500/50 ring-1 ring-cyan-400/20 shadow-lg shadow-cyan-500/25">
+                <Users className="h-6 w-6 text-cyan-400" />
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Consultoria Personalizada</h3>
-              <p className="text-gray-400 text-sm">Estratégia específica para seu perfil de clientes e negócio</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Suporte Dedicado</h3>
+              <p className="text-gray-400 text-sm">Acompanhamento completo durante toda implementação</p>
             </div>
           </div>
 
@@ -61,25 +75,27 @@ const ReativacaoCTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-10 py-4 text-lg font-semibold shadow-xl border border-green-500/20"
+              onClick={handleFormClick}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-4 text-lg font-semibold shadow-xl border-2 border-blue-500/30 ring-2 ring-blue-400/20 hover:ring-blue-400/40 transition-all duration-300"
             >
-              <RefreshCw className="h-6 w-6 mr-3" />
-              Solicitar Diagnóstico Gratuito
+              <Rocket className="h-6 w-6 mr-3" />
+              Quero Implementar o Agente
             </Button>
             
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-2 border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-10 py-4 text-lg font-semibold backdrop-blur-sm"
+              onClick={handleWhatsAppClick}
+              className="border-2 border-green-500/60 text-green-400 hover:bg-green-500/10 hover:text-green-300 hover:border-green-400 px-10 py-4 text-lg font-semibold backdrop-blur-sm ring-1 ring-green-400/20 hover:ring-green-400/40 transition-all duration-300"
             >
-              <Phone className="h-5 w-5 mr-2" />
-              Falar via WhatsApp
+              <MessageCircle className="h-5 w-5 mr-2" />
+              Conversar no WhatsApp
             </Button>
           </div>
 
           <div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
-              ✅ Sem compromisso • ✅ Análise em 24h • ✅ 100% gratuito
+              ✅ Implementação em 15 dias • ✅ ROI em 60-90 dias • ✅ Suporte dedicado
             </p>
           </div>
         </div>
