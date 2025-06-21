@@ -60,11 +60,13 @@ const ReativacaoHero = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Sua maior oportunidade de faturar rápido está nos clientes que já 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"> confiaram em você</span>, mas hoje estão esquecidos.
+              Sua maior oportunidade de faturar rápido<br />
+              está nos clientes que já{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">confiaram em você</span>,<br />
+              mas hoje estão esquecidos.
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed max-w-5xl mx-auto">
               A carteira de clientes inativos não está visível nos relatórios que você acompanha diariamente, mas representa uma das maiores oportunidades imediatas de aumentar receita, sem precisar prospectar novos clientes. Nosso agente usa Inteligência Artificial para encontrar automaticamente esses clientes esquecidos, disparar mensagens personalizadas via WhatsApp e e-mail, e trazê-los de volta para o seu negócio rapidamente.
             </p>
           </div>
