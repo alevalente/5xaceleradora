@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FollowupHero from '../components/agente-followup/FollowupHero';
 import FollowupExplanation from '../components/agente-followup/FollowupExplanation';
+import FollowupKanbanFlow from '../components/agente-followup/FollowupKanbanFlow';
 import FollowupFeatures from '../components/agente-followup/FollowupFeatures';
 import FollowupExamples from '../components/agente-followup/FollowupExamples';
 import FollowupDashboard from '../components/agente-followup/FollowupDashboard';
@@ -17,6 +18,7 @@ const AgenteAnaliseConversasFollowup = () => {
       <main className="flex-grow">
         <FollowupHero />
         <FollowupExplanation />
+        <FollowupKanbanFlow />
         <FollowupFeatures />
         <FollowupExamples />
         <FollowupDashboard />
