@@ -23,7 +23,7 @@ const ReativacaoFeatures = () => {
     {
       icon: Search,
       title: "Identificação Automática dos Inativos",
-      description: "Identifica automaticamente clientes que deixaram de comprar, diretamente do seu ERP ou CRM, através de integração via API.",
+      description: "Identifica clientes inativos diretamente do ERP ou CRM via integração por API.",
       benefit: "Detecta 100% dos clientes inativos sem trabalho manual.",
       color: "text-blue-400",
       borderColor: "border-blue-400/40 hover:border-blue-400/60"
@@ -31,7 +31,7 @@ const ReativacaoFeatures = () => {
     {
       icon: RefreshCw,
       title: "Follow-up Automático Dual (WhatsApp + E-mail)",
-      description: "Envia automaticamente mensagens personalizadas via WhatsApp e e-mail simultaneamente até obter resposta, garantindo constância perfeita.",
+      description: "Dispara automaticamente mensagens personalizadas via WhatsApp e e-mail até obter resposta positiva.",
       benefit: "Multiplica as chances de contato e acelera as respostas.",
       color: "text-green-400",
       borderColor: "border-green-400/40 hover:border-green-400/60"
@@ -39,7 +39,7 @@ const ReativacaoFeatures = () => {
     {
       icon: Sparkles,
       title: "Personalização via IA com Histórico Real",
-      description: "Integração via API com seu ERP para personalizar automaticamente as mensagens usando últimas compras e histórico completo do cliente.",
+      description: "Personaliza automaticamente mensagens utilizando histórico real de compras via API do ERP.",
       benefit: "Mensagens altamente relevantes aumentam drasticamente a conversão.",
       color: "text-purple-400",
       borderColor: "border-purple-400/40 hover:border-purple-400/60"
@@ -47,7 +47,7 @@ const ReativacaoFeatures = () => {
     {
       icon: Users,
       title: "Transferência Inteligente para Equipe",
-      description: "Assim que o cliente responde positivamente (WhatsApp ou e-mail), o agente encaminha imediatamente para seu vendedor dar continuidade.",
+      description: "Ao receber resposta positiva, o agente direciona o cliente automaticamente para o vendedor.",
       benefit: "Otimiza o tempo da equipe focando apenas em leads qualificados.",
       color: "text-cyan-400",
       borderColor: "border-cyan-400/40 hover:border-cyan-400/60"
@@ -55,7 +55,7 @@ const ReativacaoFeatures = () => {
     {
       icon: BarChart3,
       title: "Dashboard Visual e Kanban Completo",
-      description: "Controle visual imediato dos clientes reativados, canais mais eficazes, faturamento recuperado e pipeline em tempo real.",
+      description: "Gestão visual simples e imediata dos resultados, faturamento recuperado e ROI em tempo real.",
       benefit: "Visibilidade total dos resultados e ROI da reativação.",
       color: "text-orange-400",
       borderColor: "border-orange-400/40 hover:border-orange-400/60"
@@ -79,7 +79,7 @@ const ReativacaoFeatures = () => {
         </div>
 
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white mb-12 text-center leading-tight">
+          <h3 className="text-2xl font-bold text-white mb-12 text-center leading-tight">
             Como exatamente o Agente de Reativação automatiza a recuperação dos seus clientes?
           </h3>
           
