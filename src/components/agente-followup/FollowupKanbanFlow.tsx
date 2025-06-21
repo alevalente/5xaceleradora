@@ -11,10 +11,10 @@ const FollowupKanbanFlow = () => {
       <div className="container max-w-6xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-4xl font-bold text-white mb-6">
-            Kanban de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Follow-up Inteligente</span>
+            Como o nosso Agente resolve o problema de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">follow-ups esquecidos</span>?
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Acompanhe em tempo real o pipeline completo de recuperação de oportunidades
+            Através de um Kanban inteligente que monitora e organiza automaticamente cada oportunidade, desde a detecção até a recuperação, garantindo que nenhuma venda seja perdida por falta de follow-up
           </p>
         </div>
 

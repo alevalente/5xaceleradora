@@ -5,8 +5,6 @@ import Footer from '../components/Footer';
 import FollowupHero from '../components/agente-followup/FollowupHero';
 import FollowupExplanation from '../components/agente-followup/FollowupExplanation';
 import FollowupKanbanFlow from '../components/agente-followup/FollowupKanbanFlow';
-import FollowupFeatures from '../components/agente-followup/FollowupFeatures';
-import FollowupExamples from '../components/agente-followup/FollowupExamples';
 import FollowupDashboard from '../components/agente-followup/FollowupDashboard';
 import FollowupTestimonial from '../components/agente-followup/FollowupTestimonial';
 import FollowupCTA from '../components/agente-followup/FollowupCTA';
@@ -19,8 +17,6 @@ const AgenteAnaliseConversasFollowup = () => {
         <FollowupHero />
         <FollowupExplanation />
         <FollowupKanbanFlow />
-        <FollowupFeatures />
-        <FollowupExamples />
         <FollowupDashboard />
         <FollowupTestimonial />
         <FollowupCTA />
