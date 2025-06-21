@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const FollowupExplanation = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-gray-800 to-gray-900 relative">
+    <section className="py-28 bg-gradient-to-b from-gray-800 to-gray-900 relative">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center">
           {/* Badge */}
@@ -15,12 +15,12 @@ const FollowupExplanation = () => {
           </div>
 
           {/* Título */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 leading-tight">
             O que é o Agente de Análise de Conversa e Follow-up?
           </h2>
 
           {/* Texto explicativo principal */}
-          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
             É uma solução inteligente baseada em Inteligência Artificial, integrada diretamente à plataforma multiatendimento{' '}
             <Link 
               to="/iago-conversas" 
@@ -33,7 +33,7 @@ const FollowupExplanation = () => {
           </p>
 
           {/* Complemento de reforço */}
-          <p className="text-base text-gray-400 max-w-4xl mx-auto">
+          <p className="text-base text-gray-400 max-w-4xl mx-auto mb-8">
             Você recebe insights claros, recupera vendas perdidas e ganha controle total sobre oportunidades que você nunca conseguiria monitorar sozinho.
           </p>
         </div>
