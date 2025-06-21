@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MessageCircle, Mail, Clock } from 'lucide-react';
+import { MessageCircle, Mail, Clock, Sparkles } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
 
 const ReativacaoExamples = () => {

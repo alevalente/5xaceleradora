@@ -14,6 +14,7 @@ const ConsultingDetail = lazy(() => import('./pages/ConsultingDetail'));
 const AgenteCoberturaCarteira = lazy(() => import('./pages/AgenteCoberturaCarteira'));
 const AgenteAnaliseConversas = lazy(() => import('./pages/AgenteAnaliseConversas'));
 const IagoConversas = lazy(() => import('./pages/IagoConversas'));
+const AgenteReativacaoClientes = lazy(() => import('./pages/AgenteReativacaoClientes'));
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/agente-cobertura-carteira" element={<AgenteCoberturaCarteira />} />
             <Route path="/agente-analise-conversas" element={<AgenteAnaliseConversas />} />
             <Route path="/iago-conversas" element={<IagoConversas />} />
+            <Route path="/agente-reativacao-clientes" element={<AgenteReativacaoClientes />} />
             <Route path="/platform" element={<PlatformDetail />} />
             <Route path="/consulting" element={<ConsultingDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
