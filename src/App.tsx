@@ -17,6 +17,8 @@ const AgenteAnaliseConversas = lazy(() => import('./pages/AgenteAnaliseConversas
 const IagoConversas = lazy(() => import('./pages/IagoConversas'));
 const AgenteReativacaoClientes = lazy(() => import('./pages/AgenteReativacaoClientes'));
 const AgenteAnaliseConversasFollowup = lazy(() => import('./pages/AgenteAnaliseConversasFollowup'));
+const AgenteCadastroCredito = lazy(() => import('./pages/AgenteCadastroCredito'));
+const AgenteSDRAtendimento = lazy(() => import('./pages/AgenteSDRAtendimento'));
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,8 @@ const App = () => (
             <Route path="/agente-cobertura-carteira" element={<AgenteCoberturaCarteira />} />
             <Route path="/agente-analise-conversas" element={<AgenteAnaliseConversas />} />
             <Route path="/agente-analise-conversas-followup" element={<AgenteAnaliseConversasFollowup />} />
+            <Route path="/agente-cadastro-credito" element={<AgenteCadastroCredito />} />
+            <Route path="/agente-sdr-atendimento" element={<AgenteSDRAtendimento />} />
             <Route path="/iago-conversas" element={<IagoConversas />} />
             <Route path="/agente-reativacao-clientes" element={<AgenteReativacaoClientes />} />
             <Route path="/platform" element={<PlatformDetail />} />

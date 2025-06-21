@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -64,7 +63,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Análise automática, rápida e segura.',
       description: 'Reduza o tempo e custos da análise com aprovação instantânea e automática de crédito integrada ao comercial.',
       image: '/lovable-uploads/0ab82369-42d6-40c1-bc2e-95902bc715e6.png',
-      ctaText: 'Quero reduzir meu tempo de análise'
+      ctaText: 'Quero reduzir meu tempo de análise',
+      customLink: '/agente-cadastro-credito'
     },
     {
       id: 'sdr-atendimento',
@@ -72,7 +72,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       subtitle: 'Atendimento imediato e qualificação automática',
       description: 'Melhore a satisfação e fidelize clientes com atendimento ágil, qualificação inteligente e integração direta ao CRM.',
       image: '/lovable-uploads/9f08124a-ba80-40a9-8b80-a201c4915bb3.png',
-      ctaText: 'Quero fidelizar meus clientes'
+      ctaText: 'Quero fidelizar meus clientes',
+      customLink: '/agente-sdr-atendimento'
     }
   ];
 
