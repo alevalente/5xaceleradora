@@ -7,7 +7,6 @@ import FollowupExplanation from '../components/agente-followup/FollowupExplanati
 import FollowupFeatures from '../components/agente-followup/FollowupFeatures';
 import FollowupExamples from '../components/agente-followup/FollowupExamples';
 import FollowupDashboard from '../components/agente-followup/FollowupDashboard';
-import FollowupHowItWorks from '../components/agente-followup/FollowupHowItWorks';
 import FollowupTestimonial from '../components/agente-followup/FollowupTestimonial';
 import FollowupCTA from '../components/agente-followup/FollowupCTA';
 
@@ -21,7 +20,6 @@ const AgenteAnaliseConversasFollowup = () => {
         <FollowupFeatures />
         <FollowupExamples />
         <FollowupDashboard />
-        <FollowupHowItWorks />
         <FollowupTestimonial />
         <FollowupCTA />
       </main>
