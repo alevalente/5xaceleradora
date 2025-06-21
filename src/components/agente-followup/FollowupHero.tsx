@@ -33,7 +33,7 @@ const FollowupHero = () => {
       </div>
 
       <div className="container-wide text-center relative z-10">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
           <span className="text-white drop-shadow-lg">
             Você sabe que seus vendedores esquecem de fazer
           </span>
@@ -51,9 +51,9 @@ const FollowupHero = () => {
         </h1>
         
         {/* Tech Badge */}
-        <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full backdrop-blur-sm mb-8">
-          <Brain className="h-4 w-4 mr-2 text-blue-400" />
-          <span className="text-blue-300 font-mono text-sm">AI-Powered Follow-up</span>
+        <div className="inline-flex items-center px-6 py-3 bg-blue-500/20 border border-blue-400/30 rounded-full backdrop-blur-sm mb-8 ring-1 ring-white/20">
+          <Brain className="h-5 w-5 mr-2 text-blue-100" />
+          <span className="text-blue-100 font-mono text-base">AI-Powered Follow-up</span>
         </div>
 
         <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
