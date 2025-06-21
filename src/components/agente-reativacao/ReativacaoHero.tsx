@@ -73,37 +73,6 @@ const ReativacaoHero = () => {
             {/* Coluna da Direita - Elementos visuais */}
             <div className="relative animate-scale-in animation-delay-300">
               <div className="relative">
-                {/* Cards flutuantes representando reativação */}
-                <div className="absolute top-10 right-8 z-30 backdrop-blur-md bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 animate-float animation-delay-300 shadow-2xl">
-                  <div className="flex items-center gap-3">
-                    <MessageCircle className="h-8 w-8 text-green-400" />
-                    <div>
-                      <p className="text-white font-bold text-lg">WhatsApp</p>
-                      <p className="text-green-400 text-sm">87% de resposta</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-24 left-8 z-30 backdrop-blur-md bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 animate-float animation-delay-500 shadow-2xl">
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-8 w-8 text-purple-400" />
-                    <div>
-                      <p className="text-white font-bold text-lg">E-mail</p>
-                      <p className="text-purple-400 text-sm">63% de abertura</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute top-32 left-0 z-30 backdrop-blur-md bg-gray-800/60 border border-gray-700/50 rounded-xl p-4 animate-float animation-delay-700 shadow-2xl">
-                  <div className="flex items-center gap-3">
-                    <RefreshCw className="h-8 w-8 text-cyan-400" />
-                    <div>
-                      <p className="text-white font-bold text-lg">Reativação</p>
-                      <p className="text-cyan-400 text-sm">25% dos inativos</p>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Elemento central */}
                 <div className="bg-gray-800/40 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 shadow-2xl">
                   <div className="text-center">
