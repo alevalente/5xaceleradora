@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, RefreshCw, MessageCircle, Mail, Target } from 'lucide-react';
+import { ArrowLeft, Target, MessageCircle, Mail } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 const ReativacaoHero = () => {
@@ -72,18 +72,8 @@ const ReativacaoHero = () => {
 
             {/* Coluna da Direita - Elementos visuais */}
             <div className="relative animate-scale-in animation-delay-300">
-              <div className="relative">
-                {/* Elemento central */}
-                <div className="bg-gray-800/40 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 shadow-2xl">
-                  <div className="text-center">
-                    <div className="mb-4">
-                      <RefreshCw className="h-16 w-16 mx-auto text-blue-400 animate-spin" style={{ animationDuration: '3s' }} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Automação Dupla</h3>
-                    <p className="text-gray-300">WhatsApp + E-mail simultâneo</p>
-                  </div>
-                </div>
-              </div>
+              {/* Área vazia para manter o layout balanceado */}
+              <div className="h-96"></div>
             </div>
           </div>
         </div>
