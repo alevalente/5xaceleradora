@@ -18,22 +18,34 @@ const ReativacaoExplanation = () => {
       
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full mb-6 border border-blue-500/40 backdrop-blur-sm shadow-glass-strong animate-pulse-soft">
-              <Bot className="h-10 w-10 text-blue-400" />
+          {/* Glass Morphism Container para título e subtítulo */}
+          <div className="mb-16 animate-fade-in">
+            <div className="relative backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-glass-strong">
+              {/* Gradient overlay sutil */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl"></div>
+              
+              {/* Conteúdo do título */}
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                  O que é o Agente de Reativação?
+                </h2>
+                
+                <div className="text-lg text-gray-300 leading-relaxed space-y-6">
+                  <p>
+                    O <strong className="text-white">Agente de Reativação de Clientes Inativos</strong> automatiza integralmente o processo estratégico de recuperação dos clientes que deixaram de comprar, garantindo contatos constantes e personalizados simultaneamente por WhatsApp e e-mail, até obter respostas positivas.
+                  </p>
+                  <p>
+                    Você define quantos contatos e follow-ups deseja realizar, e nosso agente trabalha automaticamente nesses dois canais até que o cliente responda, garantindo que nenhum cliente inativo fique para trás.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Efeito de brilho nas bordas */}
+              <div className="absolute inset-0 rounded-3xl opacity-50">
+                <div className="absolute top-0 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              O que é o Agente de Reativação?
-            </h2>
-          </div>
-          
-          <div className="text-lg text-gray-300 leading-relaxed space-y-6 animate-slide-in">
-            <p>
-              O <strong className="text-white">Agente de Reativação de Clientes Inativos</strong> automatiza integralmente o processo estratégico de recuperação dos clientes que deixaram de comprar, garantindo contatos constantes e personalizados simultaneamente por WhatsApp e e-mail, até obter respostas positivas.
-            </p>
-            <p>
-              Você define quantos contatos e follow-ups deseja realizar, e nosso agente trabalha automaticamente nesses dois canais até que o cliente responda, garantindo que nenhum cliente inativo fique para trás.
-            </p>
           </div>
 
           {/* Seção de ícones completamente redesenhada */}
@@ -52,7 +64,7 @@ const ReativacaoExplanation = () => {
                 Inteligência Artificial
               </h3>
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
-                Analisa padrões e comportamentos para identificar o momento perfeito do contato
+                Identifica automaticamente o melhor momento para reconquistar cada cliente.
               </p>
             </div>
 
@@ -70,7 +82,7 @@ const ReativacaoExplanation = () => {
                 Força Magnética
               </h3>
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
-                Atrai clientes de volta automaticamente com mensagens irresistíveis
+                Recupera clientes automaticamente com mensagens personalizadas e envolventes.
               </p>
             </div>
 
@@ -88,7 +100,7 @@ const ReativacaoExplanation = () => {
                 Precisão Cirúrgica
               </h3>
               <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 leading-relaxed">
-                Mira certeira nos resultados com follow-ups estratégicos e personalizados
+                Garante follow-ups altamente estratégicos, aumentando a conversão dos contatos.
               </p>
             </div>
           </div>
