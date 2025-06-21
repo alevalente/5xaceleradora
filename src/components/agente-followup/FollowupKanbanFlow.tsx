@@ -10,7 +10,7 @@ const FollowupKanbanFlow = () => {
     <section className="py-20 bg-[#0F172A] relative">
       <div className="container max-w-6xl mx-auto px-4 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Como o nosso Agente resolve o problema de <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">follow-ups esquecidos</span>?
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
