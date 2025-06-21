@@ -1,8 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, RefreshCw, MessageCircle, Mail, Shield, Target } from 'lucide-react';
-import { Button } from '../ui/button';
+import { ArrowLeft, RefreshCw, MessageCircle, Mail, Target } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 const ReativacaoHero = () => {
@@ -62,23 +61,13 @@ const ReativacaoHero = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Quer novos clientes? Então pare primeiro de 
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"> perder os antigos</span>
+                Sua maior oportunidade de faturar rápido está nos clientes que já 
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"> confiaram em você</span>, mas hoje estão esquecidos.
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
-                Reative automaticamente seus clientes inativos por WhatsApp e e-mail, sem depender da disciplina manual dos seus vendedores.
+              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto lg:mx-0 leading-relaxed">
+                A carteira de clientes inativos não está visível nos relatórios que você acompanha diariamente, mas representa uma das maiores oportunidades imediatas de aumentar receita, sem precisar prospectar novos clientes. Nosso agente usa Inteligência Artificial para encontrar automaticamente esses clientes esquecidos, disparar mensagens personalizadas via WhatsApp e e-mail, e trazê-los de volta para o seu negócio rapidamente.
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg border border-blue-500/20">
-                  <RefreshCw className="h-5 w-5 mr-2" />
-                  Solicitar Diagnóstico Gratuito
-                </Button>
-                <Button variant="outline" size="lg" className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-8 py-4 text-lg">
-                  Ver Como Funciona
-                </Button>
-              </div>
             </div>
 
             {/* Coluna da Direita - Elementos visuais */}
