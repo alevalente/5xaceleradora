@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Brain, AlertTriangle, TrendingDown, MessageSquare } from 'lucide-react';
+import { Brain } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const FollowupHero = () => {
@@ -12,79 +12,68 @@ const FollowupHero = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
-      {/* Background effects */}
+    <section className="py-20 relative overflow-hidden">
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px',
+          animation: 'float 10s ease-in-out infinite'
+        }}></div>
+      </div>
+      
+      {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-        <div className="absolute top-[10%] left-[5%] w-72 h-72 rounded-full bg-red-500/20 filter blur-3xl animate-pulse-soft"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-96 h-96 rounded-full bg-orange-500/20 filter blur-3xl animate-float"></div>
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse-soft"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-purple-400 rounded-full animate-pulse-soft animation-delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-green-400 rounded-full animate-pulse-soft animation-delay-500"></div>
       </div>
 
-      <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-          {/* Problem Badge */}
-          <div className="inline-flex items-center px-6 py-3 bg-red-500/20 border border-red-400/30 rounded-full backdrop-blur-sm mb-8">
-            <AlertTriangle className="h-5 w-5 mr-2 text-red-400" />
-            <span className="text-red-300 font-mono text-sm">Problema Crítico Identificado</span>
-          </div>
-
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
-            <span className="text-red-400">Quantos negócios você perde</span>
-            <br />
-            <span className="text-white">porque seus vendedores esquecem</span>
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-              de fazer follow-up?
-            </span>
-          </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            <span className="text-red-400 font-bold">73% das vendas são perdidas</span> por falta de follow-up adequado. 
-            Seus vendedores conversam com clientes interessados, mas <span className="text-orange-400 font-bold">esquecem de acompanhar</span> as oportunidades.
-            <br /><br />
-            Sem acompanhamento sistemático, você deixa <span className="text-yellow-400 font-bold">dinheiro na mesa todos os dias</span>.
-          </p>
-
-          {/* Problem Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-center mb-3">
-                <TrendingDown className="h-8 w-8 text-red-400" />
-              </div>
-              <div className="text-3xl font-bold text-red-400 mb-2">73%</div>
-              <div className="text-gray-300 text-sm">das vendas perdidas por falta de follow-up</div>
-            </div>
-            
-            <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-center mb-3">
-                <MessageSquare className="h-8 w-8 text-orange-400" />
-              </div>
-              <div className="text-3xl font-bold text-orange-400 mb-2">85%</div>
-              <div className="text-gray-300 text-sm">das conversas não têm acompanhamento</div>
-            </div>
-            
-            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-6 backdrop-blur-sm">
-              <div className="flex items-center justify-center mb-3">
-                <Brain className="h-8 w-8 text-yellow-400" />
-              </div>
-              <div className="text-3xl font-bold text-yellow-400 mb-2">R$ 180k</div>
-              <div className="text-gray-300 text-sm">perda média mensal por empresa</div>
-            </div>
-          </div>
-
-          <Button 
-            onClick={handleScrollToContact}
-            size="lg" 
-            className="bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white px-12 py-6 text-xl font-bold shadow-2xl border-2 border-red-500/30 ring-2 ring-red-400/20 hover:ring-red-400/40 transition-all duration-300 transform hover:scale-105"
-          >
-            <AlertTriangle className="h-6 w-6 mr-3" />
-            Parar de Perder Vendas Agora
-          </Button>
-
-          <p className="mt-6 text-gray-400 text-sm">
-            ⚡ Solução implementada em 15 dias • 🎯 ROI garantido em 60 dias
-          </p>
+      <div className="container-wide text-center relative z-10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+          <span className="text-white drop-shadow-lg">
+            Você sabe que seus vendedores esquecem de fazer
+          </span>
+          <br />
+          <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            follow-up
+          </span>
+          <span className="text-white drop-shadow-lg">
+            .
+          </span>
+          <br />
+          <span className="text-white drop-shadow-lg">
+            Mas você consegue controlar isso hoje?
+          </span>
+        </h1>
+        
+        {/* Tech Badge */}
+        <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full backdrop-blur-sm mb-8">
+          <Brain className="h-4 w-4 mr-2 text-blue-400" />
+          <span className="text-blue-300 font-mono text-sm">AI-Powered Follow-up</span>
         </div>
+
+        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          É humanamente impossível acompanhar cada conversa da sua equipe.
+          <br />
+          O nosso Agente de Follow-up identifica e recupera automaticamente as oportunidades que você não consegue ver.
+        </p>
+
+        <Button 
+          onClick={handleScrollToContact}
+          size="lg" 
+          className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-bold shadow-2xl border-2 border-blue-500/30 ring-2 ring-blue-400/20 hover:ring-blue-400/40 transition-all duration-300 transform hover:scale-105"
+        >
+          <Brain className="h-6 w-6 mr-3" />
+          Solicitar Demonstração
+        </Button>
+
+        <p className="mt-6 text-gray-400 text-sm">
+          ⚡ Solução implementada em 15 dias • 🎯 ROI garantido em 60 dias
+        </p>
       </div>
     </section>
   );
