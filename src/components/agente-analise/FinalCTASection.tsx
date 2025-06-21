@@ -5,6 +5,10 @@ import { AlertTriangle, Terminal, Zap } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const FinalCTASection = () => {
+  const handleCTAClick = () => {
+    console.log('CTA button clicked - navigating to:', '/agente-analise-conversas-followup');
+  };
+
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Animated geometric background */}
@@ -41,7 +45,11 @@ const FinalCTASection = () => {
           asChild
           className="bg-white text-gray-900 hover:bg-gray-100 text-xl font-bold py-8 px-12 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20"
         >
-          <Link to="/agente-analise-conversas-followup" className="inline-flex items-center">
+          <Link 
+            to="/agente-analise-conversas-followup" 
+            className="inline-flex items-center"
+            onClick={handleCTAClick}
+          >
             <Terminal className="h-6 w-6 mr-3" />
             Conhecer o Agente de Follow-up
             <Zap className="h-6 w-6 ml-3" />
