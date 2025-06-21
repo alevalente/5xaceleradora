@@ -8,7 +8,7 @@ import IntelligentSolutions from '../components/IntelligentSolutions';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
-const Index = () => {
+const Index: React.FC = () => {
   // Add smooth scroll functionality for anchor links
   useEffect(() => {
     const handleAnchorClick = (e: MouseEvent) => {
