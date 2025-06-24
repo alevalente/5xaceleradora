@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -78,7 +79,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
   ];
 
   return (
-    <div id="agents" className="mb-20 relative">
+    <div id="agents" className="relative">
       <button 
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Previous agent"
@@ -95,9 +96,9 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
         <ChevronRight className="h-6 w-6 text-blue-600" />
       </button>
 
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="heading-lg mb-4">Conheça nossos Agentes Inteligentes</h2>
-        <p className="text-gray-600 text-lg">
+      <div className="text-center max-w-3xl mx-auto mb-20">
+        <h2 className="heading-lg mb-8">Conheça nossos Agentes Inteligentes</h2>
+        <p className="text-gray-600 text-lg leading-relaxed">
           Cada agente foi desenvolvido para resolver desafios específicos do seu processo comercial, automatizando tarefas repetitivas e permitindo que sua equipe foque no que realmente importa: vender mais e melhor.
         </p>
       </div>
@@ -113,7 +114,7 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
         <CarouselContent>
           {agentSolutions.map((solution) => (
             <CarouselItem key={solution.id} className="md:basis-1/2 lg:basis-1/2">
-              <div className="p-2">
+              <div className="p-4 lg:p-6">
                 <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                   {solution.image && (
                     <div className="overflow-hidden h-64">
@@ -124,16 +125,16 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
                       />
                     </div>
                   )}
-                  <div className="bg-gray-50 p-8">
-                    <CardTitle className="text-2xl font-bold text-blue-600 mb-3 leading-tight text-center">
+                  <div className="bg-gray-50 p-8 lg:p-10">
+                    <CardTitle className="text-2xl font-bold text-blue-600 mb-4 leading-tight text-center">
                       {solution.title}
                     </CardTitle>
                     {solution.subtitle && (
-                      <p className="text-xl font-bold text-gray-900 mb-6 leading-tight text-center">
+                      <p className="text-xl font-bold text-gray-900 mb-8 leading-tight text-center">
                         {solution.subtitle}
                       </p>
                     )}
-                    <CardDescription className="text-gray-600 mb-6 text-base">
+                    <CardDescription className="text-gray-600 mb-8 text-base leading-relaxed">
                       {solution.description}
                     </CardDescription>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">

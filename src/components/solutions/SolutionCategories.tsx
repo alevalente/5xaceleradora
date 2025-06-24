@@ -50,7 +50,7 @@ const SolutionCategories = () => {
   ];
 
   return (
-    <div className="mb-20 relative">
+    <div className="relative">
       <button 
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-4 rounded-full bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         aria-label="Previous solution"
@@ -78,7 +78,7 @@ const SolutionCategories = () => {
         <CarouselContent>
           {solutionCategories.map((category) => (
             <CarouselItem key={category.id} className="md:basis-1/3 lg:basis-1/3">
-              <div className="p-1">
+              <div className="p-4 lg:p-6">
                 <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-lg" hoverEffect={true}>
                   {category.image && (
                     <div className="overflow-hidden h-36">
@@ -95,11 +95,11 @@ const SolutionCategories = () => {
                       />
                     </div>
                   )}
-                  <div className="bg-gray-50 p-6">
-                    <CardTitle className="text-lg font-medium text-gray-900 mb-3 leading-tight">
+                  <div className="bg-gray-50 p-8 lg:p-10">
+                    <CardTitle className="text-lg font-medium text-gray-900 mb-6 leading-tight">
                       {category.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-600 mb-4">
+                    <CardDescription className="text-gray-600 mb-8 text-base leading-relaxed">
                       {category.description}
                     </CardDescription>
                     <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">

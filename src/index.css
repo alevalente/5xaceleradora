@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -66,6 +65,16 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container-improved {
+    @apply mx-auto px-12 md:px-16 lg:px-20 xl:px-24 max-w-container;
+  }
+  
+  .container-improved-lg {
+    @apply mx-auto px-12 md:px-16 lg:px-20 xl:px-24 max-w-container-lg;
   }
 }
 

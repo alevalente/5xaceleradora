@@ -57,12 +57,12 @@ const Statistics = () => {
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-400/10 rounded-full blur-3xl"></div>
       
-      <div className="container-wide relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
+      <div className="container-improved relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-8">
             📊 Dados do Mercado
           </div>
-          <h2 className="heading-lg mb-6 text-gray-900">
+          <h2 className="heading-lg mb-8 text-gray-900">
             O Mercado de IA Comercial em Números
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -70,12 +70,12 @@ const Statistics = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 lg:gap-10 mb-16">
           {stats.map((stat) => (
             <div 
               key={stat.id} 
               className={`group relative overflow-hidden ${stat.animation} 
-                bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-white/20 
+                bg-white/80 backdrop-blur-sm p-8 lg:p-10 rounded-2xl border border-white/20 
                 hover:bg-white/90 hover:shadow-2xl hover:shadow-blue-500/10
                 transition-all duration-500 hover:-translate-y-2
                 ${stat.highlight ? 'ring-2 ring-blue-500/20' : ''}
@@ -94,11 +94,11 @@ const Statistics = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               
               <div className="relative z-10 flex flex-col items-center text-center">
-                <div className="mb-6 p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl group-hover:scale-110 transition-transform duration-300 animate-pulse-soft">
+                <div className="mb-8 p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl group-hover:scale-110 transition-transform duration-300 animate-pulse-soft">
                   {stat.icon}
                 </div>
                 
-                <h3 className="text-5xl font-bold mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                <h3 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   {stat.value}
                 </h3>
                 
@@ -107,15 +107,15 @@ const Statistics = () => {
                 </p>
 
                 {/* Subtle bottom border animation */}
-                <div className="mt-4 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-500"></div>
+                <div className="mt-6 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-500"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA section */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 mb-6">
+        <div className="text-center mt-20">
+          <p className="text-lg text-gray-600 mb-8">
             Quer fazer parte dessa transformação digital?
           </p>
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 cursor-pointer">

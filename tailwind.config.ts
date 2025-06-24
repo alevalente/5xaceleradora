@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -96,6 +95,14 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'system-ui', 'sans-serif'],
 				display: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif']
+			},
+			spacing: {
+				'18': '4.5rem',
+				'22': '5.5rem',
+			},
+			maxWidth: {
+				'container': '1320px',
+				'container-lg': '1440px',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
