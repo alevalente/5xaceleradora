@@ -172,9 +172,9 @@ const ContactForm = () => {
       <FloatingElement className="w-8 h-8 bg-yellow-400 bottom-40 right-10" delay={1500} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
           {/* Left Side - Form Content (3/5 proportion) */}
-          <div className="order-2 lg:order-1 lg:col-span-3 space-y-6">
+          <div className="order-2 lg:order-1 lg:col-span-3 space-y-5">
             {/* Progress Header */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full border border-blue-200 mb-4">
@@ -184,15 +184,15 @@ const ContactForm = () => {
                 </span>
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Vamos começar sua automação comercial?
               </h2>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-base text-gray-600 mb-4">
                 Converse com nossos especialistas e descubra como nossos agentes inteligentes podem acelerar sua operação.
               </p>
               
               {/* Progress Bar */}
-              <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
+              <div className="w-full bg-gray-200 rounded-full h-2 mb-5">
                 <div 
                   className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${(completedFields / 6) * 100}%` }}
@@ -201,18 +201,18 @@ const ContactForm = () => {
             </div>
 
             {/* Enhanced Form */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-6 lg:p-8">
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-6 lg:p-7">
               <form 
                 name="formulario-contato" 
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit} 
-                className="space-y-5"
+                className="space-y-4"
               >
                 <input type="hidden" name="form-name" value="formulario-contato" />
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <InputField
                     icon={User}
                     label="Nome completo"
@@ -230,7 +230,7 @@ const ContactForm = () => {
                   />
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <InputField
                     icon={Building}
                     label="Empresa"
@@ -328,18 +328,18 @@ const ContactForm = () => {
             </div>
           </div>
           
-          {/* Right Side - Compact Benefits (2/5 proportion) */}
-          <div className="order-1 lg:order-2 lg:col-span-2 space-y-6">
+          {/* Right Side - Benefits (2/5 proportion) */}
+          <div className="order-1 lg:order-2 lg:col-span-2 space-y-5">
             <div className="text-center lg:text-left">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
                 Por que escolher nossos agentes?
               </h3>
-              <p className="text-gray-600 text-sm mb-6">
+              <p className="text-base text-gray-600 mb-5">
                 Resultados comprovados e implementação rápida.
               </p>
             </div>
             
-            {/* Compact Benefits Grid */}
+            {/* Benefits Grid */}
             <div className="grid grid-cols-1 gap-4">
               {[
                 {
@@ -363,22 +363,22 @@ const ContactForm = () => {
               ].map((benefit, index) => (
                 <div 
                   key={index}
-                  className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/80 transition-all duration-300"
+                  className="flex items-center space-x-4 bg-white/70 backdrop-blur-sm p-5 rounded-xl border border-white/30 hover:bg-white/90 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className={cn(
-                    "flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center",
+                    "flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center",
                     benefit.color === 'blue' && "bg-blue-100 text-blue-600",
                     benefit.color === 'green' && "bg-green-100 text-green-600",
                     benefit.color === 'purple' && "bg-purple-100 text-purple-600"
                   )}>
-                    <benefit.icon className="h-5 w-5" />
+                    <benefit.icon className="h-6 w-6" />
                   </div>
                   
                   <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">
+                    <h4 className="text-base font-bold text-gray-900 mb-1">
                       {benefit.title}
                     </h4>
-                    <p className="text-xs text-gray-600 leading-relaxed">
+                    <p className="text-sm text-gray-600 leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -386,26 +386,26 @@ const ContactForm = () => {
               ))}
             </div>
 
-            {/* Compact Trust Indicators */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 text-white">
+            {/* Trust Indicators */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-5 text-white">
               <div className="flex items-center justify-between text-center">
                 <div className="flex-1">
-                  <div className="flex items-center justify-center mb-1">
+                  <div className="flex items-center justify-center mb-2">
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                   </div>
-                  <p className="text-xs font-medium">4.9/5 estrelas</p>
+                  <p className="text-sm font-medium">4.9/5 estrelas</p>
                   <p className="text-xs text-blue-200">50+ clientes</p>
                 </div>
-                <div className="w-px h-8 bg-white/20"></div>
+                <div className="w-px h-10 bg-white/20"></div>
                 <div className="flex-1">
-                  <div className="flex items-center justify-center mb-1">
+                  <div className="flex items-center justify-center mb-2">
                     <Zap className="h-4 w-4 text-yellow-400" />
                   </div>
-                  <p className="text-xs font-medium">Resposta rápida</p>
+                  <p className="text-sm font-medium">Resposta rápida</p>
                   <p className="text-xs text-blue-200">Em até 30 min</p>
                 </div>
               </div>
