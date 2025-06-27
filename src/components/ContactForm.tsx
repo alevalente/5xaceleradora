@@ -3,6 +3,7 @@ import { useState, FormEvent } from 'react';
 import { Send, Clock, TrendingUp, Headset } from 'lucide-react';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,17 +12,32 @@ const ContactForm = () => {
     company: '',
     website: '',
     phone: '',
-    message: ''
+    message: '',
+    consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: type === 'checkbox' ? checked : value 
+    }));
+  };
+
+  const handleConsentChange = (checked: boolean) => {
+    setFormData(prev => ({ ...prev, consent: checked }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.consent) {
+      toast.error("Por favor, aceite os termos de consentimento para continuar.");
+      return;
+    }
+    
     setIsSubmitting(true);
     
     // Simulate form submission
@@ -37,7 +53,8 @@ const ContactForm = () => {
       company: '',
       website: '',
       phone: '',
-      message: ''
+      message: '',
+      consent: false
     });
     
     setIsSubmitting(false);
@@ -54,7 +71,16 @@ const ContactForm = () => {
                 Solicite agora sua análise gratuita com nosso especialista.
               </p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                name="formulario-contato" 
+                method="POST" 
+                data-netlify="true" 
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="formulario-contato" />
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -153,14 +179,27 @@ const ContactForm = () => {
                     placeholder="Conte-nos mais sobre seu desafio comercial..."
                   ></textarea>
                 </div>
+
+                <div className="flex items-start space-x-3">
+                  <Checkbox
+                    id="consent"
+                    checked={formData.consent}
+                    onCheckedChange={handleConsentChange}
+                    required
+                    className="mt-1"
+                  />
+                  <label htmlFor="consent" className="text-sm text-gray-700 leading-relaxed">
+                    Autorizo que a 5X Aceleradora entre em contato comigo por telefone, incluindo chamadas automatizadas, gravadas ou utilizando vozes artificiais. Sei que este consentimento não é condição obrigatória para compra.
+                  </label>
+                </div>
                 
                 <div>
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !formData.consent}
                     className={cn(
                       "w-full button-primary flex items-center justify-center",
-                      isSubmitting && "opacity-70 cursor-not-allowed"
+                      (isSubmitting || !formData.consent) && "opacity-70 cursor-not-allowed"
                     )}
                   >
                     {isSubmitting ? (
