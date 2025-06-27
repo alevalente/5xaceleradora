@@ -159,7 +159,7 @@ const ContactForm = () => {
   );
 
   return (
-    <section id="contact" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-16 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
@@ -172,27 +172,27 @@ const ContactForm = () => {
       <FloatingElement className="w-8 h-8 bg-yellow-400 bottom-40 right-10" delay={1500} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Left Side - Enhanced Content */}
-          <div className="order-2 lg:order-1 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+          {/* Left Side - Form Content (3/5 proportion) */}
+          <div className="order-2 lg:order-1 lg:col-span-3 space-y-6">
             {/* Progress Header */}
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full border border-blue-200 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full border border-blue-200 mb-4">
                 <Sparkles className="h-4 w-4 text-blue-600 animate-pulse" />
                 <span className="text-sm font-medium text-blue-700">
                   {completedFields}/6 campos preenchidos
                 </span>
               </div>
               
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Vamos começar sua automação comercial?
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-4">
                 Converse com nossos especialistas e descubra como nossos agentes inteligentes podem acelerar sua operação.
               </p>
               
               {/* Progress Bar */}
-              <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
+              <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
                 <div 
                   className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${(completedFields / 6) * 100}%` }}
@@ -201,18 +201,18 @@ const ContactForm = () => {
             </div>
 
             {/* Enhanced Form */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-8 lg:p-10">
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-6 lg:p-8">
               <form 
                 name="formulario-contato" 
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit} 
-                className="space-y-6"
+                className="space-y-5"
               >
                 <input type="hidden" name="form-name" value="formulario-contato" />
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <InputField
                     icon={User}
                     label="Nome completo"
@@ -230,7 +230,7 @@ const ContactForm = () => {
                   />
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <InputField
                     icon={Building}
                     label="Empresa"
@@ -328,100 +328,85 @@ const ContactForm = () => {
             </div>
           </div>
           
-          {/* Right Side - Enhanced Benefits */}
-          <div className="order-1 lg:order-2 space-y-8">
+          {/* Right Side - Compact Benefits (2/5 proportion) */}
+          <div className="order-1 lg:order-2 lg:col-span-2 space-y-6">
             <div className="text-center lg:text-left">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Por que escolher nossos agentes inteligentes?
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Por que escolher nossos agentes?
               </h3>
-              <p className="text-gray-600 mb-8">
-                Transformamos sua operação comercial com resultados comprovados.
+              <p className="text-gray-600 text-sm mb-6">
+                Resultados comprovados e implementação rápida.
               </p>
             </div>
             
-            <div className="space-y-6">
+            {/* Compact Benefits Grid */}
+            <div className="grid grid-cols-1 gap-4">
               {[
                 {
                   icon: Clock,
-                  title: "Implementação rápida",
-                  description: "Seu agente inteligente funcionando em até 21 dias, com resultados imediatos na operação.",
-                  color: "blue",
-                  stat: "21 dias"
+                  title: "21 dias",
+                  description: "Implementação rápida com resultados imediatos",
+                  color: "blue"
                 },
                 {
                   icon: TrendingUp,
-                  title: "Resultados mensuráveis",
-                  description: "Em média, nossos clientes aumentam suas vendas em 35% após ativar nossos agentes de IA.",
-                  color: "green",
-                  stat: "+35%"
+                  title: "+35%",
+                  description: "Aumento médio nas vendas dos nossos clientes",
+                  color: "green"
                 },
                 {
                   icon: Headset,
                   title: "Suporte contínuo",
-                  description: "Você terá suporte dedicado e contínuo para garantir o máximo desempenho dos seus agentes.",
-                  color: "purple",
-                  stat: "Contínuo"
+                  description: "Acompanhamento dedicado para máximo desempenho",
+                  color: "purple"
                 }
               ].map((benefit, index) => (
                 <div 
                   key={index}
-                  className="group bg-white/60 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/80 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  className="flex items-center space-x-4 bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-white/20 hover:bg-white/80 transition-all duration-300"
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className={cn(
-                      "flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110",
-                      benefit.color === 'blue' && "bg-blue-100 text-blue-600 group-hover:bg-blue-200",
-                      benefit.color === 'green' && "bg-green-100 text-green-600 group-hover:bg-green-200",
-                      benefit.color === 'purple' && "bg-purple-100 text-purple-600 group-hover:bg-purple-200"
-                    )}>
-                      <benefit.icon className="h-7 w-7" />
-                    </div>
-                    
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                          {benefit.title}
-                        </h4>
-                        <span className={cn(
-                          "text-sm font-bold px-2 py-1 rounded-full",
-                          benefit.color === 'blue' && "bg-blue-100 text-blue-600",
-                          benefit.color === 'green' && "bg-green-100 text-green-600",
-                          benefit.color === 'purple' && "bg-purple-100 text-purple-600"
-                        )}>
-                          {benefit.stat}
-                        </span>
-                      </div>
-                      <p className="text-gray-600 leading-relaxed">
-                        {benefit.description}
-                      </p>
-                    </div>
+                  <div className={cn(
+                    "flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center",
+                    benefit.color === 'blue' && "bg-blue-100 text-blue-600",
+                    benefit.color === 'green' && "bg-green-100 text-green-600",
+                    benefit.color === 'purple' && "bg-purple-100 text-purple-600"
+                  )}>
+                    <benefit.icon className="h-5 w-5" />
+                  </div>
+                  
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm font-bold text-gray-900 mb-1">
+                      {benefit.title}
+                    </h4>
+                    <p className="text-xs text-gray-600 leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Trust Indicators */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
-              <div className="flex items-center justify-center space-x-6 text-center">
-                <div>
-                  <div className="flex items-center justify-center mb-2">
-                    <Star className="h-6 w-6 text-yellow-400 fill-current" />
-                    <Star className="h-6 w-6 text-yellow-400 fill-current" />
-                    <Star className="h-6 w-6 text-yellow-400 fill-current" />
-                    <Star className="h-6 w-6 text-yellow-400 fill-current" />
-                    <Star className="h-6 w-6 text-yellow-400 fill-current" />
+            {/* Compact Trust Indicators */}
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-4 text-white">
+              <div className="flex items-center justify-between text-center">
+                <div className="flex-1">
+                  <div className="flex items-center justify-center mb-1">
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
                   </div>
-                  <p className="text-sm font-medium">4.9/5 estrelas</p>
-                  <p className="text-xs text-blue-200">50+ clientes satisfeitos</p>
+                  <p className="text-xs font-medium">4.9/5 estrelas</p>
+                  <p className="text-xs text-blue-200">50+ clientes</p>
                 </div>
-                <div className="w-px h-12 bg-white/20"></div>
-                <div>
-                  <div className="flex items-center justify-center mb-2">
-                    <Zap className="h-6 w-6 text-yellow-400" />
+                <div className="w-px h-8 bg-white/20"></div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-center mb-1">
+                    <Zap className="h-4 w-4 text-yellow-400" />
                   </div>
-                  <p className="text-sm font-medium">Resposta rápida</p>
-                  <p className="text-xs text-blue-200">Em até 30 minutos</p>
+                  <p className="text-xs font-medium">Resposta rápida</p>
+                  <p className="text-xs text-blue-200">Em até 30 min</p>
                 </div>
               </div>
             </div>
