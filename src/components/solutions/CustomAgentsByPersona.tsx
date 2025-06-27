@@ -189,7 +189,7 @@ const CustomAgentsByPersona = () => {
                   href="https://wa.me/5519994435314?text=Olá! Gostaria de conversar sobre os agentes inteligentes da 5X" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 flex items-center"
+                  className="group bg-green-500 text-white hover:bg-green-600 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 flex items-center shadow-lg hover:shadow-xl"
                 >
                   <WhatsAppIcon className="mr-2 h-5 w-5" />
                   WhatsApp
