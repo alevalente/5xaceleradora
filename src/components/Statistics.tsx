@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { Target, Clock, TrendingUp, LineChart } from 'lucide-react';
+import { Target, Clock, TrendingUp, Users } from 'lucide-react';
 import { createObserver } from '../utils/animations';
 
 const Statistics = () => {
@@ -10,6 +10,13 @@ const Statistics = () => {
       if (observer) observer.disconnect();
     };
   }, []);
+
+  const handleCTAClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const stats = [
     { 
@@ -23,12 +30,12 @@ const Statistics = () => {
     },
     { 
       id: 2, 
-      icon: <Clock className="h-10 w-10 text-green-500" />, 
-      value: '24/7', 
-      label: 'Disponibilidade total dos nossos agentes inteligentes',
+      icon: <Users className="h-10 w-10 text-green-500" />, 
+      value: '85%', 
+      label: 'Das empresas brasileiras planejam investir em IA nos próximos 2 anos',
       animation: 'animate-slide-left delay-200',
       highlight: false,
-      badge: 'DISPONÍVEL'
+      badge: 'MERCADO'
     },
     { 
       id: 3, 
@@ -41,7 +48,7 @@ const Statistics = () => {
     },
     { 
       id: 4, 
-      icon: <LineChart className="h-10 w-10 text-orange-500" />, 
+      icon: <TrendingUp className="h-10 w-10 text-orange-500" />, 
       value: '300%', 
       label: 'ROI médio em projetos de IA comercial no primeiro ano',
       animation: 'animate-slide-right delay-400',
@@ -62,10 +69,10 @@ const Statistics = () => {
           <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-8">
             📊 Dados do Mercado
           </div>
-          <h2 className="heading-lg mb-8 text-gray-900">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-8 text-gray-900">
             O Mercado de IA Comercial em Números
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Veja como a inteligência artificial está transformando o cenário comercial brasileiro e mundial
           </p>
         </div>
@@ -118,9 +125,12 @@ const Statistics = () => {
           <p className="text-lg text-gray-600 mb-8">
             Quer fazer parte dessa transformação digital?
           </p>
-          <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 cursor-pointer">
-            Solicitar Demonstração
-          </div>
+          <button 
+            onClick={handleCTAClick}
+            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 cursor-pointer"
+          >
+            Fale com um Especialista
+          </button>
         </div>
       </div>
     </section>
