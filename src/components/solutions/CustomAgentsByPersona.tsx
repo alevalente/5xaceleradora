@@ -1,10 +1,17 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
+import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const CustomAgentsByPersona = () => {
+  const handleCTAClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const customBenefits = [
     {
       icon: <Target className="h-8 w-8 text-white" />,
@@ -167,24 +174,24 @@ const CustomAgentsByPersona = () => {
                 as possibilidades de automação específicas para sua empresa.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button asChild size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <Link to="/contact" className="flex items-center">
-                    <Sparkles className="mr-2 h-5 w-5" />
-                    Solicitar Análise Gratuita
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button 
+                  onClick={handleCTAClick}
+                  className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center"
+                >
+                  <Sparkles className="mr-2 h-5 w-5" />
+                  Solicitar Análise Gratuita
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
                 
                 <a 
                   href="https://wa.me/5519994435313?text=Olá! Gostaria de uma análise gratuita para criar um agente personalizado para meu negócio." 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group flex items-center text-blue-100 hover:text-white font-medium transition-colors duration-300"
+                  className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 flex items-center"
                 >
-                  <span className="border-b border-blue-200 group-hover:border-white transition-colors">
-                    Ou fale conosco no WhatsApp
-                  </span>
+                  <MessageSquare className="mr-2 h-5 w-5" />
+                  WhatsApp
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
