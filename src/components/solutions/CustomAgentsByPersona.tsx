@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock, MessageSquare } from 'lucide-react';
+import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
 
 const CustomAgentsByPersona = () => {
   const handleCTAClick = () => {
@@ -190,7 +190,7 @@ const CustomAgentsByPersona = () => {
                   rel="noopener noreferrer"
                   className="group bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 flex items-center"
                 >
-                  <MessageSquare className="mr-2 h-5 w-5" />
+                  <WhatsAppIcon className="mr-2 h-5 w-5" />
                   WhatsApp
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
