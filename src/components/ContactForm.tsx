@@ -171,7 +171,7 @@ const ContactForm = () => {
       <FloatingElement className="w-16 h-16 bg-pink-400 bottom-20 left-1/4" delay={2000} />
       <FloatingElement className="w-8 h-8 bg-yellow-400 bottom-40 right-10" delay={1500} />
       
-      <div className="container-wide relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - Enhanced Content */}
           <div className="order-2 lg:order-1 space-y-8">
@@ -184,7 +184,7 @@ const ContactForm = () => {
                 </span>
               </div>
               
-              <h2 className="heading-lg mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Vamos começar sua automação comercial?
               </h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -344,9 +344,9 @@ const ContactForm = () => {
                 {
                   icon: Clock,
                   title: "Implementação rápida",
-                  description: "Seu agente inteligente funcionando em até 15 dias, com resultados imediatos na operação.",
+                  description: "Seu agente inteligente funcionando em até 21 dias, com resultados imediatos na operação.",
                   color: "blue",
-                  stat: "15 dias"
+                  stat: "21 dias"
                 },
                 {
                   icon: TrendingUp,
@@ -360,7 +360,7 @@ const ContactForm = () => {
                   title: "Suporte contínuo",
                   description: "Você terá suporte dedicado e contínuo para garantir o máximo desempenho dos seus agentes.",
                   color: "purple",
-                  stat: "24/7"
+                  stat: "Contínuo"
                 }
               ].map((benefit, index) => (
                 <div 
