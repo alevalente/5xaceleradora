@@ -1,4 +1,3 @@
-
 import { useState, FormEvent, useEffect } from 'react';
 import { Send, Sparkles, ArrowRight, User, Mail, Building, Globe, Phone, MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
@@ -78,7 +77,7 @@ const ContactForm = () => {
       <ContactFormBackground />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Left Side - Form Content (3/5 proportion) */}
           <div className="order-2 lg:order-1 lg:col-span-3 space-y-6">
             {/* Progress Header */}
@@ -263,8 +262,8 @@ const ContactForm = () => {
             </div>
           </div>
           
-          {/* Right Side - Benefits (2/5 proportion) */}
-          <div className="order-1 lg:order-2 lg:col-span-2">
+          {/* Right Side - Benefits (2/5 proportion) - Enhanced layout */}
+          <div className="order-1 lg:order-2 lg:col-span-2 h-full">
             <ContactFormBenefits />
           </div>
         </div>
