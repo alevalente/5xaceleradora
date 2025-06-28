@@ -1,0 +1,96 @@
+
+import React from 'react';
+import { Clock, TrendingUp, Headset, Star, Zap } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { BenefitItem } from './ContactFormTypes';
+
+const ContactFormBenefits = () => {
+  const benefits: BenefitItem[] = [
+    {
+      icon: Clock,
+      title: "21 dias",
+      description: "Implementação rápida com resultados imediatos",
+      color: "blue"
+    },
+    {
+      icon: TrendingUp,
+      title: "+35%",
+      description: "Aumento médio nas vendas dos nossos clientes",
+      color: "green"
+    },
+    {
+      icon: Headset,
+      title: "Suporte contínuo",
+      description: "Acompanhamento dedicado para máximo desempenho",
+      color: "purple"
+    }
+  ];
+
+  return (
+    <div className="space-y-6">
+      <div className="text-center lg:text-left">
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+          Por que escolher nossos agentes?
+        </h3>
+        <p className="text-base text-gray-600 mb-6">
+          Resultados comprovados e implementação rápida.
+        </p>
+      </div>
+      
+      {/* Benefits Grid */}
+      <div className="grid grid-cols-1 gap-5">
+        {benefits.map((benefit, index) => (
+          <div 
+            key={index}
+            className="flex items-center space-x-4 bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-white/30 hover:bg-white/90 transition-all duration-300 hover:shadow-lg"
+          >
+            <div className={cn(
+              "flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center",
+              benefit.color === 'blue' && "bg-blue-100 text-blue-600",
+              benefit.color === 'green' && "bg-green-100 text-green-600",
+              benefit.color === 'purple' && "bg-purple-100 text-purple-600"
+            )}>
+              <benefit.icon className="h-7 w-7" />
+            </div>
+            
+            <div className="flex-1 min-w-0">
+              <h4 className="text-lg font-bold text-gray-900 mb-1">
+                {benefit.title}
+              </h4>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {benefit.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white">
+        <div className="flex items-center justify-between text-center">
+          <div className="flex-1">
+            <div className="flex items-center justify-center mb-2">
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+            </div>
+            <p className="text-sm font-medium">4.9/5 estrelas</p>
+            <p className="text-xs text-blue-200">50+ clientes</p>
+          </div>
+          <div className="w-px h-10 bg-white/20"></div>
+          <div className="flex-1">
+            <div className="flex items-center justify-center mb-2">
+              <Zap className="h-4 w-4 text-yellow-400" />
+            </div>
+            <p className="text-sm font-medium">Resposta rápida</p>
+            <p className="text-xs text-blue-200">Em até 30 min</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactFormBenefits;

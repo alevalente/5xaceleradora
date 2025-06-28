@@ -1,13 +1,16 @@
 
 import { useState, FormEvent, useEffect } from 'react';
-import { Send, Clock, TrendingUp, Headset, User, Mail, Building, Globe, Phone, MessageSquare, Sparkles, ArrowRight, CheckCircle, Star, Zap } from 'lucide-react';
+import { Send, Sparkles, ArrowRight, User, Mail, Building, Globe, Phone, MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
-import { cn } from '@/lib/utils';
 import { Checkbox } from '@/components/ui/checkbox';
 import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
+import ContactFormBackground from './contact/ContactFormBackground';
+import ContactFormField from './contact/ContactFormField';
+import ContactFormBenefits from './contact/ContactFormBenefits';
+import { FormData } from './contact/ContactFormTypes';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     company: '',
@@ -23,7 +26,7 @@ const ContactForm = () => {
   // Calculate progress
   useEffect(() => {
     const fields = ['name', 'email', 'company', 'website', 'phone', 'message'];
-    const completed = fields.filter(field => formData[field as keyof typeof formData]).length;
+    const completed = fields.filter(field => formData[field as keyof FormData]).length;
     setCompletedFields(completed);
   }, [formData]);
 
@@ -70,111 +73,14 @@ const ContactForm = () => {
     setIsSubmitting(false);
   };
 
-  const InputField = ({ 
-    icon: Icon, 
-    label, 
-    name, 
-    type = "text", 
-    placeholder, 
-    required = false,
-    isTextarea = false 
-  }: {
-    icon: any;
-    label: string;
-    name: string;
-    type?: string;
-    placeholder: string;
-    required?: boolean;
-    isTextarea?: boolean;
-  }) => {
-    const isFocused = focusedField === name;
-    const hasValue = formData[name as keyof typeof formData];
-    
-    return (
-      <div className="relative group">
-        <label className={cn(
-          "flex items-center text-sm font-medium mb-2 transition-colors duration-200",
-          isFocused ? "text-blue-600" : "text-gray-700"
-        )}>
-          <Icon className={cn(
-            "h-4 w-4 mr-2 transition-colors duration-200",
-            isFocused ? "text-blue-600" : hasValue ? "text-green-500" : "text-gray-400"
-          )} />
-          {label}
-          {required && <span className="text-red-500 ml-1">*</span>}
-        </label>
-        <div className="relative">
-          {isTextarea ? (
-            <textarea
-              name={name}
-              value={formData[name as keyof typeof formData] as string}
-              onChange={handleChange}
-              onFocus={() => setFocusedField(name)}
-              onBlur={() => setFocusedField(null)}
-              required={required}
-              rows={4}
-              className={cn(
-                "w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none resize-none",
-                isFocused 
-                  ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
-                  : hasValue 
-                    ? "border-green-300 bg-green-50/30" 
-                    : "border-gray-200 hover:border-gray-300 bg-white"
-              )}
-              placeholder={placeholder}
-            />
-          ) : (
-            <input
-              type={type}
-              name={name}
-              value={formData[name as keyof typeof formData] as string}
-              onChange={handleChange}
-              onFocus={() => setFocusedField(name)}
-              onBlur={() => setFocusedField(null)}
-              required={required}
-              className={cn(
-                "w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none",
-                isFocused 
-                  ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
-                  : hasValue 
-                    ? "border-green-300 bg-green-50/30" 
-                    : "border-gray-200 hover:border-gray-300 bg-white"
-              )}
-              placeholder={placeholder}
-            />
-          )}
-          {hasValue && (
-            <CheckCircle className="absolute right-3 top-3 h-5 w-5 text-green-500 animate-scale-in" />
-          )}
-        </div>
-      </div>
-    );
-  };
-
-  const FloatingElement = ({ className, delay = 0 }: { className: string; delay?: number }) => (
-    <div 
-      className={cn("absolute rounded-full opacity-20 animate-float", className)}
-      style={{ animationDelay: `${delay}ms` }}
-    />
-  );
-
   return (
     <section id="contact" className="py-16 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-      
-      {/* Floating Elements */}
-      <FloatingElement className="w-20 h-20 bg-blue-400 top-10 left-10" delay={0} />
-      <FloatingElement className="w-12 h-12 bg-purple-400 top-32 right-20" delay={1000} />
-      <FloatingElement className="w-16 h-16 bg-pink-400 bottom-20 left-1/4" delay={2000} />
-      <FloatingElement className="w-8 h-8 bg-yellow-400 bottom-40 right-10" delay={1500} />
+      <ContactFormBackground />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
           {/* Left Side - Form Content (3/5 proportion) */}
-          <div className="order-2 lg:order-1 lg:col-span-3 space-y-5">
+          <div className="order-2 lg:order-1 lg:col-span-3 space-y-6">
             {/* Progress Header */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full border border-blue-200 mb-4">
@@ -192,7 +98,7 @@ const ContactForm = () => {
               </p>
               
               {/* Progress Bar */}
-              <div className="w-full bg-gray-200 rounded-full h-2 mb-5">
+              <div className="w-full bg-gray-200 rounded-full h-2 mb-6">
                 <div 
                   className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-500 ease-out"
                   style={{ width: `${(completedFields / 6) * 100}%` }}
@@ -201,68 +107,98 @@ const ContactForm = () => {
             </div>
 
             {/* Enhanced Form */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-6 lg:p-7">
+            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 p-6 lg:p-8">
               <form 
                 name="formulario-contato" 
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit} 
-                className="space-y-4"
+                className="space-y-5"
               >
                 <input type="hidden" name="form-name" value="formulario-contato" />
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputField
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <ContactFormField
                     icon={User}
                     label="Nome completo"
                     name="name"
                     placeholder="Seu nome"
                     required
+                    formData={formData}
+                    focusedField={focusedField}
+                    onChange={handleChange}
+                    onFocus={setFocusedField}
+                    onBlur={() => setFocusedField(null)}
                   />
-                  <InputField
+                  <ContactFormField
                     icon={Mail}
                     label="E-mail"
                     name="email"
                     type="email"
                     placeholder="seu.email@empresa.com"
                     required
+                    formData={formData}
+                    focusedField={focusedField}
+                    onChange={handleChange}
+                    onFocus={setFocusedField}
+                    onBlur={() => setFocusedField(null)}
                   />
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <InputField
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <ContactFormField
                     icon={Building}
                     label="Empresa"
                     name="company"
                     placeholder="Nome da empresa"
                     required
+                    formData={formData}
+                    focusedField={focusedField}
+                    onChange={handleChange}
+                    onFocus={setFocusedField}
+                    onBlur={() => setFocusedField(null)}
                   />
-                  <InputField
+                  <ContactFormField
                     icon={Globe}
                     label="Site da Empresa"
                     name="website"
                     type="url"
                     placeholder="www.suaempresa.com.br"
                     required
+                    formData={formData}
+                    focusedField={focusedField}
+                    onChange={handleChange}
+                    onFocus={setFocusedField}
+                    onBlur={() => setFocusedField(null)}
                   />
                 </div>
                 
-                <InputField
+                <ContactFormField
                   icon={Phone}
                   label="Telefone"
                   name="phone"
                   type="tel"
                   placeholder="(00) 00000-0000"
                   required
+                  formData={formData}
+                  focusedField={focusedField}
+                  onChange={handleChange}
+                  onFocus={setFocusedField}
+                  onBlur={() => setFocusedField(null)}
                 />
                 
-                <InputField
+                <ContactFormField
                   icon={MessageSquare}
                   label="Descreva rapidamente sua maior dificuldade ou objetivo comercial"
                   name="message"
                   placeholder="Conte-nos mais sobre seu desafio comercial..."
                   isTextarea
+                  formData={formData}
+                  focusedField={focusedField}
+                  onChange={handleChange}
+                  onFocus={setFocusedField}
+                  onBlur={() => setFocusedField(null)}
                 />
 
                 {/* Enhanced Consent Checkbox */}
@@ -284,12 +220,11 @@ const ContactForm = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting || !formData.consent}
-                    className={cn(
-                      "w-full relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center group",
+                    className={`w-full relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center group ${
                       (isSubmitting || !formData.consent) 
                         ? "opacity-70 cursor-not-allowed" 
                         : "hover:from-blue-700 hover:to-purple-700 hover:shadow-2xl hover:shadow-blue-500/25 hover:scale-105"
-                    )}
+                    }`}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                     {isSubmitting ? (
@@ -329,87 +264,8 @@ const ContactForm = () => {
           </div>
           
           {/* Right Side - Benefits (2/5 proportion) */}
-          <div className="order-1 lg:order-2 lg:col-span-2 space-y-5">
-            <div className="text-center lg:text-left">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                Por que escolher nossos agentes?
-              </h3>
-              <p className="text-base text-gray-600 mb-5">
-                Resultados comprovados e implementação rápida.
-              </p>
-            </div>
-            
-            {/* Benefits Grid */}
-            <div className="grid grid-cols-1 gap-4">
-              {[
-                {
-                  icon: Clock,
-                  title: "21 dias",
-                  description: "Implementação rápida com resultados imediatos",
-                  color: "blue"
-                },
-                {
-                  icon: TrendingUp,
-                  title: "+35%",
-                  description: "Aumento médio nas vendas dos nossos clientes",
-                  color: "green"
-                },
-                {
-                  icon: Headset,
-                  title: "Suporte contínuo",
-                  description: "Acompanhamento dedicado para máximo desempenho",
-                  color: "purple"
-                }
-              ].map((benefit, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center space-x-4 bg-white/70 backdrop-blur-sm p-5 rounded-xl border border-white/30 hover:bg-white/90 transition-all duration-300 hover:shadow-lg"
-                >
-                  <div className={cn(
-                    "flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center",
-                    benefit.color === 'blue' && "bg-blue-100 text-blue-600",
-                    benefit.color === 'green' && "bg-green-100 text-green-600",
-                    benefit.color === 'purple' && "bg-purple-100 text-purple-600"
-                  )}>
-                    <benefit.icon className="h-6 w-6" />
-                  </div>
-                  
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-base font-bold text-gray-900 mb-1">
-                      {benefit.title}
-                    </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-5 text-white">
-              <div className="flex items-center justify-between text-center">
-                <div className="flex-1">
-                  <div className="flex items-center justify-center mb-2">
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                    <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                  </div>
-                  <p className="text-sm font-medium">4.9/5 estrelas</p>
-                  <p className="text-xs text-blue-200">50+ clientes</p>
-                </div>
-                <div className="w-px h-10 bg-white/20"></div>
-                <div className="flex-1">
-                  <div className="flex items-center justify-center mb-2">
-                    <Zap className="h-4 w-4 text-yellow-400" />
-                  </div>
-                  <p className="text-sm font-medium">Resposta rápida</p>
-                  <p className="text-xs text-blue-200">Em até 30 min</p>
-                </div>
-              </div>
-            </div>
+          <div className="order-1 lg:order-2 lg:col-span-2">
+            <ContactFormBenefits />
           </div>
         </div>
       </div>
