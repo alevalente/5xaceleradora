@@ -32,11 +32,11 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
   return (
     <div className="relative group">
       <label className={cn(
-        "flex items-center text-sm font-medium mb-2 transition-colors duration-200",
+        "flex items-center text-xs font-medium mb-1.5 transition-colors duration-200",
         isFocused ? "text-blue-600" : "text-gray-700"
       )}>
         <Icon className={cn(
-          "h-4 w-4 mr-2 transition-colors duration-200",
+          "h-3.5 w-3.5 mr-2 transition-colors duration-200",
           isFocused ? "text-blue-600" : hasValue ? "text-green-500" : "text-gray-400"
         )} />
         {label}
@@ -51,9 +51,9 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
             onFocus={() => onFocus(name)}
             onBlur={onBlur}
             required={required}
-            rows={4}
+            rows={3}
             className={cn(
-              "w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none resize-none",
+              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none resize-none text-sm",
               isFocused 
                 ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
                 : hasValue 
@@ -72,7 +72,7 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
             onBlur={onBlur}
             required={required}
             className={cn(
-              "w-full px-4 py-3 rounded-xl border-2 transition-all duration-300 focus:outline-none",
+              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none text-sm",
               isFocused 
                 ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
                 : hasValue 
@@ -83,7 +83,7 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
           />
         )}
         {hasValue && (
-          <CheckCircle className="absolute right-3 top-3 h-5 w-5 text-green-500 animate-scale-in" />
+          <CheckCircle className="absolute right-2.5 top-2.5 h-4 w-4 text-green-500 animate-scale-in" />
         )}
       </div>
     </div>
