@@ -97,8 +97,8 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
       </button>
 
       <div className="text-center max-w-3xl mx-auto mb-20">
-        <h2 className="heading-lg mb-8">Conheça nossos Agentes Inteligentes</h2>
-        <p className="text-gray-600 text-lg leading-relaxed">
+        <h2 className="heading-section mb-6">Conheça nossos Agentes Inteligentes</h2>
+        <p className="subtitle-section text-gray-600">
           Cada agente foi desenvolvido para resolver desafios específicos do seu processo comercial, automatizando tarefas repetitivas e permitindo que sua equipe foque no que realmente importa: vender mais e melhor.
         </p>
       </div>
