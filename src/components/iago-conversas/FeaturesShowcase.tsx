@@ -122,6 +122,9 @@ const FeaturesShowcase = () => {
                             "object-contain transition-transform duration-700 group-hover:scale-110",
                             feature.largeImage ? "w-full h-full scale-125" : "w-full h-full"
                           )}
+                          loading="lazy"
+                          width="600"
+                          height={feature.largeImage ? "500" : "400"}
                         />
                       </div>
                     ) : (
@@ -136,6 +139,9 @@ const FeaturesShowcase = () => {
                             "w-full h-full object-contain transition-transform duration-700 group-hover:scale-110",
                             feature.largeImage ? "scale-125" : ""
                           )}
+                          loading="lazy"
+                          width="600"
+                          height={feature.largeImage ? "500" : "400"}
                         />
                       </div>
                     )

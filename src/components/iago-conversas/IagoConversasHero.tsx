@@ -71,7 +71,9 @@ const IagoConversasHero = () => {
                     src={images.iagoConversasScreenshot}
                     alt="Interface do IAgo Conversas - Plataforma unificada de atendimento"
                     className="w-full h-auto rounded-xl shadow-lg"
-                    loading="eager"
+                    loading="lazy"
+                    width="600"
+                    height="400"
                   />
                   
                   {/* Overlay com informações */}

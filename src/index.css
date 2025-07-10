@@ -88,6 +88,17 @@
   .subtitle-section {
     @apply text-lg md:text-xl leading-relaxed;
   }
+  
+  /* Performance optimizations */
+  img {
+    font-display: swap;
+  }
+  
+  /* Preload critical fonts */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
 }
 
 @keyframes shimmer {

@@ -2,6 +2,7 @@
 import { Mail, Phone, Linkedin, Instagram, Facebook, MapPin, Building2, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { images } from '../assets/images';
+import { schemaData } from '../data/seoData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,11 +10,15 @@ const Footer = () => {
 
   return (
     <footer className="bg-dark-900 text-white pt-16 pb-8">
+      {/* Schema.org structured data */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaData.localBusiness)}
+      </script>
       <div className="container-wide">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12">
           <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
-              <img src={logoSrc} alt="5x Aceleradora" className="h-14" />
+              <img src={logoSrc} alt="5x Aceleradora" className="h-14" loading="lazy" width="120" height="56" />
             </div>
             <p className="text-gray-400 mb-6">
               Especialistas em automatizar processos comerciais com IA personalizada para empresas que buscam vantagem competitiva.
@@ -108,24 +113,14 @@ const Footer = () => {
           
           <div>
             <h4 className="text-lg font-semibold mb-6">Contato</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-3 mt-0.5 text-blue-500 flex-shrink-0" />
-                <span className="text-gray-400 break-words">alexandre.valente@5xaceleradora.com.br</span>
-              </li>
-              <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 mt-0.5 text-blue-500 flex-shrink-0" />
-                <span className="text-gray-400">(19) 9 9443-5313</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 mt-0.5 text-blue-500 flex-shrink-0" />
-                <div className="text-gray-400">
-                  <div>Rua Augusto Emílio Zaluar, 59</div>
-                  <div>Jardim Chapadão</div>
-                  <div>13070-140 - Campinas/SP</div>
-                </div>
-              </li>
-            </ul>
+            <div className="text-gray-400 space-y-2">
+              <div className="font-medium text-white">5X Aceleradora</div>
+              <div>Rua Augusto Emílio Zaluar, 59</div>
+              <div>Jardim Chapadão</div>
+              <div>13070-140 - Campinas/SP</div>
+              <div>(19) 9 9443-5313</div>
+              <div className="break-words">alexandre.valente@5xaceleradora.com.br</div>
+            </div>
           </div>
         </div>
         

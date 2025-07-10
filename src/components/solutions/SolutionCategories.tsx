@@ -92,6 +92,9 @@ const SolutionCategories = () => {
                             : "Consultor apresentando ferramentas de IA (ChatGPT, OpenAI, Gemini, etc.) para equipe em treinamento."
                         } 
                         className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
+                        width="400"
+                        height="144"
                       />
                     </div>
                   )}

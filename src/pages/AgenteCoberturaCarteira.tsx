@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, Users, BarChart3, AlertTriangle, CheckCircle2, Phone, TrendingUp, Cpu, Zap, Terminal, Brain, PieChart, Activity, Clock, Filter, Calendar, ExternalLink } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Progress } from '../components/ui/progress';
 import { Badge } from '../components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
+import { seoData } from '../data/seoData';
+import { getCanonicalUrl } from '../utils/seo';
 
 const AgenteCoberturaCarteira = () => {
   const [animatedCards, setAnimatedCards] = useState<boolean[]>([false, false, false]);
@@ -375,6 +378,12 @@ const AgenteCoberturaCarteira = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+      <SEOHead 
+        title={seoData.agenteCoberturaCarteira.title}
+        description={seoData.agenteCoberturaCarteira.description}
+        canonical={getCanonicalUrl('/agente-cobertura-carteira')}
+        keywords={seoData.agenteCoberturaCarteira.keywords}
+      />
       <Navbar />
       
       <main className="flex-grow pt-20">

@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logoSrc} alt="5x Aceleradora" className="h-12" />
+          <img src={logoSrc} alt="5x Aceleradora" className="h-12" loading="lazy" width="100" height="48" />
         </Link>
 
         {/* Desktop Navigation */}

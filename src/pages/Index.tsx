@@ -7,6 +7,9 @@ import Statistics from '../components/Statistics';
 import IntelligentSolutions from '../components/IntelligentSolutions';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
+import SEOHead from '../components/SEOHead';
+import { seoData, schemaData } from '../data/seoData';
+import { getCanonicalUrl } from '../utils/seo';
 
 const Index: React.FC = () => {
   // Add smooth scroll functionality for anchor links
@@ -32,6 +35,13 @@ const Index: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SEOHead 
+        title={seoData.home.title}
+        description={seoData.home.description}
+        canonical={getCanonicalUrl('/')}
+        keywords={seoData.home.keywords}
+        schema={schemaData.organization}
+      />
       <Navbar />
       <FloatingBadge />
       <main className="flex-grow">

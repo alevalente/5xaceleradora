@@ -122,6 +122,9 @@ const AgentSolutions: React.FC<AgentSolutionsProps> = ({ setApi }) => {
                         src={solution.image} 
                         alt={`${solution.title} - Agente de IA`}
                         className="w-full h-full object-cover object-[center_20%] transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
+                        width="400"
+                        height="256"
                       />
                     </div>
                   )}
