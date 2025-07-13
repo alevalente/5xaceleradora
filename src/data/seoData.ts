@@ -12,8 +12,8 @@ export const seoData = {
     canonical: "https://5xaceleradora.com/agente-analise-conversas"
   },
   iagoConversas: {
-    title: "Iago Conversas - Plataforma de Atendimento com IA",
-    description: "Plataforma completa de atendimento automatizado com IA. Integração WhatsApp, análise de conversas e gestão inteligente de leads para maximizar suas vendas.",
+    title: "Iago WhatsApp IA - Automação Comercial Inteligente",
+    description: "Automatize vendas no WhatsApp com IA avançada. Gestão de leads, análise de conversas e follow-up automático para maximizar resultados comerciais.",
     keywords: "plataforma atendimento, IA atendimento, WhatsApp Business, gestão leads, automação comercial",
     canonical: "https://5xaceleradora.com/iago-conversas"
   },
