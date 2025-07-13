@@ -19,7 +19,7 @@ const ReativacaoHero = () => {
       <div className="bg-gray-800/50 backdrop-blur-sm py-4 relative z-10">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center space-x-2 text-sm text-gray-400">
-            <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
+            <Link to="/" className="hover:text-blue-400 transition-colors">Início</Link>
             <span>/</span>
             <span className="text-gray-200">Agente Reativação de Clientes</span>
             <Badge variant="outline" className="ml-4 border-green-500/30 text-green-400">
