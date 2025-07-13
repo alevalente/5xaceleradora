@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12">
           <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-6">
-              <img src={logoSrc} alt="5x Aceleradora" className="h-14" loading="lazy" width="120" height="56" />
+              <img src={logoSrc} alt="5x Aceleradora" className="h-14 w-auto object-contain" loading="lazy" />
             </div>
             <p className="text-gray-400 mb-6">
               Especialistas em automatizar processos comerciais com IA personalizada para empresas que buscam vantagem competitiva.
