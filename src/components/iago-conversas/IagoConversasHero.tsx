@@ -13,7 +13,7 @@ const IagoConversasHero = () => {
       <div className="bg-gray-50 py-4">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link to="/" className="hover:text-blue-600">Home</Link>
+            <Link to="/" className="hover:text-blue-600">Início</Link>
             <span>/</span>
             <span className="text-gray-900">IAgo Conversas</span>
           </div>
@@ -38,7 +38,11 @@ const IagoConversasHero = () => {
             <div className="text-center lg:text-left animate-fade-up">
               {/* Logo do IAgo Conversas */}
               <div className="mb-8 flex justify-center lg:justify-start">
-                <LogoWithTransparentBackground />
+                <img 
+                  src={images.logo} 
+                  alt="IAgo Conversas" 
+                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                />
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
