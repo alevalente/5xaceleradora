@@ -65,7 +65,7 @@ const ContactForm = () => {
           method="POST" 
           data-netlify="true" 
           netlify-honeypot="bot-field"
-          action="/"
+          action="/obrigado"
           onSubmit={handleSubmit} 
           className="space-y-3"
         >
