@@ -43,34 +43,15 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, consent: checked }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    
+  const handleSubmit = (e: FormEvent) => {
     if (!formData.consent) {
+      e.preventDefault();
       toast.error("Por favor, aceite os termos de consentimento para continuar.");
       return;
     }
     
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // Show success message
-    toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      website: '',
-      phone: '',
-      message: '',
-      consent: false
-    });
-    
-    setIsSubmitting(false);
+    // Form will be submitted naturally to Netlify after validation
   };
 
   return (
@@ -84,6 +65,7 @@ const ContactForm = () => {
           method="POST" 
           data-netlify="true" 
           netlify-honeypot="bot-field"
+          action="/"
           onSubmit={handleSubmit} 
           className="space-y-3"
         >
