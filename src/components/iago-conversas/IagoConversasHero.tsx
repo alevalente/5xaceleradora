@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Shield, TrendingUp, Eye } from 'lucide-react';
-import LogoWithTransparentBackground from '../LogoWithTransparentBackground';
 import { Button } from '../ui/button';
 import { images } from '../../assets/images';
 
@@ -10,7 +9,7 @@ const IagoConversasHero = () => {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-4 relative z-[80]">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <Link to="/" className="hover:text-blue-600">Início</Link>
