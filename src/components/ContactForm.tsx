@@ -88,6 +88,7 @@ const ContactForm = () => {
           className="space-y-3"
         >
           <input type="hidden" name="form-name" value="formulario-contato" />
+          <input type="text" name="bot-field" hidden />
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <ContactFormField
