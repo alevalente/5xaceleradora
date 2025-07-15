@@ -34,7 +34,7 @@ const ContactFormSubmitSection: React.FC<ContactFormSubmitSectionProps> = ({
         ) : (
           <>
             <Sparkles className="mr-2 h-4 w-4" />
-            Solicitar Consultoria Personalizada
+            Descobrir Meu Potencial de Automação
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </>
         )}
