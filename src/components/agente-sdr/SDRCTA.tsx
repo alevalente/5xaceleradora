@@ -11,10 +11,7 @@ const SDRCTA = () => {
   };
 
   const handleFormClick = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = '/#contact';
   };
 
   return (
@@ -70,8 +67,8 @@ const SDRCTA = () => {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CTA Button */}
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               onClick={handleFormClick}
@@ -80,22 +77,6 @@ const SDRCTA = () => {
               <Zap className="h-6 w-6 mr-3" />
               Quero Atender Instantaneamente
             </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={handleWhatsAppClick}
-              className="border-2 border-orange-500/60 text-orange-400 hover:bg-orange-500/10 hover:text-orange-300 hover:border-orange-400 px-10 py-4 text-lg font-semibold backdrop-blur-sm ring-1 ring-orange-400/20 hover:ring-orange-400/40 transition-all duration-300"
-            >
-              <MessageCircle className="h-5 w-5 mr-2" />
-              Conversar no WhatsApp
-            </Button>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              ✅ Atendimento em 2 segundos • ✅ Conversão 3x maior • ✅ Disponível 24/7
-            </p>
           </div>
         </div>
       </div>

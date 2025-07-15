@@ -11,11 +11,7 @@ const FollowupCTA = () => {
   };
 
   const handleFormClick = () => {
-    // Scroll para o formulário de contato
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = '/#contact';
   };
 
   return (
@@ -71,8 +67,8 @@ const FollowupCTA = () => {
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* CTA Button */}
+          <div className="flex justify-center">
             <Button 
               size="lg" 
               onClick={handleFormClick}
@@ -81,22 +77,6 @@ const FollowupCTA = () => {
               <Zap className="h-6 w-6 mr-3" />
               Quero Implementar o Agente
             </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={handleWhatsAppClick}
-              className="border-2 border-green-500/60 text-green-400 hover:bg-green-500/10 hover:text-green-300 hover:border-green-400 px-10 py-4 text-lg font-semibold backdrop-blur-sm ring-1 ring-green-400/20 hover:ring-green-400/40 transition-all duration-300"
-            >
-              <MessageCircle className="h-5 w-5 mr-2" />
-              Conversar no WhatsApp
-            </Button>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              ✅ Implementação em 15 dias • ✅ ROI em 60-90 dias • ✅ Suporte dedicado
-            </p>
           </div>
         </div>
       </div>
