@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Send, Sparkles, ArrowRight } from 'lucide-react';
-import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
 
 interface ContactFormSubmitSectionProps {
   isSubmitting: boolean;
@@ -41,20 +40,6 @@ const ContactFormSubmitSection: React.FC<ContactFormSubmitSectionProps> = ({
         )}
       </button>
 
-      {/* WhatsApp Alternative */}
-      <div className="text-center">
-        <p className="text-gray-500 text-xs mb-1">Ou se preferir:</p>
-        <a 
-          href="https://wa.me/5519994435314?text=Olá! Gostaria de conversar sobre os agentes inteligentes da 5X" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group text-sm"
-        >
-          <WhatsAppIcon className="mr-2 h-4 w-4" />
-          Falar pelo WhatsApp agora
-          <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform" />
-        </a>
-      </div>
     </div>
   );
 };
