@@ -2,8 +2,11 @@
 import React from 'react';
 import { Rocket, DollarSign, Users, MessageCircle, Phone } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const ReativacaoCTA = () => {
+  const navigate = useNavigate();
+
   const handleWhatsAppClick = () => {
     const phoneNumber = "5511999999999"; // Número do WhatsApp da empresa
     const message = encodeURIComponent("Olá! Tenho interesse no Agente de Reativação de Clientes. Gostaria de saber mais sobre como implementar na minha empresa.");
@@ -11,7 +14,7 @@ const ReativacaoCTA = () => {
   };
 
   const handleFormClick = () => {
-    window.location.href = '/#contact';
+    navigate('/#contact');
   };
 
   return (
