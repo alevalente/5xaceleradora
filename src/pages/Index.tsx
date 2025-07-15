@@ -33,6 +33,23 @@ const Index: React.FC = () => {
     return () => document.removeEventListener('click', handleAnchorClick);
   }, []);
 
+  // Handle automatic scroll to hash on page load
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col">
       <SEOHead 
