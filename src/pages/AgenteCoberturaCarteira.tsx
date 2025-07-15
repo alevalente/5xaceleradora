@@ -951,10 +951,6 @@ const AgenteCoberturaCarteira = () => {
               </a>
             </Button>
             
-            {/* Urgency indicator */}
-            <p className="mt-6 text-white/80 font-mono text-sm">
-              ⚡ Consultoria disponível por tempo limitado
-            </p>
           </div>
         </section>
       </main>

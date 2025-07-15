@@ -50,10 +50,6 @@ const FinalCTASection = () => {
           <Zap className="h-6 w-6 ml-3" />
         </Button>
         
-        {/* Urgency indicator */}
-        <p className="mt-6 text-white/80 font-mono text-sm">
-          ⚡ Análise disponível por tempo limitado
-        </p>
       </div>
     </section>
   );
