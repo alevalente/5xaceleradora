@@ -3,7 +3,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import WhatsAppIcon from '@/components/ui/WhatsAppIcon';
 
 const CustomAgentsByPersona = () => {
   const handleCTAClick = () => {
@@ -175,7 +174,7 @@ const CustomAgentsByPersona = () => {
                 as possibilidades de automação específicas para sua empresa.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex justify-center">
                 <button 
                   onClick={handleCTAClick}
                   className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center"
@@ -184,17 +183,6 @@ const CustomAgentsByPersona = () => {
                   Solicitar Consultoria Personalizada
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                
-                <a 
-                  href="https://wa.me/5519994435314?text=Olá! Gostaria de conversar sobre os agentes inteligentes da 5X" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="group bg-green-500 text-white hover:bg-green-600 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 flex items-center shadow-lg hover:shadow-xl"
-                >
-                  <WhatsAppIcon className="mr-2 h-5 w-5" />
-                  WhatsApp
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
               </div>
 
               {/* Trust Indicators */}
