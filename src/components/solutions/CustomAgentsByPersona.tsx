@@ -181,7 +181,7 @@ const CustomAgentsByPersona = () => {
                   className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center"
                 >
                   <Sparkles className="mr-2 h-5 w-5" />
-                  Solicitar Análise Gratuita
+                  Solicitar Consultoria Personalizada
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
                 

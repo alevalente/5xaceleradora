@@ -944,16 +944,16 @@ const AgenteCoberturaCarteira = () => {
               asChild
               className="bg-white text-gray-900 hover:bg-gray-100 text-xl font-bold py-8 px-12 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20"
             >
-              <Link to="/contato" className="inline-flex items-center">
+              <a href="/#contact" className="inline-flex items-center">
                 <Terminal className="h-6 w-6 mr-3" />
-                Solicitar Análise Gratuita da Minha Carteira
+                Descubra como proteger seus clientes
                 <Zap className="h-6 w-6 ml-3" />
-              </Link>
+              </a>
             </Button>
             
             {/* Urgency indicator */}
             <p className="mt-6 text-white/80 font-mono text-sm">
-              ⚡ Análise disponível por tempo limitado
+              ⚡ Consultoria disponível por tempo limitado
             </p>
           </div>
         </section>
