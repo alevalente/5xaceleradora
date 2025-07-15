@@ -9,7 +9,7 @@ const Footer = () => {
   const logoSrc = images.logoWhite;
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-700/50">
+    <footer className="bg-gray-800 text-white pt-16 pb-8 border-t-2 border-gray-600">
       {/* Schema.org structured data */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData.localBusiness)}
