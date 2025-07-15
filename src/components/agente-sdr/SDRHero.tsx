@@ -4,11 +4,8 @@ import { Headphones } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const SDRHero = () => {
-  const handleScrollToContact = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleFormRedirect = () => {
+    window.location.href = '/#contact';
   };
 
   return (
@@ -63,12 +60,12 @@ const SDRHero = () => {
         </p>
 
         <Button 
-          onClick={handleScrollToContact}
+          onClick={handleFormRedirect}
           size="lg" 
           className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-12 py-6 text-xl font-bold shadow-2xl border-2 border-orange-500/30 ring-2 ring-orange-400/20 hover:ring-orange-400/40 transition-all duration-300 transform hover:scale-105"
         >
           <Headphones className="h-6 w-6 mr-3" />
-          Quero atender instantaneamente
+          Automatizar Meu Processo Comercial
         </Button>
 
         <p className="mt-6 text-gray-400 text-sm">

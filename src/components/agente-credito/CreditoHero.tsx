@@ -4,11 +4,8 @@ import { Shield } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const CreditoHero = () => {
-  const handleScrollToContact = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleFormRedirect = () => {
+    window.location.href = '/#contact';
   };
 
   return (
@@ -63,12 +60,12 @@ const CreditoHero = () => {
         </p>
 
         <Button 
-          onClick={handleScrollToContact}
+          onClick={handleFormRedirect}
           size="lg" 
           className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-12 py-6 text-xl font-bold shadow-2xl border-2 border-green-500/30 ring-2 ring-green-400/20 hover:ring-green-400/40 transition-all duration-300 transform hover:scale-105"
         >
           <Shield className="h-6 w-6 mr-3" />
-          Quero agilizar minhas aprovações
+          Automatizar Meu Processo de Crédito
         </Button>
 
         <p className="mt-6 text-gray-400 text-sm">

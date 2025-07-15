@@ -4,11 +4,8 @@ import { Brain } from 'lucide-react';
 import { Button } from '../ui/button';
 
 const FollowupHero = () => {
-  const handleScrollToContact = () => {
-    const contactForm = document.getElementById('contact');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleFormRedirect = () => {
+    window.location.href = '/#contact';
   };
 
   return (
@@ -63,12 +60,12 @@ const FollowupHero = () => {
         </p>
 
         <Button 
-          onClick={handleScrollToContact}
+          onClick={handleFormRedirect}
           size="lg" 
           className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-12 py-6 text-xl font-bold shadow-2xl border-2 border-blue-500/30 ring-2 ring-blue-400/20 hover:ring-blue-400/40 transition-all duration-300 transform hover:scale-105"
         >
           <Brain className="h-6 w-6 mr-3" />
-          Quero conhecer a solução
+          Descobrir Meu Potencial de Automação
         </Button>
 
         <p className="mt-6 text-gray-400 text-sm">
