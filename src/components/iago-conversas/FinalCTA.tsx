@@ -124,6 +124,7 @@ const FinalCTA = () => {
                   method="POST" 
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
+                  action="/iago-conversas"
                   onSubmit={handleSubmit} 
                   className="space-y-4"
                 >
