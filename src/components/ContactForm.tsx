@@ -20,15 +20,7 @@ const ContactForm = () => {
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [completedFields, setCompletedFields] = useState(0);
   const [focusedField, setFocusedField] = useState<string | null>(null);
-
-  // Calculate progress
-  useEffect(() => {
-    const fields = ['name', 'email', 'company', 'website', 'phone', 'message'];
-    const completed = fields.filter(field => formData[field as keyof FormData]).length;
-    setCompletedFields(completed);
-  }, [formData]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -76,7 +68,7 @@ const ContactForm = () => {
 
   return (
     <ContactFormLayout>
-      <ContactFormHeader completedFields={completedFields} />
+      <ContactFormHeader />
 
       {/* Form */}
       <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-4 lg:p-5">

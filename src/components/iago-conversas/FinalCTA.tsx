@@ -22,15 +22,7 @@ const FinalCTA = () => {
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [completedFields, setCompletedFields] = useState(0);
   const [focusedField, setFocusedField] = useState<string | null>(null);
-
-  // Calculate progress
-  useEffect(() => {
-    const fields = ['name', 'email', 'company', 'website', 'phone', 'message'];
-    const completed = fields.filter(field => formData[field as keyof FormData]).length;
-    setCompletedFields(completed);
-  }, [formData]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -82,27 +74,12 @@ const FinalCTA = () => {
         <div className="max-w-5xl mx-auto">
           {/* Header compacto - fora do grid */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full border border-white/30 mb-4">
-              <MessageSquare className="h-4 w-4 text-white animate-pulse" />
-              <span className="text-xs font-medium text-white">
-                {completedFields}/6 campos preenchidos
-              </span>
-            </div>
-            
             <h3 className="text-lg md:text-xl font-bold text-white mb-3">
               Descubra como o IAgo pode melhorar a satisfação de seus clientes
             </h3>
             <p className="text-sm text-blue-100 mb-4">
               Converse com nossos especialistas e veja como analisar e melhorar cada interação da sua equipe.
             </p>
-            
-            {/* Progress Bar compacto */}
-            <div className="w-full max-w-md mx-auto bg-white/20 rounded-full h-1.5">
-              <div 
-                className="bg-white h-1.5 rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${(completedFields / 6) * 100}%` }}
-              />
-            </div>
           </div>
 
           {/* Grid com os dois cards alinhados */}
