@@ -77,19 +77,10 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="contact-iago" className="py-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="contact-iago" className="py-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="max-w-5xl mx-auto text-center mb-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2">
-            Entre em contato conosco
-          </h2>
-          <p className="text-lg mb-4 text-blue-100">
-            Resposta em até 30 minutos
-          </p>
-        </div>
-
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
             {/* Left Side - Form Content */}
             <div className="lg:col-span-8">
               {/* Header compacto */}
@@ -102,7 +93,7 @@ const FinalCTA = () => {
                 </div>
                 
                 <h3 className="text-lg md:text-xl font-bold text-white mb-1">
-                  Descubra como o IAgo pode revolucionar suas conversas comerciais
+                  Descubra como o IAgo pode melhorar a satisfação de seus clientes
                 </h3>
                 <p className="text-sm text-blue-100 mb-2">
                   Converse com nossos especialistas e veja como analisar e melhorar cada interação da sua equipe.
