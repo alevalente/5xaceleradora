@@ -77,21 +77,21 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="contact-iago" className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="contact-iago" className="py-12 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="max-w-4xl mx-auto text-center mb-8">
+        <div className="max-w-4xl mx-auto text-center mb-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Entre em contato conosco
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-6 text-blue-100">
             Resposta em até 30 minutos
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
             {/* Left Side - Form Content */}
-            <div className="lg:col-span-3 space-y-4">
+            <div className="lg:col-span-2 space-y-3">
               {/* Header personalizado para IAgo Conversas */}
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 rounded-full border border-white/30 mb-3">
@@ -237,12 +237,12 @@ const FinalCTA = () => {
             </div>
             
             {/* Right Side - Benefits específicos do IAgo */}
-            <div className="lg:col-span-2">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                <h4 className="text-lg font-semibold text-white mb-4">
+            <div className="lg:col-span-1">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                <h4 className="text-lg font-semibold text-white mb-3">
                   O que você vai descobrir:
                 </h4>
-                <ul className="space-y-3 text-blue-100">
+                <ul className="space-y-2 text-blue-100">
                   <li className="flex items-start">
                     <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
                     <span className="text-sm">Como identificar automaticamente oportunidades perdidas nas conversas</span>
@@ -260,26 +260,6 @@ const FinalCTA = () => {
                     <span className="text-sm">Dashboard estratégico para gestão comercial</span>
                   </li>
                 </ul>
-
-                <div className="mt-6 pt-6 border-t border-white/20">
-                  <p className="text-white/80 mb-4 text-sm">Ou se preferir:</p>
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
-                    className="w-full border-white/30 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm"
-                    asChild
-                  >
-                    <a 
-                      href="https://wa.me/5511999999999?text=Olá! Gostaria de conhecer o IAgo Conversas" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      <MessageCircle className="h-5 w-5" />
-                      Falar pelo WhatsApp agora
-                    </a>
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
