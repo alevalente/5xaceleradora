@@ -5,7 +5,7 @@ import ContactFormLayout from '../contact/ContactFormLayout';
 import ContactFormHeader from '../contact/ContactFormHeader';
 import ContactFormField from '../contact/ContactFormField';
 import ContactFormSubmitSection from '../contact/ContactFormSubmitSection';
-import { FormData } from '../contact/ContactFormTypes';
+import { type FormData } from '../contact/ContactFormTypes';
 import { useState, FormEvent, useEffect } from 'react';
 import { User, Mail, Building, Globe, Phone, MessageSquare } from 'lucide-react';
 import { toast } from 'sonner';
@@ -45,15 +45,35 @@ const FinalCTA = () => {
     setFormData(prev => ({ ...prev, consent: checked }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
     if (!formData.consent) {
-      e.preventDefault();
       toast.error("Por favor, aceite os termos de consentimento para continuar.");
       return;
     }
     
     setIsSubmitting(true);
-    // Form will be submitted naturally to Netlify after validation
+    
+    try {
+      const formElement = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(formElement);
+      
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSend as any).toString()
+      });
+      
+      if (response.ok) {
+        window.location.href = '/obrigado';
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast.error("Erro ao enviar formulário. Tente novamente.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -104,7 +124,6 @@ const FinalCTA = () => {
                   method="POST" 
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
-                  action="/obrigado"
                   onSubmit={handleSubmit} 
                   className="space-y-4"
                 >
