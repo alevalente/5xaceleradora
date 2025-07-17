@@ -54,8 +54,8 @@ const IagoConversasHero = () => {
 
               <div className="flex justify-center lg:justify-start">
                 <Button 
-                  size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+                  size="default" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3"
                   onClick={() => {
                     const contactSection = document.getElementById('contact-iago');
                     if (contactSection) {
