@@ -80,7 +80,7 @@ const FinalCTA = () => {
     <section id="contact-iago" className="py-6 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Left Side - Form Content */}
             <div className="lg:col-span-8">
               {/* Header compacto */}
