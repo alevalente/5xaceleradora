@@ -227,28 +227,28 @@ const FinalCTA = () => {
               </div>
             </div>
             
-            {/* Right Side - Benefits compactos específicos do IAgo */}
+            {/* Right Side - Benefits alinhados com o formulário */}
             <div className="lg:col-span-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 border border-white/20 h-fit">
-                <h4 className="text-base font-semibold text-white mb-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full flex flex-col justify-center">
+                <h4 className="text-lg font-semibold text-white mb-4">
                   O que você vai descobrir:
                 </h4>
-                <ul className="space-y-1.5 text-blue-100">
+                <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
-                    <span className="text-xs">Como identificar automaticamente oportunidades perdidas nas conversas</span>
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Como identificar automaticamente oportunidades perdidas nas conversas</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
-                    <span className="text-xs">Análise detalhada do desempenho de cada vendedor</span>
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Análise detalhada do desempenho de cada vendedor</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
-                    <span className="text-xs">Follow-ups automáticos personalizados</span>
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Follow-ups automáticos personalizados</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
-                    <span className="text-xs">Dashboard estratégico para gestão comercial</span>
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-sm leading-relaxed">Dashboard estratégico para gestão comercial</span>
                   </li>
                 </ul>
               </div>
