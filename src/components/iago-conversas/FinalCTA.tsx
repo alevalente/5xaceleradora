@@ -7,7 +7,7 @@ import ContactFormField from '../contact/ContactFormField';
 import ContactFormSubmitSection from '../contact/ContactFormSubmitSection';
 import { type FormData } from '../contact/ContactFormTypes';
 import { useState, FormEvent, useEffect } from 'react';
-import { User, Mail, Building, Globe, Phone, MessageSquare } from 'lucide-react';
+import { User, Mail, Building, Globe, Phone, MessageSquare, TrendingDown, AlertTriangle, Eye, Crown } from 'lucide-react';
 import { toast } from 'sonner';
 import { Checkbox } from '@/components/ui/checkbox';
 
@@ -233,24 +233,24 @@ const FinalCTA = () => {
             <div className="lg:col-span-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 h-full flex flex-col justify-center">
                 <h4 className="text-lg font-semibold text-white mb-4">
-                  O que você vai descobrir:
+                  Você realmente sabe o que acontece nas suas conversas comerciais?
                 </h4>
                 <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Como identificar automaticamente oportunidades perdidas nas conversas</span>
+                    <TrendingDown className="h-5 w-5 text-white mt-0.5 mr-3 flex-shrink-0 animate-bounce" />
+                    <span className="text-sm leading-relaxed">Descubra onde seus vendedores realmente perdem vendas – todos os dias.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Análise detalhada do desempenho de cada vendedor</span>
+                    <AlertTriangle className="h-5 w-5 text-white mt-0.5 mr-3 flex-shrink-0 animate-pulse" />
+                    <span className="text-sm leading-relaxed">Pare de se enganar: ninguém preenche CRM do jeito que deveria.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Follow-ups automáticos personalizados</span>
+                    <Eye className="h-5 w-5 text-white mt-0.5 mr-3 flex-shrink-0 animate-pulse" />
+                    <span className="text-sm leading-relaxed">Deixe a IA te mostrar o que o seu ouvido nunca captou.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm leading-relaxed">Dashboard estratégico para gestão comercial</span>
+                    <Crown className="h-5 w-5 text-white mt-0.5 mr-3 flex-shrink-0 animate-bounce" />
+                    <span className="text-sm leading-relaxed">Saia do achismo e assuma o controle total das conversas com clientes.</span>
                   </li>
                 </ul>
               </div>
