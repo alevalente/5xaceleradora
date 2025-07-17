@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -58,7 +57,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+    <section id="contact-iago" className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
