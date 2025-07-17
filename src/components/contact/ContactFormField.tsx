@@ -64,14 +64,13 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
           />
         ) : (
           <input
-            type={type}
+            type={name === 'website' ? 'text' : type}
             name={name}
             value={formData[name as keyof FormData] as string}
             onChange={onChange}
             onFocus={() => onFocus(name)}
             onBlur={onBlur}
             required={required}
-            // Remove validação de padrão para URL - deixar apenas o tipo
             className={cn(
               "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none text-sm text-gray-900 placeholder:text-gray-500",
               isFocused 
