@@ -77,48 +77,48 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="contact-iago" className="py-12 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="max-w-4xl mx-auto text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="contact-iago" className="py-8 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="max-w-5xl mx-auto text-center mb-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">
             Entre em contato conosco
           </h2>
-          <p className="text-xl mb-6 text-blue-100">
+          <p className="text-lg mb-4 text-blue-100">
             Resposta em até 30 minutos
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
             {/* Left Side - Form Content */}
-            <div className="lg:col-span-2 space-y-3">
-              {/* Header personalizado para IAgo Conversas */}
-              <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/20 rounded-full border border-white/30 mb-3">
+            <div className="lg:col-span-8">
+              {/* Header compacto */}
+              <div className="text-center lg:text-left mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full border border-white/30 mb-2">
                   <MessageSquare className="h-4 w-4 text-white animate-pulse" />
-                  <span className="text-sm font-medium text-white">
+                  <span className="text-xs font-medium text-white">
                     {completedFields}/6 campos preenchidos
                   </span>
                 </div>
                 
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-white mb-1">
                   Descubra como o IAgo pode revolucionar suas conversas comerciais
                 </h3>
-                <p className="text-blue-100 mb-4">
+                <p className="text-sm text-blue-100 mb-2">
                   Converse com nossos especialistas e veja como analisar e melhorar cada interação da sua equipe.
                 </p>
                 
-                {/* Progress Bar */}
-                <div className="w-full bg-white/20 rounded-full h-2 mb-4">
+                {/* Progress Bar compacto */}
+                <div className="w-full bg-white/20 rounded-full h-1.5 mb-3">
                   <div 
-                    className="bg-white h-2 rounded-full transition-all duration-500 ease-out"
+                    className="bg-white h-1.5 rounded-full transition-all duration-500 ease-out"
                     style={{ width: `${(completedFields / 6) * 100}%` }}
                   />
                 </div>
               </div>
 
               {/* Form */}
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-6">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-4">
                 <form 
                   name="formulario-iago-conversas" 
                   method="POST" 
@@ -126,12 +126,12 @@ const FinalCTA = () => {
                   netlify-honeypot="bot-field"
                   action="/iago-conversas"
                   onSubmit={handleSubmit} 
-                  className="space-y-4"
+                   className="space-y-3"
                 >
                   <input type="hidden" name="form-name" value="formulario-iago-conversas" />
                   <input type="text" name="bot-field" hidden />
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <ContactFormField
                       icon={User}
                       label="Nome completo"
@@ -159,7 +159,7 @@ const FinalCTA = () => {
                     />
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <ContactFormField
                       icon={Building}
                       label="Empresa"
@@ -236,28 +236,28 @@ const FinalCTA = () => {
               </div>
             </div>
             
-            {/* Right Side - Benefits específicos do IAgo */}
-            <div className="lg:col-span-1">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
-                <h4 className="text-lg font-semibold text-white mb-3">
+            {/* Right Side - Benefits compactos específicos do IAgo */}
+            <div className="lg:col-span-4">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 border border-white/20 h-fit">
+                <h4 className="text-base font-semibold text-white mb-2">
                   O que você vai descobrir:
                 </h4>
-                <ul className="space-y-2 text-blue-100">
+                <ul className="space-y-1.5 text-blue-100">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm">Como identificar automaticamente oportunidades perdidas nas conversas</span>
+                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+                    <span className="text-xs">Como identificar automaticamente oportunidades perdidas nas conversas</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm">Análise detalhada do desempenho de cada vendedor</span>
+                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+                    <span className="text-xs">Análise detalhada do desempenho de cada vendedor</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm">Follow-ups automáticos personalizados</span>
+                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+                    <span className="text-xs">Follow-ups automáticos personalizados</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                    <span className="text-sm">Dashboard estratégico para gestão comercial</span>
+                    <div className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+                    <span className="text-xs">Dashboard estratégico para gestão comercial</span>
                   </li>
                 </ul>
               </div>
