@@ -52,12 +52,18 @@ const IagoConversasHero = () => {
                 IAgo Conversas organiza automaticamente WhatsApp, Instagram, e-mail e chat, garantindo histórico completo, segurança total e eficiência imediata da sua equipe.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg">
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact-iago');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
                   Solicitar Demonstração Gratuita
-                </Button>
-                <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                  Ver Como Funciona
                 </Button>
               </div>
             </div>
