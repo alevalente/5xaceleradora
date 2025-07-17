@@ -53,7 +53,7 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
             required={required}
             rows={3}
             className={cn(
-              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none resize-none text-sm",
+              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none resize-none text-sm text-gray-900 placeholder:text-gray-500",
               isFocused 
                 ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
                 : hasValue 
@@ -71,8 +71,9 @@ const ContactFormField: React.FC<ContactFormFieldProps> = ({
             onFocus={() => onFocus(name)}
             onBlur={onBlur}
             required={required}
+            // Remove validação de padrão para URL - deixar apenas o tipo
             className={cn(
-              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none text-sm",
+              "w-full px-3 py-2.5 rounded-xl border-2 transition-all duration-300 focus:outline-none text-sm text-gray-900 placeholder:text-gray-500",
               isFocused 
                 ? "border-blue-500 bg-blue-50/50 shadow-lg shadow-blue-100/50 transform scale-[1.02]" 
                 : hasValue 
