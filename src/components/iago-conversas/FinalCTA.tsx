@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -37,15 +38,14 @@ const FinalCTA = () => {
     setFormData(prev => ({ ...prev, consent: checked }));
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmitClick = () => {
     if (!formData.consent) {
-      e.preventDefault();
       toast.error("Por favor, aceite os termos de consentimento para continuar.");
-      return;
+      return false;
     }
     
     setIsSubmitting(true);
-    // Permitir que o Netlify processe o formulário nativamente
+    return true;
   };
 
   return (
@@ -75,7 +75,6 @@ const FinalCTA = () => {
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
                   action="/obrigado"
-                  onSubmit={handleSubmit} 
                   className="space-y-3"
                 >
                   <input type="hidden" name="form-name" value="formulario-iago-conversas" />
@@ -182,6 +181,7 @@ const FinalCTA = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting || !formData.consent}
+                      onClick={handleSubmitClick}
                       className={`w-full relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-2.5 px-5 rounded-xl transition-all duration-300 flex items-center justify-center group ${
                         (isSubmitting || !formData.consent) 
                           ? "opacity-70 cursor-not-allowed" 
