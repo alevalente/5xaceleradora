@@ -74,6 +74,7 @@ const FinalCTA = () => {
                   method="POST" 
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
+                  action="/obrigado"
                   onSubmit={handleSubmit} 
                   className="space-y-3"
                 >
