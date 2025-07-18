@@ -74,9 +74,8 @@ const FinalCTA = () => {
                   method="POST" 
                   data-netlify="true" 
                   netlify-honeypot="bot-field"
-                  action="/iago-conversas"
                   onSubmit={handleSubmit} 
-                   className="space-y-3"
+                  className="space-y-3"
                 >
                   <input type="hidden" name="form-name" value="formulario-iago-conversas" />
                   <input type="text" name="bot-field" hidden />

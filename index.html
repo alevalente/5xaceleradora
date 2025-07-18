@@ -22,9 +22,24 @@
   </head>
 
   <body>
-    <!-- Hidden form for Netlify Forms recognition -->
+    <!-- Hidden forms for Netlify Forms recognition -->
+    
+    <!-- Formulário principal (página inicial) -->
     <form name="formulario-contato" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="formulario-contato" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="url" name="website" />
+      <input type="tel" name="phone" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+    </form>
+
+    <!-- Formulário da página Iago Conversas -->
+    <form name="formulario-iago-conversas" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="formulario-iago-conversas" />
       <input type="text" name="bot-field" />
       <input type="text" name="name" />
       <input type="email" name="email" />
