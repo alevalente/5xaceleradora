@@ -1,0 +1,1224 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pelo Contato - 5X Aceleradora</title>
+    <meta name="description" content="Recebemos suas informações! Em breve, um dos nossos especialistas entrará em contato com você.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Obrigado pelo Contato - 5X Aceleradora">
+    <meta property="og:description" content="Recebemos suas informações! Em breve, um dos nossos especialistas entrará em contato com você.">
+    <meta property="og:image" content="/lovable-uploads/72182d7a-6fac-4c80-bb0c-a84498888fc6.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 222.2 47.4% 11.2%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96%;
+            --secondary-foreground: 222.2 84% 4.9%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222.2 84% 4.9%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 222.2 84% 4.9%;
+            --radius: 0.5rem;
+        }
+
+        /* Reset and Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.5;
+            color: hsl(var(--foreground));
+            background: hsl(var(--background));
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container Classes */
+        .container-wide {
+            margin: 0 auto;
+            padding: 0 1rem;
+            max-width: 1280px;
+        }
+
+        @media (min-width: 768px) {
+            .container-wide {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container-wide {
+                padding: 0 2rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container-wide {
+                padding: 0 3rem;
+            }
+        }
+
+        /* Layout Classes */
+        .min-h-screen {
+            min-height: 100vh;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .justify-start {
+            justify-content: flex-start;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .inset-0 {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .overflow-visible {
+            overflow: visible;
+        }
+
+        .z-20 {
+            z-index: 20;
+        }
+
+        .z-30 {
+            z-index: 30;
+        }
+
+        /* Grid Classes */
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-10 {
+                grid-template-columns: repeat(10, minmax(0, 1fr));
+            }
+            
+            .lg\:col-span-6 {
+                grid-column: span 6 / span 6;
+            }
+            
+            .lg\:col-span-4 {
+                grid-column: span 4 / span 4;
+            }
+        }
+
+        .gap-8 {
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:gap-16 {
+                gap: 4rem;
+            }
+        }
+
+        /* Background Gradients */
+        .bg-gradient-to-br {
+            background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+        }
+
+        .from-blue-950 {
+            --tw-gradient-from: #172554;
+            --tw-gradient-to: #172554;
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
+
+        .via-blue-900 {
+            --tw-gradient-to: #1e3a8a;
+            --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to);
+        }
+
+        .to-indigo-900 {
+            --tw-gradient-to: #312e81;
+        }
+
+        .bg-gradient-to-r {
+            background-image: linear-gradient(to right, var(--tw-gradient-stops));
+        }
+
+        .from-blue-600 {
+            --tw-gradient-from: #2563eb;
+            --tw-gradient-to: #2563eb;
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
+
+        .to-purple-600 {
+            --tw-gradient-to: #9333ea;
+        }
+
+        .bg-gradient-to-t {
+            background-image: linear-gradient(to top, var(--tw-gradient-stops));
+        }
+
+        .from-blue-900\/50 {
+            --tw-gradient-from: rgb(30 58 138 / 0.5);
+            --tw-gradient-to: rgb(30 58 138 / 0.5);
+            --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        }
+
+        .to-transparent {
+            --tw-gradient-to: transparent;
+        }
+
+        .bg-white\/10 {
+            background-color: rgb(255 255 255 / 0.1);
+        }
+
+        /* Background Colors */
+        .bg-green-500\/20 {
+            background-color: rgb(34 197 94 / 0.2);
+        }
+
+        .bg-blue-400\/20 {
+            background-color: rgb(96 165 250 / 0.2);
+        }
+
+        .bg-indigo-400\/20 {
+            background-color: rgb(129 140 248 / 0.2);
+        }
+
+        .bg-purple-400\/20 {
+            background-color: rgb(196 181 253 / 0.2);
+        }
+
+        /* Text Colors */
+        .text-white {
+            color: #ffffff;
+        }
+
+        .text-blue-100 {
+            color: #dbeafe;
+        }
+
+        .text-blue-200 {
+            color: #bfdbfe;
+        }
+
+        .text-green-400 {
+            color: #4ade80;
+        }
+
+        .text-purple-300 {
+            color: #d8b4fe;
+        }
+
+        .text-blue-300 {
+            color: #93c5fd;
+        }
+
+        .text-cyan-300 {
+            color: #67e8f9;
+        }
+
+        .text-transparent {
+            color: transparent;
+        }
+
+        .bg-clip-text {
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        /* Text Size */
+        .text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .md\:text-5xl {
+                font-size: 3rem;
+                line-height: 1;
+            }
+            
+            .md\:text-2xl {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+            
+            .md\:text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+            
+            .md\:text-sm {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:text-6xl {
+                font-size: 3.75rem;
+                line-height: 1;
+            }
+            
+            .lg\:text-lg {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+            
+            .lg\:text-sm {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        /* Font Weight */
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        /* Leading */
+        .leading-tight {
+            line-height: 1.25;
+        }
+
+        /* Margin & Padding */
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+
+        .p-3 {
+            padding: 0.75rem;
+        }
+
+        .px-8 {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .pt-20 {
+            padding-top: 5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:p-4 {
+                padding: 1rem;
+            }
+            
+            .lg\:pt-0 {
+                padding-top: 0;
+            }
+        }
+
+        /* Sizing */
+        .w-20 {
+            width: 5rem;
+        }
+
+        .h-20 {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .h-10 {
+            height: 2.5rem;
+        }
+
+        .w-10 {
+            width: 2.5rem;
+        }
+
+        .h-5 {
+            height: 1.25rem;
+        }
+
+        .w-5 {
+            width: 1.25rem;
+        }
+
+        .h-6 {
+            height: 1.5rem;
+        }
+
+        .w-6 {
+            width: 1.5rem;
+        }
+
+        .h-8 {
+            height: 2rem;
+        }
+
+        .w-8 {
+            width: 2rem;
+        }
+
+        .w-96 {
+            width: 24rem;
+        }
+
+        .h-96 {
+            width: 24rem;
+            height: 24rem;
+        }
+
+        .w-80 {
+            width: 20rem;
+        }
+
+        .h-80 {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        .w-72 {
+            width: 18rem;
+        }
+
+        .h-72 {
+            width: 18rem;
+            height: 18rem;
+        }
+
+        .w-2 {
+            width: 0.5rem;
+        }
+
+        .h-2 {
+            height: 0.5rem;
+        }
+
+        .w-3 {
+            width: 0.75rem;
+        }
+
+        .h-3 {
+            height: 0.75rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .h-32 {
+            height: 8rem;
+        }
+
+        .h-\[500px\] {
+            height: 500px;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:h-\[600px\] {
+                height: 600px;
+            }
+
+            .lg\:h-8 {
+                height: 2rem;
+            }
+
+            .lg\:w-8 {
+                width: 2rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .xl\:h-\[700px\] {
+                height: 700px;
+            }
+        }
+
+        /* Max Width */
+        .max-w-2xl {
+            max-width: 42rem;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:mx-0 {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        /* Text Alignment */
+        .text-center {
+            text-align: center;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:text-left {
+                text-align: left;
+            }
+
+            .lg\:justify-start {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Borders */
+        .rounded-full {
+            border-radius: 9999px;
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+
+        .rounded-xl {
+            border-radius: 0.75rem;
+        }
+
+        .border {
+            border-width: 1px;
+        }
+
+        .border-green-400\/30 {
+            border-color: rgb(74 222 128 / 0.3);
+        }
+
+        .border-white\/20 {
+            border-color: rgb(255 255 255 / 0.2);
+        }
+
+        /* Filter Effects */
+        .filter {
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        }
+
+        .blur-3xl {
+            --tw-blur: blur(64px);
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        }
+
+        .backdrop-blur-sm {
+            --tw-backdrop-blur: blur(4px);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        }
+
+        .backdrop-blur-md {
+            --tw-backdrop-blur: blur(12px);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+        }
+
+        /* Shadows */
+        .shadow-xl {
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .shadow-2xl {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        /* Flexbox Gap */
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .gap-3 {
+            gap: 0.75rem;
+        }
+
+        .gap-4 {
+            gap: 1rem;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:gap-3 {
+                gap: 0.75rem;
+            }
+        }
+
+        /* Flexbox Direction */
+        .flex-col {
+            flex-direction: column;
+        }
+
+        @media (min-width: 640px) {
+            .sm\:flex-row {
+                flex-direction: row;
+            }
+        }
+
+        /* Positioning */
+        .top-20 {
+            top: 5rem;
+        }
+
+        .right-8 {
+            right: 2rem;
+        }
+
+        .bottom-24 {
+            bottom: 6rem;
+        }
+
+        .right-4 {
+            right: 1rem;
+        }
+
+        .top-32 {
+            top: 8rem;
+        }
+
+        .left-0 {
+            left: 0;
+        }
+
+        .left-8 {
+            left: 2rem;
+        }
+
+        .top-\[10\%\] {
+            top: 10%;
+        }
+
+        .left-\[10\%\] {
+            left: 10%;
+        }
+
+        .top-\[60\%\] {
+            top: 60%;
+        }
+
+        .right-\[15\%\] {
+            right: 15%;
+        }
+
+        .bottom-\[20\%\] {
+            bottom: 20%;
+        }
+
+        .left-\[40\%\] {
+            left: 40%;
+        }
+
+        .top-\[30\%\] {
+            top: 30%;
+        }
+
+        .left-\[20\%\] {
+            left: 20%;
+        }
+
+        .top-\[50\%\] {
+            top: 50%;
+        }
+
+        .right-\[30\%\] {
+            right: 30%;
+        }
+
+        .bottom-\[40\%\] {
+            bottom: 40%;
+        }
+
+        .left-\[60\%\] {
+            left: 60%;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:top-32 {
+                top: 8rem;
+            }
+
+            .lg\:right-12 {
+                right: 3rem;
+            }
+
+            .lg\:bottom-32 {
+                bottom: 8rem;
+            }
+
+            .lg\:right-8 {
+                right: 2rem;
+            }
+
+            .lg\:top-48 {
+                top: 12rem;
+            }
+
+            .lg\:left-0 {
+                left: 0;
+            }
+
+            .lg\:left-12 {
+                left: 3rem;
+            }
+        }
+
+        /* Visibility */
+        .hidden {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:block {
+                display: block;
+            }
+        }
+
+        /* Transitions */
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+
+        .duration-300 {
+            transition-duration: 300ms;
+        }
+
+        /* Transform */
+        .transform {
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .hover\:scale-105:hover {
+            --tw-scale-x: 1.05;
+            --tw-scale-y: 1.05;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .hover\:shadow-2xl:hover {
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        /* Button Styles */
+        .inline-flex {
+            display: inline-flex;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+
+        /* Background Image */
+        .bg-opacity-40 {
+            --tw-bg-opacity: 0.4;
+        }
+
+        /* Background Pattern */
+        .opacity-40 {
+            opacity: 0.4;
+        }
+
+        /* Custom Keyframes and Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-10px) rotate(1deg);
+            }
+            66% {
+                transform: translateY(5px) rotate(-1deg);
+            }
+        }
+
+        @keyframes scale-in {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse-soft {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-scale-in {
+            animation: scale-in 0.3s ease-out;
+        }
+
+        .animate-fade-up {
+            animation: fade-up 0.6s ease-out;
+        }
+
+        .animate-pulse-soft {
+            animation: pulse-soft 2s ease-in-out infinite;
+        }
+
+        .animation-delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .animation-delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .animation-delay-500 {
+            animation-delay: 500ms;
+        }
+
+        .animation-delay-700 {
+            animation-delay: 700ms;
+        }
+
+        .animation-delay-800 {
+            animation-delay: 800ms;
+        }
+
+        .animation-delay-1000 {
+            animation-delay: 1000ms;
+        }
+
+        .delay-200 {
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            animation-delay: 300ms;
+        }
+
+        .delay-400 {
+            animation-delay: 400ms;
+        }
+
+        .delay-500 {
+            animation-delay: 500ms;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1rem 0;
+        }
+
+        .navbar-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo {
+            height: 2.5rem;
+            width: auto;
+        }
+
+        .navbar-nav {
+            display: none;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-nav {
+                display: flex;
+            }
+        }
+
+        .navbar-link {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .navbar-link:hover {
+            color: #2563eb;
+        }
+
+        .navbar-cta {
+            background: linear-gradient(to right, #2563eb, #9333ea);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .navbar-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .footer-section h3 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Fix for min-h-screen calculation with fixed header */
+        .main-content {
+            min-height: calc(100vh - 80px);
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/">
+                <img src="/lovable-uploads/72182d7a-6fac-4c80-bb0c-a84498888fc6.png" alt="5X Aceleradora" class="navbar-logo">
+            </a>
+            <div class="navbar-nav">
+                <a href="/" class="navbar-link">Início</a>
+                <a href="/#solucoes" class="navbar-link">Soluções</a>
+                <a href="/#sobre" class="navbar-link">Sobre</a>
+                <a href="/#contato" class="navbar-link">Contato</a>
+            </div>
+            <a href="/#contato" class="navbar-cta">Falar com Especialista</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-900">
+            <!-- Background animated elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-[10%] left-[10%] w-96 h-96 rounded-full bg-blue-400/20 filter blur-3xl animate-pulse-soft"></div>
+                <div class="absolute top-[60%] right-[15%] w-80 h-80 rounded-full bg-indigo-400/20 filter blur-3xl animate-float animation-delay-500"></div>
+                <div class="absolute bottom-[20%] left-[40%] w-72 h-72 rounded-full bg-purple-400/20 filter blur-3xl animate-float animation-delay-1000"></div>
+                
+                <!-- Partículas flutuantes -->
+                <div class="absolute top-[30%] left-[20%] w-2 h-2 bg-blue-300 rounded-full animate-float animation-delay-300"></div>
+                <div class="absolute top-[50%] right-[30%] w-3 h-3 bg-indigo-300 rounded-full animate-float animation-delay-700"></div>
+                <div class="absolute bottom-[40%] left-[60%] w-2 h-2 bg-purple-300 rounded-full animate-float animation-delay-200"></div>
+            </div>
+
+            <!-- Grid pattern sutil -->
+            <div class="absolute inset-0 opacity-40" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+
+            <!-- Main content -->
+            <div class="container-wide relative z-20">
+                <div class="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-16 items-center min-h-[80vh]">
+                    
+                    <!-- Coluna principal - conteúdo -->
+                    <div class="lg:col-span-6 text-center lg:text-left pt-20 lg:pt-0">
+                        
+                        <!-- Ícone de sucesso -->
+                        <div class="flex justify-center lg:justify-start mb-6 animate-scale-in">
+                            <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-green-400/30">
+                                <!-- CheckCircle SVG Icon -->
+                                <svg class="h-10 w-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <!-- Título principal -->
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-fade-up delay-200 text-white leading-tight">
+                            Recebemos suas<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-blue-300 to-purple-300 animate-pulse-soft">
+                                informações!
+                            </span>
+                        </h1>
+                        
+                        <!-- Mensagem complementar -->
+                        <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-up delay-300 font-light">
+                            Em breve, um dos nossos especialistas entrará em contato com você. Obrigado pela confiança!
+                        </p>
+                        
+                        <!-- Botão CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-400 mb-6">
+                            <a href="/" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg">
+                                Voltar para página inicial
+                                <!-- ArrowRight SVG Icon -->
+                                <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- Informação adicional -->
+                        <div class="flex items-center justify-center lg:justify-start gap-2 text-blue-200 animate-fade-up delay-500">
+                            <div class="flex items-center gap-2">
+                                <!-- Bot SVG Icon -->
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-sm">Entraremos em contato em até 24 horas úteis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna lateral - cartões flutuantes visíveis a partir de lg breakpoint -->
+                    <div class="lg:col-span-4 relative hidden lg:block">
+                        
+                        <!-- Área de contenção para os cartões flutuantes -->
+                        <div class="relative w-full h-[500px] lg:h-[600px] xl:h-[700px] overflow-visible">
+                            
+                            <!-- Cards flutuantes com posicionamento corrigido -->
+                            
+                            <!-- Card 1 - Sucesso -->
+                            <div class="absolute top-20 lg:top-32 right-8 lg:right-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg">
+                                <div class="flex items-center gap-2 lg:gap-3">
+                                    <!-- CheckCircle SVG Icon -->
+                                    <svg class="h-6 w-6 lg:h-8 lg:w-8 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-bold text-sm lg:text-lg">Recebido</p>
+                                        <p class="text-blue-200 text-xs lg:text-sm">Com Sucesso</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 - Contato -->
+                            <div class="absolute bottom-24 lg:bottom-32 right-4 lg:right-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg">
+                                <div class="flex items-center gap-2 lg:gap-3">
+                                    <!-- MessageCircle SVG Icon -->
+                                    <svg class="h-6 w-6 lg:h-8 lg:w-8 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-bold text-sm lg:text-lg">Contato</p>
+                                        <p class="text-blue-200 text-xs lg:text-sm">Em Breve</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 - Especialistas -->
+                            <div class="absolute top-32 lg:top-48 left-0 lg:left-0 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-700 shadow-lg">
+                                <div class="flex items-center gap-2 lg:gap-3">
+                                    <!-- Shield SVG Icon -->
+                                    <svg class="h-6 w-6 lg:h-8 lg:w-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-bold text-sm lg:text-lg">Especialistas</p>
+                                        <p class="text-blue-200 text-xs lg:text-sm">Qualificados</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 - IA -->
+                            <div class="absolute bottom-24 lg:bottom-32 left-8 lg:left-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-800 shadow-lg">
+                                <div class="flex items-center gap-2 lg:gap-3">
+                                    <!-- Bot SVG Icon -->
+                                    <svg class="h-6 w-6 lg:h-8 lg:w-8 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <div>
+                                        <p class="text-white font-bold text-sm lg:text-lg">Soluções IA</p>
+                                        <p class="text-blue-200 text-xs lg:text-sm">Personalizadas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Efeito de luz de fundo -->
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>5X Aceleradora</h3>
+                    <p>Transformamos empresas com soluções de IA aplicadas a vendas e atendimento.</p>
+                    <p>Especialistas em automação comercial e agentes inteligentes.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Soluções</h3>
+                    <a href="/agente-cobertura-carteira">Agente Cobertura de Carteira</a>
+                    <a href="/agente-sdr-atendimento">Agente SDR WhatsApp</a>
+                    <a href="/agente-analise-conversas-followup">Agente Follow-Up</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>alexandre.valente@5xaceleradora.com.br</p>
+                    <p>Especialistas disponíveis para demonstração</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 5X Aceleradora. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
