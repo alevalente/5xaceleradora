@@ -37,35 +37,15 @@ const FinalCTA = () => {
     setFormData(prev => ({ ...prev, consent: checked }));
   };
 
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    
+  const handleSubmit = (e: FormEvent) => {
     if (!formData.consent) {
+      e.preventDefault();
       toast.error("Por favor, aceite os termos de consentimento para continuar.");
       return;
     }
     
     setIsSubmitting(true);
-    
-    try {
-      const formElement = e.target as HTMLFormElement;
-      const formDataToSend = new FormData(formElement);
-      
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as any).toString()
-      });
-      
-      if (response.ok) {
-        window.location.href = '/obrigado';
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      toast.error("Erro ao enviar formulário. Tente novamente.");
-      setIsSubmitting(false);
-    }
+    // Permitir que o Netlify processe o formulário nativamente
   };
 
   return (
