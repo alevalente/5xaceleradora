@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '../ui/button';
@@ -21,7 +22,6 @@ const FinalCTA = () => {
     message: '',
     consent: false
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -38,12 +38,16 @@ const FinalCTA = () => {
   };
 
   const handleSubmitClick = (e: React.MouseEvent) => {
+    console.log('handleSubmitClick executado', { consent: formData.consent });
+    
     if (!formData.consent) {
+      console.log('Bloqueando envio - sem consentimento');
       e.preventDefault();
       toast.error("Por favor, aceite os termos de consentimento para continuar.");
       return;
     }
     
+    console.log('Permitindo envio nativo para Netlify');
     // Se há consentimento, permite o envio nativo para o Netlify
     // Não usar setIsSubmitting aqui pois o Netlify redireciona imediatamente
   };
