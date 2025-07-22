@@ -118,11 +118,11 @@ const InteractiveAgentShowcase = () => {
                 <CardContent className="p-6 flex flex-col justify-between h-full">
                   <div>
                     <div className="mb-6">
-                      <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                      <div className="w-full h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
                         <img 
                           src={selectedAgent.image} 
                           alt={`${selectedAgent.title} - Agente de IA`}
-                          className="w-full h-full object-contain object-center"
+                          className="w-full h-full object-cover object-center"
                           loading="lazy"
                         />
                       </div>
