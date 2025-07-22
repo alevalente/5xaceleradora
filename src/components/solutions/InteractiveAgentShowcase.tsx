@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
@@ -123,7 +122,7 @@ const InteractiveAgentShowcase = () => {
                         <img 
                           src={selectedAgent.image} 
                           alt={`${selectedAgent.title} - Agente de IA`}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full object-contain object-center"
                           loading="lazy"
                         />
                       </div>
