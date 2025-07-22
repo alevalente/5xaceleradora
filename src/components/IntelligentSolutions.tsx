@@ -1,12 +1,10 @@
 
 import React from 'react';
 import SolutionCategories from './solutions/SolutionCategories';
-import AgentSolutions from './solutions/AgentSolutions';
+import InteractiveAgentShowcase from './solutions/InteractiveAgentShowcase';
 import CustomAgentsByPersona from './solutions/CustomAgentsByPersona';
 
 const IntelligentSolutions = () => {
-  const [api, setApi] = React.useState<any>();
-
   return (
     <section id="solutions" className="py-24 bg-gradient-to-b from-white to-blue-50">
       <div className="container-improved">
@@ -19,7 +17,7 @@ const IntelligentSolutions = () => {
 
         <div className="space-y-16">
           <SolutionCategories />
-          <AgentSolutions setApi={setApi} />
+          <InteractiveAgentShowcase />
           <CustomAgentsByPersona />
         </div>
       </div>
