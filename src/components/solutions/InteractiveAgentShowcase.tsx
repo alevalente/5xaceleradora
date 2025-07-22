@@ -112,7 +112,7 @@ const InteractiveAgentShowcase = () => {
         </div>
 
         <div className="relative">
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
+          <div className="grid lg:grid-cols-5 gap-8 items-stretch">
             {/* Card Principal do Agente Selecionado */}
             <div className="order-2 lg:order-1 lg:col-span-3">
               <Card className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 shadow-xl border-0" hoverEffect={false}>
