@@ -112,38 +112,38 @@ const InteractiveAgentShowcase = () => {
         </div>
 
         <div className="relative">
-          <div className="grid lg:grid-cols-5 gap-8 items-stretch">
+          <div className="grid lg:grid-cols-5 gap-8 min-h-0 items-stretch">
             {/* Card Principal do Agente Selecionado */}
-            <div className="order-2 lg:order-1 lg:col-span-3">
-              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 shadow-xl border-0" hoverEffect={false}>
-                <CardContent className="p-0">
-                  <div className="mb-6">
-                    <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
-                      <img 
-                        src={selectedAgent.image} 
-                        alt={`${selectedAgent.title} - Agente de IA`}
-                        className="w-full h-full object-cover object-center"
-                        loading="lazy"
-                      />
+            <div className="order-2 lg:order-1 lg:col-span-3 flex">
+              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl shadow-xl border-0 h-full w-full" hoverEffect={false}>
+                <CardContent className="p-6 flex flex-col justify-between h-full">
+                  <div>
+                    <div className="mb-6">
+                      <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                        <img 
+                          src={selectedAgent.image} 
+                          alt={`${selectedAgent.title} - Agente de IA`}
+                          className="w-full h-full object-cover object-center"
+                          loading="lazy"
+                        />
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="flex items-center mb-6">
-                    <div>
-                      <CardTitle className="text-2xl font-bold text-gray-900 mb-1">
-                        {selectedAgent.name}
-                      </CardTitle>
-                      <p className="text-blue-600 font-semibold">
-                        {selectedAgent.role}
-                      </p>
+                    
+                    <div className="flex items-center mb-6">
+                      <div>
+                        <CardTitle className="text-2xl font-bold text-gray-900 mb-1">
+                          {selectedAgent.name}
+                        </CardTitle>
+                        <p className="text-blue-600 font-semibold">
+                          {selectedAgent.role}
+                        </p>
+                      </div>
                     </div>
+                    
+                    <CardDescription className="text-gray-700 text-lg leading-relaxed mb-8">
+                      {selectedAgent.description}
+                    </CardDescription>
                   </div>
-                  
-                  <CardDescription className="text-gray-700 text-lg leading-relaxed mb-6">
-                    {selectedAgent.description}
-                  </CardDescription>
-                  
-                  {/* Tags removidas */}
 
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     <Link to={selectedAgent.customLink}>
@@ -155,13 +155,13 @@ const InteractiveAgentShowcase = () => {
             </div>
 
             {/* Grid de Thumbnails dos Agentes */}
-            <div className="order-1 lg:order-2 lg:col-span-2">
-              <div className="grid grid-cols-2 gap-6">
+            <div className="order-1 lg:order-2 lg:col-span-2 flex">
+              <div className="grid grid-cols-2 gap-6 w-full h-full">
                 {agentSolutions.map((agent) => (
                   <div
                     key={agent.id}
                     className={cn(
-                      "agent-card cursor-pointer transform hover:scale-105 transition-all duration-200 p-5 rounded-2xl border-2",
+                      "agent-card cursor-pointer transform hover:scale-105 transition-all duration-200 p-5 rounded-2xl border-2 h-full flex flex-col justify-center",
                       selectedAgent.id === agent.id
                         ? "border-blue-400 bg-blue-50 selected"
                         : "border-transparent hover:border-blue-200 hover:bg-blue-50"
@@ -179,7 +179,7 @@ const InteractiveAgentShowcase = () => {
                       <img 
                         src={agent.avatar} 
                         alt={agent.name}
-                        className="rounded-full object-cover w-24 h-24 mx-auto mb-4 shadow-md"
+                        className="rounded-full object-cover w-20 h-20 mx-auto mb-4 shadow-md"
                         loading="lazy"
                       />
                       <h4 className="font-semibold text-gray-900 text-base">
