@@ -112,13 +112,13 @@ const InteractiveAgentShowcase = () => {
         </div>
 
         <div className="relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-5 gap-8 items-start">
             {/* Card Principal do Agente Selecionado */}
-            <div className="order-2 lg:order-1">
-              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 shadow-xl border-0" hoverEffect={false}>
+            <div className="order-2 lg:order-1 lg:col-span-3">
+              <Card className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-6 shadow-xl border-0" hoverEffect={false}>
                 <CardContent className="p-0">
                   <div className="mb-6">
-                    <div className="w-full h-80 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg">
                       <img 
                         src={selectedAgent.image} 
                         alt={`${selectedAgent.title} - Agente de IA`}
@@ -164,8 +164,8 @@ const InteractiveAgentShowcase = () => {
             </div>
 
             {/* Grid de Thumbnails dos Agentes */}
-            <div className="order-1 lg:order-2">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="order-1 lg:order-2 lg:col-span-2">
+              <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-2 gap-6">
                 {agentSolutions.map((agent) => (
                   <div
                     key={agent.id}
@@ -188,7 +188,7 @@ const InteractiveAgentShowcase = () => {
                       <img 
                         src={agent.avatar} 
                         alt={agent.name}
-                        className="rounded-full object-cover w-16 h-16 mx-auto mb-3 shadow-md"
+                        className="rounded-full object-cover w-20 h-20 mx-auto mb-3 shadow-md"
                         loading="lazy"
                       />
                       <h4 className="font-semibold text-gray-900 text-sm">
