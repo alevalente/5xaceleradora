@@ -143,16 +143,7 @@ const InteractiveAgentShowcase = () => {
                     {selectedAgent.description}
                   </CardDescription>
                   
-                  <div className="flex flex-wrap gap-3 mb-8">
-                    {selectedAgent.tags.map((tag, index) => (
-                      <Badge 
-                        key={index}
-                        className="px-4 py-2 bg-blue-100 text-blue-800 hover:bg-blue-200 transition-colors"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                  {/* Tags removidas */}
 
                   <Button asChild className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     <Link to={selectedAgent.customLink}>
@@ -165,12 +156,12 @@ const InteractiveAgentShowcase = () => {
 
             {/* Grid de Thumbnails dos Agentes */}
             <div className="order-1 lg:order-2 lg:col-span-2">
-              <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 {agentSolutions.map((agent) => (
                   <div
                     key={agent.id}
                     className={cn(
-                      "agent-card cursor-pointer transform hover:scale-105 transition-all duration-200 p-4 rounded-2xl border-2",
+                      "agent-card cursor-pointer transform hover:scale-105 transition-all duration-200 p-5 rounded-2xl border-2",
                       selectedAgent.id === agent.id
                         ? "border-blue-400 bg-blue-50 selected"
                         : "border-transparent hover:border-blue-200 hover:bg-blue-50"
@@ -188,13 +179,13 @@ const InteractiveAgentShowcase = () => {
                       <img 
                         src={agent.avatar} 
                         alt={agent.name}
-                        className="rounded-full object-cover w-20 h-20 mx-auto mb-3 shadow-md"
+                        className="rounded-full object-cover w-24 h-24 mx-auto mb-4 shadow-md"
                         loading="lazy"
                       />
-                      <h4 className="font-semibold text-gray-900 text-sm">
+                      <h4 className="font-semibold text-gray-900 text-base">
                         {agent.name}
                       </h4>
-                      <p className="text-xs text-gray-600">
+                      <p className="text-sm text-gray-600">
                         {agent.role}
                       </p>
                     </div>
