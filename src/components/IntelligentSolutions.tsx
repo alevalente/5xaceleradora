@@ -18,9 +18,11 @@ const IntelligentSolutions = () => {
         <div className="space-y-0">
           <SolutionCategories />
           <InteractiveAgentShowcase />
-          <CustomAgentsByPersona />
         </div>
       </div>
+      
+      {/* CustomAgentsByPersona sem container limitador para permitir fundo de largura total */}
+      <CustomAgentsByPersona />
     </section>
   );
 };
