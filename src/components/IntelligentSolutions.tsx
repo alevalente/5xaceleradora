@@ -6,7 +6,7 @@ import CustomAgentsByPersona from './solutions/CustomAgentsByPersona';
 
 const IntelligentSolutions = () => {
   return (
-    <section id="solutions" className="py-24 bg-white">
+    <section id="solutions" className="pt-24 bg-white">
       <div className="container-improved">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="heading-lg mb-6">Automações Inteligentes para Alavancar suas Vendas</h2>
