@@ -52,7 +52,7 @@ const CustomAgentsByPersona = () => {
 
   return (
     <section className="w-full bg-blue-50 py-20">
-      <div className="container-improved">
+      <div className="px-4 md:px-8 lg:px-12 xl:px-16 max-w-7xl mx-auto">
         <div className="relative">
           {/* Elementos decorativos sutis ajustados para o fundo azul */}
           <div className="absolute top-20 left-10 w-16 h-16 bg-white/40 rounded-full opacity-50"></div>
