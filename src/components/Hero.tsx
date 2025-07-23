@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { TrendingUp, Zap, Target, Clock, DollarSign, Bot, Shield, Settings, FileText, MessageCircle, Bell, RotateCcw } from 'lucide-react';
 
@@ -79,10 +80,10 @@ const Hero = () => {
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg"
               >
                 <Bot className="h-5 w-5 mr-2" />
-                Quero Essa Vantagem Agora
+                Quero automatizar minhas vendas
               </button>
               <a href="#solutions" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-lg backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-lg">
-                Ver Como Funciona
+                Descubra como a IA trabalha por você
               </a>
             </div>
 
@@ -101,10 +102,10 @@ const Hero = () => {
             {/* Área de contenção para os cartões flutuantes */}
             <div className="relative w-full h-[500px] lg:h-[600px] xl:h-[700px] overflow-visible">
               
-              {/* Cards flutuantes com posicionamento corrigido */}
+              {/* Cards flutuantes com posicionamento corrigido e efeito hover */}
               
               {/* Card 1 - Automação (abaixado um pouco) */}
-              <div className="absolute top-20 lg:top-32 right-8 lg:right-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg">
+              <div className="absolute top-20 lg:top-32 right-8 lg:right-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-300 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Settings className="h-6 w-6 lg:h-8 lg:w-8 text-yellow-300" />
                   <div>
@@ -115,7 +116,7 @@ const Hero = () => {
               </div>
 
               {/* Card 2 - WhatsApp (reposicionado para o lado direito do Reativação) */}
-              <div className="absolute bottom-24 lg:bottom-32 right-4 lg:right-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg">
+              <div className="absolute bottom-24 lg:bottom-32 right-4 lg:right-8 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-500 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <MessageCircle className="h-6 w-6 lg:h-8 lg:w-8 text-purple-300" />
                   <div>
@@ -126,7 +127,7 @@ const Hero = () => {
               </div>
 
               {/* Card 3 - Zero Erros (posição original) */}
-              <div className="absolute top-32 lg:top-48 left-0 lg:left-0 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-700 shadow-lg">
+              <div className="absolute top-32 lg:top-48 left-0 lg:left-0 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-700 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Shield className="h-6 w-6 lg:h-8 lg:w-8 text-green-300" />
                   <div>
@@ -137,7 +138,7 @@ const Hero = () => {
               </div>
 
               {/* Card 4 - Follow-Up (abaixado um pouco) */}
-              <div className="absolute top-64 lg:top-80 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg">
+              <div className="absolute top-64 lg:top-80 left-2 lg:left-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-400 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <Bell className="h-6 w-6 lg:h-8 lg:w-8 text-orange-300" />
                   <div>
@@ -148,7 +149,7 @@ const Hero = () => {
               </div>
 
               {/* Card 5 - CRM (movido para baixo para não sobrepor) */}
-              <div className="absolute top-64 lg:top-80 right-2 lg:right-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-1000 shadow-lg">
+              <div className="absolute top-64 lg:top-80 right-2 lg:right-4 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-1000 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <FileText className="h-6 w-6 lg:h-8 lg:w-8 text-blue-300" />
                   <div>
@@ -159,7 +160,7 @@ const Hero = () => {
               </div>
 
               {/* Card 6 - Reativação (movido para a esquerda para ficar ao lado da Automação) */}
-              <div className="absolute bottom-24 lg:bottom-32 left-8 lg:left-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-800 shadow-lg">
+              <div className="absolute bottom-24 lg:bottom-32 left-8 lg:left-12 z-30 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl p-3 lg:p-4 animate-float animation-delay-800 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/15 cursor-pointer">
                 <div className="flex items-center gap-2 lg:gap-3">
                   <RotateCcw className="h-6 w-6 lg:h-8 lg:w-8 text-cyan-300" />
                   <div>
