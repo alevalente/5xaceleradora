@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BrainCircuit, Cog, Zap, Target, ArrowRight, Sparkles, Users, Clock } from 'lucide-react';
@@ -52,21 +51,18 @@ const CustomAgentsByPersona = () => {
   ];
 
   return (
-    <div className="mt-20 bg-white">
+    <div className="mt-20 bg-blue-50">
       <div className="relative">
-        {/* Background simples e elegante */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
-        
-        {/* Elementos decorativos sutis */}
-        <div className="absolute top-20 left-10 w-16 h-16 bg-blue-100 rounded-full opacity-30"></div>
-        <div className="absolute bottom-20 right-10 w-12 h-12 bg-purple-100 rounded-full opacity-30"></div>
+        {/* Elementos decorativos sutis ajustados para o fundo azul */}
+        <div className="absolute top-20 left-10 w-16 h-16 bg-white/40 rounded-full opacity-50"></div>
+        <div className="absolute bottom-20 right-10 w-12 h-12 bg-blue-200/60 rounded-full opacity-50"></div>
         
         <div className="relative z-10 py-20">
           {/* Hero Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             {/* Left Content */}
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-200">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-blue-200">
                 <Sparkles className="h-4 w-4 text-blue-600" />
                 <span className="text-sm font-medium text-blue-700">Solução Personalizada</span>
               </div>
@@ -76,8 +72,8 @@ const CustomAgentsByPersona = () => {
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> agente sob medida</span>?
               </h3>
               
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Criamos agentes de IA <span className="font-semibold text-blue-600">completamente personalizados</span> para 
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Criamos agentes de IA <span className="font-semibold text-blue-700">completamente personalizados</span> para 
                 resolver os desafios específicos do seu processo comercial.
               </p>
             </div>
@@ -126,12 +122,12 @@ const CustomAgentsByPersona = () => {
                     </div>
                     
                     <h5 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h5>
-                    <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-gray-700 text-sm leading-relaxed">{step.description}</p>
                   </div>
                   
                   {/* Connector Line */}
                   {index < processSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-blue-200 to-purple-200 transform -translate-x-1/2"></div>
+                    <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 transform -translate-x-1/2"></div>
                   )}
                 </div>
               ))}
@@ -142,14 +138,14 @@ const CustomAgentsByPersona = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
             {customBenefits.map((benefit, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-blue-200/50">
                   <div className="text-center">
                     <div className={`w-16 h-16 bg-gradient-to-br ${benefit.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       {benefit.icon}
                     </div>
                     
                     <h5 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h5>
-                    <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
+                    <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
               </div>
