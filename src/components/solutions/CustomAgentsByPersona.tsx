@@ -51,7 +51,7 @@ const CustomAgentsByPersona = () => {
   ];
 
   return (
-    <div className="mt-20 bg-blue-50">
+    <div className="w-full bg-blue-50">
       <div className="relative">
         {/* Elementos decorativos sutis ajustados para o fundo azul */}
         <div className="absolute top-20 left-10 w-16 h-16 bg-white/40 rounded-full opacity-50"></div>
