@@ -15,7 +15,7 @@ const Statistics = () => {
         <div className="w-full md:w-3/5 lg:w-1/2">
           <video 
             controls 
-            poster="/lovable-uploads/nova-thumbnail-video.png"
+            poster="/lovable-uploads/b23435a6-89e0-47fc-8cdb-66afd9b9b0a6.png"
             className="w-full rounded-xl shadow-2xl border border-gray-200"
             preload="metadata"
           >
