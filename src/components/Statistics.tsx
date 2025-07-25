@@ -19,8 +19,7 @@ const Statistics = () => {
             className="w-full rounded-xl shadow-2xl border border-gray-200"
             preload="metadata"
           >
-            <source src="/video-empresario.mp4" type="video/mp4" />
-            <source src="/lovable-uploads/video-empresario.mp4" type="video/mp4" />
+            <source src="https://wmvjjnpljoookuhmzpfc.supabase.co/storage/v1/object/public/video-secao-2-site-5x//Video%205x%20Aceleradora%20-%20Final.mp4" type="video/mp4" />
             Seu navegador não suporta reprodução de vídeo.
           </video>
         </div>
